@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class Project extends Component {
 
@@ -18,29 +18,23 @@ class Project extends Component {
         }
     }
 
-    renderDescription() {
-        return <p>{this.props.text}</p>;
-    }
+    renderDescription = () => <p>{this.props.text}</p>
 
-    renderVisual() {
-        return <div>
+    renderVisual = () =>
+        <div>
             <p>{this.props.name}</p>
-            <img src={this.props.logo}/>        
-        </div>;
-    }
+            <img alt="" src={this.props.logo} />
+        </div>
 
-    render() {
-        return (
-            <div className="project row">
-                <div className="col s12 m6">
-                    {this.renderLeftContent()}
-                </div>
-                <div className="col s12 m6">
-                    {this.renderRightContent()}
-                </div>
+    render = () =>
+        <div className="project row">
+            <div className="col s12 m6">
+                {this.renderLeftContent()}
             </div>
-        );
-    }
+            <div className="col s12 m6">
+                {this.renderRightContent()}
+            </div>
+        </div>
 }
 
 export default Project;

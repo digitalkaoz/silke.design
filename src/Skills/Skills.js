@@ -2,8 +2,8 @@ import React from 'react';
 
 import Skill from './Skill.js'
 
-const Skills = () => 
-<div id="skills">
+const Skills = () =>
+  <div id="skills">
     <div className="row">
       <div className="col s12 m4">
         <Skill name="UI-Design"></Skill>
@@ -15,6 +15,6 @@ const Skills = () =>
         <Skill name="Frontend"></Skill>
       </div>
     </div>
-</div>;
+  </div>
 
 export default Skills;

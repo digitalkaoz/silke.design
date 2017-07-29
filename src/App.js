@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Header from './Header/Header.js';
 import Footer from './Footer/Footer.js';
@@ -7,12 +7,12 @@ import Projects from './Projects/Projects.js';
 
 const App = () =>
   <div>
-    <Header></Header>
+    <Header />
     <main>
-      <Skills></Skills>
-      <Projects></Projects>
+      <Skills />
+      <Projects />
     </main>
-  <Footer></Footer>
+    <Footer />
   </div>
 
 export default App;
