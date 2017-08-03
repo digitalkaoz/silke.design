@@ -37,10 +37,13 @@
     .icons {
       @extend .row;
       margin: 10% 0;
+      text-align: center;
 
       .icon {
         @extend .col;
-        @extend .s6;
+        @extend .s4;
+        @extend .m6;
+        @extend .l4;
         margin-bottom: 10%;
 
         img {

@@ -1,7 +1,29 @@
 #projects {
-  background: pink;
+    .left,
+    .right {
+        @extend .col;
+        @extend .s12;
+        @extend .m6;
+    }
+    .project {
+        @extend .row;
 
-  .project {
-    background-color: blue;
-  }
+        .flower {
+            margin: 10% 0;
+            .drop {
+                span {
+                    font-size: 2vw;
+                }
+            }
+        }
+
+        &--bornholdt_lee_website {
+          background-color: #0D345F;
+        }
+
+        &--freixenet {
+            background-image: radial-gradient(10% 30%, #E09A9A 4%, #FFFFFF 4%, #BEBEBE 100%);
+            border: 1px solid #979797;
+        }
+    }
 }

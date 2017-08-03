@@ -3,18 +3,33 @@
     "name": "Bornholdt Lee Website",
     "logo": "/favicon.ico",
     "text": "ddfofsdf",
-    "direction": "ltr"
+    "direction": "ltr",
+    "year": 2016,
+    "skills": {
+      "tl": { "name": "FE" },
+      "tr": { "name": "UI" }
+    }
   },
   {
     "name": "Freixenet",
     "logo": "/favicon.ico",
     "text": "ddfofsdf",
-    "direction": "rlt"
+    "direction": "rtl",
+    "year": 2009,
+    "skills": {
+      "tl": { "name": "FE" },
+      "tr": { "name": "UX" }
+    }
   },
   {
     "name": "Another Website",
     "logo": "/favicon.ico",
     "text": "ddfofsdf",
-    "direction": "ltr"
+    "direction": "ltr",
+    "year": 2012,
+    "skills": {
+      "tl": { "name": "FE" },
+      "tr": { "name": "UX" }
+    }
   }
 ]

@@ -1,21 +1,20 @@
 import React from 'react';
 
+import Flower from '../Flower/Flower';
+
 const Header = () =>
   <header>
-    <h1>Silke.Design</h1>
-
-    <div className="flower">
-      <div className="drop drop--tl">
-        <span>UI</span>
-      </div>
-      <div className="drop drop--tr">
-        <span>UX</span>
-      </div>
-      <div className="drop drop--bl">
-        <span>FE</span>
-      </div>
-      <div className="drop drop--br drop--pic" />
+    <div className="headline">
+      <h1>Silke.Design</h1>
+      <p>lorem ipsum</p>
     </div>
+
+    <Flower
+      tl={{ name: 'UI' }}
+      tr={{ name: 'UX' }}
+      bl={{ name: 'FE' }}
+      br={true}
+    />
   </header>;
 
 export default Header;

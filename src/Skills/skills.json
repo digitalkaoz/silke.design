@@ -5,7 +5,18 @@
     "icons": [
       {
         "name": "balsamiq",
-        "src": "/favicon.ico"
+        "src": "/img/balsamiq.png",
+        "target": "https://bdq.cloud/products/balsamiq-mockups/"
+      },
+      {
+        "name": "axure",
+        "src": "/img/axure.png",
+        "target": "https://www.axure.com/"
+      },
+      {
+        "name": "invisionapp",
+        "src": "/img/invision.svg",
+        "target": "https://www.invisionapp.com/"
       }
     ]
   },

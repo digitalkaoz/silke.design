@@ -1,0 +1,70 @@
+.drop {
+    @extend .z-depth-5;
+    @extend .valign-wrapper;
+
+    position: relative;
+    color: #fff;
+    transform: scale(0.9);
+    background-color: $drop-color;
+
+    &--tr {
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 0;
+    }
+    &--br {
+        border-top-left-radius: 0;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+    &--tl {
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 50%;
+    }
+    &--bl {
+        border-top-left-radius: 50%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+
+    &--profile {
+        background-image: url(/img/profile.png);
+        background-size: cover;
+        background-color: transparent;
+    }
+
+    &--none {
+        background: transparent;
+        box-shadow: none;
+    }
+
+    span {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+}
+
+
+.flower {
+    @extend .col;
+    @extend .s12;
+    @extend .m4;
+
+    .drop {
+      @extend .col;
+      @extend .s6;
+      padding: 0!important;
+    }
+  }

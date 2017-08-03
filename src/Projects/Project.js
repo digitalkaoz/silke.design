@@ -1,43 +1,37 @@
 import React, { Component } from 'react';
 
+import Flower from '../Flower/Flower';
+
 class Project extends Component {
-  renderLeftContent() {
-    if (this.props.direction === 'ltr') {
-      return this.renderVisual();
-    } else {
-      return this.renderDescription();
-    }
-  }
-
-  renderRightContent() {
-    if (this.props.direction === 'ltr') {
-      return this.renderDescription();
-    } else {
-      return this.renderVisual();
-    }
-  }
-
-  renderDescription = () =>
-    <p>
-      {this.props.text}
-    </p>;
-
-  renderVisual = () =>
-    <div>
-      <p>
+  renderDescription = dir =>
+    <div className={dir}>
+      <Flower {...this.props.skills} />
+      <h2>
         {this.props.name}
+      </h2>
+      <p>
+        {this.props.text}
       </p>
+    </div>;
+
+  renderVisual = dir =>
+    <div className={dir}>
       <img alt="" src={this.props.logo} />
+      <p>
+        {this.props.year}
+      </p>
     </div>;
 
   render = () =>
-    <div className="project row">
-      <div className="col s12 m6">
-        {this.renderLeftContent()}
-      </div>
-      <div className="col s12 m6">
-        {this.renderRightContent()}
-      </div>
+    <div
+      className={
+        'project project--' + this.props.name.replace(/ /g, '_').toLowerCase()
+      }
+    >
+      {this.renderVisual(this.props.direction === 'ltr' ? 'right' : 'left')}
+      {this.renderDescription(
+        this.props.direction === 'ltr' ? 'left' : 'right'
+      )}
     </div>;
 }
 

@@ -1,13 +1,10 @@
 header {
   @extend .row;
 
-  background: linear-gradient(
-    to bottom right,
-    rgba(241, 248, 251, 1) 0%,
-    rgba(50, 120, 146, 1) 100%
-  );
+  border: 1px solid #979797;
+  background-image: linear-gradient(134deg, #F1F8FB 0%, #42829A 92%, #327892 100%);
 
-  h1 {
+  .headline {
     @extend .col;
     @extend .s12;
     @extend .m7;
@@ -15,15 +12,9 @@ header {
   }
 
   .flower {
-    @extend .col;
-    @extend .s12;
-    @extend .m4;
     margin: 10% 0;
 
     .drop {
-      @extend .col;
-      @extend .s6;
-      padding: 0;
 
       span {
         font-size: 6vw;
