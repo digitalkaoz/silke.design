@@ -12,6 +12,14 @@ $roboto-font-path: "../node_modules/materialize-css/dist/fonts/roboto/";
 @import '../node_modules/materialize-css/sass/components/_icons-material-design.scss';
 @import '../node_modules/materialize-css/sass/components/_grid.scss';
 */
+
+$headline-color: #bbb;
+$drop-color: lightblue;
+
+.row {
+    margin-bottom:0;
+}
+
 @import './App.scss';
 @import './Header/Header.scss';
 @import './Footer/Footer.scss';

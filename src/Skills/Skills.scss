@@ -1,4 +1,53 @@
 #skills {
-    background-color: yellow;
-    
+  @extend .row;
+
+  background: linear-gradient(to right, rgba(112,109,109,1) 0%, rgba(13,10,13,1) 100%);
+  color: #fff;
+
+  .skill {
+    @extend .col;
+    @extend .s12; 
+    @extend .m4;
+
+    padding: 5% 5% 0 5%;
+
+    hr {
+      @extend .hide-on-small-only;
+      margin-left: -25%;
+      margin-right: -25%;
+    }
+
+    &:first-child {
+      hr {
+        margin-left:0;
+      }
+    }
+
+    &:last-child {
+      hr {
+        margin-right:0;
+      }
+    }
+
+    h2 {
+      font-size: 3vw;
+      min-height: 9vw;
+    }
+
+    .icons {
+      @extend .row;
+      margin: 10% 0;
+
+      .icon {
+        @extend .col;
+        @extend .s6;
+        margin-bottom: 10%;
+
+        img {
+          width: 100%;
+        }
+
+      }
+    }
+  }
 }

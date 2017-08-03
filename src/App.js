@@ -13,6 +13,6 @@ const App = () =>
       <Projects />
     </main>
     <Footer />
-  </div>
+  </div>;
 
 export default App;

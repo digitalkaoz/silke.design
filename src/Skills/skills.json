@@ -1,0 +1,59 @@
+[
+  {
+    "name": "User Experience",
+    "description": "lorem ipsum",
+    "icons": [
+      {
+        "name": "balsamiq",
+        "src": "/favicon.ico"
+      }
+    ]
+  },
+  {
+    "name": "User Interface",
+    "description": "lorem ipsum",
+    "icons": [
+      {
+        "name": "sketch",
+        "src": "/img/sketch-mac-icon@2x.png",
+        "target": "https://www.sketchapp.com/"
+      },
+      {
+        "name": "photoshop",
+        "src": "/img/Photoshop_CC_icon.png",
+        "target": "http://www.photoshop.com/"
+      },
+      {
+        "name": "illustrator",
+        "src": "/img/Adobe_Illustrator_CC_icon.png",
+        "target": "http://www.adobe.com/de/products/illustrator.html"
+      },
+      {
+        "name": "indesign",
+        "src": "/img/Adobe_InDesign_icon.png",
+        "target": "http://www.adobe.com/de/products/indesign.html"
+      }
+    ]
+  },
+  {
+    "name": "Frontend Development",
+    "description": "lorem ipsum",
+    "icons": [
+      {
+        "name": "webstorm",
+        "src": "/img/WS.png",
+        "target": "https://www.jetbrains.com/webstorm/"
+      },
+      {
+        "name": "html5",
+        "src": "/img/HTML5_Logo.png",
+        "target": "https://www.html5rocks.com"
+      },
+      {
+        "name": "css3",
+        "src": "/img/css3-logo.png",
+        "target": "https://www.html5rocks.com"
+      }
+    ]
+  }
+]

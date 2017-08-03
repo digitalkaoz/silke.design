@@ -1,6 +1,33 @@
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+header {
+  @extend .row;
+
+  background: linear-gradient(
+    to bottom right,
+    rgba(241, 248, 251, 1) 0%,
+    rgba(50, 120, 146, 1) 100%
+  );
+
+  h1 {
+    @extend .col;
+    @extend .s12;
+    @extend .m7;
+    color: $headline-color;
+  }
+
+  .flower {
+    @extend .col;
+    @extend .s12;
+    @extend .m4;
+    margin: 10% 0;
+
+    .drop {
+      @extend .col;
+      @extend .s6;
+      padding: 0;
+
+      span {
+        font-size: 6vw;
+      }
+    }
+  }
 }
