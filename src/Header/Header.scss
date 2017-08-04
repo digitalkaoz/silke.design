@@ -5,14 +5,24 @@ header {
   background-image: linear-gradient(134deg, #F1F8FB 0%, #42829A 92%, #327892 100%);
 
   .headline {
+    padding: 5%;
     @extend .col;
     @extend .s12;
     @extend .m7;
     color: $headline-color;
+
+    h3 {
+      color: black;
+      margin-top: 25%;
+      font-size: 3vw;
+    }
+    p {
+      color: black;
+    }
   }
 
   .flower {
-    margin: 10% 0;
+    margin: 15% 0;
 
     .drop {
 

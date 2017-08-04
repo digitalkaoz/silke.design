@@ -1,20 +1,34 @@
 #projects {
+    margin-bottom:0;
+
     .left,
     .right {
         @extend .col;
         @extend .s12;
         @extend .m6;
     }
+
     .project {
         @extend .row;
+        padding: 5%;
+
+        h2 {
+            clear:both;
+        }
 
         .flower {
-            margin: 10% 0;
+            float:left;
             .drop {
                 span {
                     font-size: 2vw;
                 }
             }
+        }
+
+        .carousel {
+            @extend .carousel-slider;
+            @extend .center;
+            background-color:red;
         }
 
         &--bornholdt_lee_website {

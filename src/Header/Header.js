@@ -5,8 +5,9 @@ import Flower from '../Flower/Flower';
 const Header = () =>
   <header>
     <div className="headline">
-      <h1>Silke.Design</h1>
-      <p>lorem ipsum</p>
+      <h1>silke.design</h1>
+      <h3>Silke Schönthal - Portfolio</h3>
+      <p>Lorem Ipsum</p>
     </div>
 
     <Flower

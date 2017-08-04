@@ -1,6 +1,6 @@
 .drop {
-    @extend .z-depth-5;
     @extend .valign-wrapper;
+    @extend .hoverable;
 
     position: relative;
     color: #fff;
@@ -61,6 +61,7 @@
     @extend .col;
     @extend .s12;
     @extend .m4;
+    padding: 0!important;
 
     .drop {
       @extend .col;

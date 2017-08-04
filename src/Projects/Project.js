@@ -16,7 +16,24 @@ class Project extends Component {
 
   renderVisual = dir =>
     <div className={dir}>
-      <img alt="" src={this.props.logo} />
+      <div className="carousel">
+        <div className="carousel-item" href="#one!">
+          <h2>First Panel</h2>
+          <p className="white-text">This is your first panel</p>
+        </div>
+        <div className="carousel-item" href="#two!">
+          <h2>Second Panel</h2>
+          <p className="white-text">This is your second panel</p>
+        </div>
+        <div className="carousel-item" href="#three!">
+          <h2>Third Panel</h2>
+          <p className="white-text">This is your third panel</p>
+        </div>
+        <div className="carousel-item" href="#four!">
+          <h2>Fourth Panel</h2>
+          <p className="white-text">This is your fourth panel</p>
+        </div>
+      </div>
       <p>
         {this.props.year}
       </p>

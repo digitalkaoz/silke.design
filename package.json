@@ -1,22 +1,18 @@
 {
-  "name": "silke.website",
+  "name": "silke.design",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "husky": "^0.14.3",
-    "lint-staged": "^4.0.2",
+    "jquery": "^3.2.1",
     "materialize-css": "^0.99.0",
-    "node-sass-chokidar": "0.0.3",
-    "prettier": "^1.5.3",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-scripts": "1.0.10"
+    "react-dom": "^15.6.1"
   },
   "scripts": {
     "precommit": "lint-staged",
-    "cs" : "lint-staged",
-    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "cs": "lint-staged",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/index.scss -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/index.scss -o src/ --watch --recursive",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "start-js": "react-scripts start",
@@ -24,14 +20,18 @@
     "build": "npm run build-css && react-scripts build"
   },
   "devDependencies": {
+    "husky": "^0.14.3",
     "npm-run-all": "^4.0.2",
+    "lint-staged": "^4.0.2",
+    "node-sass-chokidar": "0.0.3",
+    "prettier": "^1.5.3",
+    "react-scripts": "1.0.10",
     "sass-lint": "^1.10.2"
   },
-
   "lint-staged": {
-   "src/**/*.{js,jsx,json,css}": [
-     "prettier --single-quote --write",
-     "git add"
-   ]
- }
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  }
 }
