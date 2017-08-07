@@ -1,21 +1,21 @@
 footer {
   @extend .page-footer;
-  @extend .row;
+  @extend %row;
   color: #fff;
   background-color: black;
 
   .copyright {
-    @extend .col;
-    @extend .m3;
-    @extend .s12;
+    @extend %col;
+    @extend %m3;
+    @extend %s3;
 
     padding: 0 2%;
   }
 
   .icon {
     text-align: center;
-    @extend .col; 
-    @extend .m2;
-    @extend .s4;
+    @extend %col;
+    @extend %m2;
+    @extend %s3;
   }
 }

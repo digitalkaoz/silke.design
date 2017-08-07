@@ -1,6 +1,5 @@
 .drop {
     @extend .valign-wrapper;
-    @extend .hoverable;
 
     position: relative;
     color: #fff;
@@ -58,14 +57,12 @@
 
 
 .flower {
-    @extend .col;
-    @extend .s12;
-    @extend .m4;
+    @extend %col;
     padding: 0!important;
 
     .drop {
-      @extend .col;
-      @extend .s6;
+      @extend %col;
+      @extend %s6;
       padding: 0!important;
     }
   }

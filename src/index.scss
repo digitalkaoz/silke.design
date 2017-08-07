@@ -13,9 +13,10 @@ $roboto-font-path: "../node_modules/materialize-css/dist/fonts/roboto/";
 @import '../node_modules/materialize-css/sass/components/_grid.scss';
 */
 
+
 @import './variables.scss';
-@import './App.scss';
 @import './Flower/Flower.scss';
+@import './App.scss';
 @import './Header/Header.scss';
 @import './Footer/Footer.scss';
 @import './Skills/Skills.scss';

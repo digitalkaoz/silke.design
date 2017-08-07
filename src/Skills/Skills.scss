@@ -1,14 +1,14 @@
 #skills {
-  @extend .row;
+  @extend %row;
 
   background: linear-gradient(to right, rgba(112,109,109,1) 0%, rgba(13,10,13,1) 100%);
   color: #fff;
   margin-bottom: 0;
 
   .skill {
-    @extend .col;
-    @extend .s12; 
-    @extend .m4;
+    @extend %col;
+    @extend %s12; 
+    @extend %m4;
 
     padding: 5% 5% 0 5%;
 
@@ -33,24 +33,27 @@
     h2 {
       font-size: 3vw;
       min-height: 9vw;
+
+      @media #{$small-and-down} {
+        font-size: 9vw;
+      }
     }
 
     .icons {
-      @extend .row;
+      @extend %row;
       margin: 10% 0;
       text-align: center;
 
       .icon {
-        @extend .col;
-        @extend .s4;
-        @extend .m6;
-        @extend .l4;
+        @extend %col;
+        @extend %s3;
+        @extend %m6;
+        @extend %l4;
         margin-bottom: 10%;
 
         img {
           width: 100%;
         }
-
       }
     }
   }

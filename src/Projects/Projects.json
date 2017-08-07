@@ -6,7 +6,7 @@
     "direction": "ltr",
     "year": 2016,
     "skills": {
-      "tl": { "name": "FE" },
+      "bl": { "name": "FE" },
       "tr": { "name": "UI" }
     }
   },
@@ -17,7 +17,7 @@
     "direction": "rtl",
     "year": 2009,
     "skills": {
-      "tl": { "name": "FE" },
+      "bl": { "name": "FE" },
       "tr": { "name": "UX" }
     }
   },
@@ -28,7 +28,7 @@
     "direction": "ltr",
     "year": 2012,
     "skills": {
-      "tl": { "name": "FE" },
+      "bl": { "name": "FE" },
       "tr": { "name": "UX" }
     }
   }

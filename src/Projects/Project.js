@@ -6,12 +6,14 @@ class Project extends Component {
   renderDescription = dir =>
     <div className={dir}>
       <Flower {...this.props.skills} />
-      <h2>
-        {this.props.name}
-      </h2>
-      <p>
-        {this.props.text}
-      </p>
+      <div className="description">
+        <h2>
+          {this.props.name}
+        </h2>
+        <p>
+          {this.props.text}
+        </p>
+      </div>
     </div>;
 
   renderVisual = dir =>
@@ -45,10 +47,10 @@ class Project extends Component {
         'project project--' + this.props.name.replace(/ /g, '_').toLowerCase()
       }
     >
-      {this.renderVisual(this.props.direction === 'ltr' ? 'right' : 'left')}
       {this.renderDescription(
         this.props.direction === 'ltr' ? 'left' : 'right'
       )}
+      {this.renderVisual(this.props.direction === 'ltr' ? 'right' : 'left')}
     </div>;
 }
 
