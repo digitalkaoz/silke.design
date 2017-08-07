@@ -17,16 +17,6 @@
             @extend %col;
             @extend %s10;
             @extend %m8;
-
-            h2 {
-                clear:both;
-                font-size: 3vw;
-
-                @media #{$small-and-down} {
-                    font-size: 6vw;
-                }
-
-            }
         }
 
         .flower {

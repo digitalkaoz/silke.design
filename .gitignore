@@ -24,3 +24,5 @@ yarn-error.log*
 # compilates
 src/**/*.css
 src/*.css
+
+build

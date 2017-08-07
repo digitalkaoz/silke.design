@@ -10,10 +10,13 @@
     @extend %s12; 
     @extend %m4;
 
-    padding: 5% 5% 0 5%;
+    padding: 0 5% 0 0;
 
     hr {
       @extend .hide-on-small-only;
+      background-color: rgba(112,109,109,1);
+      height:1px;
+      border-width:0;
       margin-left: -25%;
       margin-right: -25%;
     }
@@ -31,28 +34,40 @@
     }
 
     h2 {
-      font-size: 3vw;
-      min-height: 9vw;
+      color: #fff;
 
+      min-height: 3vw;
       @media #{$small-and-down} {
-        font-size: 9vw;
+        margin-top: 10%;
       }
+
+    }
+
+    p {
+      @media #{$medium-and-down} {
+        font-size: 3vw;
+      }
+      @media #{$small-and-down} {
+        font-size: 5.5vw;
+      }
+
     }
 
     .icons {
       @extend %row;
-      margin: 10% 0;
       text-align: center;
+      padding: 0;
 
       .icon {
         @extend %col;
         @extend %s3;
         @extend %m6;
-        @extend %l4;
-        margin-bottom: 10%;
+        @extend %l3;
+        padding: 3%;
 
         img {
           width: 100%;
+          vertical-align: bottom
         }
       }
     }

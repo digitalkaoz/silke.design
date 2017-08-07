@@ -1,46 +1,56 @@
 header {
   @extend %row;
+  padding: 5%;
 
-  border: 1px solid #979797;
-  background-image: linear-gradient(134deg, #F1F8FB 0%, #42829A 92%, #327892 100%);
+  /* bg_01: */
+  background-image: linear-gradient(134deg, #F1F8FB 0%, #327892 100%);
 
   .headline {
-    padding: 5%;
     @extend %col;
-    @extend %s8;
-    @extend %m7;
+    @extend %s12;
+    @extend %m8;
+
     color: $headline-color;
+    padding: 0;
+
+    svg {
+      width: 100%;
+    }
 
     h1 {
-      @media #{$small-and-down} {
-        font-size: 10vw;
-      }
+      color: #1e1b1e;
+      margin-top: 10%;
     }
-    
-    h3 {
-      color: black;
-      margin-top: 25%;
-      font-size: 3vw;
 
-      @media #{$small-and-down} {
-        font-size: 5vw;
-      }
-
-    }
     p {
-      color: black;
+      color: #000;
+
+      @media #{$medium-and-down} {
+        font-size: 3vw;
+      }
+      @media #{$small-and-down} {
+        font-size: 5.5vw;
+      }
     }
   }
 
   .flower {
-    margin: 15% 0;
-    @extend %m4;
-    @extend %s4;
+    @extend %m3;
+    @extend %s12;
+
+    margin: -2% 0 0 7%;
+
+    @media #{$small-and-down} {
+      margin: -2% 0 0 0%;
+    }
 
     .drop {
-
       span {
-        font-size: 6vw;
+        font-size: 4vw;
+        @media #{$small-and-down} {
+          font-size: 14vw;
+        }
+
       }
     }
   }
