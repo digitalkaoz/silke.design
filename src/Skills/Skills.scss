@@ -36,7 +36,7 @@
     h2 {
       color: #fff;
 
-      min-height: 3vw;
+      min-height: 4vw;
       @media #{$small-and-down} {
         margin-top: 10%;
       }
@@ -67,7 +67,7 @@
 
         img {
           width: 100%;
-          vertical-align: bottom
+          vertical-align: bottom;
         }
       }
     }
