@@ -6,7 +6,7 @@ footer {
   color: #fff;
   background-color: black;
 
-  padding: 0 5%;
+  padding: 2% 5%;
 
   @media #{$small-and-down} {
     padding: 5%;
@@ -18,9 +18,12 @@ footer {
     @extend %s3;
 
     margin-left: 0;
+    line-height: .5;
 
-    @media #{$small-and-down} {
-      font-size: 5vw;
+    p {
+      @media #{$medium-and-down} {
+        font-size: 3vw;
+      }
     }
   }
 

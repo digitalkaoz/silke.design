@@ -6,6 +6,8 @@
     @extend %col;
     @extend %s12;
     @extend %m6;
+
+    height: auto;
   }
 
   .project {
@@ -13,15 +15,41 @@
 
     padding: 5%;
 
+    &--rtl.project {
+      .description,
+      .flower {
+        @extend %offset-s2;
+      }
+    }
+
+    @media #{$small-and-down} {
+      .description,
+      .flower {
+        margin-left: 0 !important;
+      }
+    }
+
     .description {
       @extend %col;
       @extend %s10;
-      @extend %m8;
+
+      padding-top: 10%;
+
+      color: #fff;
+
+      @media #{$small-and-down} {
+        width: 100%;
+
+        p {
+          font-size: 5.5vw;
+        }
+      }
     }
 
     .flower {
-      @extend %m4;
-      @extend %s2;
+      @extend %s3;
+      margin-left: -1%;
+      margin-top: -1%;
 
       .drop {
         background-color: white;
@@ -29,6 +57,10 @@
         span {
           color: inherit;
           font-size: 2vw;
+
+          @media #{$small-and-down} {
+            font-size: 5vw;
+          }
         }
 
         &--none {
@@ -39,8 +71,29 @@
 
     .carousel {
       @extend .carousel-slider;
-      @extend .center;
-      background-color: red;
+
+      height: 100% !important;
+
+      .indicators {
+        bottom: -5%;
+      }
+
+      &-item {
+        @extend .center;
+        display: flex !important;
+        align-items: center;
+        min-height: 0 !important;
+
+        img {
+          max-height: 90%;
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+      }
     }
 
     &--bornholdt_lee_website {
