@@ -2,13 +2,21 @@ header {
   @extend %row;
   padding: 5%;
 
-  /* bg_01: */
   background-image: linear-gradient(134deg, #F1F8FB 0%, #327892 100%);
+
+  @media #{$small-and-down} {
+    display: flex;
+    flex-direction: column;
+  }
 
   .headline {
     @extend %col;
     @extend %s12;
     @extend %m8;
+
+    @media #{$small-and-down} {
+      order:2;
+    }
 
     color: $headline-color;
     padding: 0;
@@ -38,10 +46,14 @@ header {
     @extend %m3;
     @extend %s12;
 
+    @media #{$small-and-down} {
+      order:1;
+    }
+
     margin: -2% 0 0 7%;
 
     @media #{$small-and-down} {
-      margin: -2% 0 0 0%;
+      margin: 5% 0 0 0%;
     }
 
     .drop {

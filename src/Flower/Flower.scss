@@ -1,7 +1,6 @@
 .drop {
-    @extend .valign-wrapper;
+    //@extend .valign-wrapper;
 
-    position: relative;
     color: #fff;
     transform: scale(0.9);
     background-color: $drop-color;
@@ -43,12 +42,14 @@
     }
 
     span {
+        position: absolute;
+        padding-top:25%;
         width: 100%;
         text-align: center;
         font-family: 'Fjalla One', sans-serif;
     }
 
-    &:after {
+    &::after {
         content: "";
         display: block;
         padding-bottom: 100%;
@@ -58,17 +59,11 @@
 
 .flower {
     @extend %col;
-    padding: 0!important;
-    height: 21vw;
-
-    @media #{$small-and-down} {
-        height: 84vw;
-    }
+    padding: 0 0 0 0!important;
 
     .drop {
       @extend %col;
       @extend %s6;
-      padding: 0!important;
-      height: 50%;
+      display:block;
     }
-  }
+}

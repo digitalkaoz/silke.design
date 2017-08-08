@@ -6,7 +6,8 @@
     "jquery": "^3.2.1",
     "materialize-css": "^0.99.0",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "vanilla-lazyload": "^8.0.3"
   },
   "scripts": {
     "precommit": "lint-staged",

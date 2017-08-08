@@ -1,15 +1,28 @@
 footer {
   @extend .page-footer;
   @extend %row;
+  @extend .valign-wrapper;
+
   color: #fff;
   background-color: black;
+
+  padding: 0 5%;
+
+  @media #{$small-and-down} {
+    padding: 5%;
+  }
 
   .copyright {
     @extend %col;
     @extend %m3;
     @extend %s3;
 
-    padding: 0 2%;
+    margin-left: 0;
+
+      @media #{$small-and-down} {
+        font-size: 5vw;
+      }
+
   }
 
   .icon {
@@ -17,5 +30,7 @@ footer {
     @extend %col;
     @extend %m2;
     @extend %s3;
+
+    margin-left: 0;
   }
 }
