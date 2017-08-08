@@ -1,63 +1,68 @@
 #projects {
-    margin-bottom:0;
+  margin-bottom: 0;
 
-    .left,
-    .right {
-        @extend %col;
-        @extend %s12;
-        @extend %m6;
+  .left,
+  .right {
+    @extend %col;
+    @extend %s12;
+    @extend %m6;
+  }
+
+  .project {
+    @extend %row;
+
+    padding: 5%;
+
+    .description {
+      @extend %col;
+      @extend %s10;
+      @extend %m8;
     }
 
-    .project {
-        @extend %row;
+    .flower {
+      @extend %m4;
+      @extend %s2;
 
-        padding: 5%;
+      .drop {
+        background-color: white;
 
-        .description {
-            @extend %col;
-            @extend %s10;
-            @extend %m8;
+        span {
+          color: inherit;
+          font-size: 2vw;
         }
 
-        .flower {
-            @extend %m4;
-            @extend %s2;
-
-            .drop {
-                background-color: white;
-
-                span {
-                    color: inherit;
-                    font-size: 2vw;
-                }
-
-                &--none {
-                    background-color: transparent;
-                }
-            }
+        &--none {
+          background-color: transparent;
         }
-
-        .carousel {
-            @extend .carousel-slider;
-            @extend .center;
-            background-color:red;
-        }
-
-        &--bornholdt_lee_website {
-          background-color: #0D345F;
-
-          .flower .drop {
-              color: #0D345F;
-            }
-        }
-
-        &--freixenet {
-            background-image: radial-gradient(10% 30%, #E09A9A 4%, #FFFFFF 4%, #BEBEBE 100%);
-            border: 1px solid #979797;
-
-            .flower .drop {
-              color: #BEBEBE;
-            }
-        }
+      }
     }
+
+    .carousel {
+      @extend .carousel-slider;
+      @extend .center;
+      background-color: red;
+    }
+
+    &--bornholdt_lee_website {
+      background-color: #0d345f;
+
+      .flower .drop {
+        color: #0d345f;
+      }
+    }
+
+    &--freixenet {
+      background-image: radial-gradient(
+        10% 30%,
+        #e09a9a 4%,
+        #ffffff 4%,
+        #bebebe 100%
+      );
+      border: 1px solid #979797;
+
+      .flower .drop {
+        color: #bebebe;
+      }
+    }
+  }
 }

@@ -45,8 +45,7 @@ class Project extends Component {
     <div
       className={
         'project project--' + this.props.name.replace(/ /g, '_').toLowerCase()
-      }
-    >
+      }>
       {this.renderDescription(
         this.props.direction === 'ltr' ? 'left' : 'right'
       )}

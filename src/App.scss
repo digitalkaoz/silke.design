@@ -1,33 +1,35 @@
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.8vw;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.8vw;
 
-    main, footer {
-        font-weight: 100;
-    }
+  main,
+  footer {
+    font-weight: 100;
+  }
 }
 
-h1, h2 {
-    clear:both;
-    font-family: 'Fjalla One', sans-serif;
-    font-weight: 100;
+h1,
+h2 {
+  clear: both;
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: 100;
 
-    color: #fff;
-    font-size: 2.4vw;
-    margin:0;
+  color: #fff;
+  font-size: 2.4vw;
+  margin: 0;
 
-    @media #{$small-and-down} {
-        font-size: 7.8vw;
-    }
+  @media #{$small-and-down} {
+    font-size: 7.8vw;
+  }
 }
 
 %row {
-    @extend %row;
-    margin-bottom:0;
-    padding:5%;
+  @extend %row;
+  margin-bottom: 0;
+  padding: 5%;
 }
 
 %col {
-    @extend %col;
-    padding:0;
+  @extend %col;
+  padding: 0;
 }

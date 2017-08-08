@@ -1,35 +1,39 @@
 #skills {
   @extend %row;
 
-  background: linear-gradient(to right, rgba(112,109,109,1) 0%, rgba(13,10,13,1) 100%);
+  background: linear-gradient(
+    to right,
+    rgba(112, 109, 109, 1) 0%,
+    rgba(13, 10, 13, 1) 100%
+  );
   color: #fff;
   margin-bottom: 0;
 
   .skill {
     @extend %col;
-    @extend %s12; 
+    @extend %s12;
     @extend %m4;
 
     padding: 0 5% 0 0;
 
     hr {
       @extend .hide-on-small-only;
-      background-color: rgba(112,109,109,1);
-      height:1px;
-      border-width:0;
+      background-color: rgba(112, 109, 109, 1);
+      height: 1px;
+      border-width: 0;
       margin-left: -25%;
       margin-right: -25%;
     }
 
     &:first-child {
       hr {
-        margin-left:0;
+        margin-left: 0;
       }
     }
 
     &:last-child {
       hr {
-        margin-right:0;
+        margin-right: 0;
       }
     }
 
@@ -40,7 +44,6 @@
       @media #{$small-and-down} {
         margin-top: 10%;
       }
-
     }
 
     p {
@@ -50,7 +53,6 @@
       @media #{$small-and-down} {
         font-size: 5.5vw;
       }
-
     }
 
     .icons {

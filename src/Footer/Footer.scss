@@ -19,10 +19,9 @@ footer {
 
     margin-left: 0;
 
-      @media #{$small-and-down} {
-        font-size: 5vw;
-      }
-
+    @media #{$small-and-down} {
+      font-size: 5vw;
+    }
   }
 
   .icon {

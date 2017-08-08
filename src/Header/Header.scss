@@ -2,7 +2,7 @@ header {
   @extend %row;
   padding: 5%;
 
-  background-image: linear-gradient(134deg, #F1F8FB 0%, #327892 100%);
+  background-image: linear-gradient(134deg, #f1f8fb 0%, #327892 100%);
 
   @media #{$small-and-down} {
     display: flex;
@@ -15,7 +15,7 @@ header {
     @extend %m8;
 
     @media #{$small-and-down} {
-      order:2;
+      order: 2;
     }
 
     color: $headline-color;
@@ -47,7 +47,7 @@ header {
     @extend %s12;
 
     @media #{$small-and-down} {
-      order:1;
+      order: 1;
     }
 
     margin: -2% 0 0 7%;
@@ -62,7 +62,6 @@ header {
         @media #{$small-and-down} {
           font-size: 14vw;
         }
-
       }
     }
   }

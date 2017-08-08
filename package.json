@@ -34,9 +34,14 @@
     "sass-lint": "^1.10.2"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --write",
+    "src/**/*.{js,jsx,json,scss}": [
+      "prettier --single-quote --write --jsx-bracket-same-line",
+      "git add"
+    ],
+    "src/*.{js,jsx,json,scss}": [
+      "prettier --single-quote --write --jsx-bracket-same-line",
       "git add"
     ]
+
   }
 }
