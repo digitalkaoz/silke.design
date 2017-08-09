@@ -19,7 +19,8 @@
     "eject": "react-scripts eject",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
-    "build": "npm run build-css && react-scripts build && react-snapshot && npm run critical"
+    "build": "npm run build-css && react-scripts build && react-snapshot && npm run critical",
+    "deploy": "docker build -t \"silke.design\" . -f docker/Dockerfile && docker tag \"silke.design\" digitalkaoz/silke.design:$(git rev-parse --verify HEAD) && docker tag \"silke.design\" digitalkaoz/silke.design:latest && docker push digitalkaoz/silke.design:$(git rev-parse --verify HEAD) && docker push digitalkaoz/silke.design:latest"
   },
   "devDependencies": {
     "critical": "^0.9.0",
