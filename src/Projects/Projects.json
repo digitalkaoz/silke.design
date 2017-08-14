@@ -1,15 +1,63 @@
 [
   {
-    "name": "Bornholdt Lee Website",
+    "name": "Bornholdt Lee Website - Relaunch",
     "images": [
-      "/img/references/freixenet.png",
-      "/img/references/pulvermühle.png"
+      "/img/references/blg-relaunch/1.jpg",
+      "/img/references/blg-relaunch/2.jpg",
+      "/img/references/blg-relaunch/3.jpg",
+      "/img/references/blg-relaunch/4.jpg"
     ],
     "text": "Dizzle shiz dolizzle sit amizzle, own yo' adipiscing break it down. Nullizzle shut the shizzle up velizzle, mammasay mammasa mamma oo sa volutpizzle, pimpin' quis, gravida vel, my shizz. Pellentesque fo shizzle mah nizzle fo rizzle, mah home g-dizzle tortor.",
     "direction": "ltr",
-    "year": 2016,
+    "year": 2017,
+    "beta": true,
     "skills": {
       "bl": { "name": "FE" },
+      "tl": { "name": "UX" },
+      "tr": { "name": "UI" }
+    }
+  },
+  {
+    "name": "Duchenne",
+    "images": [
+      "/img/references/duchenne/1.jpg",
+      "/img/references/duchenne/2.jpg"
+    ],
+    "text": "Dizzle shiz dolizzle sit amizzle, own yo' adipiscing break it down. Nullizzle shut the shizzle up velizzle, mammasay mammasa mamma oo sa volutpizzle, pimpin' quis, gravida vel, my shizz. Pellentesque fo shizzle mah nizzle fo rizzle, mah home g-dizzle tortor.",
+    "direction": "rtl",
+    "year": 2017,
+    "beta": true,
+    "skills": {
+      "tl": { "name": "UX" },
+      "tr": { "name": "UI" }
+    }
+  },
+  {
+    "name": "iChallenge",
+    "images": [
+      "/img/references/ichallenge/1.jpg",
+      "/img/references/ichallenge/2.jpg",
+      "/img/references/ichallenge/3.jpg",
+      "/img/references/ichallenge/4.jpg",
+      "/img/references/ichallenge/5.jpg"
+    ],
+    "text": "Dizzle shiz dolizzle sit amizzle, own yo' adipiscing break it down. Nullizzle shut the shizzle up velizzle, mammasay mammasa mamma oo sa volutpizzle, pimpin' quis, gravida vel, my shizz. Pellentesque fo shizzle mah nizzle fo rizzle, mah home g-dizzle tortor.",
+    "direction": "ltr",
+    "year": 2012,
+    "skills": {
+      "tr": { "name": "UI" }
+    }
+  },
+  {
+    "name": "Pulvermühle",
+    "images": [
+      "/img/references/pulvermuehle/1.jpg",
+      "/img/references/pulvermuehle/2.jpg"
+    ],
+    "text": "Dizzle shiz dolizzle sit amizzle, own yo' adipiscing break it down. Nullizzle shut the shizzle up velizzle, mammasay mammasa mamma oo sa volutpizzle, pimpin' quis, gravida vel, my shizz. Pellentesque fo shizzle mah nizzle fo rizzle, mah home g-dizzle tortor.",
+    "direction": "rtl",
+    "year": 2009,
+    "skills": {
       "tr": { "name": "UI" },
       "tl": { "name": "UX" }
     }
@@ -17,29 +65,50 @@
   {
     "name": "Freixenet",
     "images": [
-      "/img/references/freixenet.png",
-      "/img/references/pulvermühle.png"
-    ],
-    "text": "Dizzle shiz dolizzle sit amizzle, own yo' adipiscing break it down. Nullizzle shut the shizzle up velizzle, mammasay mammasa mamma oo sa volutpizzle, pimpin' quis, gravida vel, my shizz. Pellentesque fo shizzle mah nizzle fo rizzle, mah home g-dizzle tortor.",
-    "direction": "rtl",
-    "year": 2009,
-    "skills": {
-      "bl": { "name": "FE" },
-      "tr": { "name": "UX" }
-    }
-  },
-  {
-    "name": "Another Website",
-    "images": [
-      "/img/references/freixenet.png",
-      "/img/references/pulvermühle.png"
+      "/img/references/freixenet/1.jpg",
+      "/img/references/freixenet/2.jpg",
+      "/img/references/freixenet/3.jpg",
+      "/img/references/freixenet/4.jpg",
+      "/img/references/freixenet/5.jpg"
     ],
     "text": "Dizzle shiz dolizzle sit amizzle, own yo' adipiscing break it down. Nullizzle shut the shizzle up velizzle, mammasay mammasa mamma oo sa volutpizzle, pimpin' quis, gravida vel, my shizz. Pellentesque fo shizzle mah nizzle fo rizzle, mah home g-dizzle tortor.",
     "direction": "ltr",
-    "year": 2012,
+    "year": 2009,
+    "skills": {
+      "tr": { "name": "UI" },
+      "tl": { "name": "UX" }
+    }
+  },
+  {
+    "name": "Bornholdt Lee Website",
+    "images": ["/img/references/blg/1.jpg"],
+    "text": "Dizzle shiz dolizzle sit amizzle, own yo' adipiscing break it down. Nullizzle shut the shizzle up velizzle, mammasay mammasa mamma oo sa volutpizzle, pimpin' quis, gravida vel, my shizz. Pellentesque fo shizzle mah nizzle fo rizzle, mah home g-dizzle tortor.",
+    "direction": "rtl",
+    "year": 2016,
     "skills": {
       "bl": { "name": "FE" },
-      "tr": { "name": "UX" }
+      "tl": { "name": "UX" },
+      "tr": { "name": "UI" }
+    }
+  },
+  {
+    "name": "O2",
+    "images": ["/img/references/o2/1.jpg"],
+    "text": "Dizzle shiz dolizzle sit amizzle, own yo' adipiscing break it down. Nullizzle shut the shizzle up velizzle, mammasay mammasa mamma oo sa volutpizzle, pimpin' quis, gravida vel, my shizz. Pellentesque fo shizzle mah nizzle fo rizzle, mah home g-dizzle tortor.",
+    "direction": "ltr",
+    "year": 2016,
+    "skills": {
+      "bl": { "name": "FE" }
+    }
+  },
+  {
+    "name": "Tchibo",
+    "images": ["/img/references/tchibo/1.jpg"],
+    "text": "Dizzle shiz dolizzle sit amizzle, own yo' adipiscing break it down. Nullizzle shut the shizzle up velizzle, mammasay mammasa mamma oo sa volutpizzle, pimpin' quis, gravida vel, my shizz. Pellentesque fo shizzle mah nizzle fo rizzle, mah home g-dizzle tortor.",
+    "direction": "rtl",
+    "year": 2016,
+    "skills": {
+      "bl": { "name": "FE" }
     }
   }
 ]

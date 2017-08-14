@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "jquery": "^3.2.1",
-    "materialize-css": "^0.99.0",
+    "materialize-css": "git://github.com/digitalkaoz/materialize.git#patch-1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "vanilla-lazyload": "^8.0.3"
@@ -43,6 +43,5 @@
       "prettier --single-quote --write --jsx-bracket-same-line",
       "git add"
     ]
-
   }
 }

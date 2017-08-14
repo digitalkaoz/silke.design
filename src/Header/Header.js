@@ -26,8 +26,8 @@ const Header = () =>
     </div>
 
     <Flower
-      tl={{ name: 'UI' }}
-      tr={{ name: 'UX' }}
+      tl={{ name: 'UX' }}
+      tr={{ name: 'UI' }}
       bl={{ name: 'FE' }}
       br={true}
     />

@@ -27,19 +27,20 @@ class Project extends Component {
       </div>
     </div>;
 
-  render = () =>
-    <div
-      className={
-        'project project--' +
-        this.props.direction +
-        ' project--' +
-        this.props.name.replace(/ /g, '_').toLowerCase()
-      }>
-      {this.renderDescription(
-        this.props.direction === 'ltr' ? 'left' : 'right'
-      )}
-      {this.renderVisual(this.props.direction === 'ltr' ? 'right' : 'left')}
-    </div>;
+  render() {
+    const id = 'project--' + this.props.name.replace(/ /g, '_').toLowerCase();
+
+    return (
+      <div
+        className={'project project--' + this.props.direction + ' ' + id}
+        id={id}>
+        {this.renderDescription(
+          this.props.direction === 'ltr' ? 'left' : 'right'
+        )}
+        {this.renderVisual(this.props.direction === 'ltr' ? 'right' : 'left')}
+      </div>
+    );
+  }
 }
 
 export default Project;
