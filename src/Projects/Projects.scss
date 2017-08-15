@@ -10,25 +10,11 @@
     height: auto;
   }
 
-  .sticky {
-    position: fixed !important;
-    top: 0;
-    width: 100%;
-    box-sizing: border-box;
-
-    z-index: 0;
-    * {
-      z-index: 0;
-    }
-  }
-
   .project {
     @extend %row;
 
     padding: 5%;
 
-    //position: relative;
-    //z-index: 1;
     &--rtl.project {
       .description,
       .flower {
@@ -183,6 +169,14 @@
 
       .flower .drop {
         color: #373f44;
+      }
+    }
+  }
+
+  .project-wrapper {
+    &:last-child {
+      .project {
+        position: relative !important;
       }
     }
   }

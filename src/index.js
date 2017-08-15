@@ -27,6 +27,5 @@ import * as client from './client';
 
 import registerServiceWorker from './registerServiceWorker';
 
-console.log(window);
 render(<App />, document.getElementById('root'));
 registerServiceWorker();

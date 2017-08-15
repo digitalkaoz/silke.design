@@ -37,3 +37,7 @@ h2 {
   @extend %col;
   padding: 0;
 }
+
+img:not([src]) {
+  visibility: hidden;
+}

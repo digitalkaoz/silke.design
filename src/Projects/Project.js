@@ -31,13 +31,15 @@ class Project extends Component {
     const id = 'project--' + this.props.name.replace(/ /g, '_').toLowerCase();
 
     return (
-      <div
-        className={'project project--' + this.props.direction + ' ' + id}
-        id={id}>
-        {this.renderDescription(
-          this.props.direction === 'ltr' ? 'left' : 'right'
-        )}
-        {this.renderVisual(this.props.direction === 'ltr' ? 'right' : 'left')}
+      <div className="project-wrapper">
+        <div
+          className={'project project--' + this.props.direction + ' ' + id}
+          id={id}>
+          {this.renderDescription(
+            this.props.direction === 'ltr' ? 'left' : 'right'
+          )}
+          {this.renderVisual(this.props.direction === 'ltr' ? 'right' : 'left')}
+        </div>
       </div>
     );
   }
