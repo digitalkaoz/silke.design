@@ -72,6 +72,10 @@
     .carousel {
       @extend .carousel-slider;
 
+      @media #{$small-and-down} {
+        margin-top: 10%;
+      }
+
       height: 100% !important;
 
       .indicators {
@@ -80,9 +84,11 @@
 
       &-item {
         @extend .center;
-        display: flex !important;
+        display: flex;
         align-items: center;
         min-height: 0 !important;
+        font-size: 5.5vw;
+        color: #fff;
 
         img {
           max-height: 90%;
@@ -179,5 +185,9 @@
         position: relative !important;
       }
     }
+  }
+
+  .pinned {
+    width: 100%;
   }
 }

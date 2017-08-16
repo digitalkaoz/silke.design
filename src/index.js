@@ -23,7 +23,7 @@ import { render } from 'react-snapshot';
 import './index.css';
 import App from './App';
 
-import * as client from './client';
+import './client';
 
 import registerServiceWorker from './registerServiceWorker';
 

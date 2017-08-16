@@ -10,7 +10,7 @@ class Project extends Component {
         <h2>
           {this.props.name}
         </h2>
-        <p>
+        <p className="hide-on-small-only">
           {this.props.text}
         </p>
       </div>
@@ -19,6 +19,11 @@ class Project extends Component {
   renderVisual = dir =>
     <div className={dir}>
       <div className="carousel">
+        {window.matchMedia('(max-width: 600px)').matches
+          ? <div className="carousel-item">
+              {this.props.text}
+            </div>
+          : null}
         {this.props.images.map(img =>
           <div key={img} className="carousel-item" href="#one!">
             <img data-original={img} alt={this.props.name} />
