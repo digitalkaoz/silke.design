@@ -1,6 +1,6 @@
 import LazyLoad from 'vanilla-lazyload';
 
-import pushpin from './pushpin';
+import { pushpin } from './pushpin';
 
 export default () => {
   new LazyLoad({

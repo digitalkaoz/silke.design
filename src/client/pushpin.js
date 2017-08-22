@@ -7,7 +7,7 @@ const PROJECT_SELECTOR = '.project';
  * called from lazy-load to correctly calculate sizes
  * @param {Node} el 
  */
-const pushpin = el => {
+export const pushpin = el => {
   if ($(el).parents(PROJECT_SELECTOR).length === 0) {
     return;
   }
@@ -27,5 +27,3 @@ const pushpin = el => {
     });
   });
 };
-
-export default pushpin;

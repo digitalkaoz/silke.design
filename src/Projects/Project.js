@@ -19,7 +19,7 @@ class Project extends Component {
   renderVisual = dir =>
     <div className={dir}>
       <div className="carousel">
-        {window.matchMedia('(max-width: 600px)').matches
+        {window.matchMedia && window.matchMedia('(max-width: 600px)').matches
           ? <div className="carousel-item">
               {this.props.text}
             </div>
@@ -40,6 +40,7 @@ class Project extends Component {
         <div
           className={'project project--' + this.props.direction + ' ' + id}
           id={id}>
+          <div className="overlay" />
           {this.renderDescription(
             this.props.direction === 'ltr' ? 'left' : 'right'
           )}
