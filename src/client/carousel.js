@@ -44,5 +44,7 @@ export default () => {
     indicators: true
   });
 
-  window.addEventListener('scroll', automateCarousel, passiveListeners());
+  if (window.matchMedia && !window.matchMedia('(max-width: 600px)').matches) {
+    window.addEventListener('scroll', automateCarousel, passiveListeners());
+  }
 };

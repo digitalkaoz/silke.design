@@ -13,6 +13,9 @@ header {
     width: 15%;
     position: absolute;
     top: 20px;
+    @media #{$small-and-down} {
+      width: 45%;
+    }
   }
 
   .headline {
@@ -55,7 +58,7 @@ header {
     margin: -2% 0 0 7%;
 
     @media #{$small-and-down} {
-      margin: 5% 0 0 0%;
+      margin: 20% 0 0 0%;
     }
 
     .drop {

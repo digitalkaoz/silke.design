@@ -42,16 +42,23 @@
       }
       .icon {
         margin-left: 10%;
+        @media #{$small-and-down} {
+          margin-right: 0%;
+        }
       }
     }
 
     &--ltr.project {
       .icon {
         margin-right: 10%;
+        @media #{$small-and-down} {
+          margin-right: 0%;
+        }
       }
     }
 
     @media #{$small-and-down} {
+      padding-bottom: 20%;
       .description,
       .flower {
         margin-left: 0 !important;
@@ -63,6 +70,10 @@
       @extend %s10;
 
       padding-top: 10%;
+
+      @media #{$small-and-down} {
+        padding-top: 20%;
+      }
 
       color: #fff;
 
@@ -130,17 +141,12 @@
         bottom: -5%;
       }
 
-      .carousel-fixed-item {
-        @extend .right;
-        bottom: 0 !important;
-      }
-
       &-item {
         @extend .center;
         display: flex;
         align-items: center;
         min-height: 0 !important;
-        font-size: 5.5vw;
+        font-size: 6vw;
         color: #fff;
 
         img {
