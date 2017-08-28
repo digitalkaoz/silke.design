@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 
 import Flower from '../Flower/Flower';
+import Icon from '../Icon/Icon';
 
 class Project extends Component {
   renderDescription = dir =>
     <div className={dir}>
       <Flower {...this.props.skills} />
+      <Icon
+        src={
+          this.props.type === 'mobile' ? '/img/phone.svg' : '/img/desktop.svg'
+        }
+        name={this.props.type}
+      />
       <div className="description">
         <h2>
           {this.props.name}

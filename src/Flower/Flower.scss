@@ -1,9 +1,9 @@
 .drop {
   //@extend .valign-wrapper;
 
-  color: #fff;
+  color: $drop-color;
   transform: scale(0.8);
-  background-color: $drop-color;
+  background-color: #fff;
 
   &--tr {
     border-top-left-radius: 50%;
@@ -39,6 +39,13 @@
   &--none {
     background: transparent;
     box-shadow: none;
+    border: 2px solid white !important;
+  }
+
+  &--year {
+    background: transparent !important;
+    color: #fff !important;
+    border: 2px solid white !important;
   }
 
   span {

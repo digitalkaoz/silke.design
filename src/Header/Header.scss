@@ -2,11 +2,17 @@ header {
   @extend %row;
   padding: 5%;
 
-  background-image: linear-gradient(134deg, #f1f8fb 0%, #327892 100%);
+  background-image: linear-gradient(134deg, #6cc2e1 0%, #327892 100%);
 
   @media #{$small-and-down} {
     display: flex;
     flex-direction: column;
+  }
+
+  img {
+    width: 15%;
+    position: absolute;
+    top: 20px;
   }
 
   .headline {
@@ -20,10 +26,6 @@ header {
 
     color: $headline-color;
     padding: 0;
-
-    svg {
-      width: 100%;
-    }
 
     h1 {
       color: #1e1b1e;

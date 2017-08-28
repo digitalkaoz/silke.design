@@ -17,6 +17,7 @@
 
     .overlay {
       background-color: #000;
+      display: block;
       opacity: 0.0;
       position: absolute;
       top: 0;
@@ -30,6 +31,7 @@
     &.pin-top {
       .overlay {
         opacity: 0 !important;
+        display: none !important;
       }
     }
 
@@ -37,6 +39,15 @@
       .description,
       .flower {
         @extend %offset-s2;
+      }
+      .icon {
+        margin-left: 10%;
+      }
+    }
+
+    &--ltr.project {
+      .icon {
+        margin-right: 10%;
       }
     }
 
@@ -57,10 +68,21 @@
 
       @media #{$small-and-down} {
         width: 100%;
+        text-align: center;
 
         p {
           font-size: 5.5vw;
         }
+      }
+    }
+
+    .icon {
+      float: right;
+      width: 15%;
+      padding: 0 0 10% 0;
+
+      svg {
+        fill: white;
       }
     }
 
@@ -84,6 +106,14 @@
         &--none {
           background-color: transparent;
         }
+
+        &--year {
+          span {
+            @media #{$small-and-down} {
+              font-size: 4vw;
+            }
+          }
+        }
       }
     }
 
@@ -98,6 +128,11 @@
 
       .indicators {
         bottom: -5%;
+      }
+
+      .carousel-fixed-item {
+        @extend .right;
+        bottom: 0 !important;
       }
 
       &-item {
@@ -124,7 +159,7 @@
       }
     }
 
-    &--bornholdt_lee_website {
+    &--bornholdt_lee_gmbh {
       background-color: #0d345f;
 
       .flower .drop {
@@ -140,7 +175,7 @@
       }
     }
 
-    &--bornholdt_lee_website_-_relaunch {
+    &--bornholdt_lee_-_relaunch {
       background-color: #0d345f;
 
       .flower .drop {
@@ -149,7 +184,7 @@
     }
 
     &--freixenet {
-      background-color: #bebebe;
+      background-color: #d3ae6a;
 
       /*background-image: radial-gradient(
         10% 30%,
@@ -160,7 +195,7 @@
       border: 1px solid #979797;
 
       .flower .drop {
-        color: #bebebe;
+        color: #d3ae6a;
       }
     }
 

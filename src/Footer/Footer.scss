@@ -18,7 +18,7 @@ footer {
     @extend %s3;
 
     margin-left: 0;
-    line-height: .5;
+    line-height: 1;
 
     p {
       @media #{$small-and-down} {
@@ -42,6 +42,10 @@ footer {
 
     transform: scale(.6);
 
+    @media #{$large-and-up} {
+      transform: scale(.5);
+    }
+
     &::after {
       content: "";
       display: block;
@@ -53,10 +57,10 @@ footer {
     img {
       margin: 0 auto;
       @media #{$small-and-down} {
-        transform: scale(.8);
+        transform: scale(.6);
       }
       @media #{$large-and-up} {
-        transform: scale(1.8);
+        transform: scale(1.4);
       }
     }
   }
