@@ -1,17 +1,13 @@
 $roboto-font-path: "../node_modules/materialize-css/dist/fonts/roboto/";
 
-@import '../node_modules/materialize-css/sass/materialize.scss';
-/*@import '../node_modules/materialize-css/sass/components/_mixins.scss';
+//@import '../node_modules/materialize-css/sass/materialize.scss';
 @import '../node_modules/materialize-css/sass/components/_color.scss';
 @import '../node_modules/materialize-css/sass/components/_variables.scss';
 @import '../node_modules/materialize-css/sass/components/_normalize.scss';
-@import '../node_modules/materialize-css/sass/components/_roboto.scss';
 @import '../node_modules/materialize-css/sass/components/_typography.scss';
 @import '../node_modules/materialize-css/sass/components/_transitions.scss';
 @import '../node_modules/materialize-css/sass/components/_global.scss';
-@import '../node_modules/materialize-css/sass/components/_icons-material-design.scss';
 @import '../node_modules/materialize-css/sass/components/_grid.scss';
-*/
 
 @import './variables.scss';
 @import './Flower/Flower.scss';

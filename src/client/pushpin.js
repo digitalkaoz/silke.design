@@ -1,4 +1,7 @@
 const $ = (window.jQuery = require('jquery'));
+
+window.Vel = require('materialize-css/js/velocity.min');
+require('materialize-css/js/global');
 require('materialize-css/js/pushpin');
 
 const PROJECT_SELECTOR = '.project';
@@ -16,7 +19,7 @@ export const pushpin = el => {
     var $this = $(this);
     var $target = $(this.parentNode);
 
-    this.parentNode.setAttribute('style', `height: ${$this.outerHeight()}px`);
+    this.parentNode.setAttribute('style', `height: ${this.offsetHeight}px`);
 
     const top = $target.offset().top;
     let bottom = top + $this.outerHeight();

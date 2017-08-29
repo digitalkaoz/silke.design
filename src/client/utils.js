@@ -1,5 +1,6 @@
-const $ = (window.jQuery = require('jquery'));
-
+/**
+ * check for passive event listener caps
+ */
 export const passiveListeners = () => {
   let supportsPassive = false;
   try {
@@ -14,24 +15,28 @@ export const passiveListeners = () => {
   return supportsPassive ? { passive: true } : false;
 };
 
-//TODO port to vanilla
+/**
+ * check if an element is completely in viewport
+ */
 export const isInViewPort = el => {
-  var win = $(window);
-
-  var viewport = {
-    top: win.scrollTop(),
-    left: win.scrollLeft()
+  const viewport = {
+    top: document.documentElement.scrollTop,
+    left: document.documentElement.scrollLeft,
+    right: document.documentElement.scrollLeft + window.outerWidth,
+    bottom: document.documentElement.scrollTop + window.outerHeight
   };
-  viewport.right = viewport.left + win.width();
-  viewport.bottom = viewport.top + win.height();
 
-  var elemtHeight = el.height(); // Get the full height of current element
-  elemtHeight = Math.round(elemtHeight); // Round it to whole humber
+  const elementHeight = Math.round(el.outerHeight);
+  const rect = el.getBoundingClientRect();
 
-  var bounds = el.offset(); // Coordinates of current element
-  bounds.top = bounds.top + elemtHeight;
-  bounds.right = bounds.left + el.outerWidth();
-  bounds.bottom = bounds.top + el.outerHeight();
+  let bounds = {
+    top: rect.top + document.body.scrollTop,
+    left: rect.left + document.body.scrollLeft
+  };
+
+  bounds.top = bounds.top + elementHeight;
+  bounds.right = bounds.left + el.outerWidth;
+  bounds.bottom = bounds.top + el.outerHeight;
 
   return !(
     viewport.right < bounds.left ||
@@ -39,4 +44,23 @@ export const isInViewPort = el => {
     viewport.bottom < bounds.top ||
     viewport.top > bounds.bottom
   );
+};
+
+/**
+ * debounce a function 
+ */
+export const debounce = (func, wait, immediate) => {
+  var timeout;
+  return function() {
+    var context = this,
+      args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
 };

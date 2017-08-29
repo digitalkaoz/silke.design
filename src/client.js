@@ -1,11 +1,9 @@
 import lazyLoad from './client/lazyload';
-import carousel from './client/carousel';
-import projectOverlay from './client/project_overlay';
+import overlay from './client/overlay';
 
 if (window.matchMedia) {
   document.addEventListener('DOMContentLoaded', _ => {
     lazyLoad();
-    carousel();
-    projectOverlay();
+    overlay();
   });
 }
