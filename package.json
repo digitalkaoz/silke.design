@@ -9,7 +9,19 @@
     "react-dom": "^15.6.1",
     "scrollmap": "^1.7.1",
     "siema": "^1.4.6",
-    "vanilla-lazyload": "^8.0.3"
+    "vanilla-lazyload": "^8.1.0"
+  },
+  "devDependencies": {
+    "critical": "^0.9.0",
+    "husky": "^0.14.3",
+    "inline-critical": "^2.4.2",
+    "lint-staged": "^4.0.4",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.1",
+    "prettier": "^1.6.1",
+    "react-scripts": "1.0.10",
+    "react-snapshot": "^2.0.0-1",
+    "sass-lint": "^1.11.1"
   },
   "scripts": {
     "precommit": "lint-staged",
@@ -23,18 +35,6 @@
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build && react-snapshot && npm run critical",
     "deploy": "docker build -t \"silke.design\" . -f docker/Dockerfile && docker tag \"silke.design\" digitalkaoz/silke.design:$(git rev-parse --verify HEAD) && docker tag \"silke.design\" digitalkaoz/silke.design:latest && docker push digitalkaoz/silke.design:$(git rev-parse --verify HEAD) && docker push digitalkaoz/silke.design:latest"
-  },
-  "devDependencies": {
-    "critical": "^0.9.0",
-    "husky": "^0.14.3",
-    "inline-critical": "^2.4.2",
-    "lint-staged": "^4.0.2",
-    "node-sass-chokidar": "0.0.3",
-    "npm-run-all": "^4.0.2",
-    "prettier": "^1.5.3",
-    "react-scripts": "1.0.10",
-    "react-snapshot": "^2.0.0-1",
-    "sass-lint": "^1.10.2"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,scss}": [

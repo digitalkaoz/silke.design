@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import skills from './skills.json';
 import Skill from './Skill.js';
+import LazyLoad from '../LazyLoad/LazyLoad';
 
-const Skills = () =>
-  <div id="skills">
-    {skills.map(skill => <Skill key={skill.name} {...skill} />)}
-  </div>;
+class Skills extends Component {
+  render = () => (
+    <div id="skills" ref={container => (this.container = container)}>
+      {skills.map(skill => <Skill key={skill.name} {...skill} />)}
+    </div>
+  );
+}
 
-export default Skills;
+export default LazyLoad(Skills);
