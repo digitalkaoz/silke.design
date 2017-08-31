@@ -12,7 +12,10 @@ export default (element, options) => {
     ...options
   };
 
-  const originalOffset = element.getBoundingClientRect().top + scrollTop();
+  const originalOffset =
+    element.parentNode.getBoundingClientRect().top + scrollTop();
+  element.parentNode.style.height = `${element.getBoundingClientRect()
+    .height}px`;
   const listener = _ => updateElement(scrollTop() + options.offset);
 
   const removePinClasses = () => {
@@ -23,16 +26,21 @@ export default (element, options) => {
 
   const updateElement = scrolled => {
     //resize the parent in case the content changed
-    if (
-      element.getBoundingClientRect().height !==
-      element.parentNode.getBoundingClientRect().height
-    ) {
-      element.parentNode.style.height = `${element.getBoundingClientRect()
+    /*if (
+            element.getBoundingClientRect().height !==
+            element.parentNode.getBoundingClientRect().height
+        ) {
+            element.parentNode.style.height = `${element.getBoundingClientRect()
         .height}px`;
-      options.top = element.getBoundingClientRect().top + scrollTop();
-    }
+            options.top = element.getBoundingClientRect().top + scrollTop();
+        }*/
 
-    //console.log(element.getAttribute('id'), options, scrolled, element.classList);
+    console.log(
+      element.getAttribute('id'),
+      options,
+      scrolled,
+      element.classList
+    );
 
     // Add position fixed (because its between top and bottom)
     if (
@@ -40,18 +48,20 @@ export default (element, options) => {
       options.bottom >= scrolled &&
       !element.classList.contains('pinned')
     ) {
-      removePinClasses();
-      element.classList.add('pinned');
-      element.style.top = options.offset;
-      element.parentNode.style.height = `${element.getBoundingClientRect()
-        .height}px`;
+      window.requestAnimationFrame(_ => {
+        removePinClasses();
+        element.classList.add('pinned');
+        element.style.top = options.offset;
+      });
     }
 
     // Add pin-top (when scrolled position is above top)
     if (scrolled < options.top && !element.classList.contains('pin-top')) {
-      removePinClasses();
-      element.classList.add('pin-top');
-      element.style.top = 0;
+      window.requestAnimationFrame(_ => {
+        removePinClasses();
+        element.classList.add('pin-top');
+        element.style.top = 0;
+      });
     }
 
     // Add pin-bottom (when scrolled position is below bottom)
@@ -59,9 +69,11 @@ export default (element, options) => {
       scrolled > options.bottom &&
       !element.classList.contains('pin-bottom')
     ) {
-      removePinClasses();
-      element.classList.add('pin-bottom');
-      element.style.top = options.bottom - originalOffset;
+      window.requestAnimationFrame(_ => {
+        removePinClasses();
+        element.classList.add('pin-bottom');
+        element.style.top = options.bottom - originalOffset;
+      });
     }
   };
 

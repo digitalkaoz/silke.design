@@ -25,8 +25,8 @@ export default Project => {
       Scrollmap.trigger(
         {
           target: this.container,
-          surfaceVisible: 0,
-          treshold: 100
+          surfaceVisible: 0
+          //treshold: 100
           //runOnScroll: true,
           //alwaysRunOnTrigger: true
         },
@@ -35,7 +35,7 @@ export default Project => {
     }
 
     render = () => (
-      <div className="project-wrapper" data-opacity="0">
+      <div className="project-wrapper">
         <Project
           {...this.props}
           ref={component => {
