@@ -36,7 +36,11 @@ export default Project => {
     }
 
     setOpacity(opacity) {
-      requestAnimationFrame(() => (this.overlay.style.opacity = opacity));
+      requestAnimationFrame(
+        () =>
+          (this.container.parentNode.style.filter = `blur(${opacity}px) brightness(${1 -
+            opacity})`)
+      );
     }
 
     componentDidMount() {
@@ -48,16 +52,13 @@ export default Project => {
     }
 
     render = () => (
-      <div className="project-wrapper">
-        <Project
-          {...this.props}
-          ref={component => {
-            this.container = component.container;
-            this.carousel = component.carousel;
-          }}>
-          <div ref={overlay => (this.overlay = overlay)} className="overlay" />
-        </Project>
-      </div>
+      <Project
+        {...this.props}
+        ref={component => {
+          this.container = component.container;
+          this.carousel = component.carousel;
+        }}
+      />
     );
   };
 };

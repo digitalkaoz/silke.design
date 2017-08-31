@@ -41,14 +41,16 @@ export default Project => {
     }
 
     render = () => (
-      <Project
-        {...this.props}
-        ref={component => {
-          this.container = component.container;
-          this.carousel = component.carousel;
-        }}>
-        {this.props.children}
-      </Project>
+      <div className="project-wrapper" data-opacity="0">
+        <Project
+          {...this.props}
+          ref={component => {
+            this.container = component.container;
+            this.carousel = component.carousel;
+          }}>
+          {this.props.children}
+        </Project>
+      </div>
     );
   };
 };

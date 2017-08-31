@@ -1,17 +1,7 @@
 .project {
   @extend %row;
   padding: 5%;
-  .overlay {
-    background-color: #000;
-    display: none;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    z-index: 2;
-  }
+
   &.pinned {
     .overlay {
       display: block;
@@ -187,6 +177,8 @@
 }
 
 .project-wrapper {
+  background-color: #000;
+
   &:last-child {
     .project {
       position: relative !important;
