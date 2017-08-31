@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
-
 import Scrollmap from 'scrollmap/src/scrollmap';
 
-//TODO refactor jquery away!
-const $ = (window.jQuery = require('jquery'));
-
-window.Vel = require('materialize-css/js/velocity.min');
-require('materialize-css/js/global');
-require('materialize-css/js/pushpin');
+import pushpin from '../client/Pushpin';
 
 export default Project => {
   return class PushpinProject extends Component {
@@ -21,7 +15,7 @@ export default Project => {
       const top = rect.top + document.documentElement.scrollTop;
       const bottom = top + this.container.offsetHeight;
 
-      $(this.container).pushpin({
+      pushpin(this.container, {
         top: top,
         bottom: bottom
       });

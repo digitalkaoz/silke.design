@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Siema from 'siema';
 import Scrollmap from 'scrollmap';
 
-import { passiveListeners } from '../client/utils';
+import { passive } from '../client/utils';
 
 export default Project => {
   return class CarouselProject extends Component {
@@ -46,7 +46,7 @@ export default Project => {
         window.addEventListener(
           'scroll',
           this.automateCarousel.bind(this),
-          passiveListeners()
+          passive
         );
       }
     };

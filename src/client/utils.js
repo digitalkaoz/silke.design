@@ -1,7 +1,7 @@
 /**
  * check for passive event listener caps
  */
-export const passiveListeners = () => {
+const passiveListeners = () => {
   let supportsPassive = false;
   try {
     var opts = Object.defineProperty({}, 'passive', {
@@ -14,6 +14,8 @@ export const passiveListeners = () => {
 
   return supportsPassive ? { passive: true } : false;
 };
+
+export const passive = passiveListeners();
 
 /**
  * check if an element is completely in viewport
@@ -76,4 +78,10 @@ export const getParameterByName = (name, url) => {
   if (!results) return null;
   if (!results[2]) return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
+};
+
+export const scrollTop = () => {
+  return document.documentElement.clientHeight
+    ? document.documentElement.scrollTop
+    : document.body.scrollTop;
 };

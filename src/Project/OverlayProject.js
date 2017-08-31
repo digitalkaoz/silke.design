@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 
-import { passiveListeners } from '../client/utils';
+import { passive } from '../client/utils';
 
 export default Project => {
   return class OverlayProject extends Component {
     process() {
       if (!this.container.classList.contains('pinned')) {
+        this.container.parentNode.style.filter = undefined;
         return false;
       }
 
@@ -44,11 +45,7 @@ export default Project => {
     }
 
     componentDidMount() {
-      window.addEventListener(
-        'scroll',
-        this.process.bind(this),
-        passiveListeners()
-      );
+      window.addEventListener('scroll', this.process.bind(this), passive);
     }
 
     render = () => (
