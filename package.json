@@ -7,7 +7,7 @@
     "materialize-css": "git://github.com/digitalkaoz/materialize.git#patch-1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "scrollmap": "^1.7.1",
+    "scrollmap": "git://github.com/digitalkaoz/scrollmap.git#master",
     "siema": "^1.4.6",
     "vanilla-lazyload": "^8.1.0"
   },

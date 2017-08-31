@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Scrollmap from 'scrollmap';
+import Scrollmap from 'scrollmap/src/scrollmap';
 
 //TODO refactor jquery away!
 const $ = (window.jQuery = require('jquery'));
@@ -18,7 +18,6 @@ export default Project => {
       );
 
       const rect = this.container.parentNode.getBoundingClientRect();
-
       const top = rect.top + document.documentElement.scrollTop;
       const bottom = top + this.container.offsetHeight;
 
@@ -32,7 +31,8 @@ export default Project => {
       Scrollmap.trigger(
         {
           target: this.container,
-          surfaceVisible: 0
+          surfaceVisible: 0,
+          treshold: 100
           //runOnScroll: true,
           //alwaysRunOnTrigger: true
         },
