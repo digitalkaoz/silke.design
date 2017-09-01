@@ -6,12 +6,7 @@ import pushpin from '../client/Pushpin';
 export default Project => {
   return class PushpinProject extends Component {
     addPushpin() {
-      this.container.parentNode.setAttribute(
-        'style',
-        `height: ${this.container.offsetHeight}px`
-      );
-
-      const rect = this.container.parentNode.getBoundingClientRect();
+      const rect = this.container.getBoundingClientRect();
       const top = rect.top + document.documentElement.scrollTop;
       const bottom = top + this.container.offsetHeight;
 
@@ -25,8 +20,8 @@ export default Project => {
       Scrollmap.trigger(
         {
           target: this.container,
-          surfaceVisible: 0
-          //treshold: 100
+          surfaceVisible: 0,
+          treshold: 100
           //runOnScroll: true,
           //alwaysRunOnTrigger: true
         },
@@ -35,16 +30,14 @@ export default Project => {
     }
 
     render = () => (
-      <div className="project-wrapper">
-        <Project
-          {...this.props}
-          ref={component => {
-            this.container = component.container;
-            this.carousel = component.carousel;
-          }}>
-          {this.props.children}
-        </Project>
-      </div>
+      <Project
+        {...this.props}
+        ref={component => {
+          this.container = component.container;
+          this.carousel = component.carousel;
+        }}>
+        {this.props.children}
+      </Project>
     );
   };
 };

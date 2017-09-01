@@ -52,9 +52,9 @@ export default Project => {
     };
 
     componentDidMount() {
-      if (this.props.images.length > 1) {
-        this.initializeCarousel();
-      }
+      //if (this.props.images.length > 1) {
+      this.initializeCarousel();
+      //}
     }
 
     render = () => (

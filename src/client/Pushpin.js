@@ -12,10 +12,7 @@ export default (element, options) => {
     ...options
   };
 
-  const originalOffset =
-    element.parentNode.getBoundingClientRect().top + scrollTop();
-  element.parentNode.style.height = `${element.getBoundingClientRect()
-    .height}px`;
+  const originalOffset = element.getBoundingClientRect().top + scrollTop();
   const listener = _ => updateElement(scrollTop() + options.offset);
 
   const removePinClasses = () => {
@@ -24,23 +21,40 @@ export default (element, options) => {
     element.classList.remove('pin-bottom');
   };
 
-  const updateElement = scrolled => {
-    //resize the parent in case the content changed
-    /*if (
-            element.getBoundingClientRect().height !==
-            element.parentNode.getBoundingClientRect().height
-        ) {
-            element.parentNode.style.height = `${element.getBoundingClientRect()
-        .height}px`;
-            options.top = element.getBoundingClientRect().top + scrollTop();
-        }*/
+  const wrap = () => {
+    // Convert `elms` to an array, if necessary.
 
-    console.log(
+    // Loops backwards to prevent having to clone the wrapper on the
+    // first element (see `child` below).
+    var child = document.createElement('div');
+    child.classList.add('project-wrapper');
+    child.style.height = element.getBoundingClientRect().height + 'px';
+
+    // Cache the current parent and sibling.
+    var parent = element.parentNode;
+    var sibling = element.nextSibling;
+
+    // Wrap the element (is automatically removed from its current
+    // parent).
+    child.appendChild(element);
+
+    // If the element had a sibling, insert the wrapper before
+    // the sibling to maintain the HTML structure; otherwise, just
+    // append it to the parent.
+    if (sibling) {
+      parent.insertBefore(child, sibling);
+    } else {
+      parent.appendChild(child);
+    }
+  };
+
+  const updateElement = scrolled => {
+    /*console.log(
       element.getAttribute('id'),
       options,
       scrolled,
       element.classList
-    );
+    );*/
 
     // Add position fixed (because its between top and bottom)
     if (
@@ -49,6 +63,9 @@ export default (element, options) => {
       !element.classList.contains('pinned')
     ) {
       window.requestAnimationFrame(_ => {
+        if (!element.parentNode.classList.contains('project-wrapper')) {
+          wrap();
+        }
         removePinClasses();
         element.classList.add('pinned');
         element.style.top = options.offset;
