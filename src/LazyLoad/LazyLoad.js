@@ -1,12 +1,27 @@
 import React, { Component } from 'react';
-import LazyLoad from 'vanilla-lazyload';
+
+import Scrollmap from 'scrollmap';
 
 export default WrappedComponent => {
   return class LazyLoadComponent extends Component {
     componentDidMount() {
-      new LazyLoad({
-        container: this.container
-      });
+      Scrollmap.trigger(
+        {
+          target: this.container,
+          surfaceVisible: 0,
+          treshold: -300
+          //runOnScroll: true,
+          //alwaysRunOnTrigger: true
+        },
+        element => {
+          [].forEach.call(
+            this.container.querySelectorAll('[data-original]'),
+            ll => {
+              ll.src = ll.getAttribute('data-original');
+            }
+          );
+        }
+      );
     }
 
     render = () => (

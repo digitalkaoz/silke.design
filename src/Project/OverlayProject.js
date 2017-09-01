@@ -39,7 +39,7 @@ export default Project => {
     setOpacity(opacity) {
       requestAnimationFrame(
         () =>
-          (this.container.parentNode.style.filter = `blur(${opacity}px) brightness(${1 -
+          (this.container.parentNode.style.filter = `brightness(${1 -
             opacity})`)
       );
     }

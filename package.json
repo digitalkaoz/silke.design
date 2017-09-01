@@ -8,8 +8,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "scrollmap": "git://github.com/digitalkaoz/scrollmap.git#master",
-    "siema": "^1.4.6",
-    "vanilla-lazyload": "^8.1.0"
+    "siema": "^1.4.6"
   },
   "devDependencies": {
     "critical": "^0.9.0",

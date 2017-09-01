@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 import Flower from '../Flower/Flower';
 import Icon from '../Icon/Icon';
-import CarouselProject from './CarouselProject';
 import OverlayProject from './OverlayProject';
 import LazyLoad from '../LazyLoad/LazyLoad';
 import PushpinProject from './PushpinProject';
+import Carousel from '../Carousel/Carousel';
 
 class Project extends Component {
   renderDescription = dir => (
@@ -24,19 +24,15 @@ class Project extends Component {
     </div>
   );
 
+  getContainer = _ => this.container;
+
   renderVisual = dir => (
     <div className={dir}>
-      <div className="carousel" ref={carousel => (this.carousel = carousel)}>
-        {window.matchMedia &&
-        window.matchMedia('(max-width: 600px)').matches ? (
-          <div className="carousel-item">{this.props.text}</div>
-        ) : null}
-        {this.props.images.map(img => (
-          <div key={img} className="carousel-item" href="#one!">
-            <img data-original={img} alt={this.props.name} />
-          </div>
-        ))}
-      </div>
+      <Carousel
+        text={this.props.text}
+        images={this.props.images}
+        container={this.getContainer.bind(this)}
+      />
     </div>
   );
 
@@ -45,7 +41,9 @@ class Project extends Component {
 
     return (
       <div
-        className={'project project--' + this.props.direction + ' ' + id}
+        className={
+          'project pin-top project--' + this.props.direction + ' ' + id
+        }
         id={id}
         ref={container => (this.container = container)}>
         {this.props.children}
@@ -58,6 +56,4 @@ class Project extends Component {
   }
 }
 
-export default OverlayProject(
-  PushpinProject(CarouselProject(LazyLoad(Project)))
-);
+export default OverlayProject(PushpinProject(LazyLoad(Project)));

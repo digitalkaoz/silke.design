@@ -44,11 +44,10 @@
   .description {
     @extend %col;
     @extend %s10;
+
     padding-top: 10%;
-    @media #{$small-and-down} {
-      padding-top: 20%;
-    }
     color: #fff;
+
     @media #{$small-and-down} {
       width: 100%;
       text-align: center;
@@ -90,34 +89,7 @@
       }
     }
   }
-  .carousel {
-    @media #{$small-and-down} {
-      margin-top: 10%;
-    }
-    .indicators {
-      bottom: -5%;
-    }
-    &-item {
-      @extend .center;
-      display: flex;
-      align-items: center;
-      min-height: 0 !important;
-      font-size: 6vw;
-      color: #fff;
-      img {
-        max-height: 90%;
-        max-width: 100%;
-        width: auto;
-        margin: 0 auto;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-      }
-    }
-    &::after {
-      content: '';
-      display: block;
-      padding-bottom: 100%;
-    }
-  }
+
   &--bornholdt_lee_gmbh {
     background-color: #0d345f;
     .flower .drop {

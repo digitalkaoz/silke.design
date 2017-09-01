@@ -1,4 +1,7 @@
-import { passive, scrollTop } from './utils';
+import {
+  //passive,
+  scrollTop
+} from './utils';
 
 export default (element, options) => {
   const defaults = {
@@ -22,25 +25,14 @@ export default (element, options) => {
   };
 
   const wrap = () => {
-    // Convert `elms` to an array, if necessary.
+    const parent = element.parentNode;
+    const sibling = element.nextSibling;
+    let child = document.createElement('div');
 
-    // Loops backwards to prevent having to clone the wrapper on the
-    // first element (see `child` below).
-    var child = document.createElement('div');
     child.classList.add('project-wrapper');
     child.style.height = element.getBoundingClientRect().height + 'px';
-
-    // Cache the current parent and sibling.
-    var parent = element.parentNode;
-    var sibling = element.nextSibling;
-
-    // Wrap the element (is automatically removed from its current
-    // parent).
     child.appendChild(element);
 
-    // If the element had a sibling, insert the wrapper before
-    // the sibling to maintain the HTML structure; otherwise, just
-    // append it to the parent.
     if (sibling) {
       parent.insertBefore(child, sibling);
     } else {
@@ -56,42 +48,38 @@ export default (element, options) => {
       element.classList
     );*/
 
-    // Add position fixed (because its between top and bottom)
-    if (
-      options.top <= scrolled &&
-      options.bottom >= scrolled &&
-      !element.classList.contains('pinned')
-    ) {
-      window.requestAnimationFrame(_ => {
+    window.requestAnimationFrame(_ => {
+      // Add position fixed (because its between top and bottom)
+      if (
+        options.top <= scrolled &&
+        options.bottom >= scrolled &&
+        !element.classList.contains('pinned')
+      ) {
         if (!element.parentNode.classList.contains('project-wrapper')) {
           wrap();
         }
         removePinClasses();
         element.classList.add('pinned');
         element.style.top = options.offset;
-      });
-    }
+      }
 
-    // Add pin-top (when scrolled position is above top)
-    if (scrolled < options.top && !element.classList.contains('pin-top')) {
-      window.requestAnimationFrame(_ => {
+      // Add pin-top (when scrolled position is above top)
+      if (scrolled < options.top && !element.classList.contains('pin-top')) {
         removePinClasses();
         element.classList.add('pin-top');
         element.style.top = 0;
-      });
-    }
+      }
 
-    // Add pin-bottom (when scrolled position is below bottom)
-    if (
-      scrolled > options.bottom &&
-      !element.classList.contains('pin-bottom')
-    ) {
-      window.requestAnimationFrame(_ => {
+      // Add pin-bottom (when scrolled position is below bottom)
+      if (
+        scrolled > options.bottom &&
+        !element.classList.contains('pin-bottom')
+      ) {
         removePinClasses();
         element.classList.add('pin-bottom');
         element.style.top = options.bottom - originalOffset;
-      });
-    }
+      }
+    });
   };
 
   // Remove pushpin event and classes
@@ -104,5 +92,5 @@ export default (element, options) => {
 
   updateElement(scrollTop());
 
-  window.addEventListener('scroll', listener, passive);
+  window.addEventListener('scroll', listener);
 };
