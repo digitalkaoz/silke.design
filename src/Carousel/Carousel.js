@@ -58,7 +58,8 @@ class Carousel extends Component {
       ) : null}
       {this.props.images.map(img => (
         <div key={img} className="carousel-item" href="#one!">
-          <Icon src={img} alt={this.props.name} />
+          <img data-original={img} alt={this.props.name} />
+          {/*<Icon src={img} alt={this.props.name} />*/}
         </div>
       ))}
     </div>

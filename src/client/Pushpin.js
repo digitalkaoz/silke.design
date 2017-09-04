@@ -40,6 +40,12 @@ export default (element, options) => {
     }
   };
 
+  const unwrap = () => {
+    const wrapper = element.parentElement;
+    while (wrapper.firstChild) wrapper.before(wrapper.firstChild);
+    wrapper.remove();
+  };
+
   const updateElement = scrolled => {
     /*console.log(
       element.getAttribute('id'),
@@ -65,6 +71,11 @@ export default (element, options) => {
 
       // Add pin-top (when scrolled position is above top)
       if (scrolled < options.top && !element.classList.contains('pin-top')) {
+        if (element.parentNode.classList.contains('project-wrapper')) {
+          console.log(element.parentNode);
+          unwrap();
+        }
+
         removePinClasses();
         element.classList.add('pin-top');
         element.style.top = 0;
@@ -75,6 +86,9 @@ export default (element, options) => {
         scrolled > options.bottom &&
         !element.classList.contains('pin-bottom')
       ) {
+        if (element.parentNode.classList.contains('project-wrapper')) {
+          unwrap();
+        }
         removePinClasses();
         element.classList.add('pin-bottom');
         element.style.top = options.bottom - originalOffset;

@@ -16,7 +16,7 @@ export default WrappedComponent => {
             [].forEach.call(
               this.container.querySelectorAll('[data-original]'),
               ll => {
-                if ('SOURCE' == ll.nodeName) {
+                if ('SOURCE' === ll.nodeName) {
                   ll.srcset = ll.getAttribute('data-original');
                 } else {
                   ll.src = ll.getAttribute('data-original');

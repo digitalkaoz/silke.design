@@ -10,6 +10,7 @@ footer {
 
   @media #{$small-and-down} {
     padding: 5%;
+    padding-bottom: 10%;
   }
 
   .copyright {
@@ -40,14 +41,14 @@ footer {
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
 
-    transform: scale(.6);
+    transform: scale(0.6);
 
     @media #{$large-and-up} {
-      transform: scale(.5);
+      transform: scale(0.5);
     }
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       padding-bottom: 100%;
     }
@@ -57,7 +58,7 @@ footer {
     img {
       margin: 0 auto;
       @media #{$small-and-down} {
-        transform: scale(.6);
+        transform: scale(0.6);
       }
       @media #{$large-and-up} {
         transform: scale(1.4);
