@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Icon = props =>
-  <a href={props.target || '#'} target="_blank" rel="noopener" className="icon">
-    <img data-original={props.src} alt={props.name} />
-  </a>;
+class Icon extends Component {
+  renderLink = () => (
+    <a
+      href={this.props.target}
+      name={this.props.name}
+      target="_blank"
+      rel="noopener"
+      className="icon">
+      <img data-original={this.props.src} alt={this.props.name} />
+    </a>
+  );
+
+  renderImage = () => (
+    <img
+      data-original={this.props.src}
+      alt={this.props.name}
+      className="icon"
+    />
+  );
+
+  render = () => (this.props.target ? this.renderLink() : this.renderImage());
+}
 
 export default Icon;

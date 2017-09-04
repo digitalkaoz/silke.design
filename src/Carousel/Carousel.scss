@@ -22,6 +22,12 @@
     color: #fff;
     position: absolute;
     left: 0;
+
+    &--text {
+      @media #{$small-and-down} {
+        text-align: center;
+      }
+    }
     img {
       max-height: 100%;
       max-width: 100%;

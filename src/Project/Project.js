@@ -15,7 +15,7 @@ class Project extends Component {
         src={
           this.props.type === 'mobile' ? '/img/phone.svg' : '/img/desktop.svg'
         }
-        name={this.props.type}
+        name={`${this.id}_${this.props.type}_type`}
       />
       <div className="description">
         <h2>{this.props.name}</h2>
@@ -36,15 +36,17 @@ class Project extends Component {
     </div>
   );
 
-  render() {
-    const id = 'project--' + this.props.name.replace(/ /g, '_').toLowerCase();
+  get id() {
+    return 'project--' + this.props.name.replace(/ /g, '_').toLowerCase();
+  }
 
+  render() {
     return (
       <div
         className={
-          'project pin-top project--' + this.props.direction + ' ' + id
+          'project pin-top project--' + this.props.direction + ' ' + this.id
         }
-        id={id}
+        id={this.id}
         ref={container => (this.container = container)}>
         {this.props.children}
         {this.renderDescription(

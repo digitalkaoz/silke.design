@@ -72,7 +72,6 @@ export default (element, options) => {
       // Add pin-top (when scrolled position is above top)
       if (scrolled < options.top && !element.classList.contains('pin-top')) {
         if (element.parentNode.classList.contains('project-wrapper')) {
-          console.log(element.parentNode);
           unwrap();
         }
 

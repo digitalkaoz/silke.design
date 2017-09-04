@@ -2,17 +2,18 @@ import React, { Component } from 'react';
 import Scrollmap from 'scrollmap';
 
 import pushpin from '../client/Pushpin';
+import { scrollTop } from '../client/utils';
 
 export default Project => {
   return class PushpinProject extends Component {
     addPushpin() {
-      const rect = this.container.getBoundingClientRect();
-      const top = rect.top + document.documentElement.scrollTop;
-      const bottom = top + this.container.offsetHeight;
+      let rect = this.container.getBoundingClientRect();
+      let topOffset = rect.top + scrollTop();
+      let bottomOffset = topOffset + this.container.offsetHeight;
 
       pushpin(this.container, {
-        top: top,
-        bottom: bottom
+        top: topOffset,
+        bottom: bottomOffset
       });
     }
 

@@ -50,7 +50,8 @@ export const getParameterByName = (name, url) => {
 };
 
 export const scrollTop = () => {
-  return document.documentElement.clientHeight
+  return document.documentElement.clientHeight &&
+  document.documentElement.scrollTop > 0
     ? document.documentElement.scrollTop
     : document.body.scrollTop;
 };

@@ -11,17 +11,17 @@ class Footer extends Component {
         <p>Hamburg</p>
       </div>
       <Icon
-        name="xing"
+        name="Xing Profile"
         target="https://www.xing.com/profile/Silke_Schoenthal"
         src="/img/xing.svg"
       />
       <Icon
-        name="linkedin"
+        name="Linkedin Profile"
         target="https://www.linkedin.com/in/silke-sch%C3%B6nthal-878412140"
         src="/img/linkedin.svg"
       />
       <Icon
-        name="twitter"
+        name="Twitter Profile"
         target="https://twitter.com/sboe1979"
         src="/img/twitter.svg"
       />

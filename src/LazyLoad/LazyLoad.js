@@ -9,7 +9,7 @@ export default WrappedComponent => {
         {
           target: this.container,
           surfaceVisible: 0,
-          treshold: -300
+          treshold: -100
         },
         element => {
           window.requestAnimationFrame(_ => {

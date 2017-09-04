@@ -13,7 +13,7 @@ class Carousel extends Component {
     Scrollmap.trigger(
       {
         target: this.carousel,
-        surfaceVisible: 1
+        surfaceVisible: 0.5
         //runOnScroll: true,
         //alwaysRunOnTrigger: true
       },
@@ -54,12 +54,14 @@ class Carousel extends Component {
   render = () => (
     <div className="carousel" ref={carousel => (this.carousel = carousel)}>
       {window.matchMedia && window.matchMedia('(max-width: 600px)').matches ? (
-        <div className="carousel-item">{this.props.text}</div>
+        <div className="carousel-item carousel-item--text">
+          {this.props.text}
+        </div>
       ) : null}
       {this.props.images.map(img => (
         <div key={img} className="carousel-item" href="#one!">
-          <img data-original={img} alt={this.props.name} />
-          {/*<Icon src={img} alt={this.props.name} />*/}
+          <img data-original={img} alt={this.props.text} />
+          {/*<Icon src={img} alt={this.props.text} />*/}
         </div>
       ))}
     </div>
