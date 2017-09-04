@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Scrollmap from 'scrollmap/src/scrollmap';
+import Scrollmap from 'scrollmap';
 
 import pushpin from '../client/Pushpin';
 

@@ -10,16 +10,20 @@ export default WrappedComponent => {
           target: this.container,
           surfaceVisible: 0,
           treshold: -300
-          //runOnScroll: true,
-          //alwaysRunOnTrigger: true
         },
         element => {
-          [].forEach.call(
-            this.container.querySelectorAll('[data-original]'),
-            ll => {
-              ll.src = ll.getAttribute('data-original');
-            }
-          );
+          window.requestAnimationFrame(_ => {
+            [].forEach.call(
+              this.container.querySelectorAll('[data-original]'),
+              ll => {
+                if ('SOURCE' == ll.nodeName) {
+                  ll.srcset = ll.getAttribute('data-original');
+                } else {
+                  ll.src = ll.getAttribute('data-original');
+                }
+              }
+            );
+          });
         }
       );
     }

@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Siema from 'siema';
 import Scrollmap from 'scrollmap';
 
-import { passive } from '../client/utils';
+import Icon from '../Icon/Icon';
+import { passive, debounce } from '../client/utils';
 
 class Carousel extends Component {
   automateCarousel = () => {
@@ -41,7 +42,7 @@ class Carousel extends Component {
 
     window.addEventListener(
       'scroll',
-      this.automateCarousel.bind(this),
+      debounce(this.automateCarousel.bind(this), 50),
       passive
     );
   };
@@ -57,7 +58,7 @@ class Carousel extends Component {
       ) : null}
       {this.props.images.map(img => (
         <div key={img} className="carousel-item" href="#one!">
-          <img data-original={img} alt={this.props.name} />
+          <Icon src={img} alt={this.props.name} />
         </div>
       ))}
     </div>
