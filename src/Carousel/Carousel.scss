@@ -24,8 +24,11 @@
     left: 0;
 
     &--text {
+      li {
+        @extend .flow-text;
+      }
       @media #{$small-and-down} {
-        text-align: center;
+        text-align: left;
       }
     }
     img {

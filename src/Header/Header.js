@@ -2,15 +2,16 @@ import React from 'react';
 
 import Flower from '../Flower/Flower';
 
-const Header = () =>
+const Header = () => (
   <header>
     <img src="/img/logo.svg" alt="silke.design" />
 
     <div className="headline">
       <h1>Silke Schönthal - Portfolio</h1>
       <p>
-        Ich bin seit 2009 in Hamburg im Online-Bereich tätig. Meine Arbeit ist
-        ein Mix aus Frontend, Konzeption und Design.
+        Seit über 10 Jahren bin ich im Online-Bereich tätig. <br />Meine Arbeit
+        deckt die Bereiche User Experience, User Interface und Frontend
+        Development ab.<br />Eine Auswahl meiner Projekte stelle ich hier vor.
       </p>
     </div>
 
@@ -20,6 +21,7 @@ const Header = () =>
       bl={{ name: 'FE' }}
       br={true}
     />
-  </header>;
+  </header>
+);
 
 export default Header;

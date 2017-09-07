@@ -19,7 +19,7 @@ class Carousel extends Component {
       },
       element => {
         if (!this.timer) {
-          this.timer = setInterval(this.slider.next.bind(this.slider), 5000);
+          this.timer = setInterval(this.slider.next.bind(this.slider), 4000);
         }
       }
     ).out(element => {
@@ -55,7 +55,7 @@ class Carousel extends Component {
     <div className="carousel" ref={carousel => (this.carousel = carousel)}>
       {window.matchMedia && window.matchMedia('(max-width: 600px)').matches ? (
         <div className="carousel-item carousel-item--text">
-          {this.props.text}
+          <ul>{this.props.text.map((text, i) => <li key={i}>{text}</li>)}</ul>
         </div>
       ) : null}
       {this.props.images.map(img => (

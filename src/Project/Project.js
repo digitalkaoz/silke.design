@@ -12,14 +12,14 @@ class Project extends Component {
     <div className={dir}>
       <Flower {...this.props.skills} />
       <Icon
-        src={
-          this.props.type === 'mobile' ? '/img/phone.svg' : '/img/desktop.svg'
-        }
+        src={`/img/${this.props.type}.svg`}
         name={`${this.id}_${this.props.type}_type`}
       />
       <div className="description">
         <h2>{this.props.name}</h2>
-        <p className="hide-on-small-only">{this.props.text}</p>
+        <ul className="hide-on-small-only">
+          {this.props.text.map((text, i) => <li key={i}>{text}</li>)}
+        </ul>
       </div>
     </div>
   );

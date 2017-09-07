@@ -29,7 +29,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "cs": "lint-staged",
-    "image-optim": "jpegoptim -m 90 --all-progressive --strip-all build/img/references/**/*",
+    "image-optim": "jpegoptim -m 80 --all-progressive --strip-all build/img/references/**/*",
     "critical": "cat ./build/index.html | critical --base=./build --folder=./build --inline --minify > ./build/index_critical.html && mv ./build/index_critical.html ./build/index.html",
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/index.scss -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/index.scss -o src/ --watch --recursive",

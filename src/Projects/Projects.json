@@ -7,7 +7,13 @@
       "/img/references/blg-relaunch/3.jpg",
       "/img/references/blg-relaunch/4.jpg"
     ],
-    "text": "Die Website der Bornholdt Lee GmbH bekommt in diesem Jahr ein Redesign und dadurch einen aktuelleren Look. Das Konzept und die Wireframes habe ich mit Axure erstellt, den Prototypen in HTML/CSS mithilfe des Frameworks von Materialize umgesetzt. Geplant ist, Ende 2017 online zu gehen.",
+    "text": [
+      "Die Unternehmens-Website der Bornhold-Lee GmbH soll einen frischen Look erhalten. Der Launch steht noch aus.",
+      "Projekt der Bornhold-Lee GmbH",
+      "Konzept & Wireframes mit Axure",
+      "Design in Photoshop",
+      "HTML/CSS-Prototyp mit Materialize Framework"
+    ],
     "direction": "ltr",
     "beta": true,
     "type": "desktop",
@@ -15,7 +21,7 @@
       "bl": { "name": "FE" },
       "tl": { "name": "UX" },
       "tr": { "name": "UI" },
-      "br": { "name": 2012 }
+      "br": { "name": 2017 }
     }
   },
   {
@@ -24,7 +30,12 @@
       "/img/references/duchenne/1.jpg",
       "/img/references/duchenne/2.jpg"
     ],
-    "text": "Dieses Projekt ist für einen Kunden der Bornholdtlee GmbH. Es ist eine Informationsseite zu der Krankheit Muskeldystrophie Duchenne. ToDo's: Wireframes in Axure, Design in Photoshop. Bisher ist die Seite noch nicht online.",
+    "text": [
+      "Eine Informationsseite zur Krankheit \"Muskeldystrophie Duchenne\". Der Launch steht noch aus.",
+      "Projekt der Bornhold-Lee GmbH",
+      "Konzept & Wireframes mit Axure",
+      "Design in Photoshop"
+    ],
     "direction": "rtl",
     "beta": true,
     "type": "desktop",
@@ -43,9 +54,13 @@
       "/img/references/ichallenge/4.jpg",
       "/img/references/ichallenge/5.jpg"
     ],
-    "text": "Die iChallenge der ING DiBa ist ein Projekt der Bornholdt Lee GmbH, der Kunde ist GEOBOUND. Im Look der CI der ING DiBa sollte das Location Based Game auf dem iPad angepasst werden. ToDo's: Designanpassung im Look der ING DiBa, Cutups",
+    "text": [
+      "Die iChallenge im Corporate-Design der ING DiBa.",
+      "Projekt der Bornhold-Lee GmbH",
+      "Design in Photoshop"
+    ],
     "direction": "ltr",
-    "type": "mobile",
+    "type": "tablet",
     "skills": {
       "tr": { "name": "UI" },
       "br": { "name": 2017 }
@@ -57,13 +72,37 @@
       "/img/references/pulvermuehle/1.jpg",
       "/img/references/pulvermuehle/2.jpg"
     ],
-    "text": "Die Pulvermühle ist ein Projekt der Bornholdt Lee GmbH, der Kunde ist die DEKOM. Für das Restaurant wurde eine App erstellt, mit der man bestellen und bezahlen kann. ToDo's: Konzeption in Axure im Team, Mitgestaltung des Designs der App",
+    "text": [
+      "Für das Restaurant wurde eine App erstellt, mit der Bestell- und Bezahlvorgänge abgewickelt werden können.",
+      "Projekt der Bornhold-Lee GmbH",
+      "Konzept & Click-Dummy mit Axure",
+      "Design in Photoshop"
+    ],
     "direction": "rtl",
-    "type": "mobile",
+    "type": "phone",
     "skills": {
       "tr": { "name": "UI" },
       "tl": { "name": "UX" },
       "br": { "name": 2017 }
+    }
+  },
+  {
+    "name": "Accenture",
+    "images": [
+      "/img/references/accenture/1.jpg",
+      "/img/references/accenture/2.jpg",
+      "/img/references/accenture/3.jpg"
+    ],
+    "text": [
+      "Spiel für die Accenture Gruppe",
+      "Projekt der Sepus Ltd. & Co KG",
+      "Design in Photoshop"
+    ],
+    "direction": "ltr",
+    "type": "tablet",
+    "skills": {
+      "tr": { "name": "UI" },
+      "br": { "name": 2013 }
     }
   },
   {
@@ -75,9 +114,14 @@
       "/img/references/freixenet/4.jpg",
       "/img/references/freixenet/5.jpg"
     ],
-    "text": "Freixenet ist ein Projekt der Bornholdt Lee GmbH. Es wurde eine App gebaut mit Infos rund um das Unternehmen. ToDo's: konzeptionelle Mitarbeit, Appdesign und Cutupserstellung",
-    "direction": "ltr",
-    "type": "mobile",
+    "text": [
+      "Eine Informations-App zum Unternehmen Freixenet.",
+      "Projekt der Bornhold-Lee GmbH",
+      "Wireframes mit WireframeSketcher",
+      "Design in Photoshop"
+    ],
+    "direction": "rtl",
+    "type": "phone",
     "skills": {
       "tr": { "name": "UI" },
       "tl": { "name": "UX" },
@@ -87,8 +131,14 @@
   {
     "name": "Bornholdt Lee GmbH",
     "images": ["/img/references/blg/1.jpg"],
-    "text": "Die alte Bornholdt Lee GbmH Website bekam 2016 ein neues Gesicht. ToDo's: Konzeption, Design, Frondend-Umsetzung in Symfony2 ",
-    "direction": "rtl",
+    "text": [
+      "Die Unternehmens-Website der Bornhold-Lee GmbH",
+      "Projekt der Bornhold-Lee GmbH",
+      "Wireframes mit WireframeSketcher",
+      "Design in Photoshop",
+      "HTML/CSS Prototyp in Symfony"
+    ],
+    "direction": "ltr",
     "type": "desktop",
     "skills": {
       "bl": { "name": "FE" },
@@ -100,20 +150,27 @@
   {
     "name": "O2",
     "images": ["/img/references/o2/1.jpg"],
-    "text": "Alice (o2) ist ein Kunde der spot-Media AG gewesen. Alice wurde 2016 zu o2 und im Zuge dessen ist das Alice-Portal im o2-Look geändert worden. Beim Kunden vor Ort (Überseering) habe ich im Frondent-Team daran mitgearbeitet. ToDo's: Frontend in CoreMedia",
-    "direction": "ltr",
+    "text": [
+      "Aus Alice wird O2",
+      "Projekt der Spot-Media GmbH",
+      "HTML/CSS in CoreMedia"
+    ],
+    "direction": "rtl",
     "type": "desktop",
-    "year": 2016,
     "skills": {
       "bl": { "name": "FE" },
-      "br": { "name": 2010 }
+      "br": { "name": 2011 }
     }
   },
   {
     "name": "Tchibo",
     "images": ["/img/references/tchibo/1.jpg"],
-    "text": "Tchibo ist ein Kunde der spot-Media AG gewesen. Für Tchibo haben wir u.a. auch den Newsletter gemacht.",
-    "direction": "rtl",
+    "text": [
+      "Wöchentlicher Tchibo-Produkt-Newsletter.",
+      "Projekt der Spot-Media GmbH",
+      "Newsletter-Templates mit HTML/CSS"
+    ],
+    "direction": "ltr",
     "type": "desktop",
     "skills": {
       "bl": { "name": "FE" },

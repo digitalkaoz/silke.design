@@ -1,7 +1,8 @@
 [
   {
     "name": "User Experience",
-    "description": "Dizzle shiz dolizzle sit amizzle, own yo' adipiscing break it down. Nullizzle shut the shizzle up velizzle, mammasay mammasa mamma oo sa volutpizzle, pimpin' quis, gravida vel, my shizz. Pellentesque fo shizzle mah nizzle fo rizzle, mah home g-dizzle tortor.",
+    "description":
+      "Am Anfang eines jeden Projektes gilt es die Personas zu identifizieren. Dabei steht konsequent das Nutzererlebnis des Users bei der Interaktion mit dem Produkt im Fokus.",
     "icons": [
       {
         "name": "balsamiq",
@@ -22,7 +23,8 @@
   },
   {
     "name": "User Interface",
-    "description": "Dizzle shiz dolizzle sit amizzle, own yo' adipiscing break it down. Nullizzle shut the shizzle up velizzle, mammasay mammasa mamma oo sa volutpizzle, pimpin' quis, gravida vel, my shizz. Pellentesque fo shizzle mah nizzle fo rizzle, mah home g-dizzle tortor.",
+    "description":
+      "Dizzle shiz dolizzle sit amizzle, own yo' adipiscing break it down. Nullizzle shut the shizzle up velizzle, mammasay mammasa mamma oo sa volutpizzle, pimpin' quis, gravida vel, my shizz. Pellentesque fo shizzle mah nizzle fo rizzle, mah home g-dizzle tortor.",
     "icons": [
       {
         "name": "sketch",
@@ -48,7 +50,8 @@
   },
   {
     "name": "Frontend Development",
-    "description": "Dizzle shiz dolizzle sit amizzle, own yo' adipiscing break it down. Nullizzle shut the shizzle up velizzle, mammasay mammasa mamma oo sa volutpizzle, pimpin' quis, gravida vel, my shizz. Pellentesque fo shizzle mah nizzle fo rizzle, mah home g-dizzle tortor.",
+    "description":
+      "Dizzle shiz dolizzle sit amizzle, own yo' adipiscing break it down. Nullizzle shut the shizzle up velizzle, mammasay mammasa mamma oo sa volutpizzle, pimpin' quis, gravida vel, my shizz. Pellentesque fo shizzle mah nizzle fo rizzle, mah home g-dizzle tortor.",
     "icons": [
       {
         "name": "webstorm",
