@@ -24,9 +24,19 @@
     left: 0;
 
     &--text {
+      @extend .browser-default;
+      padding: 0;
+      list-style-type: circle;
+
       li {
         @extend .flow-text;
+
+        &:first-child {
+          list-style-type: none !important;
+        }
+        list-style-position: inside !important;
       }
+
       @media #{$small-and-down} {
         text-align: left;
       }

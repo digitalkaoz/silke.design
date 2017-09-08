@@ -55,7 +55,11 @@ class Carousel extends Component {
     <div className="carousel" ref={carousel => (this.carousel = carousel)}>
       {window.matchMedia && window.matchMedia('(max-width: 600px)').matches ? (
         <div className="carousel-item carousel-item--text">
-          <ul>{this.props.text.map((text, i) => <li key={i}>{text}</li>)}</ul>
+          <ul>
+            {this.props.text.map((text, i) => (
+              <li key={i} dangerouslySetInnerHTML={{ __html: text }} />
+            ))}
+          </ul>
         </div>
       ) : null}
       {this.props.images.map(img => (

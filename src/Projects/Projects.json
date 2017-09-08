@@ -148,10 +148,10 @@
     }
   },
   {
-    "name": "O2",
+    "name": "O<sub>2</sub>",
     "images": ["/img/references/o2/1.jpg"],
     "text": [
-      "Aus Alice wird O2",
+      "Aus Alice wird O<sub>2</sub>",
       "Projekt der Spot-Media GmbH",
       "HTML/CSS in CoreMedia"
     ],

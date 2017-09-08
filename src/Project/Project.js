@@ -6,6 +6,7 @@ import OverlayProject from './OverlayProject';
 import LazyLoad from '../LazyLoad/LazyLoad';
 import PushpinProject from './PushpinProject';
 import Carousel from '../Carousel/Carousel';
+import { stripTags } from '../client/utils';
 
 class Project extends Component {
   renderDescription = dir => (
@@ -16,9 +17,11 @@ class Project extends Component {
         name={`${this.id}_${this.props.type}_type`}
       />
       <div className="description">
-        <h2>{this.props.name}</h2>
+        <h2 dangerouslySetInnerHTML={{ __html: this.props.name }} />
         <ul className="hide-on-small-only">
-          {this.props.text.map((text, i) => <li key={i}>{text}</li>)}
+          {this.props.text.map((text, i) => (
+            <li key={i} dangerouslySetInnerHTML={{ __html: text }} />
+          ))}
         </ul>
       </div>
     </div>
@@ -37,22 +40,29 @@ class Project extends Component {
   );
 
   get id() {
-    return 'project--' + this.props.name.replace(/ /g, '_').toLowerCase();
+    return (
+      'project--' +
+      stripTags(this.props.name)
+        .replace(/ /g, '_')
+        .toLowerCase()
+    );
   }
 
   render() {
     return (
-      <div
-        className={
-          'project pin-top project--' + this.props.direction + ' ' + this.id
-        }
-        id={this.id}
-        ref={container => (this.container = container)}>
-        {this.props.children}
-        {this.renderDescription(
-          this.props.direction === 'ltr' ? 'left' : 'right'
-        )}
-        {this.renderVisual(this.props.direction === 'ltr' ? 'right' : 'left')}
+      <div className="project-wrapper">
+        <div
+          className={
+            'project pin-top project--' + this.props.direction + ' ' + this.id
+          }
+          id={this.id}
+          ref={container => (this.container = container)}>
+          {this.props.children}
+          {this.renderDescription(
+            this.props.direction === 'ltr' ? 'left' : 'right'
+          )}
+          {this.renderVisual(this.props.direction === 'ltr' ? 'right' : 'left')}
+        </div>
       </div>
     );
   }
