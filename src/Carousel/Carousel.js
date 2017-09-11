@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Siema from 'siema';
 import Scrollmap from 'scrollmap';
 
-import Icon from '../Icon/Icon';
+//import Icon from '../Icon/Icon';
 import { passive, debounce } from '../client/utils';
 
 class Carousel extends Component {
@@ -13,16 +13,17 @@ class Carousel extends Component {
     Scrollmap.trigger(
       {
         target: this.carousel,
-        surfaceVisible: 0.5
+        surfaceVisible: 0.8,
         //runOnScroll: true,
-        //alwaysRunOnTrigger: true
+        alwaysRunOnTrigger: true
       },
       element => {
         if (!this.timer) {
-          this.timer = setInterval(this.slider.next.bind(this.slider), 4000);
+          this.timer = setInterval(this.slider.next.bind(this.slider), 6000);
         }
       }
     ).out(element => {
+      this.slider.goTo(0);
       clearInterval(this.timer);
     });
   };
@@ -55,7 +56,7 @@ class Carousel extends Component {
     <div className="carousel" ref={carousel => (this.carousel = carousel)}>
       {window.matchMedia && window.matchMedia('(max-width: 600px)').matches ? (
         <div className="carousel-item carousel-item--text">
-          <ul>
+          <ul className="browser-default">
             {this.props.text.map((text, i) => (
               <li key={i} dangerouslySetInnerHTML={{ __html: text }} />
             ))}

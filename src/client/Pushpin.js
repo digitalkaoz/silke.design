@@ -1,4 +1,4 @@
-import { passive, scrollTop } from './utils';
+import { scrollTop } from './utils';
 
 export class Pushpin {
   defaults = {

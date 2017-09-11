@@ -24,26 +24,27 @@
     left: 0;
 
     &--text {
-      @extend .browser-default;
-      padding: 0;
-      list-style-type: circle;
-
-      li {
-        @extend .flow-text;
-
-        &:first-child {
-          list-style-type: none !important;
-        }
-        list-style-position: inside !important;
-      }
-
-      @media #{$small-and-down} {
+      font-size: 5.5vw;
+      ul {
+        margin: 0;
+        padding-left: 22px;
+        width: 100%;
         text-align: left;
+        li {
+          list-style-type: circle;
+          list-style-position: outside;
+          &:first-child {
+            list-style-type: none !important;
+            list-style-position: inside !important;
+            margin-left: -20px;
+            padding-bottom: 20px;
+          }
+        }
       }
     }
     img {
       max-height: 100%;
-      max-width: 100%;
+      max-width: 99%;
       width: auto;
       margin: 0 auto;
       border: 1px solid rgba(255, 255, 255, 0.3);
