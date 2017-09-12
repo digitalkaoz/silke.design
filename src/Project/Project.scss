@@ -5,6 +5,11 @@
   width: 100% !important;
   overflow: hidden;
 
+  .left,
+  .right {
+    position: relative;
+  }
+
   &--rtl.project {
     .description,
     .flower {
@@ -38,6 +43,13 @@
 
     padding-top: 10%;
     color: #fff;
+
+    @media #{$medium-and-down} {
+      font-size: 3vw;
+    }
+    @media #{$small-and-down} {
+      font-size: 5.5vw;
+    }
 
     ul {
       @extend .browser-default;

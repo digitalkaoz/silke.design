@@ -49,9 +49,11 @@
     p {
       @media #{$medium-and-down} {
         font-size: 3vw;
+        min-height: 110vw;
       }
       @media #{$small-and-down} {
         font-size: 5.5vw;
+        min-height: 0;
       }
     }
 
