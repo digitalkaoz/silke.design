@@ -3,27 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "jpegoptim-bin": "^3.0.0",
-    "jquery": "^3.2.1",
     "materialize-css": "github:digitalkaoz/materialize#patch-1",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
     "scrollmap": "github:digitalkaoz/scrollmap",
     "siema": "github:digitalkaoz/siema"
   },
   "devDependencies": {
-    "critical": "^0.9.1",
+    "critical": "^1.0.0",
     "husky": "^0.14.3",
     "imagemin": "^5.3.1",
     "imagemin-webp": "^4.0.0",
     "inline-critical": "^2.4.2",
-    "lint-staged": "^4.1.0",
+    "jpegoptim-bin": "^3.0.0",
+    "lint-staged": "^5.0.0",
     "node-sass-chokidar": "0.0.3",
-    "npm-run-all": "^4.1.1",
-    "prettier": "^1.6.1",
-    "react-scripts": "1.0.10",
-    "react-snapshot": "^2.0.0-1",
-    "sass-lint": "^1.11.1",
+    "npm-run-all": "^4.1.2",
+    "prettier": "^1.8.2",
+    "react-scripts": "^1.0.17",
+    "react-snapshot": "^1.3.0",
+    "sass-lint": "^1.12.1",
     "webp-converter-cli": "0.0.5"
   },
   "scripts": {
@@ -37,8 +36,7 @@
     "eject": "react-scripts eject",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
-    "build": "NODE_ENV=production npm run build-css && react-scripts build && npm run image-optim && react-snapshot && npm run critical",
-    "deploy": "docker build -t \"silke.design\" . -f docker/Dockerfile && docker tag \"silke.design\" digitalkaoz/silke.design:$(git rev-parse --verify HEAD) && docker tag \"silke.design\" digitalkaoz/silke.design:latest && docker push digitalkaoz/silke.design:$(git rev-parse --verify HEAD) && docker push digitalkaoz/silke.design:latest"
+    "build": "NODE_ENV=production npm run build-css && react-scripts build && npm run image-optim && react-snapshot && npm run critical"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,scss}": [
