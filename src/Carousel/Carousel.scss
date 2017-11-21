@@ -24,17 +24,19 @@
         font-size: 3vw;
       }
       @media #{$small-and-down} {
-        font-size: 5.5vw;
+        font-size: 4.5vw;
       }
 
       &:after {
         color: #fff;
         content: '\25CB';
+        opacity: 0.5;
       }
 
       &.active:after {
         color: #fff;
         content: '\25CF';
+        opacity: 0.5;
       }
     }
   }

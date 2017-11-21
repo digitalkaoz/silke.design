@@ -1,0 +1,32 @@
+language: node_js
+
+sudo: false
+
+cache: yarn
+
+node_js:
+  - '9'
+
+script: yarn build
+
+before_deploy:
+  - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
+
+deploy:
+  provider: s3
+  access_key_id: AKIAIS5KE76AV4QS36OA
+  skip_cleanup: true
+  secret_access_key:
+    secure: TtZ14LVfOqLIgKp2bpy74SR92ieC89lrvse1D5HReIWmeIUI9AivHK9sQn3pc9NECfVQgD6lfGFlxVTBunCqHJEs8om2J+nVgV37Vgi+5cxzDVALw/f2p/me1VTCSdIMcGvgzzg36aDAZjzAkBckxf86bK6MYBPI1UhMAtJMnW8=
+  bucket: silke.design
+  local-dir: build
+  acl: bucket_owner_full_control
+  cache_control: "max-age=21600"
+  on:
+    repo: digitalkaoz/silke.design
+    branch: master
+
+after_deploy:
+  - aws configure set preview.cloudfront true
+  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
