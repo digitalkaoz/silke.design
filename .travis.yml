@@ -13,9 +13,8 @@ before_deploy:
 
 deploy:
   provider: s3
-  access_key_id: AKIAIS5KE76AV4QS36OA
-  secret_access_key:
-    secure: VWvnNkUyXl1DF8Agmd1r8nGe3IoV21s6ZK4EFFKkCqlUJCzm4s3YRmBYjK24HL4mB+MsRou1HuqP/jsgnmlVbHupu+oe/Nhl78fd6/kkh6ShYMRr1kOckcHkeGsxLCcBAPKKRj5OpgTcKeAMlm74xLXT8//9ZNU+2SwZh1S29aSODcveQGHty7ZsM96IlPXHMHhn6jYoY8Xtqb/PMrmH1ijceY32+Zj6qhFYgvjK4GXN7iokVc3Rbj4WmLBm09zSHqMZ+tWNCtNLmEFiDJWktBZIsuatL1P79+Pk+I4x0d3kzu4N8fj0Zox/B5B6fQnROvprXDLiJTNQ6DV4mwe5lGfZ/gR+u4tveJQ+0RzIfzi9dOhbbc7KDjrVHyV6eF8LsoyKGsdYvN41199YxPU7GUQWvgbBiMKCE6j0KsZwJQRwmh8nT1+XGXLdh06e8pjamUH+Kac1GuoS5MhavNgXrHXj5ktKnCnXGeye/RyfjA+Shqj5ajEQGQsXfZt1JLlzL6IQFQytaDkAqnJqEtVmtkwUeAdVr3A16TQm30TjctCFWoQnbDiePpJN364RboAV0Raiuc8IHQMO3M1s/70ce3+EVkKvpTDfKV141/wNlYGZw8a/5d4H7ChxhK8Nzy3LpkbBjF6RF8eLhxRQRu3KKyFoj4zAqmbS6hO89upmUbs=
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: silke.design
   local-dir: build
   acl: bucket_owner_full_control
