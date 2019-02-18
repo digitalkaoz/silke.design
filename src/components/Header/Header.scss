@@ -1,0 +1,76 @@
+@import "../../index";
+
+header {
+  @extend .row;
+  padding: 5%;
+  margin-bottom: 0;
+
+  background-image: linear-gradient(134deg, #6cc2e1 0%, #327892 100%);
+
+  @media #{$small-and-down} {
+    display: flex;
+    flex-direction: column;
+  }
+
+  img {
+    width: 15%;
+    position: absolute;
+    top: 20px;
+    @media #{$small-and-down} {
+      width: 45%;
+    }
+  }
+
+  .headline {
+    @extend .col;
+    @extend .s12;
+    @extend .m8;
+
+    @media #{$small-and-down} {
+      order: 2;
+    }
+
+    color: $headline-color;
+    padding: 0;
+
+    h1 {
+      color: #1e1b1e;
+      margin-top: 10%;
+    }
+
+    p {
+      color: #000;
+
+      @media #{$medium-and-down} {
+        font-size: 3vw;
+      }
+      @media #{$small-and-down} {
+        font-size: 5.5vw;
+      }
+    }
+  }
+
+  .flower {
+    @extend .m3;
+    @extend .s12;
+
+    @media #{$small-and-down} {
+      order: 1;
+    }
+
+    margin: -2% 0 0 7%;
+
+    @media #{$small-and-down} {
+      margin: 20% 0 0 0%;
+    }
+
+    .drop {
+      span {
+        font-size: 4vw;
+        @media #{$small-and-down} {
+          font-size: 14vw;
+        }
+      }
+    }
+  }
+}

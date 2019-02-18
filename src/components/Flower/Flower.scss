@@ -1,0 +1,77 @@
+@import "../../index";
+
+.drop {
+  //@extend .valign-wrapper;
+
+  color: $drop-color;
+  transform: scale(0.8);
+  background-color: #fff;
+
+  &--tr {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 0;
+  }
+  &--br {
+    border-top-left-radius: 0;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+  &--tl {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 50%;
+  }
+  &--bl {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+
+  &--profile {
+    background-image: url(/img/profile.jpg);
+    background-size: cover;
+    background-color: transparent;
+  }
+
+  &--none {
+    background: transparent;
+    box-shadow: none;
+    border: 2px solid white !important;
+  }
+
+  &--year {
+    background: transparent !important;
+    color: #fff !important;
+    border: 2px solid white !important;
+  }
+
+  span {
+    position: absolute;
+    padding-top: 25%;
+    width: 100%;
+    text-align: center;
+    font-family: "Fjalla One", sans-serif;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+
+.flower {
+  @extend .col;
+  padding: 0 0 0 0 !important;
+
+  .drop {
+    @extend .col;
+    @extend .s6;
+    display: block;
+  }
+}

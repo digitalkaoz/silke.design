@@ -1,11 +1,34 @@
-import React from 'react';
-import { render } from 'react-snapshot';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import './client';
+// Your top level component
+import App from "./components/App";
 
-import registerServiceWorker from './registerServiceWorker';
+if (process.env.NODE_ENV !== "production") {
+  const { whyDidYouUpdate } = require("why-did-you-update");
+  whyDidYouUpdate(React);
+}
 
-render(<App />, document.getElementById('root'));
-registerServiceWorker();
+// Export your top level component as JSX (for static rendering)
+export default App;
+
+// Render your app
+if (typeof document !== "undefined") {
+  const renderMethod = module.hot
+    ? ReactDOM.render
+    : ReactDOM.hydrate || ReactDOM.render;
+
+  const render = Comp => {
+    renderMethod(<Comp />, document.getElementById("root"));
+  };
+
+  // Render!
+  render(App);
+
+  // Hot Module Replacement
+  if (module.hot) {
+    module.hot.accept("./components/App", () =>
+      render(require("./components/App").default)
+    );
+  }
+}

@@ -1,0 +1,14 @@
+@import "../../index";
+
+#projects {
+  margin-bottom: 0;
+
+  .left,
+  .right {
+    @extend .col;
+    @extend .s12;
+    @extend .m6;
+
+    height: auto;
+  }
+}

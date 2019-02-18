@@ -1,0 +1,86 @@
+.carousel {
+  @media #{$small-and-down} {
+    margin-top: 10%;
+  }
+
+  position: relative;
+
+  &[data-carousel-loaded="true"] {
+    .carousel-item {
+      position: initial;
+      left: auto;
+    }
+  }
+
+  &-indicator {
+    text-align: center;
+    a {
+      display: inline-block;
+      padding: 5px;
+      cursor: pointer;
+      color: transparent;
+
+      @media #{$medium-and-down} {
+        font-size: 3vw;
+      }
+      @media #{$small-and-down} {
+        font-size: 4.5vw;
+      }
+
+      &:after {
+        color: #fff;
+        content: "\25CB";
+        opacity: 0.5;
+      }
+
+      &.active:after {
+        color: #fff;
+        content: "\25CF";
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &-item {
+    @extend .center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 0 !important;
+    font-size: 6vw;
+    color: #fff;
+    position: absolute;
+    left: 0;
+
+    &--text {
+      font-size: 5.5vw;
+      ul {
+        margin: 0;
+        padding-left: 22px;
+        width: 100%;
+        text-align: left;
+        li {
+          list-style-type: circle;
+          list-style-position: outside;
+          &:first-child {
+            list-style-type: none !important;
+            list-style-position: inside !important;
+            margin-left: -20px;
+            padding-bottom: 20px;
+          }
+        }
+      }
+    }
+    img {
+      max-height: 80vh;
+      max-width: 80%;
+      width: auto;
+      margin: 0 auto;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+
+      @media #{$small-and-down} {
+        max-height: 60vh;
+      }
+    }
+  }
+}

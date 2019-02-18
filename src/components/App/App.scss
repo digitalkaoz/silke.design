@@ -1,0 +1,50 @@
+@import "../../index";
+
+html,
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.8vw;
+
+  main,
+  footer {
+    font-weight: 100;
+  }
+
+  header p {
+    font-weight: 400;
+  }
+}
+
+h1,
+h2 {
+  clear: both;
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 100;
+
+  color: #fff;
+  font-size: 2.4vw;
+  margin: 0;
+
+  @media #{$small-and-down} {
+    font-size: 8vw;
+  }
+}
+
+%row {
+  @extend %row;
+  margin-bottom: 0;
+  padding: 5%;
+}
+
+%col {
+  @extend %col;
+  padding: 0;
+}
+
+img:not([src]) {
+  visibility: hidden;
+}
