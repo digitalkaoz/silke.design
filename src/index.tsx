@@ -4,10 +4,10 @@ import ReactDOM from "react-dom";
 // Your top level component
 import App from "./components/App";
 
-if (process.env.NODE_ENV !== "production") {
+/*if (process.env.NODE_ENV !== "production") {
   const { whyDidYouUpdate } = require("why-did-you-update");
   whyDidYouUpdate(React);
-}
+}*/
 
 // Export your top level component as JSX (for static rendering)
 export default App;
@@ -18,7 +18,7 @@ if (typeof document !== "undefined") {
     ? ReactDOM.render
     : ReactDOM.hydrate || ReactDOM.render;
 
-  const render = Comp => {
+  const render = (Comp: React.ReactType) => {
     renderMethod(<Comp />, document.getElementById("root"));
   };
 
@@ -31,4 +31,12 @@ if (typeof document !== "undefined") {
       render(require("./components/App").default)
     );
   }
+}
+
+export function isMobile(): boolean {
+  return (
+    typeof window !== "undefined" &&
+    window.matchMedia &&
+    window.matchMedia("(max-width: 600px)").matches
+  );
 }

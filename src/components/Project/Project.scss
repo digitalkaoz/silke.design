@@ -1,50 +1,140 @@
-@import "../../index";
+@import "../../mixins";
 
 .project {
-  @extend .row;
+  @extend %row;
   padding: 5%;
+  display: flex;
+  height: 100vh;
 
-  width: 100% !important;
-  overflow: hidden;
-  margin-bottom: 0;
+  &--left,
+  &--right {
+    @extend %col;
+    @extend %s12;
+    @extend %m6;
 
-  .left,
-  .right {
-    position: relative;
+    height: auto;
+
+    > div {
+      width: 100%;
+    }
   }
 
-  &--rtl.project {
+    .description {
+      width: 100%;
+      @media #{$small-and-down} {
+      }
+    }
+
+  @media #{$small-and-down} {
+    display:block!important;
+    padding-bottom: 10%;       
+    &--left,
+    &--right {
+      display:block!important; 
+      padding:0!important;       
+    }
+    }
+
+  .icon {
+    overflow: initial!important;
+    height:auto!important;
+    img {
+      position: absolute;
+      top:0;  
+    }
+  }
+
+  &--rtl {
+    .project--left {
+      display: flex;
+      order:1;
+      @media #{$medium-and-up} {
+        .carousel {
+          padding-right: 10%;
+        }
+      }          
+    }
+
+    .project--right {
+      display: flex;
+      order:2;
+
+      .flower {
+        float:right;
+      }
+      .icon {
+        float:left;
+      }
+    }
+  }
+
+  &--ltr {
+    .project--left {
+      display: flex;
+      order:1;
+    }
+    .project--right {
+      display: flex;
+      order:2;
+
+      @media #{$medium-and-up} {
+        .carousel {
+          padding-left: 10%;
+        }
+      }
+    }
+  }
+
+  // width: 100% !important;
+  // overflow: hidden;
+  margin-bottom: 0;
+
+
+/* all old below */
+
+
+  &--rtl {
+
+  .project {
     .description,
     .flower {
-      @extend .offset-s2;
+      @extend %offset-s2;
     }
     .icon {
       margin-left: 10%;
+      display: block !important;
+      overflow: initial !important;
       @media #{$small-and-down} {
         margin-right: 0%;
       }
     }
   }
-  &--ltr.project {
+  }
+
+  &--ltr {
+  .project {
     .icon {
       margin-right: 10%;
+      display: block !important;
+      overflow: initial !important;
       @media #{$small-and-down} {
         margin-right: 0%;
       }
     }
   }
+}
+
   @media #{$small-and-down} {
-    padding-bottom: 20%;
     .description,
     .flower {
       margin-left: 0 !important;
     }
   }
   .description {
-    @extend .col;
-    @extend .s10;
+    @extend %col;
+    @extend %s10;
 
-    padding-top: 10%;
+    padding: 0;
     color: #fff;
 
     @media #{$medium-and-down} {
@@ -55,7 +145,6 @@
     }
 
     ul {
-      @extend .browser-default;
       margin: 0;
       padding-left: 22px;
       margin-top: 20px;
@@ -64,12 +153,6 @@
       li {
         list-style-type: circle;
         list-style-position: outside;
-        &:first-child {
-          list-style-type: none !important;
-          list-style-position: inside !important;
-          margin-left: -20px;
-          padding-bottom: 20px;
-        }
       }
     }
 
@@ -81,6 +164,7 @@
       }
     }
   }
+
   .icon {
     float: right;
     width: 15%;
@@ -90,16 +174,16 @@
     }
   }
   .flower {
-    @extend .s3;
-    margin-left: -1%;
-    margin-top: -1%;
+    @extend %col;
+    @extend %s3;
+    padding: 0;
     .drop {
       background-color: white;
       span {
         color: inherit;
         font-size: 2vw;
         @media #{$small-and-down} {
-          font-size: 5vw;
+          font-size: 4vw;
         }
       }
       &--none {
@@ -207,10 +291,4 @@
 
 .project-wrapper {
   background-color: #000;
-
-  &:last-child {
-    .project {
-      position: relative !important;
-    }
-  }
 }

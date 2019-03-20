@@ -6,7 +6,7 @@ html,
   overflow-x: hidden;
 }
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Roboto', sans-serif;  
   font-size: 1.8vw;
 
   main,
@@ -22,26 +22,27 @@ body {
 h1,
 h2 {
   clear: both;
-  font-family: "Fjalla One", sans-serif;
   font-weight: 100;
 
   color: #fff;
-  font-size: 2.4vw;
+  font-size: 2.4vw !important;
   margin: 0;
 
+  font-family: 'Fjalla One', sans-serif;
+
   @media #{$small-and-down} {
-    font-size: 8vw;
+    font-size: 8vw !important;
   }
 }
 
-%row {
-  @extend %row;
+.row {
+  @extend .row;
   margin-bottom: 0;
   padding: 5%;
 }
 
-%col {
-  @extend %col;
+.col {
+  @extend .col;
   padding: 0;
 }
 

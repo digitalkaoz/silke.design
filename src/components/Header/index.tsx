@@ -2,6 +2,7 @@ import React from 'react';
 
 import Flower from '../Flower';
 import "./Header.scss";
+
 const Header = () => (
   <header>
     <img src="/img/logo.svg" alt="silke.design" />
@@ -19,7 +20,7 @@ const Header = () => (
       tl={{ name: 'UX' }}
       tr={{ name: 'UI' }}
       bl={{ name: 'FE' }}
-      br={true}
+      br={{}}
     />
   </header>
 );

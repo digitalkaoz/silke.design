@@ -1,12 +1,17 @@
 import ManifestPlugin from "webpack-manifest-plugin";
-import ServiceWorkerPlugin from "sw-precache-webpack-plugin";
+//import ServiceWorkerPlugin from "sw-precache-webpack-plugin";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
+const {InjectManifest} = require('workbox-webpack-plugin');
 
 export default () => ({
-  webpack: (config, { stage }) => {
+  webpack: (config /*: any*/, { stage } /* : any*/) => {
     if (stage === "dev") {
       config.plugins = [...config.plugins, new BundleAnalyzerPlugin()];
 
+      return config;
+    }
+
+    if (stage !== "prod") {
       return config;
     }
 
@@ -39,14 +44,24 @@ export default () => ({
           ]
         }
       }),
-      new ServiceWorkerPlugin({
-        cacheId: "silke-design",
-        handleFetch: process.env.NODE_ENV === "production",
-        minify: true,
-        navigateFallback: `/index.html`,
-        staticFileGlobs: ["/index.html"],
-        staticFileGlobsIgnorePatterns: [/\.map$/]
+      new InjectManifest({
+        importWorkboxFrom: "local",
+        swSrc: './public/sw.js',
+        globPatterns: ['dist/**/*.{js,png,svg,jpg,json,html,css}'],
+        modifyURLPrefix: {
+          // Remove a '/dist' prefix from the URLs:
+          '/dist': ''
+        }
       })
+
+      // new ServiceWorkerPlugin({
+      //   cacheId: "silke-design",
+      //   handleFetch: process.env.NODE_ENV === "production",
+      //   minify: true,
+      //   navigateFallback: `/index.html`,
+      //   staticFileGlobs: ["/index.html", /\.js$/, /\.css$/],
+      //   staticFileGlobsIgnorePatterns: [/\.map$/]
+      // })
     ];
 
     return config;

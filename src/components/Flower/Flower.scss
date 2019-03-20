@@ -1,11 +1,12 @@
-@import "../../index";
+@import "../../mixins";
 
 .drop {
   //@extend .valign-wrapper;
 
   color: $drop-color;
-  transform: scale(0.8);
+  transform: scale(0.9);
   background-color: #fff;
+  font-family: 'Fjalla One', sans-serif;
 
   &--tr {
     border-top-left-radius: 50%;
@@ -55,7 +56,6 @@
     padding-top: 25%;
     width: 100%;
     text-align: center;
-    font-family: "Fjalla One", sans-serif;
   }
 
   &::after {
@@ -66,12 +66,13 @@
 }
 
 .flower {
-  @extend .col;
-  padding: 0 0 0 0 !important;
+  @extend %row;
+  padding: 0 0 0 0;
 
   .drop {
-    @extend .col;
-    @extend .s6;
+    @extend %col;
+    @extend %s6;
     display: block;
+    padding: 0;
   }
 }

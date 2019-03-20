@@ -1,14 +1,11 @@
-$roboto-font-path: "materialize-css/dist/fonts/roboto/";
-
-//@import 'materialize-css/sass/materialize.scss';
-@import "materialize-css/sass/components/_color-variables.scss";
-@import "materialize-css/sass/components/_variables.scss";
-@import "materialize-css/sass/components/_normalize.scss";
-@import "materialize-css/sass/components/_typography.scss";
-@import "materialize-css/sass/components/_transitions.scss";
-@import "materialize-css/sass/components/_global.scss";
-@import "materialize-css/sass/components/_grid.scss";
-
 $headline-color: #bbb;
 $drop-color: #57809a;
-$roboto-font-path: "../node_modules/materialize-css/dist/fonts/roboto/";
+
+//@import 'materialize-css/sass/materialize.scss';
+@import "materialize-css/sass/components/color-variables";
+@import "materialize-css/sass/components/variables";
+@import "materialize-css/sass/components/normalize";
+@import "materialize-css/sass/components/typography";
+@import "materialize-css/sass/components/transitions";
+@import "materialize-css/sass/components/global";
+@import "materialize-css/sass/components/grid";

@@ -1,7 +1,7 @@
-@import "../../index";
+@import "../../mixins";
 
 #skills {
-  @extend .row;
+  @extend %row;
 
   background: linear-gradient(
     to right,
@@ -13,9 +13,9 @@
   padding: 5%;
 
   .skill {
-    @extend .col;
-    @extend .s12;
-    @extend .m4;
+    @extend %col;
+    @extend %s12;
+    @extend %m4;
 
     padding: 0 0 0 0;
 
@@ -24,7 +24,7 @@
     }
 
     hr {
-      @extend .hide-on-small-only;
+      @extend %hide-on-small-only;
       background-color: rgba(112, 109, 109, 1);
       height: 1px;
       border-width: 0;
@@ -65,15 +65,20 @@
     }
 
     .icons {
-      @extend .row;
+      @extend %row;
       text-align: center;
       padding: 0;
 
+      @media #{$small-and-down} {
+        margin-top:20px;
+      }
+  
+
       .icon {
-        @extend .col;
-        @extend .s3;
-        @extend .m6;
-        @extend .l3;
+        @extend %col;
+        @extend %s3;
+        @extend %m6;
+        @extend %l3;
         padding: 3%;
 
         > div {

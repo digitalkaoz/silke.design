@@ -1,4 +1,9 @@
 import { readFileSync } from "fs";
+//import { SiteData, PageData } from "./src";
+//import { ReactStaticConfig, Route} from "react-static";
+
+// const getConfig = async (file:string): Promise<any> =>
+//   JSON.parse(readFileSync(`${__dirname}/config/${file}.json`).toString());
 
 const getConfig = async file =>
   JSON.parse(readFileSync(`${__dirname}/config/${file}.json`).toString());
@@ -9,7 +14,9 @@ export default {
 
   // siteRoot: `https://${config.website}`,
 
-  getSiteData: async () => ({
+  extensions: [".tsx", ".ts", ".jsx", ".js"],
+
+  getSiteData: async () /*: Promise<SiteData>*/ => ({
     siteTitle: "Portfolio | Silke Schönthal",
     author: "Silke Schönthal",
     description: "Portfolio | Silke Schönthal",
@@ -17,16 +24,17 @@ export default {
     footerLinks: await getConfig("footer")
   }),
 
-  getRoutes: async () => [
+  getRoutes: () /*: Route[]*/ => [
     {
       path: "/",
-      getData: async () => ({
+      getData: async () /*: Promise<PageData> */ => ({
         skills: await getConfig("skills"),
         projects: await getConfig("projects")
       })
     }
   ],
   plugins: [
+    "react-static-plugin-typescript",
     [
       "react-static-plugin-sass",
       {
@@ -35,4 +43,4 @@ export default {
       }
     ]
   ]
-};
+} /* as ReactStaticConfig*/;
