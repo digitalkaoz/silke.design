@@ -14,18 +14,23 @@
     img {
       width: auto;
       max-width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.5);
       @media #{$medium-and-up} {
         max-height: 80vh;
       }
       @media #{$small-and-down} {
         max-height: 45vh;
-      }    
+      }
     }
 
-    
     .image-gallery-image__text {
       ul {
         vertical-align: middle;
+        font-size: 2.2em;
+        @media #{$small-and-down} {
+          font-size: 5.5em;
+        }
+  
       }
     }
 
@@ -44,7 +49,6 @@
         list-style-position: outside;
         line-height: 6vw;
         color: white;
-        font-size: 4.5vw;
       }
     }
   }

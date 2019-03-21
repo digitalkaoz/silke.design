@@ -2,6 +2,7 @@ import React from "react";
 import { Root, Routes, withSiteData } from "react-static";
 import Helmet from "react-helmet";
 
+import "default-passive-events";
 import "./App.scss";
 
 type AppProps = {
@@ -12,7 +13,7 @@ type AppProps = {
 const App = ({ siteTitle, description }: AppProps) => (
   <Root>
     <Helmet>
-      <meta name="theme-color" content="#57809a" />
+      <meta name="theme-color" content="#6cc2e1" />
       <script
         defer
         src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"

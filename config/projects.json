@@ -14,7 +14,6 @@
       "Design in Photoshop",
       "HTML/CSS-Prototyp mit Materialize Framework"
     ],
-    "direction": "ltr",
     "beta": true,
     "type": "desktop",
     "skills": {
@@ -36,7 +35,6 @@
       "Konzept & Wireframes mit Axure",
       "Design in Photoshop"
     ],
-    "direction": "rtl",
     "beta": true,
     "type": "desktop",
     "skills": {
@@ -59,7 +57,6 @@
       "Projekt der Bornhold-Lee GmbH",
       "Design in Photoshop"
     ],
-    "direction": "ltr",
     "type": "tablet",
     "skills": {
       "tr": { "name": "UI" },
@@ -81,31 +78,11 @@
       "Konzept & Click-Dummy mit Axure",
       "Design in Photoshop"
     ],
-    "direction": "rtl",
     "type": "phone",
     "skills": {
       "tr": { "name": "UI" },
       "tl": { "name": "UX" },
       "br": { "name": 2017 }
-    }
-  },
-  {
-    "name": "Accenture",
-    "images": [
-      "/img/references/accenture/1.jpg",
-      "/img/references/accenture/2.jpg",
-      "/img/references/accenture/3.jpg"
-    ],
-    "text": [
-      "Spiel für die Accenture Gruppe",
-      "Projekt der Sepus Ltd. & Co KG",
-      "Design in Photoshop"
-    ],
-    "direction": "ltr",
-    "type": "tablet",
-    "skills": {
-      "tr": { "name": "UI" },
-      "br": { "name": 2013 }
     }
   },
   {
@@ -123,7 +100,6 @@
       "Wireframes mit WireframeSketcher",
       "Design in Photoshop"
     ],
-    "direction": "rtl",
     "type": "phone",
     "skills": {
       "tr": { "name": "UI" },
@@ -141,7 +117,6 @@
       "Design in Photoshop",
       "HTML/CSS Prototyp in Symfony"
     ],
-    "direction": "ltr",
     "type": "desktop",
     "skills": {
       "bl": { "name": "FE" },
@@ -158,7 +133,6 @@
       "Projekt der Spot-Media GmbH",
       "HTML/CSS in CoreMedia"
     ],
-    "direction": "rtl",
     "type": "desktop",
     "skills": {
       "bl": { "name": "FE" },
@@ -173,7 +147,6 @@
       "Projekt der Spot-Media GmbH",
       "Newsletter-Templates mit HTML/CSS"
     ],
-    "direction": "ltr",
     "type": "desktop",
     "skills": {
       "bl": { "name": "FE" },

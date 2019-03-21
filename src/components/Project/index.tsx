@@ -5,7 +5,6 @@ import Icon from "../Icon";
 import "./Project.scss";
 
 import universal from "react-universal-component";
-import { SSL_OP_NO_TICKET } from "constants";
 
 type UniversalContext = {
   error?: string;
@@ -43,11 +42,17 @@ export type ProjectProps = {
 };
 
 class Project extends PureComponent<ProjectProps, any> {
+
+  private container:React.RefObject<Sticky>;
+
   constructor(props:ProjectProps) {
     super(props);
 
     this.handleStickyChange = this.handleStickyChange.bind(this);
-    this.state = {sticky:false}
+    this.fadeSticky = this.fadeSticky.bind(this);
+
+    this.container = React.createRef();
+    this.state = {sticky:false, play: true}
   }
   
   renderDescription(dir: string) {
@@ -73,14 +78,50 @@ class Project extends PureComponent<ProjectProps, any> {
     );
   }
 
+  private getDistance() : number {
+    if (!this.container.current) {
+      return 100
+    }
+    const self:HTMLDivElement = (this.container.current as any).outerElement 
+
+    if (!self.nextSibling) {
+      return 100;
+    }
+
+    return (self.nextSibling as HTMLDivElement).getBoundingClientRect().top / window.innerHeight;
+  }
+
+  private fadeSticky() {
+    if (this.container.current && (this.container.current as any).outerElement ) {
+      const self:HTMLDivElement = (this.container.current as any).outerElement 
+      const distance = this.getDistance();
+      self.style.opacity = distance.toString();
+
+      if (distance <= 0.5 && this.state.play === true) {
+        this.setState({play: false});
+      }
+
+      if (distance >= 0.5 && this.state.play === false) {
+        this.setState({play: true});
+      }
+    }
+  }
+
   private handleStickyChange({status}:any) {
-    this.setState({sticky:status})
+    this.setState({sticky:status});
+
+    if (status === Sticky.STATUS_FIXED && typeof window !== "undefined") {
+      window.addEventListener('scroll', this.fadeSticky);
+    } else {
+      window.removeEventListener("scroll", this.fadeSticky);
+      this.setState({play: true});
+    }
   }
 
   private renderVisual(dir: string) {
     return (
       <div className={dir}>
-        <Carousel text={this.props.text} images={this.props.images} play={this.state.sticky === Sticky.STATUS_ORIGINAL || this.state.sticky === Sticky.STATUS_RELEASED} />
+        <Carousel text={this.props.text} images={this.props.images} play={this.state.play} />
       </div>
     );
   }
@@ -93,7 +134,7 @@ class Project extends PureComponent<ProjectProps, any> {
 
   render() {
     return (
-      <Sticky onStateChange={this.handleStickyChange}>
+      <Sticky onStateChange={this.handleStickyChange} ref={this.container}>
         <div className={`project project--${this.props.direction} ${this.getId()}`}>
           {this.renderDescription(
             this.props.direction === "ltr" ? "project--left" : "project--right"

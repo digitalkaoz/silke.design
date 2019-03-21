@@ -19,7 +19,7 @@ const Projects = ({projects}: ProjectsProps) => (
   <div id="projects">
     {projects
       .filter(project => !project.beta || getParameterByName('beta'))
-      .map(project => <Project key={project.name} {...project} />)}
+      .map((project, index) => <Project key={project.name} direction={index % 2 === 0 ? "ltr" : "rtl"} {...project} />)}
   </div>
 );
 

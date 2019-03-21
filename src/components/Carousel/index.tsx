@@ -105,7 +105,7 @@ class Carousel extends PureComponent<CarouselProps, any> {
           showNav={false}
           showPlayButton={false}
           useBrowserFullscreen={false}
-          slideInterval={6000}
+          slideInterval={5000}
           slideDuration={0}
           onSlide={this.init}
           autoPlay

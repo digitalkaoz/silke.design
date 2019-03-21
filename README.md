@@ -4,8 +4,7 @@ website of [silke.design](https://silke.design)
 
 # Whats inside
 
-* unejected `react-app`
-* service-worker
-* above-the-fold inlining
-* sass
-* image optimizers
+* React App using [react-static](https://react-static.js.org)
+* PWA features through [workbox](https://developers.google.com/web/tools/workbox/)
+* Sass
+* [Typescript](https://www.typescriptlang.org)

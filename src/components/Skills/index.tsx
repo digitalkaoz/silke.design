@@ -1,5 +1,8 @@
-import React, { memo } from "react";
+import React, {PureComponent, memo } from "react";
 import Icon, { IconProps } from "../Icon";
+import EllipsisText from "react-lines-ellipsis";
+
+import {isMobile} from "../..";
 
 import "./Skills.scss";
 
@@ -9,8 +12,26 @@ export type SkillProps = {
   icons: Array<IconProps>;
 };
 
-const Skill = ({ name, description, icons }: SkillProps) => (
-  <div className="skill">
+class Skill extends PureComponent<SkillProps, any> {
+  constructor(props:SkillProps) {
+    super(props);
+
+    this.state = {lines: isMobile() ? 5 : 100};
+    this.handleClick = this.handleClick.bind(this);
+  } 
+
+  handleClick() {
+    if (!isMobile()) {
+      return;
+    }
+    this.setState({lines: 100});
+  }
+
+  render() {
+    const { name, description, icons } = {...this.props};
+
+    return (
+    <div className="skill">
     <h2>{name}</h2>
     <hr />
     <div className="icons">
@@ -18,9 +39,11 @@ const Skill = ({ name, description, icons }: SkillProps) => (
         <Icon key={icon.src} {...icon} />
       ))}
     </div>
-    <p>{description}</p>
-  </div>
-);
+    <EllipsisText onClick={this.handleClick} basedOn="words" text={description} maxLine={this.state.lines} component="p"/>
+  </div>  
+    );
+  }
+}
 
 export type SkillsProps = {
   skills: Array<SkillProps>;

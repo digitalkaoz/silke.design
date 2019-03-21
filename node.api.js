@@ -1,6 +1,6 @@
 import ManifestPlugin from "webpack-manifest-plugin";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
-import {InjectManifest} from 'workbox-webpack-plugin';
+import { InjectManifest } from "workbox-webpack-plugin";
 
 export default () => ({
   webpack: (config /*: any*/, { stage } /* : any*/) => {
@@ -22,8 +22,8 @@ export default () => ({
           short_name: "silke.design",
           start_url: "/",
           display: "standalone",
-          theme_color: "#57809a",
-          background_color: "#0d0a0d",
+          theme_color: "#6cc2e1",
+          background_color: "#327892",
           icons: [
             {
               src: "favicon.png",
@@ -46,13 +46,13 @@ export default () => ({
 
       new InjectManifest({
         importWorkboxFrom: "local",
-        swSrc: './public/sw.js',
-        globPatterns: ['dist/**/*.{js,png,svg,jpg,json,html,css}'],
+        swSrc: "./public/sw.js",
+        globPatterns: ["dist/**/*.{js,png,svg,jpg,json,html,css}"],
         modifyURLPrefix: {
           // Remove a '/dist' prefix from the URLs:
-          '/dist': ''
+          "/dist": ""
         }
-      }),
+      })
     ];
 
     return config;
