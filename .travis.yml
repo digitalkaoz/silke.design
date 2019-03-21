@@ -1,15 +1,16 @@
 language: node_js
-dist: trusty
-addons:
-  chrome: stable
+sudo: false
+# dist: trusty
+# addons:
+#   chrome: stable
 cache: yarn
 
 node_js:
 - '10'
 
-before_install:
-  - # start your web application and listen on `localhost`
-  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+# before_install:
+#   - # start your web application and listen on `localhost`
+#   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 
 script: 
 - yarn build
@@ -24,7 +25,7 @@ deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY_ID
     secret_access_key: $AWS_SECRET_ACCESS_KEY
-    bucket: silke.design
+    bucket: web.silke.design
     region: $AWS_DEFAULT_REGION
     local-dir: dist_html
     skip_cleanup: true
@@ -38,7 +39,7 @@ deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY_ID
     secret_access_key: $AWS_SECRET_ACCESS_KEY
-    bucket: silke.design
+    bucket: web.silke.design
     region: $AWS_DEFAULT_REGION
     local-dir: dist
     skip_cleanup: true

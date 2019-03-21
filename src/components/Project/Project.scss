@@ -19,51 +19,54 @@
     }
   }
 
-    .description {
-      width: 100%;
-      @media #{$small-and-down} {
-      }
+  .description {
+    width: 100%;
+    font-size: 2.2vw;
+
+    h2 {
+      margin-top: 0;
     }
+  }
 
   @media #{$small-and-down} {
-    display:block!important;
-    padding-bottom: 10%;       
+    display: block !important;
+    padding-bottom: 10%;
     &--left,
     &--right {
-      display:block!important; 
-      padding:0!important;       
+      display: block !important;
+      padding: 0 !important;
     }
-    }
+  }
 
   .icon {
-    overflow: initial!important;
-    height:auto!important;
+    overflow: initial !important;
+    height: auto !important;
     img {
       position: absolute;
-      top:0;  
+      top: 0;
     }
   }
 
   &--rtl {
     .project--left {
       display: flex;
-      order:1;
+      order: 1;
       @media #{$medium-and-up} {
         .carousel {
           padding-right: 10%;
         }
-      }          
+      }
     }
 
     .project--right {
       display: flex;
-      order:2;
+      order: 2;
 
       .flower {
-        float:right;
+        float: right;
       }
       .icon {
-        float:left;
+        float: left;
       }
     }
   }
@@ -71,11 +74,11 @@
   &--ltr {
     .project--left {
       display: flex;
-      order:1;
+      order: 1;
     }
     .project--right {
       display: flex;
-      order:2;
+      order: 2;
 
       @media #{$medium-and-up} {
         .carousel {
@@ -89,40 +92,38 @@
   // overflow: hidden;
   margin-bottom: 0;
 
-
-/* all old below */
-
+  /* all old below */
 
   &--rtl {
-
-  .project {
-    .description,
-    .flower {
-      @extend %offset-s2;
-    }
-    .icon {
-      margin-left: 10%;
-      display: block !important;
-      overflow: initial !important;
-      @media #{$small-and-down} {
-        margin-right: 0%;
+    .project {
+      .description,
+      .flower {
+        @extend %offset-s2;
+        font-weight: lighter;
+      }
+      .icon {
+        margin-left: 10%;
+        display: block !important;
+        overflow: initial !important;
+        @media #{$small-and-down} {
+          margin-right: 0%;
+        }
       }
     }
-  }
   }
 
   &--ltr {
-  .project {
-    .icon {
-      margin-right: 10%;
-      display: block !important;
-      overflow: initial !important;
-      @media #{$small-and-down} {
-        margin-right: 0%;
+    .project {
+      .icon {
+        margin-right: 10%;
+        display: block !important;
+        overflow: initial !important;
+        @media #{$small-and-down} {
+          margin-right: 0%;
+        }
       }
     }
   }
-}
 
   @media #{$small-and-down} {
     .description,
@@ -137,8 +138,8 @@
     padding: 0;
     color: #fff;
 
-    @media #{$medium-and-down} {
-      font-size: 3vw;
+    @media #{$medium-and-up} {
+      font-size: 2.2vw;
     }
     @media #{$small-and-down} {
       font-size: 5.5vw;

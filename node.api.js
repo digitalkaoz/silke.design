@@ -1,6 +1,6 @@
 import ManifestPlugin from "webpack-manifest-plugin";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
-import {InjectManifest} from 'workbox-webpack-plugin';
+import { InjectManifest } from "workbox-webpack-plugin";
 
 export default () => ({
   webpack: (config /*: any*/, { stage } /* : any*/) => {
@@ -46,13 +46,13 @@ export default () => ({
 
       new InjectManifest({
         importWorkboxFrom: "local",
-        swSrc: './public/sw.js',
-        globPatterns: ['dist/**/*.{js,png,svg,jpg,json,html,css}'],
+        swSrc: "./public/sw.js",
+        globPatterns: ["dist/**/*.{js,png,svg,jpg,json,html,css}"],
         modifyURLPrefix: {
           // Remove a '/dist' prefix from the URLs:
-          '/dist': ''
+          "/dist": ""
         }
-      }),
+      })
     ];
 
     return config;

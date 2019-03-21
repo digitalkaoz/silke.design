@@ -22,6 +22,11 @@ footer {
 
     margin-left: 0;
     line-height: 1;
+    padding-top: 25px;
+
+    @media #{$medium-and-down} {
+      padding-top: 10px;
+    }
 
     p {
       @media #{$small-and-down} {
@@ -52,7 +57,7 @@ footer {
     transform: scale(0.6);
 
     @media #{$large-and-up} {
-      transform: scale(0.5);
+      transform: scale(0.4);
     }
 
     &::after {
@@ -67,8 +72,11 @@ footer {
       @media #{$small-and-down} {
         transform: scale(0.6);
       }
+      @media #{$medium-and-up} {
+        transform: scale(0.8);
+      }
       @media #{$large-and-up} {
-        transform: scale(1.4);
+        transform: scale(1);
       }
     }
   }

@@ -14,15 +14,15 @@
     img {
       width: auto;
       max-width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.5);
       @media #{$medium-and-up} {
         max-height: 80vh;
       }
       @media #{$small-and-down} {
         max-height: 45vh;
-      }    
+      }
     }
 
-    
     .image-gallery-image__text {
       ul {
         vertical-align: middle;
