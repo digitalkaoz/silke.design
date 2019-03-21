@@ -23,7 +23,7 @@ const Carousel = universal(import("../Carousel"), {
 
 const stripTags = (html: string): string => {
   if (typeof window === "undefined") {
-    return html; // TODO wrong
+    return html.replace(/(<([^>]+)>)/ig,"");
   }
 
   const tmp = document.createElement("DIV");
@@ -57,7 +57,7 @@ class Project extends PureComponent<ProjectProps, any> {
           <Flower {...this.props.skills} />
           <Icon
             src={`/img/${this.props.type}.svg`}
-            name={`${this.id}_${this.props.type}_type`}
+            name={`${this.getId()}_${this.props.type}_type`}
           />
           <div className="description">
             <h2 dangerouslySetInnerHTML={{ __html: this.props.name }} />
@@ -85,7 +85,7 @@ class Project extends PureComponent<ProjectProps, any> {
     );
   }
 
-  private get id() {
+  private getId(): string {
     return `project--${stripTags(this.props.name)
       .replace(/ /g, "_")
       .toLowerCase()}`;
@@ -94,7 +94,7 @@ class Project extends PureComponent<ProjectProps, any> {
   render() {
     return (
       <Sticky onStateChange={this.handleStickyChange}>
-        <div className={`project project--${this.props.direction} ${this.id}`}>
+        <div className={`project project--${this.props.direction} ${this.getId()}`}>
           {this.renderDescription(
             this.props.direction === "ltr" ? "project--left" : "project--right"
           )}

@@ -72,7 +72,7 @@ class Carousel extends PureComponent<CarouselProps, any> {
             ))}
           </ul>
         ) : (
-          <img src={item.original} />
+          <img src={item.original} alt={item.original} />
         )}
       </div>
     );

@@ -1,7 +1,6 @@
 import ManifestPlugin from "webpack-manifest-plugin";
-//import ServiceWorkerPlugin from "sw-precache-webpack-plugin";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
-const {InjectManifest} = require('workbox-webpack-plugin');
+import {InjectManifest} from 'workbox-webpack-plugin';
 
 export default () => ({
   webpack: (config /*: any*/, { stage } /* : any*/) => {
@@ -44,6 +43,7 @@ export default () => ({
           ]
         }
       }),
+
       new InjectManifest({
         importWorkboxFrom: "local",
         swSrc: './public/sw.js',
@@ -52,16 +52,7 @@ export default () => ({
           // Remove a '/dist' prefix from the URLs:
           '/dist': ''
         }
-      })
-
-      // new ServiceWorkerPlugin({
-      //   cacheId: "silke-design",
-      //   handleFetch: process.env.NODE_ENV === "production",
-      //   minify: true,
-      //   navigateFallback: `/index.html`,
-      //   staticFileGlobs: ["/index.html", /\.js$/, /\.css$/],
-      //   staticFileGlobsIgnorePatterns: [/\.map$/]
-      // })
+      }),
     ];
 
     return config;

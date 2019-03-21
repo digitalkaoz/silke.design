@@ -2,7 +2,11 @@
 
 //import workbox from "@types/workbox-sw";
 
-workbox.precaching.precacheAndRoute(self.__precacheManifest);
+if (typeof workbox === "undefined") {
+  importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.1.1/workbox-sw.js');
+}
+
+workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
 
 const cacheFirst = (path) => {
   workbox.routing.registerRoute(
@@ -30,6 +34,21 @@ const networkFirst = (path) => {
 
 cacheFirst(/img\/*/);
 cacheFirst('/manifest.json');
-cacheFirst('/register-service-worker.js');
+cacheFirst('https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-window.prod.mjs');
 cacheFirst(new RegExp('\\.png$'));
 networkFirst(/\/$/);
+
+/*
+workbox.routing.registerRoute(
+  /\.(?:png|gif|jpg|jpeg|svg)$/,
+  new workbox.strategies.CacheFirst({
+    cacheName: 'images',
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 60,
+        maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+      }),
+    ],
+  })
+);
+*/

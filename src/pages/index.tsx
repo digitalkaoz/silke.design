@@ -1,4 +1,4 @@
-import React, {memo, FunctionComponent} from "react";
+import React, {FunctionComponent} from "react";
 import { withSiteData, withRouteData } from "react-static";
 import universal from "react-universal-component";
 import 'typeface-roboto';
@@ -30,8 +30,8 @@ const Home = ({ footerLinks = [], skills = [], projects = [] }: PageData&SiteDat
     <main>
       <Skills skills={skills} />
       <Projects projects={projects} />
-      <Footer links={footerLinks} />
     </main>
+    <Footer links={footerLinks} />
   </>
 );
 

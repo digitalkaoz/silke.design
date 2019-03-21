@@ -16,6 +16,7 @@ class Icon extends PureComponent<IconProps, any> {
         href={this.props.target}
         target="_blank"
         rel="noopener noreferrer"
+        aria-label={this.props.name}
         className="icon"
       >
         {this.renderImage(false)}
