@@ -54,6 +54,15 @@
       @media #{$medium-and-up} {
         .carousel {
           padding-right: 10%;
+          position: relative;
+
+          .image-gallery {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 90%;
+            margin-left: 5%;
+          }
         }
       }
     }
@@ -83,6 +92,15 @@
       @media #{$medium-and-up} {
         .carousel {
           padding-left: 10%;
+          position: relative;
+
+          .image-gallery {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 90%;
+            margin-left: 5%;
+          }
         }
       }
     }
@@ -178,6 +196,7 @@
     @extend %col;
     @extend %s3;
     padding: 0;
+    margin-top: -2px;
     .drop {
       background-color: white;
       span {
@@ -205,27 +224,17 @@
     .flower .drop {
       color: #0d345f;
     }
-
-    .project-wrapper & {
-      background-color: #0d345f;
-    }
   }
   &--duchenne {
     background-color: #f9b234;
     .flower .drop {
       color: #f9b234;
     }
-    .project-wrapper & {
-      background-color: #f9b234;
-    }
   }
   &--bornholdt_lee_-_relaunch {
     background-color: #0d345f;
     .flower .drop {
       color: #0d345f;
-    }
-    .project-wrapper & {
-      background-color: #0d345f;
     }
   }
   &--freixenet {
@@ -239,17 +248,11 @@
     .flower .drop {
       color: #d3ad6a;
     }
-    .project-wrapper & {
-      background-color: #d3ad6a;
-    }
   }
   &--ichallenge {
     background-color: #ff6200;
     .flower .drop {
       color: #ff6200;
-    }
-    .project-wrapper & {
-      background-color: #ff6200;
     }
   }
   &--pulvermühle {
@@ -257,17 +260,11 @@
     .flower .drop {
       color: #000;
     }
-    .project-wrapper & {
-      background-color: #000;
-    }
   }
   &--o2 {
     background-color: #0090d0;
     .flower .drop {
       color: #0090d0;
-    }
-    .project-wrapper & {
-      background-color: #0090d0;
     }
   }
   &--tchibo {
@@ -275,21 +272,11 @@
     .flower .drop {
       color: #373f44;
     }
-    .project-wrapper & {
-      background-color: #373f44;
-    }
   }
   &--accenture {
     background-color: #74881d;
     .flower .drop {
       color: #74881d;
     }
-    .project-wrapper & {
-      background-color: #74881d;
-    }
   }
-}
-
-.project-wrapper {
-  background-color: #000;
 }

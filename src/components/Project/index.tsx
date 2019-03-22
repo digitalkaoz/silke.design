@@ -111,9 +111,13 @@ class Project extends PureComponent<ProjectProps, any> {
     this.setState({sticky:status});
 
     if (status === Sticky.STATUS_FIXED && typeof window !== "undefined") {
-      window.addEventListener('scroll', this.fadeSticky);
+      window.addEventListener('scroll', this.fadeSticky, {passive: true});
     } else {
       window.removeEventListener("scroll", this.fadeSticky);
+      if (this.container.current && (this.container.current as any).outerElement ) {
+        const self:HTMLDivElement = (this.container.current as any).outerElement 
+        self.style.opacity = "1";
+      }
       this.setState({play: true});
     }
   }
