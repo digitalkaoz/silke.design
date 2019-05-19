@@ -8,75 +8,75 @@ footer {
   color: #fff;
   background-color: black;
 
-  padding: 0 5%;
+  padding: 5% 0;
 
-  @media #{$small-and-down} {
-    padding: 5%;
-    padding-bottom: 10%;
+  @media #{$medium-and-up} {
+    padding: 2.5% 0;
   }
 
   .copyright {
     @extend %col;
-    @extend %m3;
-    @extend %s3;
+    @extend %s12;
 
     margin-left: 0;
     line-height: 1;
-    padding-top: 25px;
+    text-align: center;
+    padding-top: 5%;
 
-    @media #{$medium-and-down} {
-      padding-top: 10px;
+    @media #{$medium-and-up} {
+      padding-top: 2.5%;
     }
 
     p {
+      margin: 0;
       @media #{$small-and-down} {
-        font-size: 3.6vw;
+        font-size: 4vw;
+      }
+      @media #{$medium-and-up} {
+        font-size: 1.8vw;
       }
     }
   }
 
-  .icon {
-    text-align: center;
+  .icon--container {
     @extend %col;
-    @extend %m2;
-    @extend %s3;
-    @extend %valign-wrapper;
+    @extend %s4;
+    padding: 0 14%;
 
-    padding: 10px;
-
-    > div {
-      margin: 0 auto;
+    @media #{$medium-and-down} {
+      padding: 0 13%;
     }
 
-    border: 3px solid white;
-    border-top-left-radius: 0%;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-bottom-left-radius: 50%;
-
-    transform: scale(0.6);
-
-    @media #{$large-and-up} {
-      transform: scale(0.4);
+    @media #{$small-and-down} {
+      padding: 0 9%;
     }
 
-    &::after {
-      content: "";
-      display: block;
-      padding-bottom: 100%;
-    }
+    .icon {
+      @extend %valign-wrapper;
+      text-align: center;
 
-    margin-left: 0;
-
-    img {
-      @media #{$small-and-down} {
-        transform: scale(0.6);
+      > div {
+        margin: 0 auto;
+        width: 100%;
+        height: auto !important;
       }
-      @media #{$medium-and-up} {
-        transform: scale(0.8);
+
+      border: 2px solid white;
+      border-top-left-radius: 0%;
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+      border-bottom-left-radius: 50%;
+
+      &::after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
       }
-      @media #{$large-and-up} {
-        transform: scale(1);
+
+      margin-left: 0;
+
+      img {
+        transform: scale(0.5);
       }
     }
   }

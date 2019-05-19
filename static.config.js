@@ -2,10 +2,7 @@ import { readFileSync } from "fs";
 //import { SiteData, PageData } from "./src";
 //import { ReactStaticConfig, Route} from "react-static";
 
-// const getConfig = async (file:string): Promise<any> =>
-//   JSON.parse(readFileSync(`${__dirname}/config/${file}.json`).toString());
-
-const getConfig = async file =>
+const getConfig = file =>
   JSON.parse(readFileSync(`${__dirname}/config/${file}.json`).toString());
 
 export default {
@@ -27,9 +24,11 @@ export default {
   getRoutes: () /*: Route[]*/ => [
     {
       path: "/",
-      getData: async () /*: Promise<PageData> */ => ({
-        skills: await getConfig("skills"),
-        projects: await getConfig("projects")
+      getData: () /*: Promise<PageData> */ => ({
+        skills: getConfig("skills"),
+        projects: getConfig("projects").sort((a, b) =>
+          a.skills.br.name > b.skills.br.name ? -1 : 1
+        )
       })
     }
   ],

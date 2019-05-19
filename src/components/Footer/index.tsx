@@ -13,13 +13,12 @@ export type FooterProps = {
 const Footer = ({ links }: FooterProps) => (
   <Sticky>
    <footer>
-     <div className="copyright">
-       <p>Silke Schönthal</p>
-       <p>Hamburg</p>
-     </div>
      {links.map(link => (
-       <Icon key={link.name} {...link} />
+       <div className="icon--container"><Icon key={link.name} {...link} /></div>
      ))}
+     <div className="copyright">
+       <p>&copy; {new Date().getFullYear()} - Silke Schönthal - Hamburg</p>
+     </div>
    </footer>
   </Sticky>
 );
