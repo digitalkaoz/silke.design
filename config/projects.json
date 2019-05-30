@@ -1,5 +1,27 @@
 [
   {
+    "name": "Smoothr",
+    "images": [
+      "/img/references/smoothr/1.jpg",
+      "/img/references/smoothr/2.jpg",
+      "/img/references/smoothr/3.jpg",
+      "/img/references/smoothr/4.jpg"
+    ],
+    "text": [
+      "Eine Tresenapp für mobile Bestellungen im Restaurant.",
+      "Projekt der Bornhold-Lee GmbH",
+      "Design in Photoshop"
+    ],
+    "beta": true,
+    "type": "tablet",
+    "skills": {
+      "tl": { "name": "UX" },
+      "tr": { "name": "UI" },
+      "br": { "name": 2018 }
+    }
+  },
+
+  {
     "name": "Bornholdt Lee - Relaunch",
     "images": [
       "/img/references/blg-relaunch/1.jpg",
@@ -10,8 +32,8 @@
     "text": [
       "Die Unternehmens-Website der Bornhold-Lee GmbH soll einen frischen Look erhalten. Der Launch steht noch aus.",
       "Projekt der Bornhold-Lee GmbH",
-      "Konzept & Wireframes mit Axure",
-      "Design in Photoshop",
+      "Konzept & Wireframes mit Axure & Invision",
+      "Design in Sketch",
       "HTML/CSS-Prototyp mit Materialize Framework"
     ],
     "beta": true,
