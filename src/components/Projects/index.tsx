@@ -1,30 +1,17 @@
-import React, { memo } from "react";
+import React from "react";
 
 import Project, { ProjectProps } from "../Project";
 
 import "./Projects.scss";
-
-const getParameterByName = (name: string): boolean => {
-  if (typeof window === "undefined") {
-    return true;
-  }
-  const search = new URLSearchParams(window.location.search);
-
-  return search.has(name);
-};
 
 export type ProjectsProps = {
   projects: Array<ProjectProps>;
 };
 
 const Projects = ({ projects }: ProjectsProps) => {
-  const betaProjects = projects.filter(project => getParameterByName("beta"));
-  const normalProjects = projects.filter(project => !project.beta);
-
   return (
     <div id="projects">
-      {(getParameterByName("beta") ? betaProjects : normalProjects).map(
-        (project, index) => (
+      {projects.map((project, index) => (
           <Project
             key={index}
             direction={index % 2 === 0 ? "ltr" : "rtl"}

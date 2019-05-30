@@ -13,8 +13,6 @@ export type CarouselProps = {
   play: boolean;
 };
 
-const Gallery = memo(ImageGallery);
-
 class Carousel extends PureComponent<CarouselProps, any> {
   private ref: RefObject<HTMLDivElement>;
   private gallery: RefObject<ImageGallery>;
@@ -94,7 +92,7 @@ class Carousel extends PureComponent<CarouselProps, any> {
     const images = this.getImages();
     return (
       <div className="carousel" ref={this.ref}>
-        <Gallery
+        <ImageGallery
           items={images}
           ref={this.gallery}
           renderItem={this.renderItem}

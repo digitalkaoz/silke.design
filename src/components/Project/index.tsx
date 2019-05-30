@@ -1,4 +1,4 @@
-import React, { PureComponent, memo } from "react";
+import React, { PureComponent } from "react";
 import Sticky from "react-stickynode";
 import Flower, { FlowerProps } from "../Flower";
 import Icon from "../Icon";
@@ -30,6 +30,16 @@ const stripTags = (html: string): string => {
 
   return tmp.textContent || tmp.innerText;
 };
+
+const getParameterByName = (name: string): boolean => {
+  if (typeof window === "undefined") {
+    return true;
+  }
+  const search = new URLSearchParams(window.location.search);
+
+  return search.has(name);
+};
+
 
 export type ProjectProps = {
   direction: "rtl" | "ltr";
@@ -137,6 +147,10 @@ class Project extends PureComponent<ProjectProps, any> {
   }
 
   render() {
+    if (this.props.beta && !getParameterByName('beta')) {
+      return <div style={{display: "none"}}></div>;
+    }
+
     return (
       <Sticky onStateChange={this.handleStickyChange} ref={this.container}>
         <div className={`project project--${this.props.direction} ${this.getId()}`}>
