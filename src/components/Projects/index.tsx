@@ -5,7 +5,7 @@ import Project, {ProjectProps} from '../Project';
 import "./Projects.scss";
 
 const getParameterByName = (name:string): boolean => {
-  if (typeof window === 'undefined') {return false};
+  if (typeof window === 'undefined') {return true};
   const search = new URLSearchParams(window.location.search);
 
   return search.has(name);
