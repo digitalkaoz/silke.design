@@ -26,7 +26,7 @@ const Projects = ({ projects }: ProjectsProps) => {
       {(getParameterByName("beta") ? betaProjects : normalProjects).map(
         (project, index) => (
           <Project
-            key={project.name}
+            key={index}
             direction={index % 2 === 0 ? "ltr" : "rtl"}
             {...project}
           />
