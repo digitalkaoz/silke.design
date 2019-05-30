@@ -8,11 +8,13 @@ if (typeof workbox === "undefined") {
 
 workbox.precaching.precacheAndRoute(self.__precacheManifest || []);
 
+const cacheName = workbox.core.cacheNames.runtime;
+
 const cacheFirst = (path) => {
   workbox.routing.registerRoute(
     path,
     new workbox.strategies.CacheFirst({
-      cacheName: "images-v1",
+      cacheName,
       plugins: [
         new workbox.cacheableResponse.Plugin({ statuses: [200] })
       ]
@@ -24,7 +26,7 @@ const networkFirst = (path) => {
   workbox.routing.registerRoute(
     path,
     new workbox.strategies.NetworkFirst({
-      cacheName: "html-v1",
+      cacheName,
       plugins: [
         new workbox.cacheableResponse.Plugin({ statuses: [200] })
       ]
