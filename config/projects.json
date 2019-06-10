@@ -1,5 +1,39 @@
 [
   {
+    "name": "DB-Systel",
+    "images": ["/img/references/default.jpg"],
+    "text": [
+      "App zum Tracking und Lokalisierung von Güterwagons.",
+      "Projekt der Bornhold-Lee GmbH",
+      "Design in Sketch & Invision"
+    ],
+    "beta": true,
+    "type": "tablet",
+    "skills": {
+      "tl": { "name": "UX" },
+      "tr": { "name": "UI" },
+      "br": { "name": 2018 }
+    }
+  },
+
+  {
+    "name": "DocIdent",
+    "images": ["/img/references/default.jpg"],
+    "text": [
+      "Website zum digitalen Signieren und Ablegen von Dokumenten mit der Blockchain.",
+      "Projekt der Bornhold-Lee GmbH",
+      "Design in Sketch & Invision"
+    ],
+    "beta": true,
+    "type": "desktop",
+    "skills": {
+      "tl": { "name": "UX" },
+      "tr": { "name": "UI" },
+      "br": { "name": 2018 }
+    }
+  },
+
+  {
     "name": "Smoothr",
     "images": [
       "/img/references/smoothr/1.jpg",
@@ -20,7 +54,6 @@
       "br": { "name": 2018 }
     }
   },
-
   {
     "name": "Bornholdt Lee - Relaunch",
     "images": [

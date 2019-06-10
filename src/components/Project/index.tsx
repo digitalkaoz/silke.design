@@ -70,10 +70,6 @@ class Project extends PureComponent<ProjectProps, any> {
       <div className={dir}>
         <div>
           <Flower {...this.props.skills} />
-          <Icon
-            src={`/img/${this.props.type}.svg`}
-            name={`${this.getId()}_${this.props.type}_type`}
-          />
           <div className="description">
             <h2 dangerouslySetInnerHTML={{ __html: this.props.name }} />
             <p dangerouslySetInnerHTML={{ __html: this.props.text[0] }}></p>
@@ -90,12 +86,12 @@ class Project extends PureComponent<ProjectProps, any> {
 
   private getDistance() : number {
     if (!this.container.current) {
-      return 100
+      return 0
     }
     const self:HTMLDivElement = (this.container.current as any).outerElement 
 
     if (!self.nextSibling) {
-      return 100;
+      return 0;
     }
 
     return (self.nextSibling as HTMLDivElement).getBoundingClientRect().top / window.innerHeight;
@@ -107,11 +103,9 @@ class Project extends PureComponent<ProjectProps, any> {
       const distance = this.getDistance();
       self.style.opacity = distance.toString();
 
-      if (distance <= 0.5 && this.state.play === true) {
-        this.setState({play: false});
-      }
+      this.setState({play: false});
 
-      if (distance >= 0.5 && this.state.play === false) {
+      if (distance >= 0.7 && this.state.play === false) {
         this.setState({play: true});
       }
     }

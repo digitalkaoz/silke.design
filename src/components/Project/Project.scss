@@ -11,6 +11,7 @@
     @extend %col;
     @extend %s12;
     @extend %m6;
+    position: relative;
 
     height: auto;
 
@@ -19,9 +20,12 @@
     }
   }
 
+  .flower {
+    margin-bottom: 0;
+  }
+
   .description {
     width: 100%;
-    font-size: 2.2vw;
 
     h2 {
       margin-top: 0;
@@ -35,6 +39,11 @@
     &--right {
       display: block !important;
       padding: 0 !important;
+    }
+
+    .description p {
+      padding: 5% 0;
+      margin: 0;
     }
   }
 
@@ -51,6 +60,7 @@
     .project--left {
       display: flex;
       order: 1;
+      padding: 0;
       @media #{$medium-and-up} {
         .carousel {
           padding-right: 10%;
@@ -59,9 +69,8 @@
           .image-gallery {
             position: absolute;
             top: 50%;
+            left: 0;
             transform: translateY(-50%);
-            width: 90%;
-            margin-left: 5%;
           }
         }
       }
@@ -70,6 +79,16 @@
     .project--right {
       display: flex;
       order: 2;
+      padding: 0;
+
+      h2 {
+        position: absolute;
+        top: 7.5%;
+        left: 0;
+        @media #{$small-and-down} {
+          top: 0;
+        }
+      }
 
       .flower {
         float: right;
@@ -84,10 +103,21 @@
     .project--left {
       display: flex;
       order: 1;
+      padding: 0;
+
+      h2 {
+        position: absolute;
+        top: 7.5%;
+        right: 0;
+        @media #{$small-and-down} {
+          top: 0;
+        }
+      }
     }
     .project--right {
       display: flex;
       order: 2;
+      padding: 0;
 
       @media #{$medium-and-up} {
         .carousel {
@@ -98,8 +128,7 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            width: 90%;
-            margin-left: 5%;
+            right: 0;
           }
         }
       }
@@ -149,14 +178,15 @@
       margin-left: 0 !important;
     }
   }
+
   .description {
     @extend %col;
     @extend %s10;
 
     padding: 0;
     color: #fff;
-
-    @media #{$medium-and-up} {
+    font-size: 1.8vw;
+    @media #{$medium-and-down} {
       font-size: 2.2vw;
     }
     @media #{$small-and-down} {
