@@ -1,10 +1,14 @@
-declare module "react-lines-ellipsis" {
+declare module "react-clamp-lines" {
   type ExpandCollapseProps = {
+    id?: string;
     text: string;
-    maxLine: Number;
-    component?: string;
+    lines: Number;
+    innerElement?: string;
     onClick?: Function;
-    basedOn?: string;
+    ellipsis?: string;
+    lessText?: string;
+    moreText?: string;
+    buttons?: boolean;
   };
 
   declare class ExpandCollapse extends React.Component<ExpandCollapseProps> {}

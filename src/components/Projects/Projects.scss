@@ -1,4 +1,10 @@
 #projects {
   margin-bottom: 0;
   background-color: black;
+
+  .sticky-outer-wrapper {
+    &:last-of-type {
+      opacity: 1 !important;
+    }
+  }
 }

@@ -10,9 +10,8 @@ const Header = () => (
     <div className="headline">
       <h1>Silke Schönthal - Portfolio</h1>
       <p>
-        Seit über 10 Jahren bin ich im Online-Bereich tätig und beschäftige mich
-        mit den Themen "User Experience", "User Interface" und "Frontend
-        Development".<br />Eine Auswahl meiner Projekte gibt es hier zu sehen.
+      Ich bin seit etwa 15 Jahren im Bereich der digitalen Medien tätig und habe daher eine Menge Berufserfahrung sammeln können. Meine Aufgabenfelder waren sehr facettenreich, 
+      von Frontend-Entwicklung über Webdesign bis hin zur Konzeption von Workflows mit dem Kunden. Eine Auswahl meiner Projekte gibt es hier zu sehen.
       </p>
     </div>
 

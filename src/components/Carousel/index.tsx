@@ -1,9 +1,9 @@
-import React, { PureComponent, memo, RefObject } from "react";
+import React, { PureComponent, RefObject, SyntheticEvent } from "react";
 import ImageGallery, { ReactImageGalleryItem } from "react-image-gallery";
 
 import "react-image-gallery/styles/css/image-gallery.css";
 
-import {isMobile} from "../..";
+import { isMobile } from "../..";
 
 import "./Carousel.scss";
 
@@ -20,16 +20,19 @@ class Carousel extends PureComponent<CarouselProps, any> {
   constructor(props: CarouselProps) {
     super(props);
     this.renderItem = this.renderItem.bind(this);
+    this.flip = this.flip.bind(this);
     this.ref = React.createRef();
     this.gallery = React.createRef();
+
+    this.state = {flippedText: false}
   }
 
-  public componentWillReceiveProps(props:CarouselProps) {
+  public componentWillReceiveProps(props: CarouselProps) {
     if (this.gallery.current) {
       if (props.play) {
-        this.gallery.current.play();  
+        this.gallery.current.play();
       } else {
-        this.gallery.current.pause();  
+        this.gallery.current.pause();
       }
     }
   }
@@ -55,34 +58,48 @@ class Carousel extends PureComponent<CarouselProps, any> {
     return images;
   }
 
+  private flip(e: SyntheticEvent) {
+    if (this.ref.current) {
+      this.ref.current.classList.toggle('hover');
+      this.setState({flippedText : !this.state.flippedText});
+    }
+  }
+
   render() {
     const images = this.getImages();
 
     return (
-      <div className="carousel" ref={this.ref} onTouchStart={(e) => isMobile() && e.currentTarget.classList.toggle('hover')}>
+      <>
+      <button onClick={this.flip} className={"carousel--flipper " +(this.state.flippedText ? 'flipped' : 'not-flipped')}>⌵</button>
+      <div
+        className="carousel"
+        ref={this.ref}
+        onTouchStart={this.flip}
+      >
         <div className="flipper">
-        <ImageGallery
-          items={images}
-          ref={this.gallery}
-          renderItem={this.renderItem}
-          showBullets={images.length > 1}
-          lazyLoad
-          showThumbnails={false}
-          showFullscreenButton={false}
-          showNav={false}
-          showPlayButton={false}
-          useBrowserFullscreen={false}
-          slideInterval={5000}
-          slideDuration={0}
-          autoPlay
-        />
-                <ul className="carousel--text show-on-small-only">
-          {this.props.text.slice(1).map((text, i) => (
-            <li key={i} dangerouslySetInnerHTML={{ __html: text }} />
-          ))}
-        </ul>
+          <ImageGallery
+            items={images}
+            ref={this.gallery}
+            renderItem={this.renderItem}
+            showBullets={images.length > 1}
+            lazyLoad
+            showThumbnails={false}
+            showFullscreenButton={false}
+            showNav={false}
+            showPlayButton={false}
+            useBrowserFullscreen={false}
+            slideInterval={5000}
+            slideDuration={0}
+            autoPlay
+          />
+          <ul className="carousel--text show-on-small-only">
+            {this.props.text.slice(1).map((text, i) => (
+              <li key={i} dangerouslySetInnerHTML={{ __html: text }} />
+            ))}
+          </ul>
         </div>
       </div>
+      </>
     );
   }
 }

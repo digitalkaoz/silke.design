@@ -40,3 +40,7 @@ export function isMobile(): boolean {
     window.matchMedia("(max-width: 600px)").matches
   );
 }
+
+export function toId(text:string): string {
+  return text.toLowerCase().replace(/ /g, '-');
+}

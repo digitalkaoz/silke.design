@@ -1,8 +1,9 @@
 import React, {PureComponent, memo } from "react";
 import Icon, { IconProps } from "../Icon";
-import EllipsisText from "react-lines-ellipsis";
 
-import {isMobile} from "../..";
+import ClampLines from 'react-clamp-lines';
+
+import {isMobile, toId} from "../..";
 
 import "./Skills.scss";
 
@@ -39,7 +40,15 @@ class Skill extends PureComponent<SkillProps, any> {
         <Icon key={icon.src} {...icon} />
       ))}
     </div>
-    <EllipsisText onClick={this.handleClick} basedOn="words" text={description} maxLine={this.state.lines} component="p"/>
+    <ClampLines
+      id={toId(name)}
+      onClick={this.handleClick} 
+      text={description} 
+      lines={this.state.lines} 
+      innerElement="p"
+      lessText=""
+      moreText="⌵"
+    />
   </div>  
     );
   }

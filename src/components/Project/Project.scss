@@ -32,6 +32,83 @@
     }
   }
 
+  &--phone {
+    .image-gallery {
+      @media #{$medium-and-up} {
+        border-style: solid;
+        border-color: transparent;
+
+        border-top-width: 65px;
+        border-bottom-width: 70px;
+        border-left-width: 55px;
+        border-right-width: 65px;
+
+        border-image-source: url("/img/phone.png");
+        border-image-slice: 49 41 50 48;
+      }
+
+      @media #{$medium-and-down} {
+        border-top-width: 58px;
+        border-bottom-width: 58px;
+      }
+      @media #{$large-and-up} {
+        border-top-width: 62px;
+        border-bottom-width: 62px;
+      }
+    }
+  }
+
+  &--tablet {
+    .image-gallery {
+      @media #{$medium-and-up} {
+        border-style: solid;
+        border-color: transparent;
+
+        border-top-width: 16px;
+        border-bottom-width: 16px;
+        border-left-width: 38px;
+        border-right-width: 38px;
+
+        border-image-source: url("/img/tablet.png");
+        border-image-slice: 43 114 40 110;
+      }
+
+      @media #{$large-and-up} {
+        border-right-width: 52px;
+        border-left-width: 52px;
+      }
+
+      @media #{$medium-and-down} {
+        border-right-width: 31px;
+        border-left-width: 31px;
+      }
+    }
+  }
+
+  &--desktop {
+    .image-gallery {
+      @media #{$medium-and-up} {
+        border-style: solid;
+        border-color: transparent;
+
+        border-top-width: 16px;
+        border-bottom-width: 46px;
+        border-left-width: 47px;
+        border-right-width: 47px;
+
+        border-image-source: url("/img/desktop.png");
+        border-image-slice: 36 100 95 105;
+      }
+
+      @media #{$large-and-up} {
+        border-bottom-width: 53px;
+      }
+      @media #{$medium-and-down} {
+        border-bottom-width: 33px;
+      }
+    }
+  }
+
   @media #{$small-and-down} {
     display: block !important;
     padding-bottom: 10%;
@@ -298,9 +375,9 @@
     }
   }
   &--tchibo {
-    background-color: #373f44;
+    background-color: #003976;
     .flower .drop {
-      color: #373f44;
+      color: #003976;
     }
   }
   &--accenture {
@@ -313,6 +390,50 @@
     background-color: #152831;
     .flower .drop {
       color: #152831;
+    }
+
+    .image-gallery {
+      @media #{$large-and-up} {
+        border-right-width: 48px;
+        border-left-width: 48px;
+      }
+      @media #{$medium-and-down} {
+        border-right-width: 25px;
+        border-left-width: 25px;
+      }
+    }
+  }
+  &--db-systel {
+    * {
+      color: #000;
+    }
+    background-color: #fff;
+    .flower .drop {
+      background-color: #000;
+      border-color: #000;
+      color: #fff;
+    }
+
+    .drop--none,
+    .drop--year {
+      border-color: #000 !important;
+    }
+    .drop--year {
+      color: #000 !important;
+    }
+  }
+
+  &--docident {
+    background-color: #b4dd2c;
+    .flower .drop {
+      color: #b4dd2c;
+    }
+  }
+
+  &--portfolio {
+    background-color: #261714;
+    .flower .drop {
+      color: #261714;
     }
   }
 }

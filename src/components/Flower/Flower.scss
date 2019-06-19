@@ -40,7 +40,7 @@
   }
 
   &--none {
-    background: transparent;
+    background: transparent !important;
     box-shadow: none;
     border: 2px solid white !important;
   }
@@ -74,5 +74,9 @@
     @extend %s6;
     display: block;
     padding: 0;
+
+    &:hover {
+      transform: scale(1);
+    }
   }
 }

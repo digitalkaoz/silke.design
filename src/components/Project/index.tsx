@@ -147,7 +147,7 @@ class Project extends PureComponent<ProjectProps, any> {
 
     return (
       <Sticky onStateChange={this.handleStickyChange} ref={this.container}>
-        <div className={`project project--${this.props.direction} ${this.getId()}`}>
+        <div className={`project project--${this.props.direction} project--${this.props.type} ${this.getId()}`}>
           {this.renderDescription(
             this.props.direction === "ltr" ? "project--left" : "project--right"
           )}

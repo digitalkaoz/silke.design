@@ -1,40 +1,6 @@
 [
   {
-    "name": "DB-Systel",
-    "images": ["/img/references/default.jpg"],
-    "text": [
-      "App zum Tracking und Lokalisierung von Güterwagons.",
-      "Projekt der Bornhold-Lee GmbH",
-      "Design in Sketch & Invision"
-    ],
-    "beta": true,
-    "type": "tablet",
-    "skills": {
-      "tl": { "name": "UX" },
-      "tr": { "name": "UI" },
-      "br": { "name": 2018 }
-    }
-  },
-
-  {
-    "name": "DocIdent",
-    "images": ["/img/references/default.jpg"],
-    "text": [
-      "Website zum digitalen Signieren und Ablegen von Dokumenten mit der Blockchain.",
-      "Projekt der Bornhold-Lee GmbH",
-      "Design in Sketch & Invision"
-    ],
-    "beta": true,
-    "type": "desktop",
-    "skills": {
-      "tl": { "name": "UX" },
-      "tr": { "name": "UI" },
-      "br": { "name": 2018 }
-    }
-  },
-
-  {
-    "name": "Smoothr",
+    "name": "smoothr",
     "images": [
       "/img/references/smoothr/1.jpg",
       "/img/references/smoothr/2.jpg",
@@ -42,7 +8,7 @@
       "/img/references/smoothr/4.jpg"
     ],
     "text": [
-      "Eine Tresenapp für mobile Bestellungen im Restaurant.",
+      "Eine Tresenapp für mobile Bestellungen und Bezahlungen in Restaurants.",
       "Projekt der Bornhold-Lee GmbH",
       "Design in Photoshop"
     ],
@@ -55,37 +21,13 @@
     }
   },
   {
-    "name": "Bornholdt Lee - Relaunch",
-    "images": [
-      "/img/references/blg-relaunch/1.jpg",
-      "/img/references/blg-relaunch/2.jpg",
-      "/img/references/blg-relaunch/3.jpg",
-      "/img/references/blg-relaunch/4.jpg"
-    ],
-    "text": [
-      "Die Unternehmens-Website der Bornhold-Lee GmbH soll einen frischen Look erhalten. Der Launch steht noch aus.",
-      "Projekt der Bornhold-Lee GmbH",
-      "Konzept & Wireframes mit Axure & Invision",
-      "Design in Sketch",
-      "HTML/CSS-Prototyp mit Materialize Framework"
-    ],
-    "beta": true,
-    "type": "desktop",
-    "skills": {
-      "bl": { "name": "FE" },
-      "tl": { "name": "UX" },
-      "tr": { "name": "UI" },
-      "br": { "name": 2017 }
-    }
-  },
-  {
     "name": "Duchenne",
     "images": [
       "/img/references/duchenne/1.jpg",
       "/img/references/duchenne/2.jpg"
     ],
     "text": [
-      "Eine Informationsseite zur Krankheit \"Muskeldystrophie Duchenne\". Der Launch steht noch aus.",
+      "Eine Informationsseite zur Krankheit \"Muskeldystrophie\".",
       "Projekt der Bornhold-Lee GmbH",
       "Konzept & Wireframes mit Axure",
       "Design in Photoshop"
@@ -108,7 +50,7 @@
       "/img/references/ichallenge/5.jpg"
     ],
     "text": [
-      "Die iChallenge im Corporate-Design der ING DiBa.",
+      "Geocaching-App für Tablets im Corporate-Design der ING DiBa.",
       "Projekt der Bornhold-Lee GmbH",
       "Design in Photoshop"
     ],
@@ -128,9 +70,9 @@
       "/img/references/pulvermuehle/5.jpg"
     ],
     "text": [
-      "Für das Restaurant wurde eine App erstellt, mit der Bestell- und Bezahlvorgänge abgewickelt werden können.",
+      "Tablet-App mit der Bestell- und Bezahlvorgänge im Restaurant abgewickelt werden können.",
       "Projekt der Bornhold-Lee GmbH",
-      "Konzept & Click-Dummy mit Axure",
+      "Konzept & Wireframes mit Axure",
       "Design in Photoshop"
     ],
     "type": "phone",
@@ -150,7 +92,7 @@
       "/img/references/freixenet/5.jpg"
     ],
     "text": [
-      "Eine Informations-App zum Unternehmen Freixenet.",
+      "Persönlicher Wein-Guide des Unternehmens Freixenet für iOS.",
       "Projekt der Bornhold-Lee GmbH",
       "Wireframes mit WireframeSketcher",
       "Design in Photoshop"
@@ -164,9 +106,9 @@
   },
   {
     "name": "Bornholdt Lee GmbH",
-    "images": ["/img/references/blg/1.jpg"],
+    "images": ["/img/references/blg/1.jpg", "/img/references/blg/2.jpg"],
     "text": [
-      "Die Unternehmens-Website der Bornhold-Lee GmbH",
+      "Website-Relaunch der Bornhold-Lee GmbH.",
       "Projekt der Bornhold-Lee GmbH",
       "Wireframes mit WireframeSketcher",
       "Design in Photoshop",
@@ -182,9 +124,13 @@
   },
   {
     "name": "O<sub>2</sub>",
-    "images": ["/img/references/o2/1.jpg"],
+    "images": [
+      "/img/references/o2/1.jpg",
+      "/img/references/o2/2.jpg",
+      "/img/references/o2/3.jpg"
+    ],
     "text": [
-      "Aus Alice wird O<sub>2</sub>",
+      "Aus Alice wird O<sub>2</sub>.",
       "Projekt der Spot-Media GmbH",
       "HTML/CSS in CoreMedia"
     ],
@@ -196,7 +142,7 @@
   },
   {
     "name": "Tchibo",
-    "images": ["/img/references/tchibo/1.jpg"],
+    "images": ["/img/references/tchibo/2.jpg"],
     "text": [
       "Wöchentlicher Tchibo-Produkt-Newsletter.",
       "Projekt der Spot-Media GmbH",
@@ -206,6 +152,24 @@
     "skills": {
       "bl": { "name": "FE" },
       "br": { "name": 2009 }
+    }
+  },
+  {
+    "name": "Portfolio",
+    "images": [
+      "/img/references/portfolio/1.jpg",
+      "/img/references/portfolio/2.jpg"
+    ],
+    "text": [
+      "Private Portfolio Seite.",
+      "Design in Photoshop",
+      "Umsetzung in HTML/CSS"
+    ],
+    "type": "desktop",
+    "skills": {
+      "bl": { "name": "FE" },
+      "tr": { "name": "UI" },
+      "br": { "name": 2008 }
     }
   }
 ]
