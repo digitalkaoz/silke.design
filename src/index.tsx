@@ -18,8 +18,8 @@ if (typeof document !== "undefined") {
     ? ReactDOM.render
     : ReactDOM.hydrate || ReactDOM.render;
 
-  const render = (Comp) => {
-    renderMethod(<React.Suspense fallback={<em>Loading...</em>}><Comp /></React.Suspense>, document.getElementById("root"));
+  const render = (Comp: React.ReactType) => {
+    renderMethod(<Comp />, document.getElementById("root"));
   };
 
   // Render!
@@ -33,7 +33,7 @@ if (typeof document !== "undefined") {
   }
 }
 
-export function isMobile() {
+export function isMobile(): boolean {
   return (
     typeof window !== "undefined" &&
     window.matchMedia &&
@@ -41,6 +41,6 @@ export function isMobile() {
   );
 }
 
-export function toId(text) {
+export function toId(text:string): string {
   return text.toLowerCase().replace(/ /g, '-');
 }
