@@ -1,5 +1,5 @@
 import React, {FunctionComponent} from "react";
-import { useRouteData, useSiteData } from "react-static";
+import { withSiteData, withRouteData } from "react-static";
 import universal from "react-universal-component";
 import 'typeface-roboto';
 import 'typeface-fjalla-one';
@@ -24,16 +24,15 @@ const Projects = universal(import("../components/Projects"), {
   error: Failed,
 }) as FunctionComponent<ProjectsProps>;
 
-export default () => {
-  const { footerLinks } = useSiteData() as SiteData;
-  const { skills,projects } = useRouteData() as PageData;
-
-  return (<>
+const Home = ({ footerLinks = [], skills = [], projects = [] }: PageData&SiteData) => (
+  <>
     <Header />
     <main>
       <Skills skills={skills} />
       <Projects projects={projects} />
     </main>
     <Footer links={footerLinks} />
-  </>)
-};
+  </>
+);
+
+export default withSiteData(withRouteData(Home));
