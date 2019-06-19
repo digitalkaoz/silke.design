@@ -55,7 +55,7 @@
     "test": "jest --coverage",
     "build:static": "react-static build",
     "build:optimize-css": "purgecss -c purgecss.config.js --out dist",
-    "build": "yarn build:static && yarn build:optimize-css",
+    "build": "yarn build:static",
     "start": "react-static start",
     "optimize-images": "find public/img -name \"*.jpg\" -exec mozjpeg -progressive -outfile {}.2 -optimize {} \\; -exec rename 's/\\.2//' -f {}.2 \\;",
     "lint": "prettier --write {src,test,config}/**/*.{ts,js,jsx,scss,json} && prettier --write ./*.{ts,js,jsx,json}"

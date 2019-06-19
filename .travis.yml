@@ -14,6 +14,7 @@ node_js:
 
 script: 
 - yarn build
+#- yarn build:optimize-css
 - mkdir -p dist_html
 - mv dist/*.html dist_html
 
