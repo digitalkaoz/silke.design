@@ -21,9 +21,10 @@ export default {
     footerLinks: await getConfig("footer")
   }),
 
-  getRoutes: () /*: Route[]*/ => [
+  getRoutes: async () /*: Route[]*/ => [
     {
-      path: "/",
+      path: '/',
+      template: 'src/pages/index',
       getData: () /*: Promise<PageData> */ => ({
         skills: getConfig("skills"),
         projects: getConfig("projects").sort((a, b) =>
