@@ -60,7 +60,7 @@ class Carousel extends PureComponent<CarouselProps, any> {
 
   private flip(e: SyntheticEvent) {
     if (this.ref.current) {
-      this.ref.current.classList.toggle('hover');
+      this.ref.current.classList.toggle('carousel--flipped');
       this.setState({flippedText : !this.state.flippedText});
     }
   }
@@ -74,7 +74,7 @@ class Carousel extends PureComponent<CarouselProps, any> {
       <div
         className="carousel"
         ref={this.ref}
-        onTouchStart={this.flip}
+        // onTouchStart={this.flip}
       >
         <div className="flipper">
           <ImageGallery
