@@ -166,6 +166,9 @@
         @media #{$small-and-down} {
           top: 0;
         }
+        @media #{$medium-and-down} {
+          top: 4.5%;
+        }
       }
 
       .flower {
@@ -189,6 +192,9 @@
         right: 0;
         @media #{$small-and-down} {
           top: 0;
+        }
+        @media #{$medium-and-down} {
+          top: 4.5%;
         }
       }
     }
@@ -310,7 +316,7 @@
       background-color: white;
       span {
         color: inherit;
-        font-size: 2vw;
+        font-size: 1.5vw;
         @media #{$small-and-down} {
           font-size: 4vw;
         }

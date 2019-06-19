@@ -29,6 +29,7 @@
   .image-gallery,
   &--text {
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 
   &--text {
@@ -45,6 +46,7 @@
     }
     @media #{$small-and-down} {
       font-size: 5.5vw;
+      right: 5px;
     }
   }
 
