@@ -58,7 +58,7 @@
         font-size: 5.5vw;
       }
 
-      .clamp-lines__button[aria-expanded="false"] {
+      .clamp-lines__button {
         background: transparent;
         color: white;
         border: none;
@@ -69,8 +69,9 @@
         height: 8vw;
         display:block;
       }
-      .clamp-lines__button[aria-expanded="true"] {
-        display: none;
+
+      p[aria-hidden="true"] .clamp-lines__button {
+        display:none;
       }
     }
 
