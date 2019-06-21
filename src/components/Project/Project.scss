@@ -138,7 +138,9 @@
       display: flex;
       order: 1;
       padding: 0;
-      width: 99.5%;
+      @media #{$small-and-down} {
+        width: 99.5%;
+      }
       @media #{$medium-and-up} {
         .carousel {
           padding-right: 10%;
@@ -202,7 +204,10 @@
       display: flex;
       order: 2;
       padding: 0;
-      width: 99.5%;
+
+      @media #{$small-and-down} {
+        width: 99.5%;
+      }
 
       @media #{$medium-and-up} {
         .carousel {

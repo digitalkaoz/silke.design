@@ -1,6 +1,6 @@
 # silke.design
 
-website of [silke.design](https://silke.design)
+Portfolio Site of [Silke Schönthal](https://silke.design) [![Build Status](https://travis-ci.org/digitalkaoz/silke.design.svg?branch=master)](https://travis-ci.org/digitalkaoz/silke.design)
 
 # Whats inside
 
