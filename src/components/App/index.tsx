@@ -21,6 +21,7 @@ const App = ({ siteTitle, description }: AppProps) => (
       <title>{siteTitle}</title>
       <meta name="description" content={description} />
       <link rel="icon" type="image/png" href="/favicon.png" />
+      <link rel="apple-touch-icon" href="/favicon.png" />
       <link rel="manifest" href="/manifest.json" />
       <script type="module">{`import {Workbox} from 'https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-window.prod.mjs';
 if ('serviceWorker' in navigator) {
