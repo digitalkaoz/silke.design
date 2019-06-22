@@ -73,10 +73,12 @@ class Project extends PureComponent<ProjectProps, any> {
   private fade(distance:number) {
     const self:HTMLDivElement = (this.container.current as any).outerElement;
 
-    self.style.opacity = distance.toString();
-    if (this.project.current) {
-      this.project.current.style.filter = `grayscale(${1-distance})`;
-    }
+    window.requestAnimationFrame(() => {
+      self.style.opacity = distance.toString();
+      if (this.project.current) {
+        this.project.current.style.filter = `grayscale(${1-distance})`;
+      }
+    });
   }
 
   private renderDescription(dir: string) {
