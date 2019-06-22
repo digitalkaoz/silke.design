@@ -42,12 +42,11 @@
     "jest": "^24.1.0",
     "prettier": "^1.15.3",
     "purgecss": "^1.1.0",
-    "react-hot-loader": "^4.11",
     "react-static": "^7.1",
     "react-static-plugin-sass": "^7.1",
     "react-static-plugin-typescript": "^7.0",
     "ts-jest": "^24.0.0",
-    "webpack-bundle-analyzer": "^3.0.3",
+    "typescript": "^3.5.2",
     "webpack-manifest-plugin": "^2.0.4",
     "why-did-you-update": "^1.0.6",
     "workbox-webpack-plugin": "^4.1.1"
