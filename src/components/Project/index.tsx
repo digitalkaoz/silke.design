@@ -1,7 +1,8 @@
 import React, { PureComponent } from "react";
 import Sticky from "react-stickynode";
 import Flower, { FlowerProps } from "../Flower";
-import Icon from "../Icon";
+import { debounce } from 'lodash';
+
 import "./Project.scss";
 
 import universal from "react-universal-component";
@@ -54,17 +55,29 @@ export type ProjectProps = {
 class Project extends PureComponent<ProjectProps, any> {
 
   private container:React.RefObject<Sticky>;
+  private project:React.RefObject<HTMLDivElement>;
 
   constructor(props:ProjectProps) {
     super(props);
 
     this.handleStickyChange = this.handleStickyChange.bind(this);
     this.fadeSticky = this.fadeSticky.bind(this);
+    this.fade = debounce(this.fade.bind(this), 10);
 
     this.container = React.createRef();
+    this.project = React.createRef();
     this.state = {sticky:false, play: true}
   }
   
+  private fade(distance:number) {
+    const self:HTMLDivElement = (this.container.current as any).outerElement;
+
+    self.style.opacity = distance.toString();
+    if (this.project.current) {
+      this.project.current.style.filter = `blur(${3-(distance*3)}px)`;
+    }
+  }
+
   renderDescription(dir: string) {
     return (
       <div className={dir}>
@@ -99,10 +112,9 @@ class Project extends PureComponent<ProjectProps, any> {
 
   private fadeSticky() {
     if (this.container.current && (this.container.current as any).outerElement ) {
-      const self:HTMLDivElement = (this.container.current as any).outerElement 
       const distance = this.getDistance();
-      self.style.opacity = distance.toString();
 
+      this.fade(distance);
       this.setState({play: false});
 
       if (distance >= 0.7 && this.state.play === false) {
@@ -119,8 +131,7 @@ class Project extends PureComponent<ProjectProps, any> {
     } else {
       window.removeEventListener("scroll", this.fadeSticky);
       if (this.container.current && (this.container.current as any).outerElement ) {
-        const self:HTMLDivElement = (this.container.current as any).outerElement 
-        self.style.opacity = "1";
+        this.fade(1);
       }
       this.setState({play: true});
     }
@@ -147,7 +158,7 @@ class Project extends PureComponent<ProjectProps, any> {
 
     return (
       <Sticky onStateChange={this.handleStickyChange} ref={this.container}>
-        <div className={`project project--${this.props.direction} project--${this.props.type} ${this.getId()}`}>
+        <div ref={this.project} className={`project project--${this.props.direction} project--${this.props.type} ${this.getId()}`}>
           {this.renderDescription(
             this.props.direction === "ltr" ? "project--left" : "project--right"
           )}
