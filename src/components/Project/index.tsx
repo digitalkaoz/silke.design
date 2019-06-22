@@ -56,6 +56,7 @@ class Project extends PureComponent<ProjectProps, any> {
 
   private container:React.RefObject<Sticky>;
   private project:React.RefObject<HTMLDivElement>;
+  private listenerAttached:boolean = false;
 
   constructor(props:ProjectProps) {
     super(props);
@@ -74,11 +75,11 @@ class Project extends PureComponent<ProjectProps, any> {
 
     self.style.opacity = distance.toString();
     if (this.project.current) {
-      this.project.current.style.filter = `blur(${3-(distance*3)}px)`;
+      this.project.current.style.filter = `grayscale(${1-distance})`;
     }
   }
 
-  renderDescription(dir: string) {
+  private renderDescription(dir: string) {
     return (
       <div className={dir}>
         <div>
@@ -126,10 +127,16 @@ class Project extends PureComponent<ProjectProps, any> {
   private handleStickyChange({status}:any) {
     this.setState({sticky:status});
 
-    if (status === Sticky.STATUS_FIXED && typeof window !== "undefined") {
+    if (typeof window === "undefined" || this.listenerAttached) {
+      return;
+    }
+
+    if (status === Sticky.STATUS_FIXED) {
       window.addEventListener('scroll', this.fadeSticky, {passive: true});
+      this.listenerAttached = true;
     } else {
       window.removeEventListener("scroll", this.fadeSticky);
+      this.listenerAttached = false;
       if (this.container.current && (this.container.current as any).outerElement ) {
         this.fade(1);
       }
