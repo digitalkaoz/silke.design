@@ -58,23 +58,23 @@
     }
     &.project--rtl {
       .image-gallery {
-        left: 25%!important;
+        left: 25% !important;
         @media #{$medium-and-down} {
-          left: 15%!important;
+          left: 15% !important;
         }
         @media #{$small-and-down} {
-          left: 0%!important;
+          left: 0% !important;
         }
       }
     }
     &.project--ltr {
       .image-gallery {
-        right: 25%!important;
+        right: 25% !important;
         @media #{$medium-and-down} {
-          right: 15%!important;
+          right: 15% !important;
         }
         @media #{$small-and-down} {
-          right: 0%!important;
+          right: 0% !important;
         }
       }
     }
@@ -388,7 +388,7 @@
     }
   }
 
-  &--bornholdt_lee_gmbh {
+  &--bornholdt-lee-gmbh {
     background-color: #0d345f;
     .flower .drop {
       color: #0d345f;
@@ -400,7 +400,7 @@
       color: #f9b234;
     }
   }
-  &--bornholdt_lee_-_relaunch {
+  &--bornholdt_lee---relaunch {
     background-color: #0d345f;
     .flower .drop {
       color: #0d345f;

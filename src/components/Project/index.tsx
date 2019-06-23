@@ -1,183 +1,156 @@
-import React, { PureComponent } from "react";
+import React, {
+  FunctionComponent,
+  RefObject,
+  useRef,
+  useState,
+  useCallback,
+} from "react";
 import Sticky from "react-stickynode";
 import Flower, { FlowerProps } from "../Flower";
-import { debounce } from 'lodash';
 
 import "./Project.scss";
+import {
+  toId,
+  getParameterByName,
+  Loading,
+  Failed,
+  getDistance
+} from "../../utils";
 
 import universal from "react-universal-component";
-
-type UniversalContext = {
-  error?: string;
-};
-
-const Failed = (context: UniversalContext): any =>
-  (context.error && console.error(context.error)) || <span />;
-
-const Loading = (): any => <span />;
-
-const Carousel = universal(import("../Carousel"), {
-  loading: Loading,
-  error: Failed
-}) as any; //TODO rly?
-
-const stripTags = (html: string): string => {
-  if (typeof window === "undefined") {
-    return html.replace(/(<([^>]+)>)/ig,"");
-  }
-
-  const tmp = document.createElement("DIV");
-  tmp.innerHTML = html;
-
-  return tmp.textContent || tmp.innerText;
-};
-
-const getParameterByName = (name: string): boolean => {
-  if (typeof window === "undefined") {
-    return true;
-  }
-  const search = new URLSearchParams(window.location.search);
-
-  return search.has(name);
-};
-
+import { CarouselProps } from "../Carousel";
 
 export type ProjectProps = {
-  direction: "rtl" | "ltr";
+  direction: "rtl" | "ltr" | "project--left" | "project--right";
   skills: FlowerProps;
   type: string;
   name: string;
   text: Array<string>;
   images: Array<string>;
   beta?: boolean;
+  play?: boolean;
 };
 
-class Project extends PureComponent<ProjectProps, any> {
+const Carousel = universal(import("../Carousel"), {
+  loading: Loading,
+  error: Failed
+}) as FunctionComponent<CarouselProps>;
 
-  private container:React.RefObject<Sticky>;
-  private project:React.RefObject<HTMLDivElement>;
-  private listenerAttached:boolean = false;
+const Description: FunctionComponent<ProjectProps> = ({
+  direction,
+  skills,
+  name,
+  text
+}) => (
+  <div className={direction}>
+    <div>
+      <Flower {...skills} />
+      <div className="description">
+        <h2 dangerouslySetInnerHTML={{ __html: name }} />
+        <p dangerouslySetInnerHTML={{ __html: text[0] }}></p>
+        <ul className="hide-on-small-only">
+          {text.slice(1).map((text, i) => (
+            <li key={i} dangerouslySetInnerHTML={{ __html: text }} />
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+);
 
-  constructor(props:ProjectProps) {
-    super(props);
+const Visual: FunctionComponent<ProjectProps> = ({
+  direction,
+  text,
+  images,
+  play = false
+}) => (
+  <div className={direction}>
+    <Carousel text={text} images={images} play={play} />
+  </div>
+);
 
-    this.handleStickyChange = this.handleStickyChange.bind(this);
-    this.fadeSticky = this.fadeSticky.bind(this);
-    this.fade = debounce(this.fade.bind(this), 10);
+const Project: FunctionComponent<ProjectProps> = props => {
+  const stickyContainer: RefObject<Sticky> = useRef(null);
+  const project: RefObject<HTMLDivElement> = useRef(null);
+  const [sticky, setSticky] = useState(0);
+  const [playing, setPlaying] = useState(true);
+  let listenerAttached = false;
 
-    this.container = React.createRef();
-    this.project = React.createRef();
-    this.state = {sticky:false, play: true}
+  if (props.beta && !getParameterByName("beta")) {
+    return <div style={{ display: "none" }}></div>;
   }
-  
-  private fade(distance:number) {
-    const self:HTMLDivElement = (this.container.current as any).outerElement;
+
+  //TODO sideeffect
+  const fade = (distance: number) => {
+    const self: HTMLDivElement = (stickyContainer.current as any).outerElement;
 
     window.requestAnimationFrame(() => {
       self.style.opacity = distance.toString();
-      if (this.project.current) {
-        this.project.current.style.filter = `grayscale(${1-distance})`;
+      if (project.current) {
+        project.current.style.filter = `grayscale(${1 - distance})`;
       }
     });
-  }
+  };
 
-  private renderDescription(dir: string) {
-    return (
-      <div className={dir}>
-        <div>
-          <Flower {...this.props.skills} />
-          <div className="description">
-            <h2 dangerouslySetInnerHTML={{ __html: this.props.name }} />
-            <p dangerouslySetInnerHTML={{ __html: this.props.text[0] }}></p>
-            <ul className="hide-on-small-only">
-              {this.props.text.slice(1).map((text, i) => (
-                <li key={i} dangerouslySetInnerHTML={{ __html: text }} />
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  const fadeSticky = () => {
+    const distance = getDistance(stickyContainer);
 
-  private getDistance() : number {
-    if (!this.container.current) {
-      return 0
+    fade(distance);
+    setPlaying(false);
+
+    if (distance >= 0.7 && playing === false) {
+      setPlaying(true);
     }
-    const self:HTMLDivElement = (this.container.current as any).outerElement 
+  };
 
-    if (!self.nextSibling) {
-      return 0;
-    }
+  const stickyChanged = useCallback(
+    ({ status }: Sticky.Status) => {
+      setSticky(status);
 
-    return (self.nextSibling as HTMLDivElement).getBoundingClientRect().top / window.innerHeight;
-  }
-
-  private fadeSticky() {
-    if (this.container.current && (this.container.current as any).outerElement ) {
-      const distance = this.getDistance();
-
-      this.fade(distance);
-      this.setState({play: false});
-
-      if (distance >= 0.7 && this.state.play === false) {
-        this.setState({play: true});
+      if (typeof window === "undefined" || listenerAttached) {
+        return;
       }
-    }
-  }
 
-  private handleStickyChange({status}:any) {
-    this.setState({sticky:status});
+      if (status === Sticky.STATUS_FIXED) {
+        window.addEventListener("scroll", fadeSticky, { passive: true });
+        listenerAttached = true;
+      } else {
+        window.removeEventListener("scroll", fadeSticky);
+        listenerAttached = false;
+        if (stickyContainer && (stickyContainer.current as any).outerElement) {
+          fade(1);
+        }
 
-    if (typeof window === "undefined" || this.listenerAttached) {
-      return;
-    }
-
-    if (status === Sticky.STATUS_FIXED) {
-      window.addEventListener('scroll', this.fadeSticky, {passive: true});
-      this.listenerAttached = true;
-    } else {
-      window.removeEventListener("scroll", this.fadeSticky);
-      this.listenerAttached = false;
-      if (this.container.current && (this.container.current as any).outerElement ) {
-        this.fade(1);
+        setPlaying(true);
       }
-      this.setState({play: true});
-    }
-  }
+    },
+    [sticky, stickyContainer, listenerAttached, setSticky, setPlaying]
+  );
 
-  private renderVisual(dir: string) {
-    return (
-      <div className={dir}>
-        <Carousel text={this.props.text} images={this.props.images} play={this.state.play} />
+  return (
+    <Sticky onStateChange={stickyChanged} ref={stickyContainer}>
+      <div
+        ref={project}
+        className={`project project--${props.direction} project--${
+          props.type
+        } project--${toId(props.name)}`}
+      >
+        <Description
+          {...props}
+          direction={
+            props.direction === "ltr" ? "project--left" : "project--right"
+          }
+        />
+        <Visual
+          {...props}
+          direction={
+            props.direction === "ltr" ? "project--right" : "project--left"
+          }
+          play={playing}
+        />
       </div>
-    );
-  }
-
-  private getId(): string {
-    return `project--${stripTags(this.props.name)
-      .replace(/ /g, "_")
-      .toLowerCase()}`;
-  }
-
-  render() {
-    if (this.props.beta && !getParameterByName('beta')) {
-      return <div style={{display: "none"}}></div>;
-    }
-
-    return (
-      <Sticky onStateChange={this.handleStickyChange} ref={this.container}>
-        <div ref={this.project} className={`project project--${this.props.direction} project--${this.props.type} ${this.getId()}`}>
-          {this.renderDescription(
-            this.props.direction === "ltr" ? "project--left" : "project--right"
-          )}
-          {this.renderVisual(
-            this.props.direction === "ltr" ? "project--right" : "project--left"
-          )}
-        </div>
-      </Sticky>
-    );
-  }
-}
+    </Sticky>
+  );
+};
 
 export default Project;

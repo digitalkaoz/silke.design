@@ -1,4 +1,6 @@
 import { readFileSync } from "fs";
+import { join } from "path";
+
 //import { SiteData, PageData } from "./src";
 //import { ReactStaticConfig, Route} from "react-static";
 
@@ -11,7 +13,7 @@ export default {
 
   // siteRoot: `https://${config.website}`,
 
-  //extensions: [".tsx", ".ts", ".jsx", ".js"],
+  entry: join(__dirname, "src", "index.tsx"),
 
   getSiteData: async () /*: Promise<SiteData>*/ => ({
     siteTitle: "Portfolio | Silke Schönthal",

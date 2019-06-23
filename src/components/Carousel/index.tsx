@@ -1,9 +1,13 @@
-import React, { PureComponent, RefObject, SyntheticEvent } from "react";
+import React, {
+  RefObject,
+  useState,
+  FunctionComponent,
+  useEffect,
+  useCallback,
+  useRef
+} from "react";
 import ImageGallery, { ReactImageGalleryItem } from "react-image-gallery";
-
 import "react-image-gallery/styles/css/image-gallery.css";
-
-import { isMobile } from "../..";
 
 import "./Carousel.scss";
 
@@ -13,74 +17,69 @@ export type CarouselProps = {
   play: boolean;
 };
 
-class Carousel extends PureComponent<CarouselProps, any> {
-  private ref: RefObject<HTMLDivElement>;
-  private gallery: RefObject<ImageGallery>;
-
-  constructor(props: CarouselProps) {
-    super(props);
-    this.renderItem = this.renderItem.bind(this);
-    this.flip = this.flip.bind(this);
-    this.ref = React.createRef();
-    this.gallery = React.createRef();
-
-    this.state = {flippedText: false}
-  }
-
-  public componentWillReceiveProps(props: CarouselProps) {
-    if (this.gallery.current) {
-      if (props.play) {
-        this.gallery.current.play();
-      } else {
-        this.gallery.current.pause();
+const CarouselItem: FunctionComponent<ReactImageGalleryItem> = ({
+  description,
+  original
+}) => {
+  return (
+    <div
+      className={
+        "image-gallery-image" +
+        (description ? " image-gallery-image__text" : "")
       }
+    >
+      <img src={original} alt={original} />
+    </div>
+  );
+};
+
+const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
+  const carousel: RefObject<HTMLDivElement> = useRef(null);
+  const gallery: RefObject<ImageGallery> = useRef(null);
+
+  const [flipped, setFlipped] = useState(false);
+
+  useEffect(() => {
+    if (!gallery.current) {
+      return;
     }
-  }
 
-  private renderItem(item: ReactImageGalleryItem) {
-    return (
-      <div
-        className={
-          "image-gallery-image" +
-          (item.description ? " image-gallery-image__text" : "")
-        }
-      >
-        <img src={item.original} alt={item.original} />
-      </div>
-    );
-  }
-
-  private getImages(): Array<ReactImageGalleryItem> {
-    const images: Array<ReactImageGalleryItem> = this.props.images.map(
-      image => ({ original: image })
-    );
-
-    return images;
-  }
-
-  private flip(e: SyntheticEvent) {
-    if (this.ref.current) {
-      this.ref.current.classList.toggle('carousel--flipped');
-      this.setState({flippedText : !this.state.flippedText});
+    if (play) {
+      gallery.current.play();
+    } else {
+      gallery.current.pause();
     }
-  }
+  }, [play]);
 
-  render() {
-    const images = this.getImages();
+  const flatImages: Array<ReactImageGalleryItem> = images.map(image => ({
+    original: image
+  }));
 
-    return (
-      <>
-      <button onClick={this.flip} className={"carousel--flipper " +(this.state.flippedText ? 'flipped' : 'not-flipped')}>⌵</button>
-      <div
-        className="carousel"
-        ref={this.ref}
-        // onTouchStart={this.flip}
+  const flip = useCallback(
+    () => {
+      if (carousel.current) {
+        carousel.current.classList.toggle("carousel--flipped");
+  
+        setFlipped(!flipped);
+      }
+    },
+    [carousel, flipped]
+  );
+
+  return (
+    <>
+      <button
+        onClick={flip}
+        className={"carousel--flipper " + (flipped ? "flipped" : "not-flipped")}
       >
+        ⌵
+      </button>
+      <div className="carousel" ref={carousel}>
         <div className="flipper">
           <ImageGallery
-            items={images}
-            ref={this.gallery}
-            renderItem={this.renderItem}
+            items={flatImages}
+            ref={gallery}
+            renderItem={item => <CarouselItem {...item} />}
             showBullets={images.length > 1}
             lazyLoad
             showThumbnails={false}
@@ -93,15 +92,14 @@ class Carousel extends PureComponent<CarouselProps, any> {
             autoPlay
           />
           <ul className="carousel--text show-on-small-only">
-            {this.props.text.slice(1).map((text, i) => (
+            {text.slice(1).map((text, i) => (
               <li key={i} dangerouslySetInnerHTML={{ __html: text }} />
             ))}
           </ul>
         </div>
       </div>
-      </>
-    );
-  }
-}
+    </>
+  );
+};
 
 export default Carousel;

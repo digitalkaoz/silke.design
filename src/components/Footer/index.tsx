@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo, FunctionComponent } from "react";
 import Sticky from 'react-stickynode';
 
 import Icon, { IconProps } from "../Icon";
@@ -9,7 +9,7 @@ export type FooterProps = {
   links: Array<IconProps>;
 };
 
-const Footer = ({ links }: FooterProps) => (
+const Footer: FunctionComponent<FooterProps> = ({ links }) => (
   <Sticky>
    <footer>
      {links.map(link => (
@@ -22,4 +22,4 @@ const Footer = ({ links }: FooterProps) => (
   </Sticky>
 );
 
-export default Footer;
+export default memo(Footer);

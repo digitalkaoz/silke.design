@@ -1,6 +1,5 @@
-import React from "react";
-import { Root, Routes, useSiteData } from "react-static";
-import Helmet from "react-helmet";
+import React, { FunctionComponent } from "react";
+import { Root, Routes, useSiteData, Head } from "react-static";
 
 import "default-passive-events";
 import "./App.scss";
@@ -10,16 +9,16 @@ type AppProps = {
   description: string;
 };
 
-export default () => {
+const App: FunctionComponent<AppProps> = () => {
   const { siteTitle, description }: AppProps = useSiteData();
 
   return (
     <Root>
-      <Helmet>
+      <Head>
         <meta name="theme-color" content="#6cc2e1" />
         <script
           defer
-          src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"
+          src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver,ResizeObserver"
         />
         <title>{siteTitle}</title>
         <meta name="description" content={description} />
@@ -33,8 +32,10 @@ if ('serviceWorker' in navigator) {
   wb.register();
 }
 `}</script>
-      </Helmet>
+      </Head>
       <Routes />
     </Root>
   );
 };
+
+export default App;
