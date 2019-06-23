@@ -39,6 +39,7 @@
     "eslint-config-react-tools": "^1.1.6",
     "fs-extra": "^8.0.1",
     "jest": "^24.1.0",
+    "jsesc": "^2.5.2",
     "prettier": "^1.15.3",
     "purgecss": "^1.1.0",
     "react-static": "^7.1",
