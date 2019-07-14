@@ -3,7 +3,7 @@ import React, {
   RefObject,
   useRef,
   useState,
-  useCallback,
+  useCallback
 } from "react";
 import Sticky from "react-stickynode";
 import Flower, { FlowerProps } from "../Flower";
@@ -21,8 +21,9 @@ import universal from "react-universal-component";
 import { CarouselProps } from "../Carousel";
 
 export type ProjectProps = {
-  direction: "rtl" | "ltr" | "project--left" | "project--right";
+  direction: "rtl" | "ltr";
   skills: FlowerProps;
+  orientation: "landscape" | "portrait";
   type: string;
   name: string;
   text: Array<string>;
@@ -37,34 +38,32 @@ const Carousel = universal(import("../Carousel"), {
 }) as FunctionComponent<CarouselProps>;
 
 const Description: FunctionComponent<ProjectProps> = ({
-  direction,
   skills,
   name,
   text
 }) => (
-  <div className={direction}>
-    <div>
+  <div className="project--description-column">
+    <div className="heading">
       <Flower {...skills} />
-      <div className="description">
-        <h2 dangerouslySetInnerHTML={{ __html: name }} />
-        <p dangerouslySetInnerHTML={{ __html: text[0] }}></p>
-        <ul className="hide-on-small-only">
-          {text.slice(1).map((text, i) => (
-            <li key={i} dangerouslySetInnerHTML={{ __html: text }} />
-          ))}
-        </ul>
-      </div>
+      <h2 dangerouslySetInnerHTML={{ __html: name }} />
+    </div>
+    <div className="description">
+      <p dangerouslySetInnerHTML={{ __html: text[0] }}></p>
+      <ul className="hide-on-small-only">
+        {text.slice(1).map((text, i) => (
+          <li key={i} dangerouslySetInnerHTML={{ __html: text }} />
+        ))}
+      </ul>
     </div>
   </div>
 );
 
 const Visual: FunctionComponent<ProjectProps> = ({
-  direction,
   text,
   images,
   play = false
 }) => (
-  <div className={direction}>
+  <div className="project--gallery-column">
     <Carousel text={text} images={images} play={play} />
   </div>
 );
@@ -82,14 +81,11 @@ const Project: FunctionComponent<ProjectProps> = props => {
 
   //TODO sideeffect
   const fade = (distance: number) => {
-    const self: HTMLDivElement = (stickyContainer.current as any).outerElement;
+    if (!project.current) {
+      return;
+    }
 
-    window.requestAnimationFrame(() => {
-      self.style.opacity = distance.toString();
-      if (project.current) {
-        project.current.style.filter = `grayscale(${1 - distance})`;
-      }
-    });
+    window.requestAnimationFrame(() => project.current.style.filter = `grayscale(${1 - distance}) brightness(${distance})`);
   };
 
   const fadeSticky = () => {
@@ -133,19 +129,13 @@ const Project: FunctionComponent<ProjectProps> = props => {
         ref={project}
         className={`project project--${props.direction} project--${
           props.type
-        } project--${toId(props.name)}`}
+        } project--${toId(props.name)} ${props.type == "tablet" ? "project--"+(props.orientation || "landscape") : ""}`}
       >
         <Description
           {...props}
-          direction={
-            props.direction === "ltr" ? "project--left" : "project--right"
-          }
         />
         <Visual
           {...props}
-          direction={
-            props.direction === "ltr" ? "project--right" : "project--left"
-          }
           play={playing}
         />
       </div>

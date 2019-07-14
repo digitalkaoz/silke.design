@@ -1,5 +1,54 @@
 [
   {
+    "name": "DB Systel",
+    "images": [
+      "/img/references/dbsystel/1.jpg",
+      "/img/references/dbsystel/2.jpg",
+      "/img/references/dbsystel/3.jpg",
+      "/img/references/dbsystel/4.jpg",
+      "/img/references/dbsystel/5.jpg",
+      "/img/references/dbsystel/6.jpg",
+      "/img/references/dbsystel/7.jpg"
+    ],
+    "text": [
+      "App zum Tracken und Lokalisieren von Güterwagen.",
+      "Projekt der Bornholdt Lee GmbH",
+      "Konzeption und Design in Sketch",
+      "Präsentation mit Invision"
+    ],
+    "beta": true,
+    "type": "tablet",
+    "orientation": "portrait",
+    "skills": {
+      "tl": { "name": "UX" },
+      "tr": { "name": "UI" },
+      "br": { "name": 2018 }
+    }
+  },
+  {
+    "name": "DocIdent",
+    "images": [
+      "/img/references/docident/2.jpg",
+      "/img/references/docident/3.jpg",
+      "/img/references/docident/4.jpg",
+      "/img/references/docident/5.jpg",
+      "/img/references/docident/6.jpg",
+      "/img/references/docident/7.jpg",
+      "/img/references/docident/8.jpg"
+    ],
+    "text": [
+      "Website zum digitalen Signieren und Ablegen von Dokumenten mit der Blockchain.",
+      "Projekt der Bornholdt Lee GmbH",
+      "Wireframes in Balsamiq"
+    ],
+    "beta": true,
+    "type": "desktop",
+    "skills": {
+      "tl": { "name": "UX" },
+      "br": { "name": 2018 }
+    }
+  },
+  {
     "name": "smoothr",
     "images": [
       "/img/references/smoothr/1.jpg",
@@ -9,7 +58,7 @@
     ],
     "text": [
       "Eine Tresenapp für mobile Bestellungen und Bezahlungen in Restaurants.",
-      "Projekt der Bornhold-Lee GmbH",
+      "Projekt der Bornholdt Lee GmbH",
       "Design in Photoshop"
     ],
     "beta": true,
@@ -21,6 +70,31 @@
     }
   },
   {
+    "name": "Bornholdt Lee - Relaunch",
+    "images": [
+      "/img/references/blg-relaunch/1.jpg",
+      "/img/references/blg-relaunch/2.jpg",
+      "/img/references/blg-relaunch/3.jpg",
+      "/img/references/blg-relaunch/4.jpg"
+    ],
+    "text": [
+      "Die Unternehmens-Website der Bornholdt Lee GmbH soll einen frischen Look erhalten.",
+      "Projekt der Bornholdt Lee GmbH",
+      "Design in Sketch",
+      "Konzeption mit Axure",
+      "Präsentation mit Invision",
+      "HTML/CSS-Prototyp mit dem Materialize Framework"
+    ],
+    "beta": true,
+    "type": "desktop",
+    "skills": {
+      "bl": { "name": "FE" },
+      "tl": { "name": "UX" },
+      "tr": { "name": "UI" },
+      "br": { "name": 2017 }
+    }
+  },
+  {
     "name": "Duchenne",
     "images": [
       "/img/references/duchenne/1.jpg",
@@ -28,8 +102,8 @@
     ],
     "text": [
       "Eine Informationsseite zur Krankheit \"Muskeldystrophie\".",
-      "Projekt der Bornhold-Lee GmbH",
-      "Konzept & Wireframes mit Axure",
+      "Projekt der Bornholdt Lee GmbH",
+      "Konzeption mit Axure",
       "Design in Photoshop"
     ],
     "beta": true,
@@ -41,17 +115,16 @@
     }
   },
   {
-    "name": "iChallenge",
+    "name": "iChallenge - ING DiBa",
     "images": [
-      "/img/references/ichallenge/1.jpg",
       "/img/references/ichallenge/2.jpg",
-      "/img/references/ichallenge/3.jpg",
+      "/img/references/ichallenge/5.jpg",
       "/img/references/ichallenge/4.jpg",
-      "/img/references/ichallenge/5.jpg"
+      "/img/references/ichallenge/1.jpg"
     ],
     "text": [
       "Geocaching-App für Tablets im Corporate-Design der ING DiBa.",
-      "Projekt der Bornhold-Lee GmbH",
+      "Projekt der Bornholdt Lee GmbH",
       "Design in Photoshop"
     ],
     "type": "tablet",
@@ -71,8 +144,8 @@
     ],
     "text": [
       "App mit der Bestell- und Bezahlvorgänge im Restaurant abgewickelt werden können.",
-      "Projekt der Bornhold-Lee GmbH",
-      "Konzept & Wireframes mit Axure",
+      "Projekt der Bornholdt Lee GmbH",
+      "Konzeption mit Axure",
       "Design in Photoshop"
     ],
     "type": "phone",
@@ -92,9 +165,9 @@
       "/img/references/freixenet/5.jpg"
     ],
     "text": [
-      "Persönlicher Wein-Guide des Unternehmens Freixenet für iOS.",
-      "Projekt der Bornhold-Lee GmbH",
-      "Wireframes mit WireframeSketcher",
+      "Persönlicher Wein-Guide des Unternehmens Freixenet.",
+      "Projekt der Bornholdt Lee GmbH",
+      "Konzeption mit WireframeSketcher",
       "Design in Photoshop"
     ],
     "type": "phone",
@@ -108,11 +181,11 @@
     "name": "Bornholdt Lee GmbH",
     "images": ["/img/references/blg/1.jpg", "/img/references/blg/2.jpg"],
     "text": [
-      "Website-Relaunch der Bornhold-Lee GmbH.",
-      "Projekt der Bornhold-Lee GmbH",
-      "Wireframes mit WireframeSketcher",
+      "Relaunch der Firmen-Website.",
+      "Projekt der Bornholdt Lee GmbH",
+      "Konzeption mit WireframeSketcher",
       "Design in Photoshop",
-      "HTML/CSS Prototyp in Symfony"
+      "HTML/CSS Prototyp in Twig"
     ],
     "type": "desktop",
     "skills": {

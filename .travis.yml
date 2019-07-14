@@ -13,7 +13,8 @@ node_js:
 #   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 
 script: 
-- yarn build
+- yarn build:static
+#- yarn build:optimize-css
 - mkdir -p dist_html
 - mv dist/*.html dist_html
 
