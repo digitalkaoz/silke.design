@@ -1,6 +1,4 @@
-import React, { memo } from "react";
-
-//import {pure} from 'recompose';
+import React, { memo, FunctionComponent } from "react";
 
 import "./Flower.scss";
 
@@ -14,7 +12,7 @@ export type FlowerProps = {
   br: Corner | null;
 };
 
-const Flower = ({ tl, tr, bl, br }: FlowerProps) => (
+const Flower : FunctionComponent<FlowerProps> = ({ tl, tr, bl, br }) => (
   <div className="flower">
     {tl ? (
       <div className="drop drop--tl">

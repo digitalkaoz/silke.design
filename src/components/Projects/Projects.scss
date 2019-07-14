@@ -6,7 +6,7 @@
     &:last-of-type {
       opacity: 1 !important;
       .project {
-        filter: grayscale(0)!important;
+        filter: grayscale(0) !important;
       }
     }
   }

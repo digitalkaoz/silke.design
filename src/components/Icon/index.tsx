@@ -1,7 +1,5 @@
-import React, { PureComponent } from "react";
+import React, { FunctionComponent, memo } from "react";
 import { SimpleImg } from "react-simple-img";
-
-//import { pure } from 'recompose';
 
 export type IconProps = {
   src: string;
@@ -9,35 +7,44 @@ export type IconProps = {
   target?: string;
 };
 
-class Icon extends PureComponent<IconProps, any> {
-  renderLink() {
-    return (
-      <a
-        href={this.props.target}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={this.props.name}
-        className="icon"
-      >
-        {this.renderImage(false)}
-      </a>
-    );
-  }
+export type ImageIconProps = {
+  src: string;
+  name: string;
+  target?: string;
+  asIcon?: boolean;
+};
 
-  renderImage(asIcon = true) {
-    return (
-      <SimpleImg
-        src={this.props.src}
-        placeholder="linear-gradient(rgba(0,0,0,0) 0%, rgb(0, 0, 0,1) 100%)"
-        alt={this.props.name}
-        className={asIcon ? "icon" : ""}
-      />
-    );
-  }
+const LinkIcon: FunctionComponent<IconProps> = ({ src, target, name }) => (
+  <a
+    href={target}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={name}
+    className="icon"
+  >
+    <ImageIcon src={src} target={target} name={name} asIcon={false} />
+  </a>
+);
 
-  render() {
-    return this.props.target ? this.renderLink() : this.renderImage();
-  }
-}
+const ImageIcon: FunctionComponent<ImageIconProps> = ({
+  src,
+  name,
+  asIcon = true
+}) => (
+  <SimpleImg
+    src={src}
+    placeholder="linear-gradient(rgba(0,0,0,0) 0%, rgb(0, 0, 0,1) 100%)"
+    alt={name}
+    className={asIcon ? "icon" : ""}
+  />
+);
 
-export default Icon;
+const Icon: FunctionComponent<IconProps> = ({ src, target, name }) => {
+  return target ? (
+    <LinkIcon src={src} target={target} name={name} />
+  ) : (
+    <ImageIcon src={src} target={target} name={name} />
+  );
+};
+
+export default memo(Icon);

@@ -1,10 +1,13 @@
-import React, {PureComponent, memo } from "react";
+import React, {
+  memo,
+  FunctionComponent,
+  useState,
+  useCallback
+} from "react";
+import ClampLines from "react-clamp-lines";
+
 import Icon, { IconProps } from "../Icon";
-
-import ClampLines from 'react-clamp-lines';
-
-import {isMobile, toId} from "../..";
-
+import { isMobile, toId } from "../../utils";
 import "./Skills.scss";
 
 export type SkillProps = {
@@ -13,52 +16,44 @@ export type SkillProps = {
   icons: Array<IconProps>;
 };
 
-class Skill extends PureComponent<SkillProps, any> {
-  constructor(props:SkillProps) {
-    super(props);
+const Skill: FunctionComponent<SkillProps> = ({ name, description, icons }) => {
+  const [lines, setLines] = useState(isMobile() ? 5 : 100); //TODO isMobile is a sideEffect
 
-    this.state = {lines: isMobile() ? 5 : 100};
-    this.handleClick = this.handleClick.bind(this);
-  } 
-
-  handleClick() {
+  const expand = useCallback(() => {
     if (!isMobile()) {
       return;
     }
-    this.setState({lines: 100});
-  }
 
-  render() {
-    const { name, description, icons } = {...this.props};
+    setLines(100);
+  }, []);
 
-    return (
+  return (
     <div className="skill">
-    <h2>{name}</h2>
-    <hr />
-    <div className="icons">
-      {icons.map(icon => (
-        <Icon key={icon.src} {...icon} />
-      ))}
+      <h2>{name}</h2>
+      <hr />
+      <div className="icons">
+        {icons.map(icon => (
+          <Icon key={icon.src} {...icon} />
+        ))}
+      </div>
+      <ClampLines
+        id={toId(name)}
+        onClick={expand}
+        text={description}
+        lines={lines}
+        innerElement="p"
+        lessText=""
+        moreText="⌵"
+      />
     </div>
-    <ClampLines
-      id={toId(name)}
-      onClick={this.handleClick} 
-      text={description} 
-      lines={this.state.lines} 
-      innerElement="p"
-      lessText=""
-      moreText="⌵"
-    />
-  </div>  
-    );
-  }
-}
+  );
+};
 
 export type SkillsProps = {
   skills: Array<SkillProps>;
 };
 
-const Skills = ({ skills }: SkillsProps) => (
+const Skills: FunctionComponent<SkillsProps> = ({ skills }) => (
   <div id="skills">
     {skills.map(skill => (
       <Skill key={skill.name} {...skill} />
