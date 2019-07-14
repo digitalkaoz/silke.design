@@ -71,7 +71,6 @@ const Visual: FunctionComponent<ProjectProps> = ({
 const Project: FunctionComponent<ProjectProps> = props => {
   const stickyContainer: RefObject<Sticky> = useRef(null);
   const project: RefObject<HTMLDivElement> = useRef(null);
-  const [sticky, setSticky] = useState(0);
   const [playing, setPlaying] = useState(true);
   let listenerAttached = false;
 
@@ -81,11 +80,11 @@ const Project: FunctionComponent<ProjectProps> = props => {
 
   //TODO sideeffect
   const fade = (distance: number) => {
-    if (!project.current) {
-      return;
-    }
-
-    window.requestAnimationFrame(() => project.current.style.filter = `grayscale(${1 - distance}) brightness(${distance})`);
+    window.requestAnimationFrame(() => {
+      if (project.current) {
+        project.current.style.filter = `grayscale(${1 - distance}) brightness(${distance})`
+      }
+    });
   };
 
   const fadeSticky = () => {
@@ -101,8 +100,6 @@ const Project: FunctionComponent<ProjectProps> = props => {
 
   const stickyChanged = useCallback(
     ({ status }: Sticky.Status) => {
-      setSticky(status);
-
       if (typeof window === "undefined" || listenerAttached) {
         return;
       }
@@ -119,8 +116,7 @@ const Project: FunctionComponent<ProjectProps> = props => {
 
         setPlaying(true);
       }
-    },
-    [sticky, stickyContainer, listenerAttached, setSticky, setPlaying]
+    }, []
   );
 
   return (
