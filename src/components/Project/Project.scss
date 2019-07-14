@@ -167,7 +167,7 @@
     .carousel {
       max-width: 30vw;
       @media #{$small-and-down} {
-        max-width: 45vw;
+        max-width: 35vw!important;
       }
     }
 
@@ -209,7 +209,7 @@
       .carousel {
         max-width: 30vw;
         @media #{$small-and-down} {
-          max-width: 65vw;
+          max-width: 55vw!important;
         }
       }
 
