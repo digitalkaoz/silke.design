@@ -6,6 +6,8 @@
   height: 100vh;
   display: flex;
   margin: 0;
+  position: sticky;
+  top: 0;
 
   &--description-column,
   &--gallery-column {
@@ -167,7 +169,7 @@
     .carousel {
       max-width: 23vw;
       @media #{$small-and-down} {
-        max-width: 35vw!important;
+        max-width: 35vw !important;
       }
     }
 
@@ -209,7 +211,7 @@
       .carousel {
         max-width: 30vw;
         @media #{$small-and-down} {
-          max-width: 55vw!important;
+          max-width: 55vw !important;
         }
       }
 

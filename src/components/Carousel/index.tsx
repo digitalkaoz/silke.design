@@ -40,10 +40,6 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
   const [flipped, setFlipped] = useState(false);
 
   useEffect(() => {
-    if (!gallery.current) {
-      return;
-    }
-
     if (play) {
       gallery.current.play();
     } else {

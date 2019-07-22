@@ -3,9 +3,9 @@ import React, {
   RefObject,
   useRef,
   useState,
-  useCallback
+  useEffect,
+  memo
 } from "react";
-import Sticky from "react-stickynode";
 import Flower, { FlowerProps } from "../Flower";
 
 import "./Project.scss";
@@ -69,74 +69,86 @@ const Visual: FunctionComponent<ProjectProps> = ({
 );
 
 const Project: FunctionComponent<ProjectProps> = props => {
-  const stickyContainer: RefObject<Sticky> = useRef(null);
   const project: RefObject<HTMLDivElement> = useRef(null);
-  const [playing, setPlaying] = useState(true);
-  let listenerAttached = false;
+  const [playing /* setPlaying*/] = useState<boolean>(true);
 
   if (props.beta && !getParameterByName("beta")) {
     return <div style={{ display: "none" }}></div>;
   }
 
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (project.current) {
+            project.current.style.filter = `grayscale(0) brightness(1)`;
+          }
+          window.addEventListener("scroll", fadeSticky);
+        }
+      });
+    },
+    {
+      threshold: 0.01
+    }
+  );
+
   //TODO sideeffect
   const fade = (distance: number) => {
     window.requestAnimationFrame(() => {
-      if (project.current) {
-        project.current.style.filter = `grayscale(${1 - distance}) brightness(${distance})`
+      // if we react the top with the current active project, reset our own fading
+      if (distance === 0) {
+        project.current.style.filter = `grayscale(0) brightness(1)`;
+      } else {
+        project.current.style.filter = `grayscale(${1 -
+          distance}) brightness(${distance})`;
       }
     });
   };
 
   const fadeSticky = () => {
-    const distance = getDistance(stickyContainer);
+    const distance = getDistance(project);
 
-    fade(distance);
-    setPlaying(false);
+    // if we self are not on top always reset fading
+    if (
+      project.current.getBoundingClientRect().top / window.innerHeight > 0 &&
+      project.current.style.filter != `grayscale(0) brightness(1)`
+    ) {
+      fade(0);
+    } else {
+      fade(distance);
+    }
 
     if (distance >= 0.7 && playing === false) {
-      setPlaying(true);
+      //setPlaying(true);
+    } else if (playing === true && distance < 0.7) {
+      //setPlaying(false);
     }
   };
 
-  const stickyChanged = useCallback(
-    ({ status }: Sticky.Status) => {
-      if (typeof window === "undefined" || listenerAttached) {
-        return;
-      }
+  useEffect(() => {
+    observer.observe(project.current);
 
-      if (status === Sticky.STATUS_FIXED) {
-        window.addEventListener("scroll", fadeSticky, { passive: true });
-        listenerAttached = true;
-      } else {
-        window.removeEventListener("scroll", fadeSticky);
-        listenerAttached = false;
-        if (stickyContainer && (stickyContainer.current as any).outerElement) {
-          fade(1);
-        }
-
-        setPlaying(true);
-      }
-    }, []
-  );
+    return () => {
+      window.removeEventListener("scroll", fadeSticky);
+      observer.unobserve(project.current);
+    };
+  }, []);
 
   return (
-    <Sticky onStateChange={stickyChanged} ref={stickyContainer}>
-      <div
-        ref={project}
-        className={`project project--${props.direction} project--${
-          props.type
-        } project--${toId(props.name)} ${props.type == "tablet" ? "project--"+(props.orientation || "landscape") : ""}`}
-      >
-        <Description
-          {...props}
-        />
-        <Visual
-          {...props}
-          play={playing}
-        />
-      </div>
-    </Sticky>
+    <div
+      ref={project}
+      className={`project project--${props.direction} project--${
+        props.type
+      } project--${toId(props.name)} ${
+        props.type == "tablet"
+          ? "project--" + (props.orientation || "landscape")
+          : ""
+      }`}
+    >
+      <Description {...props} />
+      <Visual {...props} play={playing} />
+    </div>
   );
 };
 
-export default Project;
+export default memo(Project);

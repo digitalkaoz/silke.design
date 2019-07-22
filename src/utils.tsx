@@ -45,14 +45,13 @@ export const Failed = (context: UniversalContext): any => {
 export const Loading = (): any => <span />;
 
 export const getDistance = (container: RefObject<any>) : number => {
-    if (!container.current) {
-      return 0
+  if (!container.current) {
+      return 1
     }
-    const self:HTMLDivElement = (container.current as any).outerElement 
-
-    if (!self.nextSibling) {
-      return 0;
+    const currentScroller = container.current.nextSibling;
+    if (!currentScroller) {
+      return 1;
     }
 
-    return (self.nextSibling as HTMLDivElement).getBoundingClientRect().top / window.innerHeight;
+    return currentScroller.getBoundingClientRect().top / window.innerHeight;
   }
