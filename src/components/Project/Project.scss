@@ -173,6 +173,13 @@
       }
     }
 
+		.carousel--text {
+			@media #{$medium-and-down} {
+				width: 100vw !important;
+				right: -85px;
+			}
+		}
+
     .image-gallery::before {
       padding-top: 178%;
     }
@@ -214,6 +221,13 @@
           max-width: 55vw !important;
         }
       }
+
+			.carousel--text {
+				@media #{$medium-and-down} {
+					width: 100vw !important;
+					right: -45px;
+				}
+			}
 
       .image-gallery::before {
         padding-top: 133%;

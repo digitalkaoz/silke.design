@@ -76,6 +76,7 @@ const Project: FunctionComponent<ProjectProps> = props => {
     return <div style={{ display: "none" }}></div>;
   }
 
+	//TODO https://github.com/thebuilder/react-intersection-observer ?
   const observer = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
