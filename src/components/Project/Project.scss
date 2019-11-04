@@ -300,12 +300,18 @@
       color: #0090d0;
     }
   }
-  &--tchibo {
+  &--tchibo, &--tchibo_shop {
     background-color: #003976;
     .flower .drop {
       color: #003976;
     }
-  }
+	}
+  &--nivea {
+    background-color: #00136f;
+    .flower .drop {
+      color: #00136f;
+    }
+	}
   &--smoothr {
     background-color: #152831;
     .image-gallery::before {

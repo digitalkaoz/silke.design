@@ -1,5 +1,49 @@
 [
   {
+    "name": "Nivea",
+    "images": [
+      "/img/references/nivea/1.jpg",
+      "/img/references/nivea/2.jpg",
+      "/img/references/nivea/3.jpg",
+      "/img/references/nivea/4.jpg",
+      "/img/references/nivea/5.jpg",
+      "/img/references/nivea/6.jpg"
+    ],
+    "text": [
+      "Konzeption des Nivea-Adventskalenders 2019",
+      "Projekt der Dept Agency",
+      "Wireframes in Sketch",
+      "Präsentation mit Invision"
+    ],
+    "beta": true,
+		"type": "phone",
+    "orientation": "portrait",
+    "skills": {
+      "tl": { "name": "UX" },
+      "br": { "name": 2019 }
+    }
+  },
+  {
+    "name": "Tchibo",
+    "images": [
+      "/img/references/tchibo_shop/1.jpg",
+      "/img/references/tchibo_shop/2.jpg",
+      "/img/references/tchibo_shop/3.jpg",
+      "/img/references/tchibo_shop/4.jpg"
+    ],
+    "text": [
+      "Neukonzeption des Kaffee-Moduls im Online-Shop.",
+      "Projekt der Dept Agency",
+      "Konzeption in Form von Scribbles"
+    ],
+    "beta": true,
+    "type": "desktop",
+    "skills": {
+      "tl": { "name": "UX" },
+      "br": { "name": 2019 }
+    }
+  },
+  {
     "name": "DB Systel",
     "images": [
       "/img/references/dbsystel/1.jpg",
