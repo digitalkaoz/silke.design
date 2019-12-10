@@ -4,11 +4,6 @@
     "description": "In der Konzeptionsphase wird evaluiert, wie ein Produkt oder ein Thema im Onlinebereich am besten vermarktet werden kann. Es müssen Rahmenbedingungen wie z. B. Produktlogik, Marktanalyse oder Personas berücksichtigt werden, damit sich der User mit der Thematik identifizieren kann.  Im Vordergrund sollte immer das Nutzererlebnis bei der Interaktion mit dem Produkt stehen.",
     "icons": [
       {
-        "name": "balsamiq",
-        "src": "/img/balsamiq.svg",
-        "target": "https://bdq.cloud/products/balsamiq-mockups/"
-      },
-      {
         "name": "axure",
         "src": "/img/axure-rp.svg",
         "target": "https://www.axure.com/"
@@ -17,6 +12,11 @@
         "name": "invisionapp",
         "src": "/img/invision.svg",
         "target": "https://www.invisionapp.com/"
+      },
+      {
+        "name": "fimga",
+        "src": "/img/figma.svg",
+        "target": "https://www.figma.com/files/recent"
       }
     ]
   },
@@ -50,11 +50,6 @@
     "name": "Frontend Development",
     "description": "Mit einfachen Prototypen lässt sich schnell herausfinden, wie sich das Produkt später anfühlen wird und ob die Benutzerführung gut funktioniert. Dies kann man bereits sehr gut mit HTML, CSS und Javascript umsetzen. Durch Kenntnisse in der Frontend-Entwicklung kann man dieses Wissen bereits während der Konzeption und Gestaltung anwenden.",
     "icons": [
-      {
-        "name": "webstorm",
-        "src": "/img/webstorm-icon.svg",
-        "target": "https://www.jetbrains.com/webstorm/"
-      },
       {
         "name": "html5",
         "src": "/img/html5.svg",
