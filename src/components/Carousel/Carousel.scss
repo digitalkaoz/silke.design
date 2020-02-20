@@ -35,19 +35,12 @@
   &--text {
     transform: rotateY(180deg);
     vertical-align: middle;
-    font-size: 2.2em;
     color: white;
-
+    white-space: initial;
+    margin: 0;
+    text-align: left;
     position: absolute;
-    top: 0;
-    padding-left: 5% !important;
-    li {
-      list-style-type: circle !important;
-    }
-    @media #{$small-and-down} {
-      font-size: 5.5vw;
-      right: 5px;
-    }
+    top: -20px;
   }
 
   .image-gallery-slide {
@@ -70,26 +63,6 @@
     &.center {
       background-color: transparent;
     }
-
-    ul {
-      white-space: initial;
-      margin: 0;
-      padding-left: 24px;
-      width: 100%;
-      text-align: left;
-      li {
-        list-style-type: circle;
-        list-style-position: outside;
-        line-height: 8vw;
-        color: white;
-        @media #{$medium-and-up} {
-          font-size: 2.2vw;
-        }
-        @media #{$small-and-down} {
-          font-size: 5.5vw;
-        }
-      }
-    }
   }
 
   .image-gallery-bullets {
@@ -104,33 +77,23 @@
 
 .carousel--flipper {
   color: white;
-  display: block;
-  padding: none;
-  margin-bottom: 5%;
   background: transparent;
-  border: none;
+  border: 1px solid white;
+  position: absolute;
+  bottom: 5%;
+  border-radius: 25px;
   outline: none;
-  font-size: 8vw;
+  font-size: 6vw;
   line-height: 8vw;
+  justify-content: center;
+  padding: 2% 4% 2% 4%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 40%;
 
-  width: 100%;
   @media #{$medium-and-up} {
     display: none;
-  }
-
-  &.flipped {
-    animation-name: spin;
-    animation-duration: 500ms;
-    animation-timing-function: cubic-bezier(0, 0.97, 0.69, 1.04);
-    animation-fill-mode: forwards;
-
-    @keyframes spin {
-      from {
-        transform: scaleX(0) rotate(0deg);
-      }
-      to {
-        transform: scaleX(-1) rotate(180deg);
-      }
-    }
   }
 }

@@ -4,7 +4,7 @@ import React, {
   FunctionComponent,
   useEffect,
   useCallback,
-  useRef
+  useRef,
 } from "react";
 import ImageGallery, { ReactImageGalleryItem } from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
@@ -12,7 +12,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import "./Carousel.scss";
 
 export type CarouselProps = {
-  text: string[];
+  text: any;
   images: Array<string>;
   play: boolean;
 };
@@ -55,7 +55,7 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
     () => {
       if (carousel.current) {
         carousel.current.classList.toggle("carousel--flipped");
-  
+
         setFlipped(!flipped);
       }
     },
@@ -64,12 +64,6 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
 
   return (
     <>
-      <button
-        onClick={flip}
-        className={"carousel--flipper " + (flipped ? "flipped" : "not-flipped")}
-      >
-        ⌵
-      </button>
       <div className="carousel" ref={carousel}>
         <div className="flipper">
           <ImageGallery
@@ -87,13 +81,17 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
             slideDuration={0}
             autoPlay
           />
-          <ul className="carousel--text show-on-small-only">
-            {text.slice(1).map((text, i) => (
-              <li key={i} dangerouslySetInnerHTML={{ __html: text }} />
-            ))}
-          </ul>
+					<div className="carousel--text show-on-small-only">
+						{text}
+					</div>
         </div>
       </div>
+      <button
+        onClick={flip}
+        className="carousel--flipper "
+      >
+        {flipped ? 'Screens' : 'Infos'}
+      </button>
     </>
   );
 };

@@ -26,7 +26,10 @@ export type ProjectProps = {
   orientation: "landscape" | "portrait";
   type: string;
   name: string;
-  text: Array<string>;
+	task: string;
+	solution: string;
+	customer: Array<string>;
+	employer: Array<string>;
   images: Array<string>;
   beta?: boolean;
   play?: boolean;
@@ -37,34 +40,38 @@ const Carousel = universal(import("../Carousel"), {
   error: Failed
 }) as FunctionComponent<CarouselProps>;
 
-const Description: FunctionComponent<ProjectProps> = ({
-  skills,
-  name,
-  text
+const Text: FunctionComponent<ProjectProps> = ({
+	task,
+	solution,
+	customer,
+	employer
 }) => (
+	<>
+			<h3>Aufgabe</h3>
+      <p dangerouslySetInnerHTML={{ __html: task }}></p>
+			<h3>Umsetzung</h3>
+      <p dangerouslySetInnerHTML={{ __html: solution }}></p>
+			<h3>Kunde</h3>
+      {customer.length == 2 ? <p><a href={customer[1]} target="_blank" rel="nofollow" dangerouslySetInnerHTML={{ __html: customer[0] }}></a></p> : <p dangerouslySetInnerHTML={{ __html: customer[0] }}></p>}
+      {employer.length == 2 ? <p><a href={employer[1]} target="_blank" rel="nofollow" dangerouslySetInnerHTML={{ __html: employer[0] }}></a></p> : <p dangerouslySetInnerHTML={{ __html: employer[0] }}></p>}
+	</>
+)
+
+const Description: FunctionComponent<ProjectProps> = (props) => (
   <div className="project--description-column">
     <div className="heading">
-      <Flower {...skills} />
-      <h2 dangerouslySetInnerHTML={{ __html: name }} />
+      <Flower {...props.skills} />
+      <h2 dangerouslySetInnerHTML={{ __html: props.name }} />
     </div>
-    <div className="description">
-      <p dangerouslySetInnerHTML={{ __html: text[0] }}></p>
-      <ul className="hide-on-small-only">
-        {text.slice(1).map((text, i) => (
-          <li key={i} dangerouslySetInnerHTML={{ __html: text }} />
-        ))}
-      </ul>
+    <div className="description hide-on-small-only">
+			<Text {...props}></Text>
     </div>
   </div>
 );
 
-const Visual: FunctionComponent<ProjectProps> = ({
-  text,
-  images,
-  play = false
-}) => (
+const Visual: FunctionComponent<ProjectProps> = (props) => (
   <div className="project--gallery-column">
-    <Carousel text={text} images={images} play={play} />
+    <Carousel text={<Text {...props}></Text>} images={props.images} play={props.play || false} />
   </div>
 );
 
