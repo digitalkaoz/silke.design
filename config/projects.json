@@ -1,5 +1,62 @@
 [
   {
+    "name": "Timesheets",
+    "images": [
+      "/img/references/kita/0.jpg",
+      "/img/references/kita/1.jpeg",
+      "/img/references/kita/2.jpeg",
+      "/img/references/kita/3.jpeg",
+      "/img/references/kita/4.jpeg",
+      "/img/references/kita/5.jpeg",
+      "/img/references/kita/6.jpeg",
+      "/img/references/kita/7.jpeg",
+      "/img/references/kita/8.jpeg",
+      "/img/references/kita/9.jpeg",
+      "/img/references/kita/10.jpeg",
+      "/img/references/kita/11.jpeg",
+      "/img/references/kita/12.jpeg"
+    ],
+    "task": "Konzeption einer multimandanten Zeiterfassungs-App mit Export-Funktion auf Grundlage von Flutter und Material Design.",
+    "solution": "User-Journeys des bestehenden Prototypen wurden vereinfacht und ein finales Design in Figma umgesetzt.",
+    "customer": ["digitalkaoz", "https://digitalkaoz.net"],
+    "employer": ["Freelance"],
+    "orientation": "portrait",
+    "type": "phone",
+    "skills": {
+      "tl": { "name": "UX" },
+      "tr": { "name": "UI" },
+      "br": { "name": 2020 }
+    }
+  },
+  {
+    "name": "Meine Kita",
+    "images": [
+      "/img/references/kita/0.jpg",
+      "/img/references/kita/1.jpeg",
+      "/img/references/kita/2.jpeg",
+      "/img/references/kita/3.jpeg",
+      "/img/references/kita/4.jpeg",
+      "/img/references/kita/5.jpeg",
+      "/img/references/kita/6.jpeg",
+      "/img/references/kita/7.jpeg",
+      "/img/references/kita/8.jpeg",
+      "/img/references/kita/9.jpeg",
+      "/img/references/kita/10.jpeg",
+      "/img/references/kita/11.jpeg",
+      "/img/references/kita/12.jpeg"
+    ],
+    "task": "Konzeption einer App, in der Erzieher und Eltern einer Kita einfacher und schneller miteinander kommunizieren können. Erstellung eines Prototypen zur Visualisierung auf Grundlage von Material Design.",
+    "solution": "Scribbles der ersten User-Journeys auf Papier und Erstellung eines Prototypen in Figma.",
+    "customer": ["eigenes Projekt"],
+    "orientation": "portrait",
+    "type": "phone",
+    "skills": {
+      "tl": { "name": "UX" },
+      "tr": { "name": "UI" },
+      "br": { "name": 2019 }
+    }
+  },
+  {
     "name": "Nivea",
     "images": [
       "/img/references/nivea/1.jpg",
@@ -9,12 +66,12 @@
       "/img/references/nivea/5.jpg",
       "/img/references/nivea/6.jpg"
     ],
-    "task": "Konzeption einer Tablet-App, die Güterwagen lokalisiert und trackt. Diese App muss von den Werkarbeitern bedient werden können.",
-    "solution": "Nach dem Kickoff wurden die ersten Wireframes in Sketch/Invision erstellt. Es folgten mehrere Feedbackschleifen und die App wurde immer komplexer. Anlehnend an den UI-Richtlinien der Deutschen Bahn ist das Design entstanden.",
-    "customer": ["Deutsche Bahn - Systel"],
+    "task": "Der User soll spielerisch die Adventstürchen auf der Nivea-Webseite mit den Überraschungen des Tages erkunden. Erstellen von Wireframes für die verschiedenen Userflows der Nutzer.",
+    "solution": "Die Darstellung der Adventstürchen wurde als Kette realisiert. Klickt der User auf ein Türchen wird die Überraschung in einem Layer angezeigt. Dort kann am Gewinnspiel oder einer Rabattaktion teilnehmen. Wireframes in Sketch und Präsentation über Invision der verschiedenen Userrollen und Devices.",
+    "customer": ["Beiersdorf AG, Nivea", "https://www.nivea.de/nivea-fuer-mich/adventskalender"],
     "employer": [
-      "Projekt der Bornholdt Lee GmbH",
-      "https://www.bornholdtlee.de/"
+      "Dept-Agency Hamburg",
+      "https://www.deptagency.com/de-de/"
     ],
     "beta": true,
     "type": "phone",
@@ -32,12 +89,12 @@
       "/img/references/tchibo_shop/3.jpg",
       "/img/references/tchibo_shop/4.jpg"
     ],
-    "task": "Konzeption einer Tablet-App, die Güterwagen lokalisiert und trackt. Diese App muss von den Werkarbeitern bedient werden können.",
-    "solution": "Nach dem Kickoff wurden die ersten Wireframes in Sketch/Invision erstellt. Es folgten mehrere Feedbackschleifen und die App wurde immer komplexer. Anlehnend an den UI-Richtlinien der Deutschen Bahn ist das Design entstanden.",
-    "customer": ["Deutsche Bahn - Systel"],
+    "task": "Das Kaffeemodul des Tchibo-Shops soll verbessert und verständlicher gestaltet werden. Die verschiedenen Preis-Konstellationen sollen besser präsentiert werden.",
+    "solution": "Nach einem Design-Sprint sind mehrere Scribbles auf Papier entstanden. Diese wurden in einem User-Lab getestet und basierend auf dem Feedback umgesetzt.",
+    "customer": ["Tchibo GmbH", "https://www.tchibo.de/"],
     "employer": [
-      "Projekt der Bornholdt Lee GmbH",
-      "https://www.bornholdtlee.de/"
+      "Dept-Agency Hamburg",
+      "https://www.deptagency.com/de-de/"
     ],
     "beta": true,
     "type": "desktop",
@@ -57,11 +114,11 @@
       "/img/references/dbsystel/6.jpg",
       "/img/references/dbsystel/7.jpg"
     ],
-    "task": "Konzeption einer Tablet-App, die Güterwagen lokalisiert und trackt. Diese App muss von den Werkarbeitern bedient werden können.",
-    "solution": "Nach dem Kickoff wurden die ersten Wireframes in Sketch/Invision erstellt. Es folgten mehrere Feedbackschleifen und die App wurde immer komplexer. Anlehnend an den UI-Richtlinien der Deutschen Bahn ist das Design entstanden.",
-    "customer": ["Deutsche Bahn - Systel"],
+    "task": "Konzeption einer Tablet-App, die Güterwagen lokalisiert und der Inhalte trackt. Die UX muss von Werkarbeitern bedienbar sein.",
+    "solution": "Nach dem Kickoff wurden die ersten Wireframes in Sketch/Invision erstellt. Es folgten mehrere Feedbackschleifen und die Inhalte wurden agil weiter ausgebaut. Das Design basiert auf dem Styleguide der Deutschen Bahn.",
+    "customer": ["Deutsche Bahn - Systel", "https://www.dbsystel.de/dbsystel"],
     "employer": [
-      "Projekt der Bornholdt Lee GmbH",
+      "Bornholdt Lee GmbH",
       "https://www.bornholdtlee.de/"
     ],
     "beta": true,
@@ -84,11 +141,11 @@
       "/img/references/docident/7.jpg",
       "/img/references/docident/8.jpg"
     ],
-    "task": "Konzeption einer Tablet-App, die Güterwagen lokalisiert und trackt. Diese App muss von den Werkarbeitern bedient werden können.",
-    "solution": "Nach dem Kickoff wurden die ersten Wireframes in Sketch/Invision erstellt. Es folgten mehrere Feedbackschleifen und die App wurde immer komplexer. Anlehnend an den UI-Richtlinien der Deutschen Bahn ist das Design entstanden.",
-    "customer": ["Deutsche Bahn - Systel"],
+    "task": "Konzeption einer Website zum digitalen Signieren und Ablegen von Dokumenten in der Blockchain.",
+    "solution": "In einem Anforderungs-Workshop mit dem Kunden wurden Use-Cases und Prozesse zusammengetragen. Userflows sind am Whiteboard entstanden auf deren Grundlage Wireframes in Sketch/Invision erstellt wurden.",
+    "customer": ["DocIdent", "https://docident.com/"],
     "employer": [
-      "Projekt der Bornholdt Lee GmbH",
+      "Bornholdt Lee GmbH",
       "https://www.bornholdtlee.de/"
     ],
     "beta": true,
@@ -106,11 +163,11 @@
       "/img/references/smoothr/3.jpg",
       "/img/references/smoothr/4.jpg"
     ],
-    "task": "Konzeption einer Tablet-App, die Güterwagen lokalisiert und trackt. Diese App muss von den Werkarbeitern bedient werden können.",
-    "solution": "Nach dem Kickoff wurden die ersten Wireframes in Sketch/Invision erstellt. Es folgten mehrere Feedbackschleifen und die App wurde immer komplexer. Anlehnend an den UI-Richtlinien der Deutschen Bahn ist das Design entstanden.",
-    "customer": ["Deutsche Bahn - Systel"],
+    "task": "Zum bereits bestehenden mobilen Client App soll eine Tresen-Tablet App entworfen werden. Diese App sollen die Angestellten im Restaurant für die Bestellungen und Rechnungen benutzen.",
+    "solution": "In Anlehnung am mobilen Client-Design ist die Tresen-App in Photoshop entstanden. Zuvor wurden alle Funktionalitäten in einem Anforderungs-Workshop zusammengetragen und User-Journeys formuliert.",
+    "customer": ["Sterlix GmbH", "https://smoothr.de/"],
     "employer": [
-      "Projekt der Bornholdt Lee GmbH",
+      "Bornholdt Lee GmbH",
       "https://www.bornholdtlee.de/"
     ],
     "beta": true,
@@ -129,11 +186,14 @@
       "/img/references/blg-relaunch/3.jpg",
       "/img/references/blg-relaunch/4.jpg"
     ],
-    "task": "Konzeption einer Tablet-App, die Güterwagen lokalisiert und trackt. Diese App muss von den Werkarbeitern bedient werden können.",
-    "solution": "Nach dem Kickoff wurden die ersten Wireframes in Sketch/Invision erstellt. Es folgten mehrere Feedbackschleifen und die App wurde immer komplexer. Anlehnend an den UI-Richtlinien der Deutschen Bahn ist das Design entstanden.",
-    "customer": ["Deutsche Bahn - Systel"],
+    "task": "Relaunch des Firmenauftritts der Bornholdt Lee GmbH. der primäre Fokus sollte auf den Referenzen liegen, so dass die Leistungen des Unternehmens noch besser verstanden werden.",
+    "solution": "Erste Wireframes wurden mit Axure prototypisch entworfen. Das finale Design wurde in Sketch/Invision gebaut und mit dem Projektmanager agil immer weiter ausgearbeitet. Zudem wurde für den ersten Eindruck ein Prototyp in HTML/CSS mit dem Materialize Framework erstellt.",
+    "customer": [
+      "Bornholdt Lee GmbH",
+      "https://www.bornholdtlee.de/"
+    ],
     "employer": [
-      "Projekt der Bornholdt Lee GmbH",
+      "Bornholdt Lee GmbH",
       "https://www.bornholdtlee.de/"
     ],
     "beta": true,
@@ -151,11 +211,11 @@
       "/img/references/duchenne/1.jpg",
       "/img/references/duchenne/2.jpg"
     ],
-    "task": "Konzeption einer Tablet-App, die Güterwagen lokalisiert und trackt. Diese App muss von den Werkarbeitern bedient werden können.",
-    "solution": "Nach dem Kickoff wurden die ersten Wireframes in Sketch/Invision erstellt. Es folgten mehrere Feedbackschleifen und die App wurde immer komplexer. Anlehnend an den UI-Richtlinien der Deutschen Bahn ist das Design entstanden.",
-    "customer": ["Deutsche Bahn - Systel"],
+    "task": "Redesign der bestehenden Informationswebseite zum Thema “Duchenne Muskeldystrophie”.",
+    "solution": "Nachdem die Wireframes in Axure erstellt worden sind wurde diese nach der Abstimmung mit dem Kunden in Photoshop umgesetzt.",
+    "customer": ["Deutsche Taskforce", "http://duchenne-taskforce.de/"],
     "employer": [
-      "Projekt der Bornholdt Lee GmbH",
+      "Bornholdt Lee GmbH",
       "https://www.bornholdtlee.de/"
     ],
     "beta": true,
@@ -174,11 +234,11 @@
       "/img/references/ichallenge/4.jpg",
       "/img/references/ichallenge/1.jpg"
     ],
-    "task": "Konzeption einer Tablet-App, die Güterwagen lokalisiert und trackt. Diese App muss von den Werkarbeitern bedient werden können.",
-    "solution": "Nach dem Kickoff wurden die ersten Wireframes in Sketch/Invision erstellt. Es folgten mehrere Feedbackschleifen und die App wurde immer komplexer. Anlehnend an den UI-Richtlinien der Deutschen Bahn ist das Design entstanden.",
-    "customer": ["Deutsche Bahn - Systel"],
+    "task": "Die iChallenge-Tablet App der digitalen Schnitzeljagd soll für ein Teamevent der ING DiBa in dessen Corporate Design umgestaltet werden.",
+    "solution": "In Photoshop wurde das vorhandene Design der iChallenge dem Look der ING DiBa angepasst. Neben der Farbänderung wurden ebenfalls die Bilderwelten und Icons geändert und passend zum Corporate-Design umgestaltet.",
+    "customer": ["iChallenge", "https://www.ichallenge.info/de/"],
     "employer": [
-      "Projekt der Bornholdt Lee GmbH",
+      "Bornholdt Lee GmbH",
       "https://www.bornholdtlee.de/"
     ],
     "type": "tablet",
@@ -196,11 +256,11 @@
       "/img/references/pulvermuehle/4.jpg",
       "/img/references/pulvermuehle/5.jpg"
     ],
-    "task": "Konzeption einer Tablet-App, die Güterwagen lokalisiert und trackt. Diese App muss von den Werkarbeitern bedient werden können.",
-    "solution": "Nach dem Kickoff wurden die ersten Wireframes in Sketch/Invision erstellt. Es folgten mehrere Feedbackschleifen und die App wurde immer komplexer. Anlehnend an den UI-Richtlinien der Deutschen Bahn ist das Design entstanden.",
-    "customer": ["Deutsche Bahn - Systel"],
+    "task": "Die Pulvermühle möchte zukünftig Bestell- und Bezahlprozesse über eine Tablet App abwickeln. Hierfür soll ein Konzept und Design entworfen werden.",
+    "solution": "Nach einem Anforderungs-Workshop sie die Wünsche und Ideen in User-Journeys festgehalten worden. In Axure wurden dann Wireframes umgesetzt, welche dann in Photoshop gestaltet wurden.",
+    "customer": ["Pulvermühle", "https://pulvermuehle.eu/de-de/"],
     "employer": [
-      "Projekt der Bornholdt Lee GmbH",
+      "Bornholdt Lee GmbH",
       "https://www.bornholdtlee.de/"
     ],
     "type": "phone",
@@ -219,11 +279,11 @@
       "/img/references/freixenet/4.jpg",
       "/img/references/freixenet/5.jpg"
     ],
-    "task": "Konzeption einer Tablet-App, die Güterwagen lokalisiert und trackt. Diese App muss von den Werkarbeitern bedient werden können.",
-    "solution": "Nach dem Kickoff wurden die ersten Wireframes in Sketch/Invision erstellt. Es folgten mehrere Feedbackschleifen und die App wurde immer komplexer. Anlehnend an den UI-Richtlinien der Deutschen Bahn ist das Design entstanden.",
-    "customer": ["Deutsche Bahn - Systel"],
+    "task": "Freixenet möchte eine Weinguide-App anbieten, in der die verschiedenen Weine in Kombination mit passenden Koch-Rezepten dargestellt werden.",
+    "solution": "Hierfür wurden zunächst Scribbles der User-Stories erstellt. Aus diesen dann später ein Prototyp in WireframeSketcher enstanden ist. Das Design ist mit Photoshop umgesetzt worden.",
+    "customer": ["Freixenet", "https://www.freixenet.de/"],
     "employer": [
-      "Projekt der Bornholdt Lee GmbH",
+      "Bornholdt Lee GmbH",
       "https://www.bornholdtlee.de/"
     ],
     "type": "phone",
@@ -234,13 +294,16 @@
     }
   },
   {
-    "name": "Bornholdt Lee GmbH",
+    "name": "Bornholdt Lee - Relaunch",
     "images": ["/img/references/blg/1.jpg", "/img/references/blg/2.jpg"],
-    "task": "Konzeption einer Tablet-App, die Güterwagen lokalisiert und trackt. Diese App muss von den Werkarbeitern bedient werden können.",
-    "solution": "Nach dem Kickoff wurden die ersten Wireframes in Sketch/Invision erstellt. Es folgten mehrere Feedbackschleifen und die App wurde immer komplexer. Anlehnend an den UI-Richtlinien der Deutschen Bahn ist das Design entstanden.",
-    "customer": ["Deutsche Bahn - Systel"],
+    "task": "Erster Relaunch der Bornholdt Lee Firmen Website. Das Design der neuen Seite soll moderner und ansprechender gestaltet werden.",
+    "solution": "Die Konzeption und das Design für verschiedene Devices wurden mit Photoshop erstellt. Die Referenzen wurden stark in Focus gestellt. Die gesamte Bilderwelt wurde freundlicher und interessanter gestaltet. Zudem wurde ein HTML/CSS-Prototyp in Twig erstellt.",
+    "customer": [
+      "Bornholdt Lee GmbH",
+      "https://www.bornholdtlee.de/"
+    ],
     "employer": [
-      "Projekt der Bornholdt Lee GmbH",
+      "Bornholdt Lee GmbH",
       "https://www.bornholdtlee.de/"
     ],
     "type": "desktop",
@@ -258,12 +321,12 @@
       "/img/references/o2/2.jpg",
       "/img/references/o2/3.jpg"
     ],
-    "task": "Konzeption einer Tablet-App, die Güterwagen lokalisiert und trackt. Diese App muss von den Werkarbeitern bedient werden können.",
-    "solution": "Nach dem Kickoff wurden die ersten Wireframes in Sketch/Invision erstellt. Es folgten mehrere Feedbackschleifen und die App wurde immer komplexer. Anlehnend an den UI-Richtlinien der Deutschen Bahn ist das Design entstanden.",
-    "customer": ["Deutsche Bahn - Systel"],
+    "task": "\"Aus Alice wird O2\". Rebranding der Alice Website im neuen Look von O2.",
+    "solution": "Anpassung der Coremedia-Templates mit HTML, CSS und JavaScript.",
+    "customer": ["Telefonica Germany GmbH"],
     "employer": [
-      "Projekt der Bornholdt Lee GmbH",
-      "https://www.bornholdtlee.de/"
+      "Spot-Media GmbH",
+      "https://spot-media.de"
     ],
     "type": "desktop",
     "skills": {
@@ -274,12 +337,12 @@
   {
     "name": "Tchibo",
     "images": ["/img/references/tchibo/2.jpg"],
-    "task": "Konzeption einer Tablet-App, die Güterwagen lokalisiert und trackt. Diese App muss von den Werkarbeitern bedient werden können.",
-    "solution": "Nach dem Kickoff wurden die ersten Wireframes in Sketch/Invision erstellt. Es folgten mehrere Feedbackschleifen und die App wurde immer komplexer. Anlehnend an den UI-Richtlinien der Deutschen Bahn ist das Design entstanden.",
-    "customer": ["Deutsche Bahn - Systel"],
+    "task": "Erstellung von wöchentliche Produkt-Newslettern der Tchibo GmbH.",
+    "solution": "Umsetzung der Newsletter-Templates der Wochenwelten in HTML und CSS.",
+    "customer": ["Tchibo GmbH", "https://www.tchibo.de/"],
     "employer": [
-      "Projekt der Bornholdt Lee GmbH",
-      "https://www.bornholdtlee.de/"
+      "Spot-Media GmbH",
+      "https://spot-media.de"
     ],
     "type": "desktop",
     "skills": {
@@ -293,13 +356,9 @@
       "/img/references/portfolio/1.jpg",
       "/img/references/portfolio/2.jpg"
     ],
-    "task": "Konzeption einer Tablet-App, die Güterwagen lokalisiert und trackt. Diese App muss von den Werkarbeitern bedient werden können.",
-    "solution": "Nach dem Kickoff wurden die ersten Wireframes in Sketch/Invision erstellt. Es folgten mehrere Feedbackschleifen und die App wurde immer komplexer. Anlehnend an den UI-Richtlinien der Deutschen Bahn ist das Design entstanden.",
-    "customer": ["Deutsche Bahn - Systel"],
-    "employer": [
-      "Projekt der Bornholdt Lee GmbH",
-      "https://www.bornholdtlee.de/"
-    ],
+    "task": "Erstellung meiner ersten eigenen Website.",
+    "solution": "Aus ersten Scribbles ist ein Design in Photoshop entstanden. Anschließend programmierte ich die Seite in HTML, CSS und JavaScript.",
+    "customer": ["eigenes Projekt", "https://silke.design"],
     "type": "desktop",
     "skills": {
       "bl": { "name": "FE" },

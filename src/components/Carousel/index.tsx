@@ -81,7 +81,7 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
             slideDuration={0}
             autoPlay
           />
-					<div className="carousel--text show-on-small-only">
+					<div className="carousel--text show-on-medium-and-down">
 						{text}
 					</div>
         </div>

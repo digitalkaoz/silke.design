@@ -29,7 +29,7 @@ export type ProjectProps = {
 	task: string;
 	solution: string;
 	customer: Array<string>;
-	employer: Array<string>;
+	employer?: Array<string>;
   images: Array<string>;
   beta?: boolean;
   play?: boolean;
@@ -53,7 +53,7 @@ const Text: FunctionComponent<ProjectProps> = ({
       <p dangerouslySetInnerHTML={{ __html: solution }}></p>
 			<h3>Kunde</h3>
       {customer.length == 2 ? <p><a href={customer[1]} target="_blank" rel="nofollow" dangerouslySetInnerHTML={{ __html: customer[0] }}></a></p> : <p dangerouslySetInnerHTML={{ __html: customer[0] }}></p>}
-      {employer.length == 2 ? <p><a href={employer[1]} target="_blank" rel="nofollow" dangerouslySetInnerHTML={{ __html: employer[0] }}></a></p> : <p dangerouslySetInnerHTML={{ __html: employer[0] }}></p>}
+      {employer && employer.length == 2 ? <p><a href={employer[1]} target="_blank" rel="nofollow" dangerouslySetInnerHTML={{ __html: employer[0] }}></a></p> : employer ? <p dangerouslySetInnerHTML={{ __html: employer[0] }}></p> : <></>}
 	</>
 )
 
@@ -63,7 +63,7 @@ const Description: FunctionComponent<ProjectProps> = (props) => (
       <Flower {...props.skills} />
       <h2 dangerouslySetInnerHTML={{ __html: props.name }} />
     </div>
-    <div className="description hide-on-small-only">
+    <div className="description hide-on-med-and-down">
 			<Text {...props}></Text>
     </div>
   </div>

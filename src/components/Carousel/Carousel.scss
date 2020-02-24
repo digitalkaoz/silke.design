@@ -12,7 +12,11 @@
     transform-style: preserve-3d;
     position: relative;
     width: 100%;
+
     height: 100%;
+    @media #{$large-and-up} {
+      height: auto;
+    }
   }
 
   .image-gallery {
@@ -93,7 +97,12 @@
   right: 0;
   width: 40%;
 
-  @media #{$medium-and-up} {
+  @media #{$medium-only} {
+    font-size: 4vw;
+    line-height: 6vw;
+  }
+
+  @media #{$large-and-up} {
     display: none;
   }
 }
