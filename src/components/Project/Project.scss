@@ -255,12 +255,15 @@
           }
         }
         @media #{$small-long} {
-          right: -25px;
+          right: -30px;
 
           p {
             font-size: 4.9vw;
             margin: 5px 0;
-          }
+					}
+					h3 {
+						margin: 25px 0 0 0;
+					}
         }
       }
     }
@@ -277,7 +280,13 @@
 
     .image-gallery-bullets {
       bottom: -25%;
-    }
+		}
+
+		.carousel--text {
+			h3 {
+				margin: 25px 0 0 0;
+			}
+		}
   }
 
   &--tablet {
@@ -339,7 +348,6 @@
             margin-top: -45%;
             h3 {
               font-size: 6vw;
-              margin: 15px 0;
             }
             p {
               font-size: 4.8vw;
@@ -353,7 +361,6 @@
 
             h3 {
               font-size: 4vw;
-              margin: 15px 0;
             }
             p {
               font-size: 3.5vw;
@@ -370,7 +377,7 @@
             }
           }
           @media #{$small-long} {
-            margin-top: -50%;
+            margin-top: -55%;
             right: 0;
 
             p {
@@ -412,7 +419,7 @@
             width: 85%;
           }
           @media #{$small-long} {
-            margin-top: 20%;
+            margin-top: 10%;
             width: 100%;
           }
           @media #{$large-and-up} {
@@ -428,7 +435,6 @@
 
             h3 {
               font-size: 6vw;
-              margin: 15px 0;
             }
             p {
               font-size: 4.8vw;
@@ -441,7 +447,6 @@
 
             h3 {
               font-size: 4vw;
-              margin: 15px 0;
             }
             p {
               font-size: 3.5vw;
@@ -465,7 +470,7 @@
             p {
               font-size: 5.3vw;
               margin: 10px 0;
-            }
+						}
           }
         }
       }
@@ -530,7 +535,6 @@
 
           h3 {
             font-size: 6vw;
-            margin: 15px 0;
           }
           p {
             font-size: 4.8vw;
@@ -544,7 +548,6 @@
 
           h3 {
             font-size: 4vw;
-            margin: 15px 0;
           }
           p {
             font-size: 3.5vw;
@@ -568,7 +571,8 @@
           p {
             font-size: 5.3vw;
             margin: 10px 0;
-          }
+					}
+
         }
       }
     }
@@ -776,9 +780,9 @@
   }
 
   &--meine-kita {
-    background-color: #00B1AD;
+    background-color: black;
     .flower .drop {
-      color: #00B1AD;
+      color: black;
     }
   }
 
