@@ -788,4 +788,16 @@
 
   }
 
+	&--car-alarm {
+    background-color: #6E37FF;
+    .flower .drop {
+      color: #6E37FF;
+    }
+    .description a,.carousel--text a {
+      color: white;
+      text-decoration: underline;
+    }
+
+  }
+
 }

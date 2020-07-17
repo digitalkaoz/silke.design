@@ -1,4 +1,24 @@
 [
+	{
+    "name": "Car-Alarm",
+    "images": [
+      "/img/references/car-tracker/1.jpg",
+      "/img/references/car-tracker/2.jpg",
+      "/img/references/car-tracker/3.jpg"
+    ],
+    "task": "Konzeption einer App für die Steuerung einer Fahrzeug-Alarmanlage auf Grundlage von Material Design.",
+    "solution": "Der zentrale Use-Case liegt derzeit auf dem Abrufen der Fahrzeug-Position und dem aktivieren/deaktivieren der Alarmanlage. Weitere Use-Cases sind geplant.",
+    "customer": ["digitalkaoz", "https://digitalkaoz.net"],
+    "employer": ["Freelance"],
+    "orientation": "portrait",
+    "type": "phone",
+    "skills": {
+      "tl": { "name": "UX" },
+      "tr": { "name": "UI" },
+      "br": { "name": 2020 }
+    }
+  },
+
   {
     "name": "Timesheets",
     "images": [
