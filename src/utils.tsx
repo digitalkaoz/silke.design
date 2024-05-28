@@ -1,9 +1,5 @@
-import React, {RefObject} from "react";
+import {RefObject} from "react";
 
-type UniversalContext = {
-    error?: string;
-  };
-  
 export const stripTags = (html: string): string => {
   if (typeof window === "undefined") {
     return html.replace(/(<([^>]+)>)/gi, "");
@@ -33,16 +29,6 @@ export const isMobile = (): boolean =>
 export const toId = (text: string): string =>
   stripTags(text).toLowerCase().replace(/ /g, "-");
 
-
-export const Failed = (context: UniversalContext): any => {
-  if (context.error) {
-    console.error(context.error);
-  }
-
-  return <span />;
-}
-
-export const Loading = (): any => <span />;
 
 export const getDistance = (container: RefObject<any>) : number => {
   if (!container.current) {
