@@ -1,66 +1,73 @@
-import React, {
-  RefObject,
-  useState,
-  FunctionComponent,
-  useEffect,
-  useCallback,
-  useRef,
+import {
+    RefObject,
+    useState,
+    FunctionComponent,
+    useEffect,
+    useCallback,
+    useRef,
 } from "react";
-import ImageGallery, { ReactImageGalleryItem } from "react-image-gallery";
-import "react-image-gallery/styles/css/image-gallery.css";
+import Gallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
+import GalleryItem from "react-image-gallery/src/components/Item";
+
+const ImageGallery = Gallery.default ? Gallery.default : Gallery;
+const ReactImageGalleryItem = GalleryItem.default ? GalleryItem.default : GalleryItem
 
 import "./Carousel.scss";
 
 export type CarouselProps = {
-  text: any;
-  images: Array<string>;
-  play: boolean;
+    text: any;
+    images: Array<string>;
+    play: boolean;
 };
 
-const CarouselItem: FunctionComponent<ReactImageGalleryItem> = ({
-  description,
-  original
-}) => {
-  return (
-    <div
-      className={
-        "image-gallery-image" +
-        (description ? " image-gallery-image__text" : "")
-      }
-    >
-      <img src={original} alt={original} />
-    </div>
-  );
+const CarouselItem: FunctionComponent<typeof ReactImageGalleryItem> = ({
+                                                                    description,
+                                                                    original
+                                                                }) => {
+    return (
+        <div
+            className={
+                "image-gallery-image" +
+                (description ? " image-gallery-image__text" : "")
+            }
+        >
+            <img src={original} alt={original}/>
+        </div>
+    );
 };
 
-const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
-  const carousel: RefObject<HTMLDivElement> = useRef(null);
-  const gallery: RefObject<ImageGallery> = useRef(null);
+const Carousel: FunctionComponent<CarouselProps> = ({images, text, play}) => {
+    const carousel: RefObject<HTMLDivElement> = useRef(null);
+    const gallery: RefObject<ImageGallery> = useRef(null);
 
-  const [flipped, setFlipped] = useState(false);
+    const [flipped, setFlipped] = useState(false);
 
-  useEffect(() => {
-    if (play) {
-      gallery.current.play();
-    } else {
-      gallery.current.pause();
-    }
-  }, [play]);
+    useEffect(() => {
+        if (!gallery.current) {
+            return
+        }
+        if (play) {
+            gallery.current.play();
+        } else {
+            gallery.current.pause();
+        }
+    }, [play]);
 
-  const flatImages: Array<ReactImageGalleryItem> = images.map(image => ({
-    original: image
-  }));
+    const flatImages: Array<typeof ReactImageGalleryItem> = images.map(image => ({
+        original: image
+    }));
 
-  const flip = useCallback(
-    () => {
-      if (carousel.current) {
-        carousel.current.classList.toggle("carousel--flipped");
+    const flip = useCallback(
+        () => {
+            if (carousel.current) {
+                carousel.current.classList.toggle("carousel--flipped");
 
-        setFlipped(!flipped);
-      }
-    },
-    [carousel, flipped]
-  );
+                setFlipped(!flipped);
+            }
+        },
+        [carousel, flipped]
+    );
 
   return (
     <>

@@ -1,4 +1,26 @@
 [
+  {
+    "name": "YogaEasy",
+    "images": [
+      "/img/references/yogaeasy/01.png",
+      "/img/references/yogaeasy/02.png",
+      "/img/references/yogaeasy/03.png",
+      "/img/references/yogaeasy/07.png",
+      "/img/references/yogaeasy/06.png",
+      "/img/references/yogaeasy/05.png"
+    ],
+    "task": "Konzeption und Design eines gesamtheitlichen und geräteübergreifenden Nutzererlebnis rund um das Thema Online-Yoga.",
+    "solution": "Kompletter Rebrush der Apps & Website und Design neuer Features in Figma nach eingehender Marktanalyse. Internationalisierung des Produktes mit regionalem Content.",
+    "customer": ["YogaEasy", "https://yogaeasy.de"],
+    "employer": [],
+    "orientation": "portrait",
+    "type": "iphone",
+    "skills": {
+      "tl": { "name": "UX" },
+      "tr": { "name": "UI" },
+      "br": { "name": 2020 }
+    }
+  },
 	{
     "name": "Car-Alarm",
     "images": [
@@ -41,7 +63,7 @@
   {
     "name": "Meine Kita",
     "images": [
-      "/img/references/kita/0.jepg",
+      "/img/references/kita/0.jpeg",
       "/img/references/kita/1.jpeg",
       "/img/references/kita/2.jpeg",
       "/img/references/kita/3.jpeg",
@@ -57,7 +79,6 @@
     "customer": ["eigenes Projekt"],
     "orientation": "portrait",
 		"type": "phone",
-		"beta": true,
     "skills": {
       "tl": { "name": "UX" },
       "tr": { "name": "UI" },

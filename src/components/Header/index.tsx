@@ -10,7 +10,7 @@ const Header: FunctionComponent<{}> = () => (
     <div className="headline">
       <h1>Silke Schönthal - Portfolio</h1>
       <p>
-      Ich bin seit etwa 15 Jahren im Bereich der digitalen Medien tätig und habe daher eine Menge Berufserfahrung sammeln können. Meine Aufgabenfelder waren sehr facettenreich, 
+      Ich bin seit etwa 20 Jahren im Bereich der digitalen Medien tätig und habe daher eine Menge Berufserfahrung sammeln können. Meine Aufgabenfelder waren sehr facettenreich,
       von Frontend-Entwicklung über Webdesign bis hin zur Konzeption von Workflows mit dem Kunden. Eine Auswahl meiner Projekte gibt es hier zu sehen.
       </p>
     </div>
@@ -18,7 +18,7 @@ const Header: FunctionComponent<{}> = () => (
     <Flower
       tl={{ name: 'UX' }}
       tr={{ name: 'UI' }}
-      bl={{ name: 'FE' }}
+      bl={{ name: '' }}
       br={{}}
     />
   </header>

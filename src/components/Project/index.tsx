@@ -80,23 +80,6 @@ const Project: FunctionComponent<ProjectProps> = props => {
         return <div style={{display: "none"}}></div>;
     }
 
-    //TODO https://github.com/thebuilder/react-intersection-observer ?
-    const observer = new IntersectionObserver(
-        entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    if (project.current) {
-                        project.current.style.filter = `grayscale(0) brightness(1)`;
-                    }
-                    window.addEventListener("scroll", fadeSticky);
-                }
-            });
-        },
-        {
-            threshold: 0.01
-        }
-    );
-
     //TODO sideeffect
     const fade = (distance: number) => {
         window.requestAnimationFrame(() => {
@@ -130,7 +113,26 @@ const Project: FunctionComponent<ProjectProps> = props => {
         }
     };
 
+    let observer;
+
     useEffect(() => {
+        if (observer === undefined) {
+            observer = new IntersectionObserver(
+                entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            if (project.current) {
+                                project.current.style.filter = `grayscale(0) brightness(1)`;
+                            }
+                            window.addEventListener("scroll", fadeSticky);
+                        }
+                    });
+                },
+                {
+                    threshold: 0.01
+                }
+            )
+        }
         observer.observe(project.current);
 
         return () => {

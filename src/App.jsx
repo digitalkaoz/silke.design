@@ -1,3 +1,6 @@
+import '@fontsource/fjalla-one';
+import '@fontsource/roboto/100.css';
+import '@fontsource/roboto/400.css';
 import './App.scss'
 
 import Header from './components/Header'
@@ -14,8 +17,8 @@ function App() {
         <>
             <Header/>
             <main>
-                <Skills skills={skills} />
-                <Projects projects={projects} />
+                <Skills skills={skills}/>
+                <Projects projects={projects}/>
             </main>
             <Footer links={footerLinks}/>
         </>
