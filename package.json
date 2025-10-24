@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite-react-ssg dev",
     "build": "vite-react-ssg build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint . --ext js,jsx,tsx --report-unused-disable-directives --max-warnings 0",
+    "fmt": "prettier",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -32,6 +33,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.12",
     "lodash-es": "^4.17.21",
+    "prettier": "^3.6.2",
     "prop-types": "^15.8.1",
     "react-fast-compare": "^3.2.2",
     "react-router-dom": "^6.27.0",

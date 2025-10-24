@@ -3,11 +3,7 @@
 #skills {
   @extend %row;
 
-  background: linear-gradient(
-    to right,
-    rgb(62, 62, 62) 0%,
-    rgba(13, 13, 13, 1) 100%
-  );
+  background: linear-gradient(to right, rgb(62, 62, 62) 0%, rgba(13, 13, 13, 1) 100%);
   color: #fff;
   margin-bottom: 0;
   padding: 5%;

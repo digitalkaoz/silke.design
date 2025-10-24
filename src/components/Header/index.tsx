@@ -1,7 +1,7 @@
 import React, { FunctionComponent, memo } from 'react';
 
 import Flower from '../Flower';
-import "./Header.scss";
+import './Header.scss';
 
 const Header: FunctionComponent<{}> = () => (
   <header>
@@ -10,17 +10,15 @@ const Header: FunctionComponent<{}> = () => (
     <div className="headline">
       <h1>Silke Schönthal - Portfolio</h1>
       <p>
-      Ich bin seit etwa 20 Jahren im Bereich der digitalen Medien tätig und habe daher eine Menge Berufserfahrung sammeln können.
-      Meine Aufgaben waren sehr vielseitig - mit einem besonderen Schwerpunkt auf App- & Webdesign und der Konzeption maßgeschneiderter Workflows in enger Abstimmung mit dem Kunden. Ergänzend dazu gehörte auch die Frontend-Entwicklung zu meinen Tätigkeitsfeldern. Eine Auswahl meiner Projekte gibt es hier zu sehen.
+        Ich bin seit etwa 20 Jahren im Bereich der digitalen Medien tätig und habe daher eine Menge
+        Berufserfahrung sammeln können. Meine Aufgaben waren sehr vielseitig - mit einem besonderen
+        Schwerpunkt auf App- & Webdesign und der Konzeption maßgeschneiderter Workflows in enger
+        Abstimmung mit dem Kunden. Ergänzend dazu gehörte auch die Frontend-Entwicklung zu meinen
+        Tätigkeitsfeldern. Eine Auswahl meiner Projekte gibt es hier zu sehen.
       </p>
     </div>
 
-    <Flower
-      tl={{ name: 'UX' }}
-      tr={{ name: 'UI' }}
-      bl={{ name: '' }}
-      br={{}}
-    />
+    <Flower tl={{ name: 'UX' }} tr={{ name: 'UI' }} bl={{ name: '' }} br={{}} />
   </header>
 );
 

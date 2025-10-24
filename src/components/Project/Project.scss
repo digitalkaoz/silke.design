@@ -224,16 +224,16 @@
   &--phone {
     &.project--ltr {
       .heading {
-      @media #{$small-and-down} {
-        justify-content: end;
+        @media #{$small-and-down} {
+          justify-content: end;
+        }
       }
-    }
-    .carousel--flipper {
-      @media #{$small-and-down} {
-        left: 0;
-        margin-left:5%;
+      .carousel--flipper {
+        @media #{$small-and-down} {
+          left: 0;
+          margin-left: 5%;
+        }
       }
-    }
     }
 
     .carousel--flipper {
@@ -242,7 +242,7 @@
         right: 0;
         bottom: auto;
         margin-bottom: 0;
-        margin-right:5%;
+        margin-right: 5%;
       }
     }
     .heading {
@@ -265,7 +265,7 @@
       .flipper {
         margin-top: 10%;
         width: 70%;
-         @media #{$small-and-down} {
+        @media #{$small-and-down} {
           width: 100%;
           margin-top: 3%;
         }
@@ -274,8 +274,8 @@
           //height: 50vh;
         }
         @media #{$extra-large-and-up} {
-          margin-top: 10%!important;
-          width: 45%!important;
+          margin-top: 10% !important;
+          width: 45% !important;
         }
 
         @media #{$medium-only} {
@@ -326,13 +326,13 @@
 
           p {
             margin: 5px 0;
-					}
-					h3 {
-						margin: 25px 0 0 0;
-					}
+          }
+          h3 {
+            margin: 25px 0 0 0;
+          }
         }
       }
-		}
+    }
 
     .image-gallery::before {
       padding-top: 178%;
@@ -340,25 +340,25 @@
 
     .image-gallery {
       @media #{$medium-and-up} {
-      background-image: url(/img/phone.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      padding: 24% 6.5% 25% 6.5%;
+        background-image: url(/img/phone.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 24% 6.5% 25% 6.5%;
       }
     }
 
     .image-gallery-bullets {
       bottom: -25%;
       @media #{$small-and-down} {
-        bottom:-3%;
+        bottom: -3%;
       }
-		}
+    }
 
-		.carousel--text {
-			h3 {
-				margin: 25px 0 0 0;
-			}
-		}
+    .carousel--text {
+      h3 {
+        margin: 25px 0 0 0;
+      }
+    }
   }
 
   &--iphone {
@@ -368,7 +368,7 @@
         left: 0;
         bottom: auto;
         margin-bottom: 0;
-        margin-left:5%;
+        margin-left: 5%;
       }
     }
     .heading {
@@ -384,7 +384,7 @@
 
     .project--gallery-column {
       @media #{$small-and-down} {
-        padding:0;
+        padding: 0;
       }
     }
     .carousel {
@@ -408,8 +408,8 @@
           //height: 50vh;
         }
         @media #{$extra-large-and-up} {
-          margin-top: 10%!important;
-          width: 70%!important;
+          margin-top: 10% !important;
+          width: 70% !important;
         }
 
         @media #{$medium-only} {
@@ -485,7 +485,6 @@
           @media #{$large-and-up} {
             border-radius: 48px !important;
           }
-
         }
       }
     }
@@ -692,16 +691,16 @@
   &--desktop {
     &.project--ltr {
       .heading {
-      @media #{$small-and-down} {
-        justify-content: end;
+        @media #{$small-and-down} {
+          justify-content: end;
+        }
       }
-    }
-    .carousel--flipper {
-      @media #{$small-and-down} {
-        left: 0;
-        margin-left:5%;
+      .carousel--flipper {
+        @media #{$small-and-down} {
+          left: 0;
+          margin-left: 5%;
+        }
       }
-    }
     }
 
     .carousel--flipper {
@@ -710,7 +709,7 @@
         right: 0;
         bottom: auto;
         margin-bottom: 0;
-        margin-right:5%;
+        margin-right: 5%;
       }
     }
     .heading {
@@ -728,10 +727,10 @@
     }
     .image-gallery {
       @media #{$medium-and-up} {
-      background-image: url(/img/desktop.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      padding: 3.5% 12.5% 9.5% 10.5%;
+        background-image: url(/img/desktop.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 3.5% 12.5% 9.5% 10.5%;
       }
     }
 

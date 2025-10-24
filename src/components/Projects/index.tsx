@@ -1,8 +1,8 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent } from 'react';
 
-import Project, { ProjectProps } from "../Project";
+import Project, { ProjectProps } from '../Project';
 
-import "./Projects.scss";
+import './Projects.scss';
 
 export type ProjectsProps = {
   projects: Array<ProjectProps>;
@@ -11,10 +11,7 @@ export type ProjectsProps = {
 const Projects: FunctionComponent<ProjectsProps> = ({ projects }) => (
   <div id="projects">
     {projects.map((project, index) => (
-      <Project key={index}
-        direction={index % 2 === 0 ? "ltr" : "rtl"}
-        {...project}
-      />
+      <Project key={index} direction={index % 2 === 0 ? 'ltr' : 'rtl'} {...project} />
     ))}
   </div>
 );
