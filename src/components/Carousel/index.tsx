@@ -1,5 +1,5 @@
-import { RefObject, useState, FunctionComponent, useEffect, useCallback, useRef, ReactElement } from 'react';
-import Gallery, {type ReactImageGalleryItem} from 'react-image-gallery';
+import { useState, FunctionComponent, useEffect, useCallback, useRef, ReactElement } from 'react';
+import Gallery, { type ReactImageGalleryItem } from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import './Carousel.scss';
 
@@ -9,10 +9,7 @@ export type CarouselProps = {
   play: boolean;
 };
 
-const CarouselItem: FunctionComponent<ReactImageGalleryItem> = ({
-  description,
-  original,
-}) => {
+const CarouselItem: FunctionComponent<ReactImageGalleryItem> = ({ description, original }) => {
   return (
     <div className={'image-gallery-image' + (description ? ' image-gallery-image__text' : '')}>
       <img src={original} alt={original} />
@@ -24,7 +21,7 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
   const carousel = useRef<HTMLDivElement>(null);
   const gallery = useRef<Gallery>(null);
 
-  const [flipped, setFlipped] = useState (false);
+  const [flipped, setFlipped] = useState(false);
 
   useEffect(() => {
     if (!gallery.current) {
