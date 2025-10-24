@@ -12,7 +12,7 @@ export default defineConfig({
     plugins: [react()],
     ssgOptions: {
         script: 'async',
-        crittersOptions: {
+        beastiesOptions: {
             // E.g., change the preload strategy
             preload: 'media',
             // Other options: https://github.com/GoogleChromeLabs/critters#usage
