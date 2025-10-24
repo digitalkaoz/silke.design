@@ -1,11 +1,6 @@
 import { RefObject, useState, FunctionComponent, useEffect, useCallback, useRef, ReactElement } from 'react';
-import Gallery from 'react-image-gallery';
+import Gallery, {type ReactImageGalleryItem} from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
-import GalleryItem from 'react-image-gallery/src/components/Item';
-
-const ImageGallery = Gallery.default ?? Gallery;
-const ReactImageGalleryItem = GalleryItem.default ? GalleryItem.default : GalleryItem;
-
 import './Carousel.scss';
 
 export type CarouselProps = {
@@ -14,7 +9,7 @@ export type CarouselProps = {
   play: boolean;
 };
 
-const CarouselItem: FunctionComponent<typeof ReactImageGalleryItem> = ({
+const CarouselItem: FunctionComponent<ReactImageGalleryItem> = ({
   description,
   original,
 }) => {
@@ -26,10 +21,10 @@ const CarouselItem: FunctionComponent<typeof ReactImageGalleryItem> = ({
 };
 
 const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
-  const carousel: RefObject<HTMLDivElement> = useRef(null);
-  const gallery: RefObject<typeof ImageGallery> = useRef(null);
+  const carousel = useRef<HTMLDivElement>(null);
+  const gallery = useRef<Gallery>(null);
 
-  const [flipped, setFlipped] = useState(false);
+  const [flipped, setFlipped] = useState (false);
 
   useEffect(() => {
     if (!gallery.current) {
@@ -42,7 +37,7 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
     }
   }, [play]);
 
-  const flatImages: Array<typeof ReactImageGalleryItem> = images.map((image) => ({
+  const flatImages: Array<ReactImageGalleryItem> = images.map((image) => ({
     original: image,
   }));
 
@@ -58,10 +53,10 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
     <>
       <div className="carousel" ref={carousel}>
         <div className="flipper">
-          <ImageGallery
+          <Gallery
             items={flatImages}
             ref={gallery}
-            renderItem={(item: CarouselProps) => <CarouselItem {...item} />}
+            renderItem={(item: ReactImageGalleryItem) => <CarouselItem {...item} />}
             showBullets={images.length > 1}
             lazyLoad
             showThumbnails={false}
