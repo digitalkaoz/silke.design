@@ -28,7 +28,7 @@ export const isMobile = (): boolean =>
 
 export const toId = (text: string): string => stripTags(text).toLowerCase().replace(/ /g, '-');
 
-export const getDistance = (container: RefObject<any>): number => {
+export const getDistance = (container: RefObject<HTMLElement>): number => {
   if (!container.current) {
     return 1;
   }

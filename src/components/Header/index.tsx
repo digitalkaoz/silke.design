@@ -1,9 +1,9 @@
-import React, { FunctionComponent, memo } from 'react';
+import { FunctionComponent, memo } from 'react';
 
 import Flower from '../Flower';
 import './Header.scss';
 
-const Header: FunctionComponent<{}> = () => (
+const Header: FunctionComponent = () => (
   <header>
     <img src="/img/logo.svg" alt="silke.design" />
 

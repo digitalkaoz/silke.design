@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 
 import Project, { ProjectProps } from '../Project';
 
@@ -11,7 +11,7 @@ export type ProjectsProps = {
 const Projects: FunctionComponent<ProjectsProps> = ({ projects }) => (
   <div id="projects">
     {projects.map((project, index) => (
-      <Project key={index} direction={index % 2 === 0 ? 'ltr' : 'rtl'} {...project} />
+      <Project key={index} {...project} direction={index % 2 === 0 ? 'ltr' : 'rtl'} />
     ))}
   </div>
 );

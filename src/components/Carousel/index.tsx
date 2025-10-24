@@ -1,15 +1,15 @@
-import { RefObject, useState, FunctionComponent, useEffect, useCallback, useRef } from 'react';
+import { RefObject, useState, FunctionComponent, useEffect, useCallback, useRef, ReactElement } from 'react';
 import Gallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import GalleryItem from 'react-image-gallery/src/components/Item';
 
-const ImageGallery = Gallery.default ? Gallery.default : Gallery;
+const ImageGallery = Gallery.default ?? Gallery;
 const ReactImageGalleryItem = GalleryItem.default ? GalleryItem.default : GalleryItem;
 
 import './Carousel.scss';
 
 export type CarouselProps = {
-  text: any;
+  text: ReactElement;
   images: Array<string>;
   play: boolean;
 };
@@ -27,7 +27,7 @@ const CarouselItem: FunctionComponent<typeof ReactImageGalleryItem> = ({
 
 const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
   const carousel: RefObject<HTMLDivElement> = useRef(null);
-  const gallery: RefObject<ImageGallery> = useRef(null);
+  const gallery: RefObject<typeof ImageGallery> = useRef(null);
 
   const [flipped, setFlipped] = useState(false);
 
@@ -61,7 +61,7 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
           <ImageGallery
             items={flatImages}
             ref={gallery}
-            renderItem={(item) => <CarouselItem {...item} />}
+            renderItem={(item: CarouselProps) => <CarouselItem {...item} />}
             showBullets={images.length > 1}
             lazyLoad
             showThumbnails={false}

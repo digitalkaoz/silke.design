@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite-react-ssg dev",
     "build": "vite-react-ssg build",
-    "lint": "eslint . --ext js,jsx,tsx --report-unused-disable-directives --max-warnings 0",
-    "fmt": "prettier",
+    "lint": "eslint . --ext js,jsx,tsx,ts --report-unused-disable-directives --max-warnings 0",
+    "fmt": "prettier -w src",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -25,6 +25,8 @@
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "@types/react-image-gallery": "^1.2.4",
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
     "@vitejs/plugin-react": "^4.3.2",
     "clsx": "^2.1.1",
     "critters": "^0.0.22",

@@ -1,4 +1,12 @@
-import { FunctionComponent, RefObject, useRef, useState, useEffect, memo } from 'react';
+import {
+  FunctionComponent,
+  RefObject,
+  useRef,
+  useState,
+  useEffect,
+  useCallback,
+  memo,
+} from 'react';
 import Flower, { FlowerProps } from '../Flower';
 
 import './Project.scss';
@@ -77,14 +85,13 @@ const Visual: FunctionComponent<ProjectProps> = (props) => (
 const Project: FunctionComponent<ProjectProps> = (props) => {
   const project: RefObject<HTMLDivElement> = useRef(null);
   const [playing /* setPlaying*/] = useState<boolean>(true);
+  const observerRef = useRef<IntersectionObserver>();
 
-  if (props.beta && !getParameterByName('beta')) {
-    return <div style={{ display: 'none' }}></div>;
-  }
-
-  //TODO sideeffect
-  const fade = (distance: number) => {
+  const fade = useCallback((distance: number) => {
     window.requestAnimationFrame(() => {
+      if (!project.current) {
+        return;
+      }
       // if we react the top with the current active project, reset our own fading
       if (distance === 0) {
         project.current.style.filter = `grayscale(0) brightness(1)`;
@@ -92,13 +99,14 @@ const Project: FunctionComponent<ProjectProps> = (props) => {
         project.current.style.filter = `grayscale(${1 - distance}) brightness(${distance})`;
       }
     });
-  };
+  }, []);
 
-  const fadeSticky = () => {
+  const fadeSticky = useCallback(() => {
     const distance = getDistance(project);
 
     // if we self are not on top always reset fading
     if (
+      project.current &&
       project.current.getBoundingClientRect().top / window.innerHeight > 0 &&
       project.current.style.filter != `grayscale(0) brightness(1)`
     ) {
@@ -112,13 +120,11 @@ const Project: FunctionComponent<ProjectProps> = (props) => {
     } else if (playing === true && distance < 0.7) {
       //setPlaying(false);
     }
-  };
-
-  let observer;
+  }, [fade, playing]);
 
   useEffect(() => {
-    if (observer === undefined) {
-      observer = new IntersectionObserver(
+    if (!observerRef.current) {
+      observerRef.current = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -134,13 +140,25 @@ const Project: FunctionComponent<ProjectProps> = (props) => {
         }
       );
     }
-    observer.observe(project.current);
+
+    const currentProject = project.current;
+    const currentObserver = observerRef.current;
+
+    if (currentProject && currentObserver) {
+      currentObserver.observe(currentProject);
+    }
 
     return () => {
       window.removeEventListener('scroll', fadeSticky);
-      observer.unobserve(project.current);
+      if (currentProject && currentObserver) {
+        currentObserver.unobserve(currentProject);
+      }
     };
-  }, []);
+  }, [fadeSticky]);
+
+  if (props.beta && !getParameterByName('beta')) {
+    return <div style={{ display: 'none' }}></div>;
+  }
 
   return (
     <div

@@ -1,4 +1,4 @@
-import React, { FunctionComponent, memo } from 'react';
+import { FunctionComponent, memo } from 'react';
 import { SimpleImg } from 'react-simple-img';
 
 export type IconProps = {
