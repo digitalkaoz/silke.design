@@ -203,7 +203,7 @@
     }
   },
   {
-    "name": "Bornholdt Lee - Relaunch",
+    "name": "Bornholdt Lee",
     "images": [
       "/img/references/blg-relaunch/1.jpg",
       "/img/references/blg-relaunch/2.jpg",
@@ -316,7 +316,7 @@
     }
   },
   {
-    "name": "Bornholdt Lee - Relaunch",
+    "name": "Bornholdt Lee",
     "images": ["/img/references/blg/1.jpg", "/img/references/blg/2.jpg"],
     "task": "Erster Relaunch der Bornholdt Lee Firmen Website. Das Design der neuen Seite soll moderner und ansprechender gestaltet werden.",
     "solution": "Die Konzeption und das Design für verschiedene Devices wurden mit Photoshop erstellt, wobei der Focus auf den Referenzen lag. Die gesamte Bilderwelt wurde freundlicher und interessanter gestaltet. Zudem wurde ein Prototyp in HTML & CSS gebaut.",

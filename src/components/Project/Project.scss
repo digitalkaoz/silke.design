@@ -17,7 +17,7 @@
     position: relative;
     @media #{$medium-and-down} {
       position: initial;
-      width: 100%!important;
+      width: 100% !important;
     }
     height: 100%;
     display: block;
@@ -74,9 +74,8 @@
       line-height: 120%;
 
       @media #{$medium-only} {
-        font-size: 5.5vw!important;
+        font-size: 5.5vw !important;
       }
-
     }
   }
 
@@ -129,9 +128,9 @@
     .flipper {
       order: 0;
       flex: 0 1 auto;
-			align-self: auto;
+      align-self: auto;
 
-			.carousel--text {
+      .carousel--text {
         @media #{$medium-and-down} {
           h3 {
             font-size: 6vw;
@@ -151,15 +150,15 @@
 
         @media #{$small-short} {
           p {
-            font-size: 4.0vw;
+            font-size: 4vw;
           }
         }
         @media #{$small-long} {
           p {
             font-size: 4.2vw;
-					}
-				}
-			}
+          }
+        }
+      }
     }
   }
 
@@ -223,6 +222,39 @@
   }
 
   &--phone {
+    &.project--ltr {
+      .heading {
+      @media #{$small-and-down} {
+        justify-content: end;
+      }
+    }
+    .carousel--flipper {
+      @media #{$small-and-down} {
+        left: 0;
+        margin-left:5%;
+      }
+    }
+    }
+
+    .carousel--flipper {
+      @media #{$small-and-down} {
+        top: 2%;
+        right: 0;
+        bottom: auto;
+        margin-bottom: 0;
+        margin-right:5%;
+      }
+    }
+    .heading {
+      @media #{$small-and-down} {
+        justify-content: start;
+      }
+    }
+    .flower {
+      @media #{$small-and-down} {
+        display: none;
+      }
+    }
     .carousel {
       max-width: 100%;
       @media #{$large-and-up} {
@@ -233,6 +265,10 @@
       .flipper {
         margin-top: 10%;
         width: 70%;
+         @media #{$small-and-down} {
+          width: 100%;
+          margin-top: 3%;
+        }
         @media #{$large-and-up} {
           margin-top: 0;
           //height: 50vh;
@@ -303,14 +339,19 @@
     }
 
     .image-gallery {
+      @media #{$medium-and-up} {
       background-image: url(/img/phone.png);
       background-repeat: no-repeat;
       background-size: contain;
       padding: 24% 6.5% 25% 6.5%;
+      }
     }
 
     .image-gallery-bullets {
       bottom: -25%;
+      @media #{$small-and-down} {
+        bottom:-3%;
+      }
 		}
 
 		.carousel--text {
@@ -321,14 +362,45 @@
   }
 
   &--iphone {
+    .carousel--flipper {
+      @media #{$small-and-down} {
+        top: 2%;
+        left: 0;
+        bottom: auto;
+        margin-bottom: 0;
+        margin-left:5%;
+      }
+    }
+    .heading {
+      @media #{$small-and-down} {
+        justify-content: end;
+      }
+    }
+    .flower {
+      @media #{$small-and-down} {
+        display: none;
+      }
+    }
+
+    .project--gallery-column {
+      @media #{$small-and-down} {
+        padding:0;
+      }
+    }
     .carousel {
       max-width: 100%;
+      @media #{$small-and-down} {
+        padding-bottom: 5%;
+      }
       @media #{$large-and-up} {
         width: 100%;
         margin-top: 0;
         //height: 50vh;
       }
       .flipper {
+        @media #{$small-and-down} {
+          margin-top: 3%;
+        }
         margin-top: 10%;
         width: 110%;
         @media #{$large-and-up} {
@@ -355,7 +427,7 @@
       .carousel--text {
         @media #{$medium-and-down} {
           width: 85vw !important;
-          right: 25px;
+          right: 5px;
 
           h3 {
             margin: 15px 0;
@@ -401,22 +473,27 @@
     }
 
     .image-gallery {
-      background-image: url(/img/iphone.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      padding: 8% 19% 22% 16.5%;
+      @media #{$medium-and-up} {
+        background-image: url(/img/iphone.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 8% 19% 22% 16.5%;
 
-      .image-gallery-image img {
-        border-radius: 35px !important;
+        .image-gallery-image img {
+          border-radius: 35px !important;
 
-        @media #{$large-and-up} {
-          border-radius: 48px !important;
+          @media #{$large-and-up} {
+            border-radius: 48px !important;
+          }
+
         }
-
       }
     }
 
     .image-gallery-bullets {
+      @media #{$small-and-down} {
+        bottom: -3%;
+      }
       bottom: -7%;
     }
 
@@ -452,8 +529,8 @@
           margin-top: 10%;
           width: 75%;
           @media #{$extra-large-and-up} {
-            margin-top: 10%!important;
-            width: 95%!important;
+            margin-top: 10% !important;
+            width: 95% !important;
           }
 
           @media #{$medium-and-down} {
@@ -537,8 +614,8 @@
           width: 100%;
 
           @media #{$extra-large-and-up} {
-            margin-top: 0%!important;
-            width: 65%!important;
+            margin-top: 0% !important;
+            width: 65% !important;
           }
 
           @media #{$medium-only} {
@@ -590,7 +667,7 @@
 
             p {
               margin: 10px 0;
-						}
+            }
           }
         }
       }
@@ -613,14 +690,49 @@
   }
 
   &--desktop {
+    &.project--ltr {
+      .heading {
+      @media #{$small-and-down} {
+        justify-content: end;
+      }
+    }
+    .carousel--flipper {
+      @media #{$small-and-down} {
+        left: 0;
+        margin-left:5%;
+      }
+    }
+    }
+
+    .carousel--flipper {
+      @media #{$small-and-down} {
+        top: 2%;
+        right: 0;
+        bottom: auto;
+        margin-bottom: 0;
+        margin-right:5%;
+      }
+    }
+    .heading {
+      @media #{$small-and-down} {
+        justify-content: start;
+      }
+    }
+    .flower {
+      @media #{$small-and-down} {
+        display: none;
+      }
+    }
     .image-gallery::before {
       padding-top: 62.5%;
     }
     .image-gallery {
+      @media #{$medium-and-up} {
       background-image: url(/img/desktop.png);
       background-repeat: no-repeat;
       background-size: contain;
       padding: 3.5% 12.5% 9.5% 10.5%;
+      }
     }
 
     .carousel {
@@ -630,8 +742,8 @@
         width: 100%;
 
         @media #{$extra-large-and-up} {
-          margin-top: 0%!important;
-          width: 80%!important;
+          margin-top: 0% !important;
+          width: 80% !important;
         }
         @media #{$large-and-up} {
           margin-top: 0%;
@@ -682,8 +794,7 @@
 
           p {
             margin: 10px 0;
-					}
-
+          }
         }
       }
     }
@@ -692,11 +803,11 @@
       bottom: -30%;
     }
 
-    .description a,.carousel--text a {
+    .description a,
+    .carousel--text a {
       color: white;
       text-decoration: underline;
     }
-
   }
 
   &--bornholdt-lee-gmbh {
@@ -716,12 +827,13 @@
     .flower .drop {
       color: #009090;
     }
-    .description a,.carousel--text a {
+    .description a,
+    .carousel--text a {
       color: white;
       text-decoration: underline;
     }
   }
-  &--bornholdt-lee---relaunch {
+  &--bornholdt-lee {
     background-color: #032034;
     .flower .drop {
       color: #032034;
@@ -733,14 +845,14 @@
       color: #d3ad6a;
     }
     .image-gallery::before {
-      padding-top: 150%;
+      padding-top: 120%;
     }
 
-    .description a,.carousel--text a {
+    .description a,
+    .carousel--text a {
       color: white;
       text-decoration: underline;
     }
-
 
     .image-gallery {
       background-image: url(/img/phone_4.png);
@@ -749,29 +861,28 @@
     .image-gallery-bullets {
       bottom: -30%;
     }
-
   }
   &--ichallenge---ing-diba {
     background-color: #ff6200;
     .flower .drop {
       color: #ff6200;
     }
-    .description a,.carousel--text a {
+    .description a,
+    .carousel--text a {
       color: white;
       text-decoration: underline;
     }
-
   }
   &--pulvermühle {
     background-color: #000;
     .flower .drop {
       color: #000;
     }
-    .description a,.carousel--text a {
+    .description a,
+    .carousel--text a {
       color: white;
       text-decoration: underline;
     }
-
   }
   &--o2 {
     background-color: #0090d0;
@@ -792,11 +903,11 @@
       color: #00136f;
     }
 
-    .description a,.carousel--text a {
+    .description a,
+    .carousel--text a {
       color: white;
       text-decoration: underline;
     }
-
   }
   &--smoothr {
     background-color: #152831;
@@ -817,11 +928,11 @@
       color: #152831;
     }
 
-    .description a,.carousel--text a {
+    .description a,
+    .carousel--text a {
       color: white;
       text-decoration: underline;
     }
-
   }
   &--db-systel {
     * {
@@ -850,11 +961,11 @@
       background-color: #000 !important;
     }
 
-    .description a,.carousel--text a {
+    .description a,
+    .carousel--text a {
       color: black;
       text-decoration: underline;
     }
-
   }
 
   &--docident {
@@ -879,7 +990,8 @@
     .image-gallery-bullet.active {
       background-color: #595757 !important;
     }
-    .description a,.carousel--text a {
+    .description a,
+    .carousel--text a {
       color: #595757;
       text-decoration: underline;
     }
@@ -900,27 +1012,26 @@
   }
 
   &--timesheets {
-    background-color: #00B1AD;
+    background-color: #00b1ad;
     .flower .drop {
-      color: #00B1AD;
+      color: #00b1ad;
     }
-    .description a,.carousel--text a {
+    .description a,
+    .carousel--text a {
       color: white;
       text-decoration: underline;
     }
-
   }
 
-	&--car-alarm {
-    background-color: #6E37FF;
+  &--car-alarm {
+    background-color: #6e37ff;
     .flower .drop {
-      color: #6E37FF;
+      color: #6e37ff;
     }
-    .description a,.carousel--text a {
+    .description a,
+    .carousel--text a {
       color: white;
       text-decoration: underline;
     }
-
   }
-
 }
