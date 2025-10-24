@@ -1,14 +1,9 @@
-import React, {
-  memo,
-  FunctionComponent,
-  useState,
-  useCallback
-} from "react";
-import ClampLines from "react-clamp-lines";
+import { memo, FunctionComponent, useState, useCallback } from 'react';
+import LinesEllipsis from 'react-lines-ellipsis';
 
-import Icon, { IconProps } from "../Icon";
-import { isMobile, toId } from "../../utils";
-import "./Skills.scss";
+import Icon, { IconProps } from '../Icon';
+import { isMobile } from '../../utils';
+import './Skills.scss';
 
 export type SkillProps = {
   name: string;
@@ -32,18 +27,16 @@ const Skill: FunctionComponent<SkillProps> = ({ name, description, icons }) => {
       <h2>{name}</h2>
       <hr />
       <div className="icons">
-        {icons.map(icon => (
+        {icons.map((icon) => (
           <Icon key={icon.src} {...icon} />
         ))}
       </div>
-      <ClampLines
-        id={toId(name)}
+      <LinesEllipsis
         onClick={expand}
         text={description}
-        lines={lines}
-        innerElement="p"
-        lessText=""
-        moreText="⌵"
+        maxLine={lines}
+        component="p"
+        ellipsis=" ⌵"
       />
     </div>
   );
@@ -55,7 +48,7 @@ export type SkillsProps = {
 
 const Skills: FunctionComponent<SkillsProps> = ({ skills }) => (
   <div id="skills">
-    {skills.map(skill => (
+    {skills.map((skill) => (
       <Skill key={skill.name} {...skill} />
     ))}
   </div>

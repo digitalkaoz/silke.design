@@ -1,6 +1,6 @@
-import React, { memo, FunctionComponent } from "react";
+import { memo, FunctionComponent } from 'react';
 
-import "./Flower.scss";
+import './Flower.scss';
 
 type Corner = {
   name?: string;
@@ -12,7 +12,7 @@ export type FlowerProps = {
   br: Corner | null;
 };
 
-const Flower : FunctionComponent<FlowerProps> = ({ tl, tr, bl, br }) => (
+const Flower: FunctionComponent<FlowerProps> = ({ tl, tr, bl, br }) => (
   <div className="flower">
     {tl ? (
       <div className="drop drop--tl">

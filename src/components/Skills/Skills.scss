@@ -3,11 +3,7 @@
 #skills {
   @extend %row;
 
-  background: linear-gradient(
-    to right,
-    rgb(62, 62, 62) 0%,
-    rgba(13, 13, 13, 1) 100%
-  );
+  background: linear-gradient(to right, rgb(62, 62, 62) 0%, rgba(13, 13, 13, 1) 100%);
   color: #fff;
   margin-bottom: 0;
   padding: 5%;
@@ -15,7 +11,7 @@
   .skill {
     @extend %col;
     @extend %s12;
-    @extend %m4;
+    @extend %m6;
 
     padding: 0 0 0 0;
 
@@ -53,7 +49,7 @@
       }
     }
 
-    .clamp-lines {
+    .LinesEllipsis {
       @media #{$medium-and-down} {
         font-size: 2.2vw;
       }
@@ -61,7 +57,7 @@
         font-size: 5.5vw;
       }
 
-      .clamp-lines__button {
+      .LinesEllipsis-ellipsis {
         background: transparent;
         color: white;
         border: none;
@@ -73,7 +69,7 @@
         display: block;
       }
 
-      p[aria-hidden="true"] .clamp-lines__button {
+      p[aria-hidden="true"] .LinesEllipsis-ellipsis {
         display: none;
       }
     }
@@ -99,7 +95,6 @@
         }
         img {
           width: 100%;
-          height: 63px;
           vertical-align: bottom;
         }
       }

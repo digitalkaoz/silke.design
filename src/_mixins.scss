@@ -45,7 +45,7 @@ $small-long: "only screen and (max-width: 400px) and (max-height: 900px)" !defau
   %col {
     float: left;
     box-sizing: border-box;
-    padding: 0 $gutter-width / 2;
+    padding: 0 calc($gutter-width / 2);
     min-height: 1px;
 
     &[class*="push-"],
@@ -55,7 +55,7 @@ $small-long: "only screen and (max-width: 400px) and (max-height: 900px)" !defau
 
     $i: 1;
     @while $i <= $num-cols {
-      $perc: unquote((100 / ($num-cols / $i)) + "%");
+      $perc: unquote((calc(100 / ($num-cols / $i))) + "%");
       &%s#{$i} {
         width: $perc;
         @include reset-offset;
@@ -65,7 +65,7 @@ $small-long: "only screen and (max-width: 400px) and (max-height: 900px)" !defau
 
     $i: 1;
     @while $i <= $num-cols {
-      $perc: unquote((100 / ($num-cols / $i)) + "%");
+      $perc: unquote((calc(100 / ($num-cols / $i))) + "%");
       @include grid-classes("s", $i, $perc);
       $i: $i + 1;
     }
@@ -73,7 +73,7 @@ $small-long: "only screen and (max-width: 400px) and (max-height: 900px)" !defau
     @media #{$medium-and-up} {
       $i: 1;
       @while $i <= $num-cols {
-        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        $perc: unquote((calc(100 / ($num-cols / $i))) + "%");
         &%m#{$i} {
           width: $perc;
           @include reset-offset;
@@ -83,7 +83,7 @@ $small-long: "only screen and (max-width: 400px) and (max-height: 900px)" !defau
 
       $i: 1;
       @while $i <= $num-cols {
-        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        $perc: unquote((calc(100 / ($num-cols / $i))) + "%");
         @include grid-classes("m", $i, $perc);
         $i: $i + 1;
       }
@@ -92,7 +92,7 @@ $small-long: "only screen and (max-width: 400px) and (max-height: 900px)" !defau
     @media #{$large-and-up} {
       $i: 1;
       @while $i <= $num-cols {
-        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        $perc: unquote((calc(100 / ($num-cols / $i))) + "%");
         &%l#{$i} {
           width: $perc;
           @include reset-offset;
@@ -102,7 +102,7 @@ $small-long: "only screen and (max-width: 400px) and (max-height: 900px)" !defau
 
       $i: 1;
       @while $i <= $num-cols {
-        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        $perc: unquote((calc(100 / ($num-cols / $i))) + "%");
         @include grid-classes("l", $i, $perc);
         $i: $i + 1;
       }
@@ -111,7 +111,7 @@ $small-long: "only screen and (max-width: 400px) and (max-height: 900px)" !defau
     @media #{$extra-large-and-up} {
       $i: 1;
       @while $i <= $num-cols {
-        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        $perc: unquote((calc(100 / ($num-cols / $i))) + "%");
         &%xl#{$i} {
           width: $perc;
           @include reset-offset;
@@ -121,7 +121,7 @@ $small-long: "only screen and (max-width: 400px) and (max-height: 900px)" !defau
 
       $i: 1;
       @while $i <= $num-cols {
-        $perc: unquote((100 / ($num-cols / $i)) + "%");
+        $perc: unquote((calc(100 / ($num-cols / $i))) + "%");
         @include grid-classes("xl", $i, $perc);
         $i: $i + 1;
       }

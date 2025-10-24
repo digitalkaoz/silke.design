@@ -5,7 +5,7 @@ header {
   padding: 5%;
   margin-bottom: 0;
 
-  background-image: linear-gradient(134deg, #6cc2e1 0%, #327892 100%);
+  background-image: linear-gradient(134deg, #6cc2e1 20%, #327892 130%);
 
   @media #{$small-and-down} {
     display: flex !important;
@@ -131,9 +131,9 @@ header {
     }
 
     p {
-      color: #000;
+      color: #1e1b1e;
 
-      font-weight: lighter;
+      font-weight: normal;
       @media #{$medium-and-down} {
         font-size: 2.2vw;
       }

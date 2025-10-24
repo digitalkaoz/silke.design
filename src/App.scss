@@ -1,0 +1,55 @@
+@import "./index";
+
+html,
+#root {
+  width: 100%;
+  background-color: #000;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8vw;
+
+  main,
+  footer {
+    font-weight: 100;
+  }
+
+  header p {
+    font-weight: 400;
+  }
+}
+
+h1,
+h2 {
+  clear: both;
+  font-weight: 100;
+
+  color: #fff;
+  font-size: 2.4vw !important;
+  margin: 0;
+
+  font-family: "Fjalla One", sans-serif;
+
+  @media #{$small-and-down} {
+    font-size: 8vw !important;
+  }
+}
+
+h3 {
+  font-family: "Fjalla One", sans-serif;
+}
+
+.row {
+  @extend .row;
+  margin-bottom: 0;
+  padding: 5%;
+}
+
+.col {
+  @extend .col;
+  padding: 0;
+}
+
+img:not([src]) {
+  visibility: hidden;
+}
