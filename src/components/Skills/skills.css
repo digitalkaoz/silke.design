@@ -1,0 +1,44 @@
+@reference "../../app.css";
+
+#skills {
+  @apply text-white p-6 pb-16 pt-0;
+  background: linear-gradient(to right, rgb(62, 62, 62) 0%, rgba(13, 13, 13, 1) 100%);
+
+  h2 {
+    @apply pt-16 pb-8;
+  }
+
+  .responsibilities {
+    @apply flex gap-8 justify-between flex-wrap;
+    li {
+      @apply text-2xl font-light;
+      @media (width >= theme(--breakpoint-md)) {
+        @apply text-3xl;
+      }
+    }
+  }
+
+  .icons {
+    @apply grid grid-cols-4 gap-4;
+
+    @media (width >= theme(--breakpoint-md)) {
+      @apply grid-cols-8 gap-8;
+    }
+    @media (width >= theme(--breakpoint-lg)) {
+      @apply grid-cols-12 gap-12;
+    }
+    @media (width >= theme(--breakpoint-xl)) {
+      @apply grid-cols-16 gap-16;
+    }
+
+    .icon {
+      @apply w-full block;
+      > div {
+        @apply inline!;
+      }
+      img {
+        @apply w-full align-bottom;
+      }
+    }
+  }
+}

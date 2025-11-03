@@ -1,0 +1,79 @@
+@reference "../../app.css";
+
+.carousel {
+  @apply perspective-distant;
+
+  .image-gallery-bullets .image-gallery-bullet {
+    @apply shadow-none;
+  }
+
+  .flipper {
+    @apply w-full h-full relative;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    @media (width >= theme(--breakpoint-md)) {
+      @apply h-auto;
+    }
+  }
+
+  .image-gallery {
+    @apply z-10 rotate-y-0;
+  }
+
+  &.carousel--flipped {
+    @apply max-w-full;
+    .flipper {
+      @apply rotate-y-180;
+    }
+  }
+
+  .image-gallery,
+  .carousel--text {
+    @apply backface-hidden;
+  }
+
+  .carousel--text {
+    @apply rotate-y-180 align-middle text-white m-0 text-left absolute;
+    white-space: initial;
+    top: -20px;
+
+    @media (width >= theme(--breakpoint-md)) {
+      @apply hidden;
+    }
+  }
+
+  .image-gallery-slide {
+    &.right,
+    &.left {
+      @apply -z-10;
+    }
+
+    img {
+      @apply w-full h-full;
+    }
+
+    &.center {
+      @apply bg-transparent;
+    }
+  }
+
+  .image-gallery-bullets {
+    @apply relative top-4;
+    .image-gallery-bullet {
+      @media (width >= theme(--breakpoint-md)) {
+        @apply scale-90;
+      }
+    }
+  }
+}
+
+.carousel--flipper {
+  @apply text-white bg-transparent border border-white absolute rounded-2xl outline-none mx-auto right-6 top-6 justify-center py-0.5 px-4 w-1/4 text-xl;
+
+  font-family: "Fjalla One", sans-serif;
+
+  @media (width >= theme(--breakpoint-md)) {
+    @apply hidden;
+  }
+}

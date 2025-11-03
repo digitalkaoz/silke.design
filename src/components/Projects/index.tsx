@@ -2,7 +2,7 @@ import { FunctionComponent } from 'react';
 
 import Project, { ProjectProps } from '../Project';
 
-import './Projects.scss';
+import './projects.css';
 
 export type ProjectsProps = {
   projects: Array<ProjectProps>;

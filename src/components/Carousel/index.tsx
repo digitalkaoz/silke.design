@@ -1,7 +1,7 @@
 import { useState, FunctionComponent, useEffect, useCallback, useRef, ReactElement } from 'react';
 import Gallery, { type ReactImageGalleryItem } from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
-import './Carousel.scss';
+import './carousel.css';
 
 export type CarouselProps = {
   text: ReactElement;
@@ -65,7 +65,7 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
             slideDuration={0}
             autoPlay
           />
-          <div className="carousel--text show-on-medium-and-down">{text}</div>
+          <div className="carousel--text">{text}</div>
         </div>
       </div>
       <button onClick={flip} className="carousel--flipper ">

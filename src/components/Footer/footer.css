@@ -1,0 +1,41 @@
+@reference "../../app.css";
+
+footer {
+  @apply text-white bg-black p-6;
+
+  h2 {
+    @apply py-12 text-center;
+  }
+  .contacts {
+    @apply flex flex-row gap-8;
+
+    @media (width >= theme(--breakpoint-md)) {
+    }
+
+    .icon--container {
+      @apply w-full block;
+      .icon {
+        > div {
+          @apply h-auto! justify-center-safe;
+        }
+        img {
+          @apply w-1/2!;
+
+          @media (width >= theme(--breakpoint-md)) {
+            @apply w-1/3!;
+          }
+          @media (width >= theme(--breakpoint-lg)) {
+            @apply w-1/6!;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    @apply text-center text-xl mt-12 font-light;
+    @media (width >= theme(--breakpoint-lg)) {
+      @apply text-2xl;
+    }
+  }
+}

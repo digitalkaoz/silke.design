@@ -1,21 +1,13 @@
-import {defineConfig} from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-    optimizeDeps: {
-        include: [
-            "prop-types",
-            "react-fast-compare"
-        ]
+  plugins: [react(), tailwindcss()],
+  ssgOptions: {
+    script: 'async',
+    beastiesOptions: {
+      preload: 'media',
     },
-    plugins: [react()],
-    ssgOptions: {
-        script: 'async',
-        beastiesOptions: {
-            // E.g., change the preload strategy
-            preload: 'media',
-            // Other options: https://github.com/GoogleChromeLabs/critters#usage
-        },
-    },
-})
+  },
+});

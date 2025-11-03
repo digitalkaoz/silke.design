@@ -21,12 +21,8 @@ export const getParameterByName = (name: string): boolean => {
   return search.has(name);
 };
 
-export const isMobile = (): boolean =>
-  typeof window !== 'undefined' &&
-  window.matchMedia &&
-  window.matchMedia('(max-width: 600px)').matches;
-
-export const toId = (text: string): string => stripTags(text).toLowerCase().replace(/ /g, '-');
+export const toId = (text: string): string =>
+  stripTags(text).toLowerCase().replace(/\(/g, '').replace(/\)/g, '').replace(/ /g, '-');
 
 export const getDistance = (container: RefObject<HTMLElement>): number => {
   if (!container.current) {

@@ -1,0 +1,45 @@
+@reference "../../app.css";
+
+header {
+  @apply px-6 grid grid-cols-1 py-12;
+  background: #60dee0;
+  background: linear-gradient(121deg, rgba(96, 222, 224, 1) 0%, rgba(247, 212, 136, 1) 100%);
+
+  @media (width >= theme(--breakpoint-md)) {
+    @apply grid-cols-2;
+  }
+
+  .logo-column {
+    @apply grid grid-flow-row auto-rows-max gap-4;
+
+    h1 {
+      @apply pb-4 text-black text-center;
+    }
+
+    p {
+      @apply text-2xl font-light text-center pb-12;
+    }
+
+    @media (width >= theme(--breakpoint-md)) {
+      h1,
+      p {
+        @apply text-left;
+      }
+
+      p {
+        @apply pb-0;
+      }
+
+      img {
+        @apply w-1/2;
+      }
+    }
+  }
+
+  .profile-column {
+    @apply justify-self-center-safe content-center;
+    img {
+      @apply w-64 h-64 rounded-full border-2 border-white;
+    }
+  }
+}

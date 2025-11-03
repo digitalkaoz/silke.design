@@ -1,0 +1,14 @@
+@reference "../../app.css"
+
+#projects {
+  @apply mb-0 bg-black;
+
+  .project {
+    &:last-of-type {
+      @apply opacity-100!
+      .project {
+        @apply grayscale-0!;
+      }
+    }
+  }
+}

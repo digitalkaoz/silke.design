@@ -1,6 +1,6 @@
 [
   {
-    "name": "YogaEasy",
+    "name": "YogaEasy Mobile-Apps (2020)",
     "images": [
       "/img/references/yogaeasy/01.png",
       "/img/references/yogaeasy/02.png",
@@ -10,16 +10,18 @@
       "/img/references/yogaeasy/05.png"
     ],
     "task": "Konzeption und Design eines gesamtheitlichen und geräteübergreifenden Nutzererlebnis rund um das Thema Online-Yoga.",
+    "role": "Product Designer",
     "solution": "Kompletter Rebrush der Apps & Website und Design neuer Features in Figma nach eingehender Marktanalyse. Internationalisierung des Produktes mit regionalem Content.",
-    "customer": ["YogaEasy", "https://yogaeasy.de"],
-    "employer": [],
+    "customer": [
+      "iOS App",
+      "https://apps.apple.com/de/app/yogaeasy-online-yoga-studio/id692200180?platform=iphone"
+    ],
+    "employer": [
+      "Android App",
+      "https://play.google.com/store/apps/details?id=de.yogaeasy.videoapp&hl=de"
+    ],
     "orientation": "portrait",
-    "type": "iphone",
-    "skills": {
-      "tl": { "name": "UX" },
-      "tr": { "name": "UI" },
-      "br": { "name": 2020 }
-    }
+    "type": "iphone"
   },
   {
     "name": "Car-Alarm",

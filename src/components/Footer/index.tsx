@@ -2,7 +2,7 @@ import { memo, FunctionComponent } from 'react';
 
 import Icon, { IconProps } from '../Icon';
 
-import './Footer.scss';
+import './footer.css';
 
 export type FooterProps = {
   links: Array<IconProps>;
@@ -10,6 +10,7 @@ export type FooterProps = {
 
 const Footer: FunctionComponent<FooterProps> = ({ links }) => (
   <footer>
+    <h2>Let&apos;s connect</h2>
     <div className="contacts">
       {links.map((link) => (
         <div key={link.name} className="icon--container">

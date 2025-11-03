@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+#root {
+  @apply w-full bg-black;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2 {
+  @apply font-bold text-2xl m-0;
+  font-family: "Fjalla One", sans-serif;
+}
+
+h3 {
+  @apply font-bold m-0 text-xl;
+}
+
+img:not([src]) {
+  visibility: hidden;
+}

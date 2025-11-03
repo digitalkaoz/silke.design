@@ -7,19 +7,18 @@ import {
   useCallback,
   memo,
 } from 'react';
-import Flower, { FlowerProps } from '../Flower';
 
-import './Project.scss';
-import { toId, getParameterByName, getDistance } from '../../utils';
+import './project.css';
+import { toId, getParameterByName, getDistance } from '../../utils.js';
 import Carousel from '../Carousel';
 
 export type ProjectProps = {
   direction: 'rtl' | 'ltr';
-  skills: FlowerProps;
   orientation: 'landscape' | 'portrait';
   type: string;
   name: string;
   task: string;
+  role?: string;
   solution: string;
   customer: Array<string>;
   employer?: Array<string>;
@@ -28,34 +27,31 @@ export type ProjectProps = {
   play?: boolean;
 };
 
-const Text: FunctionComponent<ProjectProps> = ({ task, solution, customer, employer }) => (
+const Text: FunctionComponent<ProjectProps> = ({ task, solution, customer, employer, role }) => (
   <>
-    <h3>Aufgabe</h3>
+    <h3>Task</h3>
     <p dangerouslySetInnerHTML={{ __html: task }}></p>
-    <h3>Umsetzung</h3>
+    <h3>Role</h3>
+    {role && <p dangerouslySetInnerHTML={{ __html: role }}></p>}
+    <h3>Outcome</h3>
     <p dangerouslySetInnerHTML={{ __html: solution }}></p>
-    <h3>Kunde</h3>
     {customer.length == 2 ? (
-      <p>
-        <a
-          href={customer[1]}
-          target="_blank"
-          rel="nofollow"
-          dangerouslySetInnerHTML={{ __html: customer[0] }}
-        ></a>
-      </p>
+      <a
+        href={customer[1]}
+        target="_blank"
+        rel="nofollow"
+        dangerouslySetInnerHTML={{ __html: customer[0] }}
+      ></a>
     ) : (
       <p dangerouslySetInnerHTML={{ __html: customer[0] }}></p>
     )}
-    {employer && employer.length == 2 ? (
-      <p>
-        <a
-          href={employer[1]}
-          target="_blank"
-          rel="nofollow"
-          dangerouslySetInnerHTML={{ __html: employer[0] }}
-        ></a>
-      </p>
+    {employer?.length == 2 ? (
+      <a
+        href={employer[1]}
+        target="_blank"
+        rel="nofollow"
+        dangerouslySetInnerHTML={{ __html: employer[0] }}
+      ></a>
     ) : employer ? (
       <p dangerouslySetInnerHTML={{ __html: employer[0] }}></p>
     ) : (
@@ -67,10 +63,9 @@ const Text: FunctionComponent<ProjectProps> = ({ task, solution, customer, emplo
 const Description: FunctionComponent<ProjectProps> = (props) => (
   <div className="project--description-column">
     <div className="heading">
-      <Flower {...props.skills} />
       <h2 dangerouslySetInnerHTML={{ __html: props.name }} />
     </div>
-    <div className="description hide-on-med-and-down">
+    <div className="description">
       <Text {...props}></Text>
     </div>
   </div>
@@ -85,7 +80,7 @@ const Visual: FunctionComponent<ProjectProps> = (props) => (
 const Project: FunctionComponent<ProjectProps> = (props) => {
   const project: RefObject<HTMLDivElement> = useRef(null);
   const [playing /* setPlaying*/] = useState<boolean>(true);
-  const observerRef = useRef<IntersectionObserver>();
+  const observerRef = useRef<IntersectionObserver>(null);
 
   const fade = useCallback((distance: number) => {
     window.requestAnimationFrame(() => {

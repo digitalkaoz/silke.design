@@ -1,57 +1,37 @@
-import { memo, FunctionComponent, useState, useCallback } from 'react';
-import LinesEllipsis from 'react-lines-ellipsis';
+import { FunctionComponent } from 'react';
 
 import Icon, { IconProps } from '../Icon';
-import { isMobile } from '../../utils';
-import './Skills.scss';
+import './skills.css';
 
 export type SkillProps = {
-  name: string;
-  description: string;
   icons: Array<IconProps>;
 };
 
-const Skill: FunctionComponent<SkillProps> = ({ name, description, icons }) => {
-  const [lines, setLines] = useState(isMobile() ? 5 : 100); //TODO isMobile is a sideEffect
-
-  const expand = useCallback(() => {
-    if (!isMobile()) {
-      return;
-    }
-
-    setLines(100);
-  }, []);
-
-  return (
-    <div className="skill">
-      <h2>{name}</h2>
-      <hr />
-      <div className="icons">
-        {icons.map((icon) => (
-          <Icon key={icon.src} {...icon} />
-        ))}
-      </div>
-      <LinesEllipsis
-        onClick={expand}
-        text={description}
-        maxLine={lines}
-        component="p"
-        ellipsis=" ⌵"
-      />
-    </div>
-  );
-};
-
 export type SkillsProps = {
-  skills: Array<SkillProps>;
+  tools: SkillProps;
 };
 
-const Skills: FunctionComponent<SkillsProps> = ({ skills }) => (
-  <div id="skills">
-    {skills.map((skill) => (
-      <Skill key={skill.name} {...skill} />
-    ))}
-  </div>
+const Skills: FunctionComponent<SkillsProps> = ({ tools }) => (
+  <section id="skills">
+    <h2>Responsibilities</h2>
+    <ul className="responsibilities">
+      <li>User Experience Design</li>
+      <li>User Interface Design</li>
+      <li>Interaction Design</li>
+      <li>Prototyping</li>
+      <li>Visual Design</li>
+      <li>Design Systems</li>
+      <li>Usability Testing</li>
+      <li>Responsive Design</li>
+      <li>Wireframing</li>
+    </ul>
+    <h2>Tools</h2>
+    <div className="icons">
+      {tools.icons.map((icon) => (
+        <Icon key={icon.src} {...icon} />
+      ))}
+    </div>
+  </section>
 );
 
-export default memo(Skills);
+export default Skills;

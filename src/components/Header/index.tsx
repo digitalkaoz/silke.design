@@ -1,24 +1,25 @@
 import { FunctionComponent, memo } from 'react';
 
-import Flower from '../Flower';
-import './Header.scss';
+import './Header.css';
 
 const Header: FunctionComponent = () => (
   <header>
-    <img src="/img/logo.svg" alt="silke.design" />
+    <div className="logo-column">
+      <img src="/img/logo.svg" />
 
-    <div className="headline">
-      <h1>Silke Schönthal - Portfolio</h1>
-      <p>
-        Ich bin seit etwa 20 Jahren im Bereich der digitalen Medien tätig und habe daher eine Menge
-        Berufserfahrung sammeln können. Meine Aufgaben waren sehr vielseitig - mit einem besonderen
-        Schwerpunkt auf App- & Webdesign und der Konzeption maßgeschneiderter Workflows in enger
-        Abstimmung mit dem Kunden. Ergänzend dazu gehörte auch die Frontend-Entwicklung zu meinen
-        Tätigkeitsfeldern. Eine Auswahl meiner Projekte gibt es hier zu sehen.
-      </p>
+      <div className="headline">
+        <h1>Hi! I&apos;m Silke,</h1>
+        <p>
+          a Product-Designer based in Hamburg with more than 20 years of professional experience. a
+          Product-Designer based in Hamburg with more than 20 years of professional experience. a
+          Product-Designer based in Hamburg with more than 20 years of professional experience.
+        </p>
+      </div>
     </div>
 
-    <Flower tl={{ name: 'UX' }} tr={{ name: 'UI' }} bl={{ name: '' }} br={{}} />
+    <div className="profile-column">
+      <img src="/img/profile.jpg" alt="Silke Schönthal - Product Designer" />
+    </div>
   </header>
 );
 
