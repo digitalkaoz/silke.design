@@ -19,6 +19,26 @@
       "name": "miro",
       "src": "/img/miro.svg",
       "target": "http://www.miro.com"
+    },
+    {
+      "name": "firefly",
+      "src": "/img/Adobe_Firefly_Logo.svg",
+      "target": "https://www.adobe.com/de/products/firefly"
+    },
+    {
+      "name": "chatgpt",
+      "src": "/img/ChatGPT-Logo.svg",
+      "target": "https://chatgpt.com/"
+    },
+    {
+      "name": "canva",
+      "src": "/img/Canva_Logo.svg",
+      "target": "https://canva.com/"
+    },
+    {
+      "name": "atlassian",
+      "src": "/img/atlassian.svg",
+      "target": "https://atlassian.com/"
     }
   ]
 }

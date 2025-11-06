@@ -1,6 +1,4 @@
-import '@fontsource/fjalla-one';
-import '@fontsource/roboto/100.css';
-import '@fontsource/roboto/400.css';
+import '@fontsource-variable/jost';
 import './app.css';
 
 import Header from './components/Header';

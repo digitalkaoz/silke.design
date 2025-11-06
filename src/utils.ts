@@ -1,5 +1,3 @@
-import { RefObject } from 'react';
-
 export const stripTags = (html: string): string => {
   if (typeof window === 'undefined') {
     return html.replace(/(<([^>]+)>)/gi, '');
@@ -11,27 +9,17 @@ export const stripTags = (html: string): string => {
   return tmp.textContent || tmp.innerText;
 };
 
-// TODO below are all sideeffects
-export const getParameterByName = (name: string): boolean => {
-  if (typeof window === 'undefined') {
-    return true;
-  }
-  const search = new URLSearchParams(window.location.search);
-
-  return search.has(name);
-};
-
 export const toId = (text: string): string =>
   stripTags(text).toLowerCase().replace(/\(/g, '').replace(/\)/g, '').replace(/ /g, '-');
 
-export const getDistance = (container: RefObject<HTMLElement>): number => {
-  if (!container.current) {
+export const getDistance = (container: Element): number => {
+  if (!container) {
     return 1;
   }
-  const currentScroller = container.current.nextSibling;
+  const currentScroller = container.nextSibling;
   if (!currentScroller) {
     return 1;
   }
 
-  return currentScroller.getBoundingClientRect().top / window.innerHeight;
+  return (currentScroller as Element).getBoundingClientRect().top / window.innerHeight;
 };

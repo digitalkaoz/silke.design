@@ -11,13 +11,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fontsource/fjalla-one": "^5.2.7",
-    "@fontsource/roboto": "^5.2.8",
+    "@fontsource-variable/jost": "^5.2.8",
     "@tailwindcss/vite": "^4.1.16",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-image-gallery": "^1.4.0",
-    "react-simple-image-slider": "^2.4.1",
+    "react-intersection-observer": "^10.0.0",
     "react-simple-img": "^3.0.0",
     "tailwindcss": "^4.1.16"
   },
@@ -28,6 +27,7 @@
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.46.2",
     "@vitejs/plugin-react": "^5.1.0",
+    "babel-plugin-react-compiler": "^1.0.0",
     "beasties": "^0.3.5",
     "eslint": "^8.57.1",
     "eslint-plugin-react": "^7.37.5",

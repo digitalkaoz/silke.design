@@ -34,9 +34,10 @@
   }
 
   .carousel--text {
-    @apply rotate-y-180 align-middle text-white m-0 text-left absolute;
+    @apply rotate-y-180 align-middle m-0 text-left absolute;
+    color: var(--text-color, #000000);
     white-space: initial;
-    top: -20px;
+    top: -10px;
 
     @media (width >= theme(--breakpoint-md)) {
       @apply hidden;
@@ -69,10 +70,9 @@
 }
 
 .carousel--flipper {
-  @apply text-white bg-transparent border border-white absolute rounded-2xl outline-none mx-auto right-6 top-6 justify-center py-0.5 px-4 w-1/4 text-xl;
-
-  font-family: "Fjalla One", sans-serif;
-
+  @apply bg-transparent border absolute rounded-2xl outline-none mx-auto right-6 top-6 justify-center py-0.5 px-4 w-1/4 text-xl;
+  color: var(--text-color, #000000);
+  border-color: var(--text-color, #000000);
   @media (width >= theme(--breakpoint-md)) {
     @apply hidden;
   }

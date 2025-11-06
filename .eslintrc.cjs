@@ -8,7 +8,7 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.js'],
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.js', 'src/main.jsx', 'src/App.jsx'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
@@ -16,7 +16,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    project: ['./tsconfig.json'],
+    project: true
   },
   settings: {
     react: { version: '18.2' },

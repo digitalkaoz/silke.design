@@ -1,16 +1,9 @@
-import {
-  FunctionComponent,
-  RefObject,
-  useRef,
-  useState,
-  useEffect,
-  useCallback,
-  memo,
-} from 'react';
+import { FunctionComponent, useState, memo } from 'react';
 
 import './project.css';
-import { toId, getParameterByName, getDistance } from '../../utils.js';
+import { toId, getDistance } from '../../utils.js';
 import Carousel from '../Carousel';
+import { useOnInView } from 'react-intersection-observer';
 
 export type ProjectProps = {
   direction: 'rtl' | 'ltr';
@@ -18,45 +11,54 @@ export type ProjectProps = {
   type: string;
   name: string;
   task: string;
-  role?: string;
+  role?: Array<string>;
   solution: string;
   customer: Array<string>;
   employer?: Array<string>;
+  timeframe?: string;
   images: Array<string>;
   beta?: boolean;
   play?: boolean;
 };
 
-const Text: FunctionComponent<ProjectProps> = ({ task, solution, customer, employer, role }) => (
+function fadySticky() {
+  const target = this.target as HTMLElement;
+  const distance = getDistance(this.target);
+  if (distance === 0) {
+    if (target.style.filter != `grayscale(0) brightness(1)`) {
+      //console.log('changing visibility for', target)
+      target.style.filter = `grayscale(0) brightness(1)`;
+    }
+  } else if (distance < 1) {
+    //console.log('changing visibility for', target, distance)
+    target.style.filter = `grayscale(${1 - distance}) brightness(${distance})`;
+  }
+}
+
+const Text: FunctionComponent<ProjectProps> = ({
+  task,
+  solution,
+  customer,
+  employer,
+  role,
+  timeframe,
+}) => (
   <>
+    {timeframe && <p className="time">{timeframe}</p>}
     <h3>Task</h3>
     <p dangerouslySetInnerHTML={{ __html: task }}></p>
-    <h3>Role</h3>
-    {role && <p dangerouslySetInnerHTML={{ __html: role }}></p>}
+    <h3>Responsibilities</h3>
+    {role && role.length && (
+      <ul>
+        {role.map((r, i) => (
+          <li key={i}>{r}</li>
+        ))}
+      </ul>
+    )}
     <h3>Outcome</h3>
     <p dangerouslySetInnerHTML={{ __html: solution }}></p>
-    {customer.length == 2 ? (
-      <a
-        href={customer[1]}
-        target="_blank"
-        rel="nofollow"
-        dangerouslySetInnerHTML={{ __html: customer[0] }}
-      ></a>
-    ) : (
-      <p dangerouslySetInnerHTML={{ __html: customer[0] }}></p>
-    )}
-    {employer?.length == 2 ? (
-      <a
-        href={employer[1]}
-        target="_blank"
-        rel="nofollow"
-        dangerouslySetInnerHTML={{ __html: employer[0] }}
-      ></a>
-    ) : employer ? (
-      <p dangerouslySetInnerHTML={{ __html: employer[0] }}></p>
-    ) : (
-      <></>
-    )}
+    <Link link={customer} />
+    <Link link={employer} />
   </>
 );
 
@@ -71,89 +73,46 @@ const Description: FunctionComponent<ProjectProps> = (props) => (
   </div>
 );
 
+const Link: FunctionComponent<{ link: Array<string> | string | undefined }> = ({ link }) =>
+  link && link.length == 2 ? (
+    <a
+      href={link[1]}
+      target="_blank"
+      rel="nofollow"
+      dangerouslySetInnerHTML={{ __html: link[0] }}
+    ></a>
+  ) : (
+    link && link[0] && <p dangerouslySetInnerHTML={{ __html: link[0] }}></p>
+  );
+
 const Visual: FunctionComponent<ProjectProps> = (props) => (
   <div className="project--gallery-column">
     <Carousel text={<Text {...props}></Text>} images={props.images} play={props.play || false} />
+    <p>
+      <Link link={props.customer} />
+      <Link link={props.employer} />
+    </p>
   </div>
 );
 
 const Project: FunctionComponent<ProjectProps> = (props) => {
-  const project: RefObject<HTMLDivElement> = useRef(null);
   const [playing /* setPlaying*/] = useState<boolean>(true);
-  const observerRef = useRef<IntersectionObserver>(null);
 
-  const fade = useCallback((distance: number) => {
-    window.requestAnimationFrame(() => {
-      if (!project.current) {
-        return;
+  const project = useOnInView(
+    (inView, entry) => {
+      if (!window) {
+        return
       }
-      // if we react the top with the current active project, reset our own fading
-      if (distance === 0) {
-        project.current.style.filter = `grayscale(0) brightness(1)`;
+      const cb = fadySticky.bind(entry);
+      if (inView) {
+        window.addEventListener('scroll', cb);
       } else {
-        project.current.style.filter = `grayscale(${1 - distance}) brightness(${distance})`;
+        window.removeEventListener('scroll', cb);
+        (entry.target as HTMLElement).style.filter = `grayscale(0) brightness(1)`;
       }
-    });
-  }, []);
-
-  const fadeSticky = useCallback(() => {
-    const distance = getDistance(project);
-
-    // if we self are not on top always reset fading
-    if (
-      project.current &&
-      project.current.getBoundingClientRect().top / window.innerHeight > 0 &&
-      project.current.style.filter != `grayscale(0) brightness(1)`
-    ) {
-      fade(0);
-    } else {
-      fade(distance);
-    }
-
-    if (distance >= 0.7 && playing === false) {
-      //setPlaying(true);
-    } else if (playing === true && distance < 0.7) {
-      //setPlaying(false);
-    }
-  }, [fade, playing]);
-
-  useEffect(() => {
-    if (!observerRef.current) {
-      observerRef.current = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              if (project.current) {
-                project.current.style.filter = `grayscale(0) brightness(1)`;
-              }
-              window.addEventListener('scroll', fadeSticky);
-            }
-          });
-        },
-        {
-          threshold: 0.01,
-        }
-      );
-    }
-
-    const currentProject = project.current;
-    const currentObserver = observerRef.current;
-
-    if (currentProject && currentObserver) {
-      currentObserver.observe(currentProject);
-    }
-
-    return () => {
-      window.removeEventListener('scroll', fadeSticky);
-      if (currentProject && currentObserver) {
-        currentObserver.unobserve(currentProject);
-      }
-    };
-  }, [fadeSticky]);
-
-  if (props.beta && !getParameterByName('beta')) {
-    return <div style={{ display: 'none' }}></div>;
-  }
+    },
+    { threshold: 0.1, delay: 100, trackVisibility: true }
+  );
 
   return (
     <div

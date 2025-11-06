@@ -8,18 +8,12 @@ importers:
 
   .:
     dependencies:
-      '@fontsource/fjalla-one':
-        specifier: ^5.2.7
-        version: 5.2.7
-      '@fontsource/roboto':
+      '@fontsource-variable/jost':
         specifier: ^5.2.8
         version: 5.2.8
       '@tailwindcss/vite':
         specifier: ^4.1.16
         version: 4.1.16(vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.93.2)(terser@5.44.0))
-      materialize-css:
-        specifier: ^1.0.0
-        version: 1.0.0
       react:
         specifier: ^19.2.0
         version: 19.2.0
@@ -29,12 +23,9 @@ importers:
       react-image-gallery:
         specifier: ^1.4.0
         version: 1.4.0(react@19.2.0)
-      react-lines-ellipsis:
-        specifier: ^0.16.1
-        version: 0.16.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      react-simple-image-slider:
-        specifier: ^2.4.1
-        version: 2.4.1
+      react-intersection-observer:
+        specifier: ^10.0.0
+        version: 10.0.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       react-simple-img:
         specifier: ^3.0.0
         version: 3.0.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -60,12 +51,12 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^5.1.0
         version: 5.1.0(vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.93.2)(terser@5.44.0))
+      babel-plugin-react-compiler:
+        specifier: ^1.0.0
+        version: 1.0.0
       beasties:
         specifier: ^0.3.5
         version: 0.3.5
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
       eslint:
         specifier: ^8.57.1
         version: 8.57.1
@@ -78,18 +69,9 @@ importers:
       eslint-plugin-react-refresh:
         specifier: ^0.4.24
         version: 0.4.24(eslint@8.57.1)
-      lodash-es:
-        specifier: ^4.17.21
-        version: 4.17.21
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
-      prop-types:
-        specifier: ^15.8.1
-        version: 15.8.1
-      react-fast-compare:
-        specifier: ^3.2.2
-        version: 3.2.2
       react-router-dom:
         specifier: ^7.9.4
         version: 7.9.4(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -99,15 +81,12 @@ importers:
       resize-observer-polyfill:
         specifier: ^1.5.1
         version: 1.5.1
-      sass:
-        specifier: ^1.93.2
-        version: 1.93.2
       vite:
         specifier: ^7.1.12
         version: 7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.93.2)(terser@5.44.0)
       vite-react-ssg:
         specifier: ^0.8.9
-        version: 0.8.9(beasties@0.3.5)(critters@0.0.25)(prettier@3.6.2)(react-dom@19.2.0(react@19.2.0))(react-router-dom@7.9.4(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)(vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.93.2)(terser@5.44.0))
+        version: 0.8.9(beasties@0.3.5)(prettier@3.6.2)(react-dom@19.2.0(react@19.2.0))(react-router-dom@7.9.4(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)(vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.93.2)(terser@5.44.0))
 
 packages:
 
@@ -403,11 +382,8 @@ packages:
     resolution: {integrity: sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@fontsource/fjalla-one@5.2.7':
-    resolution: {integrity: sha512-mVbi3EAfIZeW2mgeFkISixDTB4OMG8BWOGdxxIARUK/6K+B5DX7LK/dhOLq1hTJxuSkrJaM8QAITedEJi+jcJQ==}
-
-  '@fontsource/roboto@5.2.8':
-    resolution: {integrity: sha512-oh9g4Cg3loVMz9MWeKWfDI+ooxxG1aRVetkiKIb2ESS2rrryGecQ/y4pAj4z5A5ebyw450dYRi/c4k/I3UBhHA==}
+  '@fontsource-variable/jost@5.2.8':
+    resolution: {integrity: sha512-+VDDHpbhgZ9A8KeHb7/LUMRR1LILVKIscNhVRSDzn3tFXoi1mFA/OhO8CZL/u2OujoGjZANjOdUZIgaxclxyjw==}
 
   '@humanwhocodes/config-array@0.13.0':
     resolution: {integrity: sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw==}
@@ -905,6 +881,9 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
+  babel-plugin-react-compiler@1.0.0:
+    resolution: {integrity: sha512-Ixm8tFfoKKIPYdCCKYTsqv+Fd4IJ0DQqMyEimo+pxUOMUR9cVPlwTrFt9Avu+3cb6Zp3mAzl+t1MrG2fxxKsxw==}
+
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
@@ -968,10 +947,6 @@ packages:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
     engines: {node: '>=12'}
 
-  clsx@2.1.1:
-    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
-    engines: {node: '>=6'}
-
   color-convert@2.0.1:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}
     engines: {node: '>=7.0.0'}
@@ -996,23 +971,12 @@ packages:
     resolution: {integrity: sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA==}
     engines: {node: '>=18'}
 
-  critters@0.0.25:
-    resolution: {integrity: sha512-ROF/tjJyyRdM8/6W0VqoN5Ql05xAGnkf5b7f3sTEl1bI5jTQQf8O918RD/V9tEb9pRY/TKcvJekDbJtniHyPtQ==}
-    deprecated: Ownership of Critters has moved to the Nuxt team, who will be maintaining the project going forward. If you'd like to keep using Critters, please switch to the actively-maintained fork at https://github.com/danielroe/beasties
-
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
     engines: {node: '>= 8'}
 
-  css-select@5.2.2:
-    resolution: {integrity: sha512-TizTzUddG/xYLA3NXodFM0fSbNizXjOKhqiQQwvhlspadZokn1KDy0NZFS0wuEubIYAV5/c1/lAr0TaaFXEXzw==}
-
   css-select@6.0.0:
     resolution: {integrity: sha512-rZZVSLle8v0+EY8QAkDWrKhpgt6SA5OtHsgBnsj6ZaLb5dmDVOWUDtQitd9ydxxvEjhewNudS6eTVU7uOyzvXw==}
-
-  css-what@6.2.2:
-    resolution: {integrity: sha512-u/O3vwbptzhMs3L1fQE82ZSLHQQfto5gyZzwteVIEyeaY5Fc7R4dapF/BvRoSYFeqfBk4m0V1Vafq5Pjv25wvA==}
-    engines: {node: '>= 6'}
 
   css-what@7.0.0:
     resolution: {integrity: sha512-wD5oz5xibMOPHzy13CyGmogB3phdvcDaB5t0W/Nr5Z2O/agcB8YwOz6e2Lsp10pNDzBoDO9nVa3RGs/2BttpHQ==}
@@ -1388,9 +1352,6 @@ packages:
   htmlparser2@10.0.0:
     resolution: {integrity: sha512-TwAZM+zE5Tq3lrEHvOlvwgj1XLWQCtaaibSN11Q+gGBAS7Y1uZSWwXXRe4iF6OXnaq1riyQAPFOBtYc77Mxq0g==}
 
-  htmlparser2@8.0.2:
-    resolution: {integrity: sha512-GYdjWKDkbRLkZ5geuHs5NY1puJ+PXwP7+fHPRz06Eirsb9ugf6d8kkXav6ADhcODhFFPMIXyxkxSuMf3D6NCFA==}
-
   http-proxy-agent@7.0.2:
     resolution: {integrity: sha512-T1gkAiYYDWYx3V5Bmyu7HcfcvL7mUrTWiM6yOfa3PIphViJ/gFPbvidQ+veqSOHci/PxBcDabeUNCzpOODJZig==}
     engines: {node: '>= 14'}
@@ -1687,9 +1648,6 @@ packages:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
     engines: {node: '>=10'}
 
-  lodash-es@4.17.21:
-    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
-
   lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
 
@@ -1705,9 +1663,6 @@ packages:
 
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
-
-  materialize-css@1.0.0:
-    resolution: {integrity: sha512-4/oecXl8y/1i8RDZvyvwAICyqwNoKU4or5uf8uoAd74k76KzZ0Llym4zhJ5lLNUskcqjO0AuMcvNyDkpz8Z6zw==}
 
   math-intrinsics@1.1.0:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
@@ -1902,14 +1857,17 @@ packages:
     peerDependencies:
       react: ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
+  react-intersection-observer@10.0.0:
+    resolution: {integrity: sha512-JJRgcnFQoVXmbE5+GXr1OS1NDD1gHk0HyfpLcRf0575IbJz+io8yzs4mWVlfaqOQq1FiVjLvuYAdEEcrrCfveg==}
+    peerDependencies:
+      react: ^17.0.0 || ^18.0.0 || ^19.0.0
+      react-dom: ^17.0.0 || ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
-
-  react-lines-ellipsis@0.16.1:
-    resolution: {integrity: sha512-cQefaTdPlmvOAoQlcBOuv3AG2csThsdzCWSGydUZhv6VrrIsLShJ+WmxnCEHa3jAQeH4lxlsNVBd6i4bE5h2+g==}
-    peerDependencies:
-      react: '*'
-      react-dom: '*'
 
   react-refresh@0.18.0:
     resolution: {integrity: sha512-QgT5//D3jfjJb6Gsjxv0Slpj23ip+HtOpnNgnb2S5zU3CB26G/IDPGoy4RJB42wzFE46DRsstbW6tKHoKbhAxw==}
@@ -1931,9 +1889,6 @@ packages:
     peerDependenciesMeta:
       react-dom:
         optional: true
-
-  react-simple-image-slider@2.4.1:
-    resolution: {integrity: sha512-9T/WjsRThJup43QxzH202rLVNqaUK9P8izTiWOfLcc5w3QygU44a9IQUuIwGYiXtWvw2spRRGLRc5Xd62/vfDg==}
 
   react-simple-img@3.0.0:
     resolution: {integrity: sha512-I0sG/GgY9c+04BgWf1YRlipWBQxR3oG2s/bagU8EO7zals3/Vkfk1PJMeYh/wHfjxJtUmal+y7HWEBm4MzXVsQ==}
@@ -2636,9 +2591,7 @@ snapshots:
 
   '@eslint/js@8.57.1': {}
 
-  '@fontsource/fjalla-one@5.2.7': {}
-
-  '@fontsource/roboto@5.2.8': {}
+  '@fontsource-variable/jost@5.2.8': {}
 
   '@humanwhocodes/config-array@0.13.0':
     dependencies:
@@ -3123,6 +3076,10 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.1.0
 
+  babel-plugin-react-compiler@1.0.0:
+    dependencies:
+      '@babel/types': 7.28.5
+
   balanced-match@1.0.2: {}
 
   baseline-browser-mapping@2.8.20: {}
@@ -3193,14 +3150,13 @@ snapshots:
   chokidar@4.0.3:
     dependencies:
       readdirp: 4.1.2
+    optional: true
 
   cliui@8.0.1:
     dependencies:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
-
-  clsx@2.1.1: {}
 
   color-convert@2.0.1:
     dependencies:
@@ -3221,31 +3177,11 @@ snapshots:
 
   cookie@1.0.2: {}
 
-  critters@0.0.25:
-    dependencies:
-      chalk: 4.1.2
-      css-select: 5.2.2
-      dom-serializer: 2.0.0
-      domhandler: 5.0.3
-      htmlparser2: 8.0.2
-      postcss: 8.5.6
-      postcss-media-query-parser: 0.2.3
-    optional: true
-
   cross-spawn@7.0.6:
     dependencies:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
-
-  css-select@5.2.2:
-    dependencies:
-      boolbase: 1.0.0
-      css-what: 6.2.2
-      domhandler: 5.0.3
-      domutils: 3.2.2
-      nth-check: 2.1.1
-    optional: true
 
   css-select@6.0.0:
     dependencies:
@@ -3254,9 +3190,6 @@ snapshots:
       domhandler: 5.0.3
       domutils: 3.2.2
       nth-check: 2.1.1
-
-  css-what@6.2.2:
-    optional: true
 
   css-what@7.0.0: {}
 
@@ -3776,14 +3709,6 @@ snapshots:
       domutils: 3.2.2
       entities: 6.0.1
 
-  htmlparser2@8.0.2:
-    dependencies:
-      domelementtype: 2.3.0
-      domhandler: 5.0.3
-      domutils: 3.2.2
-      entities: 4.5.0
-    optional: true
-
   http-proxy-agent@7.0.2:
     dependencies:
       agent-base: 7.1.4
@@ -3806,7 +3731,8 @@ snapshots:
 
   ignore@7.0.5: {}
 
-  immutable@5.1.4: {}
+  immutable@5.1.4:
+    optional: true
 
   import-fresh@3.3.1:
     dependencies:
@@ -4082,8 +4008,6 @@ snapshots:
     dependencies:
       p-locate: 5.0.0
 
-  lodash-es@4.17.21: {}
-
   lodash.merge@4.6.2: {}
 
   loose-envify@1.4.0:
@@ -4099,8 +4023,6 @@ snapshots:
   magic-string@0.30.21:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
-
-  materialize-css@1.0.0: {}
 
   math-intrinsics@1.1.0: {}
 
@@ -4285,12 +4207,13 @@ snapshots:
     dependencies:
       react: 19.2.0
 
-  react-is@16.13.1: {}
-
-  react-lines-ellipsis@0.16.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+  react-intersection-observer@10.0.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
     dependencies:
       react: 19.2.0
+    optionalDependencies:
       react-dom: 19.2.0(react@19.2.0)
+
+  react-is@16.13.1: {}
 
   react-refresh@0.18.0: {}
 
@@ -4308,8 +4231,6 @@ snapshots:
     optionalDependencies:
       react-dom: 19.2.0(react@19.2.0)
 
-  react-simple-image-slider@2.4.1: {}
-
   react-simple-img@3.0.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
     dependencies:
       react: 19.2.0
@@ -4321,7 +4242,8 @@ snapshots:
 
   react@19.2.0: {}
 
-  readdirp@4.1.2: {}
+  readdirp@4.1.2:
+    optional: true
 
   reflect.getprototypeof@1.0.10:
     dependencies:
@@ -4427,6 +4349,7 @@ snapshots:
       source-map-js: 1.2.1
     optionalDependencies:
       '@parcel/watcher': 2.5.1
+    optional: true
 
   saxes@6.0.0:
     dependencies:
@@ -4685,7 +4608,7 @@ snapshots:
       querystringify: 2.2.0
       requires-port: 1.0.0
 
-  vite-react-ssg@0.8.9(beasties@0.3.5)(critters@0.0.25)(prettier@3.6.2)(react-dom@19.2.0(react@19.2.0))(react-router-dom@7.9.4(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)(vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.93.2)(terser@5.44.0)):
+  vite-react-ssg@0.8.9(beasties@0.3.5)(prettier@3.6.2)(react-dom@19.2.0(react@19.2.0))(react-router-dom@7.9.4(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)(vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(sass@1.93.2)(terser@5.44.0)):
     dependencies:
       fs-extra: 11.3.2
       html5parser: 2.0.2
@@ -4699,7 +4622,6 @@ snapshots:
       yargs: 17.7.2
     optionalDependencies:
       beasties: 0.3.5
-      critters: 0.0.25
       prettier: 3.6.2
       react-router-dom: 7.9.4(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
     transitivePeerDependencies:
