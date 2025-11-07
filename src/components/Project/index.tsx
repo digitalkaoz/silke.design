@@ -100,7 +100,7 @@ const Project: FunctionComponent<ProjectProps> = (props) => {
 
   const project = useOnInView(
     (inView, entry) => {
-      /*if (!window) {
+      if (!window) {
         return
       }
       const cb = fadySticky.bind(entry);
@@ -109,7 +109,7 @@ const Project: FunctionComponent<ProjectProps> = (props) => {
       } else {
         window.removeEventListener('scroll', cb);
         (entry.target as HTMLElement).style.filter = `grayscale(0) brightness(1)`;
-      }*/
+      }
     },
     { threshold: 0.1, delay: 100, trackVisibility: true }
   );
