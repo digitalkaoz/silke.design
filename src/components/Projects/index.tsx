@@ -12,7 +12,7 @@ export type ProjectsProps = {
 const Projects: FunctionComponent<ProjectsProps> = ({ projects }) => (
   <div id="projects">
     {projects.map((project, index) => (
-      <ClientOnly>{() => <Project key={index} {...project} direction={index % 2 === 0 ? 'ltr' : 'rtl'} />}</ClientOnly>
+      <ClientOnly key={index}>{() => <Project {...project} direction={index % 2 === 0 ? 'ltr' : 'rtl'} />}</ClientOnly>
     ))}
   </div>
 );
