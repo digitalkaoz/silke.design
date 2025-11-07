@@ -7,7 +7,7 @@
   }
 
   will-change: auto;
-  //box-shadow: 0px -5px 30px 10px var(--shadow-color, #ffffff);
+  /*box-shadow: 0px -5px 30px 10px var(--shadow-color, #ffffff);*/
   background-color: var(--bg-color, #ffffff);
   .heading {
     @apply mt-14 mb-4;
