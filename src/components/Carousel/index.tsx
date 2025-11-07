@@ -63,9 +63,6 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
             useBrowserFullscreen={false}
             slideInterval={5000}
             slideDuration={0}
-            onTouchMove={(e) => e.preventDefault()}
-            onTouchStart={(e) => e.preventDefault()}
-            onTouchEnd={(e) => e.preventDefault()}
             autoPlay
           />
           <div className="carousel--text">{text}</div>

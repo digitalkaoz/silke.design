@@ -88,10 +88,10 @@ const Link: FunctionComponent<{ link: Array<string> | string | undefined }> = ({
 const Visual: FunctionComponent<ProjectProps> = (props) => (
   <div className="project--gallery-column">
     <Carousel text={<Text {...props}></Text>} images={props.images} play={props.play || false} />
-    <p>
+    <div className="links">
       <Link link={props.customer} />
       <Link link={props.employer} />
-    </p>
+    </div>
   </div>
 );
 
@@ -101,7 +101,7 @@ const Project: FunctionComponent<ProjectProps> = (props) => {
   const project = useOnInView(
     (inView, entry) => {
       if (!window) {
-        return
+        return;
       }
       const cb = fadySticky.bind(entry);
       if (inView) {

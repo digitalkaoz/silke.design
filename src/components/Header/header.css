@@ -16,11 +16,17 @@ header {
     @apply grid grid-flow-row auto-rows-max gap-4;
 
     h1 {
-      @apply pb-4 text-black text-center text-6xl font-normal;
+      @apply pb-4 text-black text-center leading-8 text-4xl font-normal;
+      @media (width >= theme(--breakpoint-md)) {
+        @apply text-6xl;
+      }
     }
 
     p {
-      @apply text-4xl font-light leading-13 text-center pb-12;
+      @apply text-2xl font-light text-center pb-12 leading-10;
+      @media (width >= theme(--breakpoint-md)) {
+        @apply text-4xl leading-13;
+      }
     }
 
     @media (width >= theme(--breakpoint-md)) {

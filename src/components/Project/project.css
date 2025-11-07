@@ -1,6 +1,8 @@
 @reference "../../app.css";
 
 .project {
+  --text-color: #000000;
+  --bg-color: #ffffff;
   @apply px-8 grid h-dvh sticky m-0 top-0 grid-cols-1 auto-rows-min;
   @media (width >= theme(--breakpoint-md)) {
     @apply px-20;
@@ -10,10 +12,14 @@
   /*box-shadow: 0px -5px 30px 10px var(--shadow-color, #ffffff);*/
   background-color: var(--bg-color, #ffffff);
   .heading {
-    @apply mt-14 mb-4;
+    @apply mt-6 mb-4;
+    @media (width >= theme(--breakpoint-md)) {
+      @apply mt-14;
+    }
+
     color: var(--text-color, #000000);
     h2 {
-      @apply text-4xl;
+      @apply text-3xl;
       @media (width >= theme(--breakpoint-md)) {
         @apply text-6xl font-normal;
       }
@@ -115,27 +121,27 @@
   .project--gallery-column {
     @apply order-2;
 
-    > p a {
+    .links a {
       @apply hidden;
     }
     @media (width >= theme(--breakpoint-md)) {
-      > p {
+      .links {
         @apply mt-32;
-      }
-      > p a {
-        @apply underline mr-4 mt-8 inline-block text-2xl font-light leading-12 text-center;
-        display: inherit;
-        color: var(--text-color, #000000);
+        a {
+          @apply underline mr-4 mt-8 inline-block text-2xl font-light leading-12 text-center;
+          display: inherit;
+          color: var(--text-color, #000000);
+        }
       }
     }
     @media (width >= theme(--breakpoint-2xl)) {
-      > p {
+      .links {
         @apply mt-32;
-      }
-      > p a {
-        @apply underline mr-4 mt-8 inline-block text-4xl font-light leading-16 text-center;
-        display: inherit;
-        color: var(--text-color, #000000);
+        a {
+          @apply underline mr-4 mt-8 inline-block text-4xl font-light leading-16 text-center;
+          display: inherit;
+          color: var(--text-color, #000000);
+        }
       }
     }
   }
@@ -162,15 +168,29 @@
 .project--iphone {
   .project--gallery-column {
     @media (width >= theme(--breakpoint-md)) {
-      margin: 0 12vw;
+      margin: 0 10vw;
     }
   }
-  .image-gallery {
+  .heading {
     @media (width >= theme(--breakpoint-md)) {
-      margin-top: -145px;
+      @apply mb-4;
+    }
+  }
+
+  .project--gallery-column .links {
+    @apply mt-5;
+  }
+  .image-gallery {
+    img {
+      border: 1px solid var(--text-color, "#000000");
+    }
+
+    @media (width >= theme(--breakpoint-md)) {
+      margin-top: -85px;
       background-image: url(/img/iphone.png);
       padding: 10% 12% 24% 18.5%;
       .image-gallery-image img {
+        @apply border-transparent;
         border-radius: 1.9vw;
       }
       .image-gallery-bullets {
@@ -188,11 +208,17 @@
     }
   }
   .image-gallery {
+    img {
+      border: 1px solid var(--text-color, "#000000");
+    }
+
     @media (width >= theme(--breakpoint-md)) {
       margin-top: -5.7vw;
       background-image: url(/img/phone.png);
       padding: 19% 4.5% 23% 5%;
-
+      .image-gallery-image img {
+        @apply border-transparent;
+      }
       .image-gallery-bullets {
         top: 9vw;
       }
@@ -203,10 +229,16 @@
 /* Laptop */
 .project--desktop {
   .image-gallery {
+    img {
+      border: 1px solid var(--text-color, "#000000");
+    }
+
     @media (width >= theme(--breakpoint-md)) {
       margin-top: -2.5vw;
       background-image: url(/img/desktop.png);
-
+      .image-gallery-image img {
+        @apply border-transparent;
+      }
       padding: 3% 10% 8% 10%;
 
       .image-gallery-bullets {
@@ -219,10 +251,17 @@
 /* Table landscape */
 .project--tablet.project--landscape {
   .image-gallery {
+    img {
+      border: 1px solid var(--text-color, "#000000");
+    }
+
     @media (width >= theme(--breakpoint-md)) {
       margin-top: -2.5vw;
       background-image: url(/img/tablet.png);
       padding: 3% 9% 1% 10%;
+      .image-gallery-image img {
+        @apply border-transparent;
+      }
 
       .image-gallery-bullets {
         @apply top-24;
@@ -240,12 +279,15 @@
   }
 
   .image-gallery {
+    img {
+      border: 1px solid var(--text-color, "#000000");
+    }
     @media (width >= theme(--breakpoint-md)) {
       margin-top: -5.5vw;
       background-image: url(/img/tablet_p.png);
       padding: 15% 5% 15.5% 5.5%;
-      img {
-        @apply bg-black;
+      .image-gallery-image img {
+        @apply border-transparent bg-black;
       }
 
       .image-gallery-bullets {
@@ -257,10 +299,16 @@
 
 .project--tv {
   .image-gallery {
+    img {
+      border: 1px solid var(--text-color, "#000000");
+    }
     @media (width >= theme(--breakpoint-md)) {
       margin-top: -4vw;
       background-image: url(/img/tv.png);
       padding: 5.5% 4.7% 9% 3.7%;
+      .image-gallery-image img {
+        @apply border-transparent;
+      }
 
       .image-gallery-bullets {
         top: 7vw;
@@ -271,7 +319,7 @@
 
 /** project colors **/
 
-.project--yogaeasy-mobile-apps {
+.project--yogaeasy-mobile {
   --bg-color: #f6f7f4;
   --shadow-color: #000000;
 }
@@ -286,7 +334,7 @@
     @apply font-extralight!;
   }
 }
-.project--yogaeasy-tv-app {
+.project--yogaeasy-tv {
   --bg-color: #0e5c64;
   --shadow-color: #0e5c6484;
   --text-color: #ffffff;
