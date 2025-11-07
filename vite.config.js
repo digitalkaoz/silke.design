@@ -1,15 +1,23 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+import { viteImageToAVIFPlugin } from 'vite-image-to-avif-plugin';
 
 export default defineConfig({
-  plugins: [react({
-    babel: {
+  plugins: [
+    react({
+      babel: {
         plugins: ['babel-plugin-react-compiler'],
       },
-  }), tailwindcss(),
-    ViteImageOptimizer(),],
+    }),
+    tailwindcss(),
+    viteImageToAVIFPlugin({
+      sourcePaths: ['public/img'],
+      quality: 90, // Optional: Adjust AVIF quality (default is 80)
+      outputDir: 'public/img', // Optional: Specify output directory (default is process.cwd())
+      preserveStructure: true, // Optional: Maintain source directory structure in output (default is true)
+    }),
+  ],
   ssgOptions: {
     script: 'async',
     beastiesOptions: {

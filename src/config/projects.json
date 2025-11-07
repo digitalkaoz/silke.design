@@ -3,12 +3,12 @@
     "name": "YogaEasy Mobile",
     "timeframe": "2021 - 2025",
     "images": [
-      "/img/references/yogaeasy/01.png",
-      "/img/references/yogaeasy/02.png",
-      "/img/references/yogaeasy/03.png",
-      "/img/references/yogaeasy/07.png",
-      "/img/references/yogaeasy/06.png",
-      "/img/references/yogaeasy/05.png"
+      "/img/references/yogaeasy/01.avif",
+      "/img/references/yogaeasy/02.avif",
+      "/img/references/yogaeasy/03.avif",
+      "/img/references/yogaeasy/07.avif",
+      "/img/references/yogaeasy/06.avif",
+      "/img/references/yogaeasy/05.avif"
     ],
     "task": "Conception and design of a holistic and cross-device user experience around online yoga for Mobile-Apps.",
     "role": ["UI Design", "UX Design", "Design System", "User Research", "Competitor Analysis"],
@@ -28,17 +28,17 @@
     "name": "YogaEasy Web",
     "timeframe": "2020 - 2025",
     "images": [
-      "/img/references/yogaeasy_web/1.png",
-      "/img/references/yogaeasy_web/2.png",
-      "/img/references/yogaeasy_web/3.png",
-      "/img/references/yogaeasy_web/4.png",
-      "/img/references/yogaeasy_web/5.png",
-      "/img/references/yogaeasy_web/6.png",
-      "/img/references/yogaeasy_web/7.png",
-      "/img/references/yogaeasy_web/8.png",
-      "/img/references/yogaeasy_web/9.png",
-      "/img/references/yogaeasy_web/10.png",
-      "/img/references/yogaeasy_web/11.png"
+      "/img/references/yogaeasy_web/1.avif",
+      "/img/references/yogaeasy_web/2.avif",
+      "/img/references/yogaeasy_web/3.avif",
+      "/img/references/yogaeasy_web/4.avif",
+      "/img/references/yogaeasy_web/5.avif",
+      "/img/references/yogaeasy_web/6.avif",
+      "/img/references/yogaeasy_web/7.avif",
+      "/img/references/yogaeasy_web/8.avif",
+      "/img/references/yogaeasy_web/9.avif",
+      "/img/references/yogaeasy_web/10.avif",
+      "/img/references/yogaeasy_web/11.avif"
     ],
     "task": "Design the rebrush of the existing Web-Application while also implementing new features in Figma. The CI should match the design of the native mobile Apps.",
     "role": ["UI Design", "UX Design", "Design System", "User Research", "Competitor Analysis"],
@@ -51,14 +51,14 @@
     "name": "YogaEasy TV",
     "timeframe": "2020",
     "images": [
-      "/img/references/yogaeasy_tv/1.png",
-      "/img/references/yogaeasy_tv/2.png",
-      "/img/references/yogaeasy_tv/3.png",
-      "/img/references/yogaeasy_tv/4.png",
-      "/img/references/yogaeasy_tv/5.png",
-      "/img/references/yogaeasy_tv/6.png",
-      "/img/references/yogaeasy_tv/7.png",
-      "/img/references/yogaeasy_tv/8.png"
+      "/img/references/yogaeasy_tv/1.avif",
+      "/img/references/yogaeasy_tv/2.avif",
+      "/img/references/yogaeasy_tv/3.avif",
+      "/img/references/yogaeasy_tv/4.avif",
+      "/img/references/yogaeasy_tv/5.avif",
+      "/img/references/yogaeasy_tv/6.avif",
+      "/img/references/yogaeasy_tv/7.avif",
+      "/img/references/yogaeasy_tv/8.avif"
     ],
     "task": "Conception and design of a TV app to provide Yogeasy content on Amazon Prime.",
     "role": ["UI Design", "UX Design", "Design System", "User Research", "Competitor Analysis"],
@@ -72,9 +72,9 @@
     "timeframe": "2020",
     "role": ["UI Design", "UX Design", "Prototyping"],
     "images": [
-      "/img/references/car-tracker/1.jpg",
-      "/img/references/car-tracker/2.jpg",
-      "/img/references/car-tracker/3.jpg"
+      "/img/references/car-tracker/1.avif",
+      "/img/references/car-tracker/2.avif",
+      "/img/references/car-tracker/3.avif"
     ],
     "task": "Conception of an app for controlling a vehicle alarm system based on Material Design.",
     "solution": "The main use case is currently focused on retrieving the vehicle position and activating/deactivating the alarm system. Additional use cases are planned.",
@@ -85,9 +85,9 @@
     "name": "Timesheets",
     "timeframe": "2020",
     "images": [
-      "/img/references/timesheets/1.jpeg",
-      "/img/references/timesheets/2.jpeg",
-      "/img/references/timesheets/3.jpeg"
+      "/img/references/timesheets/1.avif",
+      "/img/references/timesheets/2.avif",
+      "/img/references/timesheets/3.avif"
     ],
     "task": "Conception of a multi-tenant time-tracking App with export function based on Material Design.",
     "solution": "The existing prototype's user journeys were refined and the final design was implemented using the designs from Figma.",
@@ -99,16 +99,16 @@
     "name": "Meine Kita",
     "timeframe": "2019",
     "images": [
-      "/img/references/kita/0.jpeg",
-      "/img/references/kita/1.jpeg",
-      "/img/references/kita/2.jpeg",
-      "/img/references/kita/3.jpeg",
-      "/img/references/kita/4.jpeg",
-      "/img/references/kita/5.jpeg",
-      "/img/references/kita/6.jpeg",
-      "/img/references/kita/7.jpeg",
-      "/img/references/kita/8.jpeg",
-      "/img/references/kita/9.jpeg"
+      "/img/references/kita/0.avif",
+      "/img/references/kita/1.avif",
+      "/img/references/kita/2.avif",
+      "/img/references/kita/3.avif",
+      "/img/references/kita/4.avif",
+      "/img/references/kita/5.avif",
+      "/img/references/kita/6.avif",
+      "/img/references/kita/7.avif",
+      "/img/references/kita/8.avif",
+      "/img/references/kita/9.avif"
     ],
     "role": ["UI Design", "UX Design", "Prototyping"],
     "task": "Conception of an App that enables educators and parents of a daycare center to communicate more easily and quickly.",
@@ -121,12 +121,12 @@
     "name": "Nivea",
     "timeframe": "2019",
     "images": [
-      "/img/references/nivea/1.jpg",
-      "/img/references/nivea/2.jpg",
-      "/img/references/nivea/3.jpg",
-      "/img/references/nivea/4.jpg",
-      "/img/references/nivea/5.jpg",
-      "/img/references/nivea/6.jpg"
+      "/img/references/nivea/1.avif",
+      "/img/references/nivea/2.avif",
+      "/img/references/nivea/3.avif",
+      "/img/references/nivea/4.avif",
+      "/img/references/nivea/5.avif",
+      "/img/references/nivea/6.avif"
     ],
     "role": ["UI Design", "UX Design", "Prototyping"],
     "task": "The user should playfully explore the advent calendar doors on the Nivea website with the daily surprises. Creation of wireframes for the different user flows.",
@@ -140,10 +140,10 @@
     "name": "Tchibo",
     "timeframe": "2019",
     "images": [
-      "/img/references/tchibo_shop/1.jpg",
-      "/img/references/tchibo_shop/2.jpg",
-      "/img/references/tchibo_shop/3.jpg",
-      "/img/references/tchibo_shop/4.jpg"
+      "/img/references/tchibo_shop/1.avif",
+      "/img/references/tchibo_shop/2.avif",
+      "/img/references/tchibo_shop/3.avif",
+      "/img/references/tchibo_shop/4.avif"
     ],
     "role": ["UX Design", "Google Design-Sprints"],
     "task": "The coffee module of the Tchibo shop should be improved and designed to be more understandable. The different price constellations should be presented better.",
@@ -156,13 +156,13 @@
     "name": "DB Systel",
     "timeframe": "2018",
     "images": [
-      "/img/references/dbsystel/1.jpg",
-      "/img/references/dbsystel/2.jpg",
-      "/img/references/dbsystel/3.jpg",
-      "/img/references/dbsystel/4.jpg",
-      "/img/references/dbsystel/5.jpg",
-      "/img/references/dbsystel/6.jpg",
-      "/img/references/dbsystel/7.jpg"
+      "/img/references/dbsystel/1.avif",
+      "/img/references/dbsystel/2.avif",
+      "/img/references/dbsystel/3.avif",
+      "/img/references/dbsystel/4.avif",
+      "/img/references/dbsystel/5.avif",
+      "/img/references/dbsystel/6.avif",
+      "/img/references/dbsystel/7.avif"
     ],
     "role": ["UX Design", "UI Design"],
     "task": "Conception of a Tablet-App that locates freight wagons and records their contents. The user experience must be understood by factory workers.",
@@ -176,13 +176,13 @@
     "name": "DocIdent",
     "timeframe": "2018",
     "images": [
-      "/img/references/docident/2.jpg",
-      "/img/references/docident/3.jpg",
-      "/img/references/docident/4.jpg",
-      "/img/references/docident/5.jpg",
-      "/img/references/docident/6.jpg",
-      "/img/references/docident/7.jpg",
-      "/img/references/docident/8.jpg"
+      "/img/references/docident/2.avif",
+      "/img/references/docident/3.avif",
+      "/img/references/docident/4.avif",
+      "/img/references/docident/5.avif",
+      "/img/references/docident/6.avif",
+      "/img/references/docident/7.avif",
+      "/img/references/docident/8.avif"
     ],
     "role": ["UX Design", "UI Design", "Requirements Workshops"],
     "task": "Conception of a website for digitally signing and storing documents in the blockchain.",
@@ -195,10 +195,10 @@
     "name": "smoothr",
     "timeframe": "2018",
     "images": [
-      "/img/references/smoothr/1.jpg",
-      "/img/references/smoothr/2.jpg",
-      "/img/references/smoothr/3.jpg",
-      "/img/references/smoothr/4.jpg"
+      "/img/references/smoothr/1.avif",
+      "/img/references/smoothr/2.avif",
+      "/img/references/smoothr/3.avif",
+      "/img/references/smoothr/4.avif"
     ],
     "role": ["UX Design", "UI Design", "Requirements Workshops"],
     "task": "Conception & Design of a Tablet point-of-sale App for restaurant orders.",
@@ -211,10 +211,10 @@
     "name": "Bornholdt Lee",
     "timeframe": "2017",
     "images": [
-      "/img/references/blg-relaunch/1.jpg",
-      "/img/references/blg-relaunch/2.jpg",
-      "/img/references/blg-relaunch/3.jpg",
-      "/img/references/blg-relaunch/4.jpg"
+      "/img/references/blg-relaunch/1.avif",
+      "/img/references/blg-relaunch/2.avif",
+      "/img/references/blg-relaunch/3.avif",
+      "/img/references/blg-relaunch/4.avif"
     ],
     "role": ["UX Design", "UI Design", "Frontend Development"],
     "task": "Relaunch of the corporate website of Bornholdt Lee GmbH. The focus should be on the references, so that the company's services can be better understood.",
@@ -225,7 +225,7 @@
   {
     "name": "Duchenne",
     "timeframe": "2017",
-    "images": ["/img/references/duchenne/1.jpg", "/img/references/duchenne/2.jpg"],
+    "images": ["/img/references/duchenne/1.avif", "/img/references/duchenne/2.avif"],
     "role": ["UX Design", "UI Design"],
     "task": "Redesign of the existing information website about \"Duchenne Muscular Dystrophy\".",
     "solution": "After creating the wireframes in Axure, the final design was implemented in Photoshop.",
@@ -237,10 +237,10 @@
     "name": "iChallenge - ING DiBa",
     "timeframe": "2017",
     "images": [
-      "/img/references/ichallenge/2.jpg",
-      "/img/references/ichallenge/5.jpg",
-      "/img/references/ichallenge/4.jpg",
-      "/img/references/ichallenge/1.jpg"
+      "/img/references/ichallenge/2.avif",
+      "/img/references/ichallenge/5.avif",
+      "/img/references/ichallenge/4.avif",
+      "/img/references/ichallenge/1.avif"
     ],
     "role": ["UI-Design"],
     "task": "The iChallenge Tablet-App for digital scavenger hunts should be redesigned in ING DiBa's corporate design for a team event.",
@@ -253,11 +253,11 @@
     "name": "Pulvermühle",
     "timeframe": "2017",
     "images": [
-      "/img/references/pulvermuehle/1.jpg",
-      "/img/references/pulvermuehle/2.jpg",
-      "/img/references/pulvermuehle/3.jpg",
-      "/img/references/pulvermuehle/4.jpg",
-      "/img/references/pulvermuehle/5.jpg"
+      "/img/references/pulvermuehle/1.avif",
+      "/img/references/pulvermuehle/2.avif",
+      "/img/references/pulvermuehle/3.avif",
+      "/img/references/pulvermuehle/4.avif",
+      "/img/references/pulvermuehle/5.avif"
     ],
     "role": ["UI Design", "UX Design", "Requirements Workshops"],
     "task": "The Pulvermühle wants to handle ordering and payment processes via a tablet app in the future. A concept and design should be developed for this.",
@@ -270,11 +270,11 @@
     "name": "Freixenet",
     "timeframe": "2012",
     "images": [
-      "/img/references/freixenet/1.jpg",
-      "/img/references/freixenet/2.jpg",
-      "/img/references/freixenet/3.jpg",
-      "/img/references/freixenet/4.jpg",
-      "/img/references/freixenet/5.jpg"
+      "/img/references/freixenet/1.avif",
+      "/img/references/freixenet/2.avif",
+      "/img/references/freixenet/3.avif",
+      "/img/references/freixenet/4.avif",
+      "/img/references/freixenet/5.avif"
     ],
     "role": ["UI Design", "UX Design", "Prototyping"],
     "task": "Freixenet would like to offer a wine guide app that presents different wines in combination with matching recipes.",
@@ -286,7 +286,7 @@
   {
     "name": "Bornholdt Lee",
     "timeframe": "2012",
-    "images": ["/img/references/blg/1.jpg", "/img/references/blg/2.jpg"],
+    "images": ["/img/references/blg/1.avif", "/img/references/blg/2.avif"],
     "role": ["UI Design", "UX Design", "Prototyping", "Frontend Development"],
 
     "task": "First relaunch of the Bornholdt Lee company website. The design of the new site is to be made more modern and appealing.",
@@ -297,7 +297,11 @@
   {
     "name": "O<sub>2</sub>",
     "timeframe": "2011",
-    "images": ["/img/references/o2/1.jpg", "/img/references/o2/2.jpg", "/img/references/o2/3.jpg"],
+    "images": [
+      "/img/references/o2/1.avif",
+      "/img/references/o2/2.avif",
+      "/img/references/o2/3.avif"
+    ],
     "role": ["Frontend Development"],
 
     "task": "\"Aus Alice wird O<sup>2</sup>\" Rebranding of the Alice website with the new O<sup>2</sup> look.",
@@ -309,7 +313,7 @@
   {
     "name": "Tchibo",
     "timeframe": "2009",
-    "images": ["/img/references/tchibo/2.jpg"],
+    "images": ["/img/references/tchibo/2.avif"],
     "role": ["Frontend Development"],
     "task": "Creation of weekly product newsletters for Tchibo GmbH.",
     "solution": "Implementation of the \"Wochenwelten\" newsletter templates in HTML and CSS.",
@@ -320,7 +324,7 @@
   {
     "name": "Portfolio",
     "timeframe": "2008",
-    "images": ["/img/references/portfolio/1.jpg", "/img/references/portfolio/2.jpg"],
+    "images": ["/img/references/portfolio/1.avif", "/img/references/portfolio/2.avif"],
     "role": ["UI Design", "UX Design", "Frontend Development"],
     "task": "Creation of my first own portfolio website.",
     "solution": "The initial scribbles were turned into a design in Photoshop. I then programmed the site in HTML, CSS, and JavaScript.",

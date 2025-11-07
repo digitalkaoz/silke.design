@@ -187,7 +187,7 @@
 
     @media (width >= theme(--breakpoint-md)) {
       margin-top: -85px;
-      background-image: url(/img/iphone.png);
+      background-image: url(/img/iphone.avif);
       padding: 10% 12% 24% 18.5%;
       .image-gallery-image img {
         @apply border-transparent;
@@ -214,7 +214,7 @@
 
     @media (width >= theme(--breakpoint-md)) {
       margin-top: -5.7vw;
-      background-image: url(/img/phone.png);
+      background-image: url(/img/phone.avif);
       padding: 19% 4.5% 23% 5%;
       .image-gallery-image img {
         @apply border-transparent;
@@ -235,7 +235,7 @@
 
     @media (width >= theme(--breakpoint-md)) {
       margin-top: -2.5vw;
-      background-image: url(/img/desktop.png);
+      background-image: url(/img/desktop.avif);
       .image-gallery-image img {
         @apply border-transparent;
       }
@@ -257,7 +257,7 @@
 
     @media (width >= theme(--breakpoint-md)) {
       margin-top: -2.5vw;
-      background-image: url(/img/tablet.png);
+      background-image: url(/img/tablet.avif);
       padding: 3% 9% 1% 10%;
       .image-gallery-image img {
         @apply border-transparent;
@@ -284,7 +284,7 @@
     }
     @media (width >= theme(--breakpoint-md)) {
       margin-top: -5.5vw;
-      background-image: url(/img/tablet_p.png);
+      background-image: url(/img/tablet_p.avif);
       padding: 15% 5% 15.5% 5.5%;
       .image-gallery-image img {
         @apply border-transparent bg-black;
@@ -304,7 +304,7 @@
     }
     @media (width >= theme(--breakpoint-md)) {
       margin-top: -4vw;
-      background-image: url(/img/tv.png);
+      background-image: url(/img/tv.avif);
       padding: 5.5% 4.7% 9% 3.7%;
       .image-gallery-image img {
         @apply border-transparent;
@@ -364,7 +364,7 @@
     @media (width >= theme(--breakpoint-md)) {
       @apply bg-cover;
       margin-top: -5.5vw;
-      background-image: url(/img/tablet_1x6.png);
+      background-image: url(/img/tablet_1x6.avif);
       padding: 8% 9.5% 4% 9%;
     }
 
@@ -380,7 +380,7 @@
   .image-gallery {
     @media (width >= theme(--breakpoint-md)) {
       margin-top: -100px;
-      background-image: url(/img/phone_4.png);
+      background-image: url(/img/phone_4.avif);
       padding: 22% 3.5% 26% 6.5%;
     }
 

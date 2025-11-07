@@ -12,7 +12,7 @@ export type CarouselProps = {
 const CarouselItem: FunctionComponent<ReactImageGalleryItem> = ({ description, original }) => {
   return (
     <div className={'image-gallery-image' + (description ? ' image-gallery-image__text' : '')}>
-      <img src={original} alt={original} />
+      <img src={original} alt={original} loading="lazy" decoding="async" />
     </div>
   );
 };
