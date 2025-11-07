@@ -3,12 +3,15 @@
 .project {
   --text-color: #000000;
   --bg-color: #ffffff;
-  @apply px-8 grid h-dvh sticky m-0 top-0 grid-cols-1 auto-rows-min;
+  @apply px-8 grid h-dvh sticky m-0 top-0 grid-cols-1 auto-rows-min will-change-auto;
   @media (width >= theme(--breakpoint-md)) {
     @apply px-20;
   }
 
-  will-change: auto;
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-height: calc(100vh - 180px);
+  }
+
   /*box-shadow: 0px -5px 30px 10px var(--shadow-color, #ffffff);*/
   background-color: var(--bg-color, #ffffff);
   .heading {
@@ -19,7 +22,7 @@
 
     color: var(--text-color, #000000);
     h2 {
-      @apply text-3xl;
+      @apply text-3xl font-medium;
       @media (width >= theme(--breakpoint-md)) {
         @apply text-6xl font-normal;
       }
@@ -63,7 +66,7 @@
         p,
         a,
         li {
-          @apply text-2xl font-light leading-12;
+          @apply text-2xl font-light leading-10;
         }
         a {
           @apply underline mr-4 mt-8 inline-block;
@@ -128,7 +131,7 @@
       .links {
         @apply mt-32;
         a {
-          @apply underline mr-4 mt-8 inline-block text-2xl font-light leading-12 text-center;
+          @apply underline mt-2 inline-block text-2xl font-light leading-12 text-center;
           display: inherit;
           color: var(--text-color, #000000);
         }
@@ -138,7 +141,7 @@
       .links {
         @apply mt-32;
         a {
-          @apply underline mr-4 mt-8 inline-block text-4xl font-light leading-16 text-center;
+          @apply underline mt-4 inline-block text-4xl font-light leading-16 text-center;
           display: inherit;
           color: var(--text-color, #000000);
         }
@@ -185,6 +188,13 @@
       border: 1px solid var(--text-color, "#000000");
     }
 
+    .image-gallery-slide .image-gallery-image {
+      @apply px-1;
+      @media (width >= theme(--breakpoint-md)) {
+        @apply px-0;
+      }
+    }
+
     @media (width >= theme(--breakpoint-md)) {
       margin-top: -85px;
       background-image: url(/img/iphone.avif);
@@ -228,6 +238,13 @@
 
 /* Laptop */
 .project--desktop {
+  .project--gallery-column .image-gallery img {
+    margin-top: 75%;
+    @media (width >= theme(--breakpoint-md)) {
+      @apply mt-0;
+    }
+  }
+
   .image-gallery {
     img {
       border: 1px solid var(--text-color, "#000000");
@@ -298,6 +315,13 @@
 }
 
 .project--tv {
+  .project--gallery-column .image-gallery img {
+    margin-top: 75%;
+    @media (width >= theme(--breakpoint-md)) {
+      @apply mt-0;
+    }
+  }
+
   .image-gallery {
     img {
       border: 1px solid var(--text-color, "#000000");

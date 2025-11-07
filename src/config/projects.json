@@ -43,7 +43,6 @@
     "task": "Design the rebrush of the existing Web-Application while also implementing new features in Figma. The CI should match the design of the native mobile Apps.",
     "role": ["UI Design", "UX Design", "Design System", "User Research", "Competitor Analysis"],
     "solution": "Responsive Redesign of the Web-Application using the newly created Design-System.",
-    "customer": [],
     "employer": ["Yogeasy", "https://yogaeasy.de"],
     "type": "desktop"
   },
@@ -63,9 +62,7 @@
     "task": "Conception and design of a TV app to provide Yogeasy content on Amazon Prime.",
     "role": ["UI Design", "UX Design", "Design System", "User Research", "Competitor Analysis"],
     "solution": "Extension of the Design-System to also include components for TV-Apps. Finally the designs was created in Figma and handed over to the development team.",
-    "type": "tv",
-    "customer": [],
-    "employer": []
+    "type": "tv"
   },
   {
     "name": "Car Tracker",
@@ -113,7 +110,6 @@
     "role": ["UI Design", "UX Design", "Prototyping"],
     "task": "Conception of an App that enables educators and parents of a daycare center to communicate more easily and quickly.",
     "solution": "Scribbles and prototypes of the first User-Journeys in Figma.",
-    "customer": ["eigenes Projekt"],
     "orientation": "portrait",
     "type": "phone"
   },

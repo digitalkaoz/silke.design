@@ -24,6 +24,7 @@ const Skills: FunctionComponent<SkillsProps> = ({ tools }) => (
       <li>Usability Testing</li>
       <li>Responsive Design</li>
       <li>Wireframing</li>
+      <li>Competitor Analysis</li>
     </ul>
     <h2>Tools</h2>
     <div className="icons">

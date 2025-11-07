@@ -4,20 +4,22 @@ footer {
   @apply text-white bg-black p-6;
 
   h2 {
-    @apply py-12 text-center;
+    @apply py-16 font-normal text-4xl text-center;
+    @media (width >= theme(--breakpoint-md)) {
+      @apply text-6xl pt-16;
+    }
   }
   .contacts {
-    @apply flex flex-row gap-8;
+    @apply flex flex-row;
 
     @media (width >= theme(--breakpoint-md)) {
+      @apply pb-8;
     }
 
     .icon--container {
       @apply w-full block;
       .icon {
-        > div {
-          @apply h-auto! justify-center-safe;
-        }
+        @apply flex justify-center-safe justify-items-center;
         img {
           @apply w-1/2!;
 
@@ -27,6 +29,19 @@ footer {
           @media (width >= theme(--breakpoint-lg)) {
             @apply w-1/6!;
           }
+        }
+      }
+    }
+
+    @media (width >= theme(--breakpoint-md)) {
+      div:first-child {
+        .icon {
+          @apply justify-end-safe;
+        }
+      }
+      div:last-child {
+        .icon {
+          @apply justify-start;
         }
       }
     }

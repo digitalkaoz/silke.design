@@ -13,13 +13,16 @@ export default defineConfig({
     tailwindcss(),
     viteImageToAVIFPlugin({
       sourcePaths: ['public/img'],
-      quality: 90, // Optional: Adjust AVIF quality (default is 80)
-      outputDir: 'public/img', // Optional: Specify output directory (default is process.cwd())
-      preserveStructure: true, // Optional: Maintain source directory structure in output (default is true)
+      quality: 90, 
+      outputDir: 'public/img', 
+      preserveStructure: true, 
     }),
   ],
+  build: {
+    //ssr: true,
+  },
   ssgOptions: {
-    script: 'async',
+    script: 'async defer',
     beastiesOptions: {
       preload: 'media',
     },

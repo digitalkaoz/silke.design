@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 #root {
   @apply w-full bg-black;
   font-family: "Jost Variable", sans-serif;
@@ -19,20 +23,19 @@ img:not([src]) {
 }
 
 .tk-blob {
+  @apply will-change-transform relative origin-center;
   animation: blob-turn var(--time, 30s) linear infinite;
   fill: var(--fill, #7600f8);
-  position: relative;
-  transform-origin: center;
 }
 
 .tk-blob svg {
+  @apply will-change-transform origin-center;
   animation: blob-skew calc(var(--time, 30s) * 0.5) linear 0s infinite;
-  transform-origin: center;
 }
 
 .tk-blob svg path {
+  @apply will-change-transform origin-center;
   animation: blob-scale calc(var(--time, 30s) * 0.5) ease-in-out 0s infinite;
-  transform-origin: center;
 }
 
 @keyframes blob-turn {
