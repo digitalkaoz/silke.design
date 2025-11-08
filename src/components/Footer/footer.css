@@ -1,0 +1,56 @@
+@reference "../../app.css";
+
+footer {
+  @apply text-white bg-black p-6;
+
+  h2 {
+    @apply py-16 font-normal text-4xl text-center;
+    @media (width >= theme(--breakpoint-md)) {
+      @apply text-6xl pt-16;
+    }
+  }
+  .contacts {
+    @apply flex flex-row;
+
+    @media (width >= theme(--breakpoint-md)) {
+      @apply pb-8;
+    }
+
+    .icon--container {
+      @apply w-full block;
+      .icon {
+        @apply flex justify-center-safe justify-items-center;
+        img {
+          @apply w-1/2!;
+
+          @media (width >= theme(--breakpoint-md)) {
+            @apply w-1/3!;
+          }
+          @media (width >= theme(--breakpoint-lg)) {
+            @apply w-1/6!;
+          }
+        }
+      }
+    }
+
+    @media (width >= theme(--breakpoint-md)) {
+      div:first-child {
+        .icon {
+          @apply justify-end-safe;
+        }
+      }
+      div:last-child {
+        .icon {
+          @apply justify-start;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    @apply text-center text-xl mt-12 font-light;
+    @media (width >= theme(--breakpoint-lg)) {
+      @apply text-2xl;
+    }
+  }
+}

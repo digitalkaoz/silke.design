@@ -1,0 +1,551 @@
+@reference "../../app.css";
+
+.project {
+  --text-color: #000000;
+  --bg-color: #ffffff;
+  @apply px-8 grid h-dvh sticky m-0 top-0 grid-cols-1 auto-rows-min;
+  @media (width >= theme(--breakpoint-md)) {
+    @apply px-20;
+  }
+
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-height: calc(100vh - 180px);
+  }
+
+  /*box-shadow: 0px -5px 30px 10px var(--shadow-color, #ffffff);*/
+  background-color: var(--bg-color, #ffffff);
+  .heading {
+    @apply mt-6 mb-4;
+    @media (width >= theme(--breakpoint-md)) {
+      @apply mt-14;
+    }
+
+    color: var(--text-color, #000000);
+    h2 {
+      @apply text-3xl font-medium;
+      @media (width >= theme(--breakpoint-md)) {
+        @apply text-6xl font-normal;
+      }
+    }
+  }
+
+  .image-gallery-bullets-container {
+    .image-gallery-bullet {
+      transition-property: color border;
+      border-color: var(--text-color, #000000);
+    }
+
+    .image-gallery-bullet.active {
+      background: var(--text-color, #000000);
+      border-color: var(--text-color, #000000);
+    }
+  }
+
+  .carousel-flipper {
+    color: var(--text-color, #000000);
+  }
+  @media (width >= theme(--breakpoint-md)) {
+    @apply grid-cols-2 gap-8;
+  }
+
+  .project--description-column {
+    @apply order-1;
+    .description {
+      @apply hidden;
+      .time {
+        @apply text-2xl font-medium;
+      }
+      color: var(--text-color, #000000);
+
+      @media (width >= theme(--breakpoint-md)) {
+        @apply block mt-8;
+        ul {
+          @apply flex justify-between flex-wrap;
+        }
+        h3 {
+          @apply mt-6 text-4xl mb-2 font-medium;
+        }
+        p,
+        a,
+        li {
+          @apply text-2xl font-light leading-10;
+        }
+        a {
+          @apply underline mr-4 mt-8 inline-block;
+        }
+        @media (width >= theme(--breakpoint-md)) {
+          a {
+            @apply hidden;
+          }
+        }
+      }
+      @media (width >= theme(--breakpoint-2xl)) {
+        @apply block mt-8;
+        ul {
+          @apply list-disc block ml-6;
+        }
+        h3 {
+          @apply mt-12 text-5xl mb-4 font-medium;
+        }
+        p,
+        a,
+        li {
+          @apply text-4xl font-light leading-16;
+        }
+        a {
+          @apply underline mr-4 mt-8 inline-block;
+        }
+
+        @media (width >= theme(--breakpoint-md)) {
+          a {
+            @apply hidden;
+          }
+        }
+      }
+
+      a:not([href]) {
+        @apply no-underline;
+      }
+    }
+  }
+
+  /** mobile only text design */
+  .carousel--text {
+    ul {
+      @apply flex justify-between flex-wrap;
+    }
+
+    h3 {
+      @apply mt-6 mb-2;
+    }
+    p,
+    a,
+    li {
+      @apply text-xl font-light;
+    }
+    a {
+      @apply underline mr-4 mt-8 inline-block;
+    }
+    a:not([href]) {
+      @apply no-underline;
+    }
+  }
+
+  .project--gallery-column {
+    @apply order-2;
+
+    .links a {
+      @apply hidden;
+    }
+    .links a:not([href]) {
+      @apply no-underline;
+    }
+
+    @media (width >= theme(--breakpoint-md)) {
+      .links {
+        @apply mt-32;
+        a {
+          @apply underline mt-2 inline-block text-2xl font-light leading-12 text-center;
+          display: inherit;
+          color: var(--text-color, #000000);
+        }
+      }
+    }
+    @media (width >= theme(--breakpoint-2xl)) {
+      .links {
+        @apply mt-32;
+        a {
+          @apply underline mt-4 inline-block text-4xl font-light leading-16 text-center;
+          display: inherit;
+          color: var(--text-color, #000000);
+        }
+      }
+    }
+  }
+
+  @media (width >= theme(--breakpoint-md)) {
+    &.project--rtl {
+      .project--description-column {
+        @apply order-2;
+      }
+      .project--gallery-column {
+        @apply order-1;
+      }
+    }
+  }
+
+  .image-gallery {
+    @apply bg-cover bg-no-repeat;
+  }
+  .image-gallery-content {
+  }
+}
+
+/* modern iPhone */
+.project--iphone {
+  .project--gallery-column {
+    @media (width >= theme(--breakpoint-md)) {
+      margin: 0 10vw;
+    }
+  }
+  .heading {
+    @media (width >= theme(--breakpoint-md)) {
+      @apply mb-4;
+    }
+  }
+
+  .project--gallery-column .links {
+    @apply mt-5;
+  }
+  .image-gallery {
+    img {
+      border: 1px solid var(--text-color, "#000000");
+    }
+
+    .image-gallery-slide .image-gallery-image {
+      @apply px-1;
+      @media (width >= theme(--breakpoint-md)) {
+        @apply px-0;
+      }
+    }
+
+    @media (width >= theme(--breakpoint-md)) {
+      margin-top: -85px;
+      background-image: url(/img/iphone.avif);
+      padding: 10% 12% 24% 18.5%;
+      .image-gallery-image img {
+        @apply border-transparent;
+        border-radius: 1.9vw;
+      }
+      .image-gallery-bullets {
+        top: 3vw;
+      }
+    }
+  }
+}
+
+/* old iPhone */
+.project--phone {
+  .project--gallery-column {
+    @media (width >= theme(--breakpoint-md)) {
+      margin: 0 12vw;
+    }
+  }
+  .image-gallery {
+    img {
+      border: 1px solid var(--text-color, "#000000");
+    }
+
+    @media (width >= theme(--breakpoint-md)) {
+      margin-top: -5.7vw;
+      background-image: url(/img/phone.avif);
+      padding: 19% 4.5% 23% 5%;
+      .image-gallery-image img {
+        @apply border-transparent;
+      }
+      .image-gallery-bullets {
+        top: 9vw;
+      }
+    }
+  }
+}
+
+/* Laptop */
+.project--desktop {
+  .project--gallery-column .image-gallery img {
+    margin-top: 75%;
+    @media (width >= theme(--breakpoint-md)) {
+      @apply mt-0;
+    }
+  }
+
+  .image-gallery {
+    img {
+      border: 1px solid var(--text-color, "#000000");
+    }
+
+    @media (width >= theme(--breakpoint-md)) {
+      margin-top: -2.5vw;
+      background-image: url(/img/desktop.avif);
+      .image-gallery-image img {
+        @apply border-transparent;
+      }
+      padding: 3% 10% 8% 10%;
+
+      .image-gallery-bullets {
+        top: 7vw;
+      }
+    }
+  }
+}
+
+/* Table landscape */
+.project--tablet.project--landscape {
+  .project--gallery-column {
+    @media (width >= theme(--breakpoint-md)) {
+      margin: 0 2vw;
+    }
+  }
+
+  .image-gallery {
+    img {
+      border: 1px solid var(--text-color, "#000000");
+    }
+
+    @media (width >= theme(--breakpoint-md)) {
+      margin-top: -2.5vw;
+      background-image: url(/img/tablet.avif);
+      padding: 3% 9% 1% 10%;
+      .image-gallery-image img {
+        @apply border-transparent;
+      }
+
+      .image-gallery-bullets {
+        @apply top-24;
+      }
+    }
+  }
+}
+
+/* Tablet portrait */
+.project--tablet.project--portrait {
+  .project--gallery-column {
+    @media (width >= theme(--breakpoint-md)) {
+      margin: 0 10vw;
+    }
+  }
+
+  .image-gallery {
+    img {
+      border: 1px solid var(--text-color, "#000000");
+    }
+    @media (width >= theme(--breakpoint-md)) {
+      margin-top: -5.5vw;
+      background-image: url(/img/tablet_p.avif);
+      padding: 15% 3% 10% 3.5%;
+      .image-gallery-image img {
+        @apply border-transparent bg-black;
+      }
+
+      .image-gallery-bullets {
+        top: 8vw;
+      }
+    }
+  }
+}
+
+.project--tv {
+  .project--gallery-column .image-gallery img {
+    margin-top: 75%;
+    @media (width >= theme(--breakpoint-md)) {
+      @apply mt-0;
+    }
+  }
+
+  .image-gallery {
+    img {
+      border: 1px solid var(--text-color, "#000000");
+    }
+    @media (width >= theme(--breakpoint-md)) {
+      margin-top: -4vw;
+      background-image: url(/img/tv.avif);
+      padding: 5.5% 4.7% 9% 3.7%;
+      .image-gallery-image img {
+        @apply border-transparent;
+      }
+
+      .image-gallery-bullets {
+        top: 7vw;
+      }
+    }
+  }
+}
+
+/** project colors **/
+
+.project--yogaeasy-mobile {
+  --bg-color: #f6f7f4;
+  --shadow-color: #000000;
+}
+
+.project--yogaeasy-web {
+  --bg-color: #009090;
+  --shadow-color: #00909084;
+  --text-color: #ffffff;
+  p:not(.time),
+  .project--gallery-column p a,
+  li {
+    @apply font-extralight!;
+  }
+}
+.project--yogaeasy-tv {
+  --bg-color: #0e5c64;
+  --shadow-color: #0e5c6484;
+  --text-color: #ffffff;
+  p:not(.time),
+  .project--gallery-column p a,
+  li {
+    @apply font-extralight!;
+  }
+}
+
+.project--smoothr.project--landscape {
+  --bg-color: #152831;
+  --shadow-color: #15283184;
+  --text-color: #ffffff;
+  p:not(.time),
+  .project--gallery-column p a,
+  li {
+    @apply font-extralight!;
+  }
+  .project--gallery-column {
+    @media (width >= theme(--breakpoint-md)) {
+      margin: 0 2vw;
+    }
+  }
+
+  .image-gallery {
+    @media (width >= theme(--breakpoint-md)) {
+      @apply bg-cover;
+      margin-top: -5.5vw;
+      background-image: url(/img/tablet_1x6.avif);
+      padding: 8% 9.5% 4% 9%;
+    }
+
+    .image-gallery-bullets {
+      @apply top-20;
+    }
+  }
+}
+
+.project--freixenet {
+  --bg-color: #d3ad6a;
+  --shadow-color: #d3ad6a84;
+  .image-gallery {
+    @media (width >= theme(--breakpoint-md)) {
+      margin-top: -100px;
+      background-image: url(/img/phone_4.avif);
+      padding: 22% 3.5% 26% 6.5%;
+    }
+
+    .image-gallery-bullets {
+      top: 10vw;
+    }
+  }
+}
+
+.project--o2 {
+  --bg-color: #0090d0;
+  --shadow-color: #0090d084;
+  --text-color: #ffffff;
+}
+
+.project--pulvermühle {
+  --bg-color: #000000;
+  --shadow-color: #00000084;
+  --text-color: #ffffff;
+  p:not(.time),
+  .project--gallery-column p a,
+  li {
+    @apply font-extralight!;
+  }
+}
+
+.project--ichallenge---ing-diba {
+  --bg-color: #ff6200;
+  --text-color: #ffffff;
+  --shadow-color: #ff620084;
+}
+
+.project--duchenne {
+  --bg-color: #f9b234;
+  --shadow-color: #f9b23484;
+}
+
+.project--bornholdt-lee-gmbh {
+  --bg-color: #0d345f;
+  --shadow-color: #0d345f84;
+}
+
+.project--bornholdt-lee {
+  --bg-color: #032034;
+  --shadow-color: #03203484;
+  --text-color: #ffffff;
+  p:not(.time),
+  .project--gallery-column p a,
+  li {
+    @apply font-extralight!;
+  }
+}
+
+.project--db-systel {
+  --bg-color: #ffffff;
+  --shadow-color: #ffffff84;
+}
+
+.project--docident {
+  --bg-color: #b4dd2c;
+  --shadow-color: #b4dd2c84;
+}
+
+.project--meine-kita {
+  --bg-color: #000000;
+  --shadow-color: #00000084;
+  --text-color: #ffffff;
+  p:not(.time),
+  .project--gallery-column p a,
+  li {
+    @apply font-extralight!;
+  }
+}
+
+.project--timesheets {
+  --bg-color: #00b1ad;
+  --shadow-color: #00b1ad84;
+  --text-color: #ffffff;
+}
+
+.project--car-tracker {
+  --bg-color: #6e37ff;
+  --text-color: #ffffff;
+  --shadow-color: #6e37ff84;
+  p:not(.time),
+  .project--gallery-column p a,
+  li {
+    @apply font-extralight!;
+  }
+}
+
+.project--nivea {
+  --bg-color: #00136f;
+  --shadow-color: #00136f84;
+  --text-color: #ffffff;
+  p:not(.time),
+  .project--gallery-column p a,
+  li {
+    @apply font-extralight!;
+  }
+}
+
+.project--tchibo,
+.project--tchibo_shop {
+  --bg-color: #003976;
+  --shadow-color: #00397684;
+  --text-color: #ffffff;
+  p:not(.time),
+  .project--gallery-column p a,
+  li {
+    @apply font-extralight!;
+  }
+}
+
+.project--portfolio {
+  --bg-color: #261714;
+  --shadow-color: #26171484;
+  --text-color: #ffffff;
+  p:not(.time),
+  .project--gallery-column p a,
+  li {
+    @apply font-extralight!;
+  }
+}

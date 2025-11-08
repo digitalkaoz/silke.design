@@ -1,7 +1,8 @@
-import { useState, FunctionComponent, useEffect, useCallback, useRef, ReactElement } from 'react';
+import { useState, FunctionComponent, useCallback, useRef, ReactElement } from 'react';
 import Gallery, { type ReactImageGalleryItem } from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
-import './Carousel.scss';
+import './carousel.css';
+import { useOnInView } from 'react-intersection-observer';
 
 export type CarouselProps = {
   text: ReactElement;
@@ -12,36 +13,43 @@ export type CarouselProps = {
 const CarouselItem: FunctionComponent<ReactImageGalleryItem> = ({ description, original }) => {
   return (
     <div className={'image-gallery-image' + (description ? ' image-gallery-image__text' : '')}>
-      <img src={original} alt={original} />
+      <img src={original} alt={original} loading="lazy" decoding="async" />
     </div>
   );
 };
 
-const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
+const Carousel: FunctionComponent<CarouselProps> = ({ images, text }) => {
   const carousel = useRef<HTMLDivElement>(null);
   const gallery = useRef<Gallery>(null);
 
   const [flipped, setFlipped] = useState(false);
 
-  useEffect(() => {
-    if (!gallery.current) {
-      return;
-    }
-    if (play) {
-      gallery.current.play();
-    } else {
-      gallery.current.pause();
-    }
-  }, [play]);
-
   const flatImages: Array<ReactImageGalleryItem> = images.map((image) => ({
     original: image,
   }));
 
+  const inview = useOnInView(
+    (inView) => {
+      if (!window || !gallery.current) {
+        return;
+      }
+      if (inView) {
+        gallery.current.play();
+      } else {
+        gallery.current.pause();
+      }
+    },
+    { threshold: 0.1, delay: 100 }
+  );
+
   const flip = useCallback(() => {
     if (carousel.current) {
       carousel.current.classList.toggle('carousel--flipped');
-
+      if (flipped) {
+        gallery.current.play();
+      } else {
+        gallery.current.pause();
+      }
       setFlipped(!flipped);
     }
   }, [carousel, flipped]);
@@ -49,7 +57,7 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
   return (
     <>
       <div className="carousel" ref={carousel}>
-        <div className="flipper">
+        <div className="flipper" ref={inview}>
           <Gallery
             items={flatImages}
             ref={gallery}
@@ -65,7 +73,7 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
             slideDuration={0}
             autoPlay
           />
-          <div className="carousel--text show-on-medium-and-down">{text}</div>
+          <div className="carousel--text">{text}</div>
         </div>
       </div>
       <button onClick={flip} className="carousel--flipper ">

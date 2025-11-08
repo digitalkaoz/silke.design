@@ -1,21 +1,30 @@
-import {defineConfig} from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+import { viteImageToAVIFPlugin } from 'vite-image-to-avif-plugin';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-    optimizeDeps: {
-        include: [
-            "prop-types",
-            "react-fast-compare"
-        ]
+  plugins: [
+    react({
+      babel: {
+        plugins: ['babel-plugin-react-compiler'],
+      },
+    }),
+    tailwindcss(),
+    viteImageToAVIFPlugin({
+      sourcePaths: ['public/img'],
+      quality: 90, 
+      outputDir: 'public/img', 
+      preserveStructure: true, 
+    }),
+  ],
+  build: {
+    //ssr: true,
+  },
+  ssgOptions: {
+    script: 'async defer',
+    beastiesOptions: {
+      preload: 'media',
     },
-    plugins: [react()],
-    ssgOptions: {
-        script: 'async',
-        beastiesOptions: {
-            // E.g., change the preload strategy
-            preload: 'media',
-            // Other options: https://github.com/GoogleChromeLabs/critters#usage
-        },
-    },
-})
+  },
+});

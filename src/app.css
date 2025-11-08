@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  @apply w-full bg-black;
+  font-family: "Jost Variable", sans-serif;
+}
+
+h1,
+h2 {
+  @apply font-bold text-2xl m-0;
+}
+
+h3 {
+  @apply m-0 text-xl font-semibold;
+}
+
+img:not([src]) {
+  visibility: hidden;
+}
+
+.tk-blob {
+  @apply will-change-transform relative origin-center;
+  animation: blob-turn var(--time, 30s) linear infinite;
+  fill: var(--fill, #7600f8);
+}
+
+.tk-blob svg {
+  @apply will-change-transform origin-center;
+  animation: blob-skew calc(var(--time, 30s) * 0.5) linear 0s infinite;
+}
+
+.tk-blob svg path {
+  @apply will-change-transform origin-center;
+  animation: blob-scale calc(var(--time, 30s) * 0.5) ease-in-out 0s infinite;
+}
+
+@keyframes blob-turn {
+  0% {
+    transform: scale(1.3) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.6) rotate(180deg);
+  }
+
+  100% {
+    transform: scale(1.3) rotate(360deg);
+  }
+}
+
+@keyframes blob-skew {
+  0% {
+    transform: skewY(0deg);
+  }
+
+  13% {
+    transform: skewY(calc((1.8deg) * var(--amount, 2)));
+  }
+
+  18% {
+    transform: skewY(calc((2.2deg) * var(--amount, 2)));
+  }
+
+  24% {
+    transform: skewY(calc((2.48deg) * var(--amount, 2)));
+  }
+
+  25% {
+    transform: skewY(calc((2.5deg) * var(--amount, 2)));
+  }
+
+  26% {
+    transform: skewY(calc((2.48deg) * var(--amount, 2)));
+  }
+
+  32% {
+    transform: skewY(calc((2.2deg) * var(--amount, 2)));
+  }
+
+  37% {
+    transform: skewY(calc((1.8deg) * var(--amount, 2)));
+  }
+
+  50% {
+    transform: skewY(0deg);
+  }
+
+  63% {
+    transform: skewY(calc((-1.8deg) * var(--amount, 2)));
+  }
+
+  68% {
+    transform: skewY(calc((-2.2deg) * var(--amount, 2)));
+  }
+
+  74% {
+    transform: skewY(calc((-2.48deg) * var(--amount, 2)));
+  }
+
+  75% {
+    transform: skewY(calc((-2.5deg) * var(--amount, 2)));
+  }
+
+  76% {
+    transform: skewY(calc((-2.48deg) * var(--amount, 2)));
+  }
+
+  82% {
+    transform: skewY(calc((-2.2deg) * var(--amount, 2)));
+  }
+
+  87% {
+    transform: skewY(calc((-1.8deg) * var(--amount, 2)));
+  }
+
+  100% {
+    transform: skewY(0deg);
+  }
+}
+
+@keyframes blob-scale {
+  0% {
+    transform: scaleX(0.9) scaleY(1);
+  }
+
+  25% {
+    transform: scaleX(0.9) scaleY(0.9);
+  }
+
+  50% {
+    transform: scaleX(1) scaleY(0.9);
+  }
+
+  75% {
+    transform: scaleX(0.9) scaleY(0.9);
+  }
+
+  100% {
+    transform: scaleX(0.9) scaleY(1);
+  }
+}

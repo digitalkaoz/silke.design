@@ -1,336 +1,330 @@
 [
   {
-    "name": "YogaEasy",
+    "name": "YogaEasy Mobile",
+    "timeframe": "2021 - 2025",
     "images": [
-      "/img/references/yogaeasy/01.png",
-      "/img/references/yogaeasy/02.png",
-      "/img/references/yogaeasy/03.png",
-      "/img/references/yogaeasy/07.png",
-      "/img/references/yogaeasy/06.png",
-      "/img/references/yogaeasy/05.png"
+      "/img/references/yogaeasy/01.avif",
+      "/img/references/yogaeasy/02.avif",
+      "/img/references/yogaeasy/03.avif",
+      "/img/references/yogaeasy/07.avif",
+      "/img/references/yogaeasy/06.avif",
+      "/img/references/yogaeasy/05.avif"
     ],
-    "task": "Konzeption und Design eines gesamtheitlichen und geräteübergreifenden Nutzererlebnis rund um das Thema Online-Yoga.",
-    "solution": "Kompletter Rebrush der Apps & Website und Design neuer Features in Figma nach eingehender Marktanalyse. Internationalisierung des Produktes mit regionalem Content.",
-    "customer": ["YogaEasy", "https://yogaeasy.de"],
-    "employer": [],
+    "task": "Concept and design of a holistic and cross-device user experience around online yoga for native Mobile-Apps.",
+    "role": ["UI Design", "UX Design", "Design System", "UX Research", "Competitor Analysis"],
+    "solution": "Complete rebrush of the existing App. In addition new features were designed in Figma after extensive UX testing and competitor analysis. Finally, we have also implemented internationalization with regional content.",
+    "customer": [
+      "iOS App",
+      "https://apps.apple.com/de/app/yogaeasy-online-yoga-studio/id692200180?platform=iphone"
+    ],
+    "employer": [
+      "Android App",
+      "https://play.google.com/store/apps/details?id=de.yogaeasy.videoapp&hl=de"
+    ],
     "orientation": "portrait",
-    "type": "iphone",
-    "skills": {
-      "tl": { "name": "UX" },
-      "tr": { "name": "UI" },
-      "br": { "name": 2020 }
-    }
+    "type": "iphone"
   },
   {
-    "name": "Car-Alarm",
+    "name": "YogaEasy Web",
+    "timeframe": "2020 - 2025",
     "images": [
-      "/img/references/car-tracker/1.jpg",
-      "/img/references/car-tracker/2.jpg",
-      "/img/references/car-tracker/3.jpg"
+      "/img/references/yogaeasy_web/1.avif",
+      "/img/references/yogaeasy_web/2.avif",
+      "/img/references/yogaeasy_web/3.avif",
+      "/img/references/yogaeasy_web/4.avif",
+      "/img/references/yogaeasy_web/5.avif",
+      "/img/references/yogaeasy_web/6.avif",
+      "/img/references/yogaeasy_web/7.avif",
+      "/img/references/yogaeasy_web/8.avif",
+      "/img/references/yogaeasy_web/9.avif",
+      "/img/references/yogaeasy_web/10.avif",
+      "/img/references/yogaeasy_web/11.avif"
     ],
-    "task": "Konzeption einer App für die Steuerung einer Fahrzeug-Alarmanlage auf Grundlage von Material Design.",
-    "solution": "Der zentrale Use-Case liegt derzeit auf dem Abrufen der Fahrzeug-Position und dem aktivieren/deaktivieren der Alarmanlage. Weitere Use-Cases sind geplant.",
-    "customer": ["digitalkaoz", "https://digitalkaoz.net"],
-    "employer": ["Freelance"],
-    "orientation": "portrait",
-    "type": "phone",
-    "skills": {
-      "tl": { "name": "UX" },
-      "tr": { "name": "UI" },
-      "br": { "name": 2020 }
-    }
+    "task": "Rebrush of the existing Web-Application including new features designed in Figma. The goal was to develop a consistent, cross-device design.",
+    "role": ["UI Design", "UX Design", "Design System", "User Research", "Usability Testing"],
+    "solution": "Responsive Redesign of the Web-Application using the newly created Design-System.",
+    "employer": ["Yogeasy", "https://yogaeasy.de"],
+    "type": "desktop"
   },
-
+  {
+    "name": "YogaEasy TV",
+    "timeframe": "2020",
+    "images": [
+      "/img/references/yogaeasy_tv/1.avif",
+      "/img/references/yogaeasy_tv/2.avif",
+      "/img/references/yogaeasy_tv/3.avif",
+      "/img/references/yogaeasy_tv/4.avif",
+      "/img/references/yogaeasy_tv/5.avif",
+      "/img/references/yogaeasy_tv/6.avif",
+      "/img/references/yogaeasy_tv/7.avif",
+      "/img/references/yogaeasy_tv/8.avif"
+    ],
+    "task": "Concept and design of a TV App to provide Yogeasy content on Amazon Prime.",
+    "role": ["UI Design", "UX Design", "Design System", "Competitor Analysis"],
+    "solution": "A design system was created in Figma and initial components for the TV app were added. Finally the designs was created in Figma and handed over to the development team.",
+    "type": "tv"
+  },
+  {
+    "name": "Car Tracker",
+    "timeframe": "2020",
+    "role": ["UI Design", "UX Design", "Prototyping"],
+    "images": [
+      "/img/references/car-tracker/1.avif",
+      "/img/references/car-tracker/2.avif",
+      "/img/references/car-tracker/3.avif"
+    ],
+    "task": "Concept of an mobile App in Figma for controlling a vehicle alarm system based on Material Design.",
+    "solution": "The main use case is currently focused on retrieving the vehicle position and activating/deactivating the alarm system.",
+    "orientation": "portrait",
+    "type": "phone"
+  },
   {
     "name": "Timesheets",
+    "timeframe": "2020",
     "images": [
-      "/img/references/timesheets/1.jpeg",
-      "/img/references/timesheets/2.jpeg",
-      "/img/references/timesheets/3.jpeg"
+      "/img/references/timesheets/1.avif",
+      "/img/references/timesheets/2.avif",
+      "/img/references/timesheets/3.avif"
     ],
-    "task": "Konzeption einer multimandanten Zeiterfassungs-App mit Export-Funktion auf Grundlage von Material Design.",
-    "solution": "Die User-Journeys des bestehenden Prototypen wurden überarbeitet und das finale Design in Figma erstellt.",
-    "customer": ["digitalkaoz", "https://digitalkaoz.net"],
-    "employer": ["Freelance"],
+    "task": "Concept of a multi-tenant time-tracking App in Figma with recording and export functionality based on Material Design.",
+    "solution": "The designed user journeys were implemented as an interactive Prototype.",
+    "role": ["UI Design", "UX Design", "Prototyping"],
     "orientation": "portrait",
-    "type": "phone",
-    "skills": {
-      "tl": { "name": "UX" },
-      "tr": { "name": "UI" },
-      "br": { "name": 2020 }
-    }
+    "type": "phone"
   },
   {
     "name": "Meine Kita",
+    "timeframe": "2019",
     "images": [
-      "/img/references/kita/0.jpeg",
-      "/img/references/kita/1.jpeg",
-      "/img/references/kita/2.jpeg",
-      "/img/references/kita/3.jpeg",
-      "/img/references/kita/4.jpeg",
-      "/img/references/kita/5.jpeg",
-      "/img/references/kita/6.jpeg",
-      "/img/references/kita/7.jpeg",
-      "/img/references/kita/8.jpeg",
-      "/img/references/kita/9.jpeg"
+      "/img/references/kita/0.avif",
+      "/img/references/kita/1.avif",
+      "/img/references/kita/2.avif",
+      "/img/references/kita/3.avif",
+      "/img/references/kita/4.avif",
+      "/img/references/kita/5.avif",
+      "/img/references/kita/6.avif",
+      "/img/references/kita/7.avif",
+      "/img/references/kita/8.avif",
+      "/img/references/kita/9.avif"
     ],
-    "task": "Konzeption einer App, in der Erzieher und Eltern einer Kita einfacher und schneller miteinander kommunizieren können. Erstellung eines Prototypen zur Visualisierung auf Grundlage von Material Design.",
-    "solution": "Scribbles der ersten User-Journeys auf Papier und Erstellung eines Prototypen in Figma.",
-    "customer": ["eigenes Projekt"],
+    "role": ["UI Design", "UX Design", "Prototyping"],
+    "task": "Concept of an mobile App that enables educators and parents of a Kindergarden to communicate more easily.",
+    "solution": "Intractive Prototypes of the first user journeys were designed in Figma.",
     "orientation": "portrait",
-    "type": "phone",
-    "skills": {
-      "tl": { "name": "UX" },
-      "tr": { "name": "UI" },
-      "br": { "name": 2019 }
-    }
+    "type": "phone"
   },
   {
     "name": "Nivea",
+    "timeframe": "2019",
     "images": [
-      "/img/references/nivea/1.jpg",
-      "/img/references/nivea/2.jpg",
-      "/img/references/nivea/3.jpg",
-      "/img/references/nivea/4.jpg",
-      "/img/references/nivea/5.jpg",
-      "/img/references/nivea/6.jpg"
+      "/img/references/nivea/1.avif",
+      "/img/references/nivea/2.avif",
+      "/img/references/nivea/3.avif",
+      "/img/references/nivea/4.avif",
+      "/img/references/nivea/5.avif",
+      "/img/references/nivea/6.avif"
     ],
-    "task": "Der User soll spielerisch die Adventstürchen auf der Nivea-Webseite mit den Überraschungen des Tages erkunden. Erstellen von Wireframes für die verschiedenen Userflows der Nutzer.",
-    "solution": "Die Darstellung der Türchen wurde als Adventskette realisiert. Klickt der User auf ein Türchen, wird die Überraschung in einem Layer angezeigt. Dort kann man am Gewinnspiel oder einer Rabattaktion teilnehmen. Wireframes in Sketch und Präsentation über Invision.",
+    "role": ["UX Design", "Prototyping"],
+    "task": "The user should playfully explore the advent calendar doors on the Nivea website with the daily surprises. Creation of wireframes for the different user flows.",
+    "solution": "The doors were realized as an advent chain. When the user clicks on a door, the surprise is displayed in an overlay. There you can participate in a raffle or a discount promotion. Wireframes in Sketch and presentation via Invision.",
     "customer": ["Beiersdorf AG, Nivea", "https://www.nivea.de/nivea-fuer-mich/adventskalender"],
     "employer": ["Dept-Agency Hamburg", "https://www.deptagency.com/de-de/"],
     "type": "phone",
-    "orientation": "portrait",
-    "skills": {
-      "tl": { "name": "UX" },
-      "br": { "name": 2019 }
-    }
+    "orientation": "portrait"
   },
   {
     "name": "Tchibo",
+    "timeframe": "2019",
     "images": [
-      "/img/references/tchibo_shop/1.jpg",
-      "/img/references/tchibo_shop/2.jpg",
-      "/img/references/tchibo_shop/3.jpg",
-      "/img/references/tchibo_shop/4.jpg"
+      "/img/references/tchibo_shop/1.avif",
+      "/img/references/tchibo_shop/2.avif",
+      "/img/references/tchibo_shop/3.avif",
+      "/img/references/tchibo_shop/4.avif"
     ],
-    "task": "Das Kaffeemodul des Tchibo-Shops soll verbessert und verständlicher gestaltet sein. Die verschiedenen Preis-Konstellationen sollen besser präsentiert werden.",
-    "solution": "Nach einem Anforderungs-Workshop sind mehrere Scribbles auf Papier entstanden, die anschliessend final umgesetzt wurden.",
+    "role": ["UX Design", "Google Design-Sprints"],
+    "task": "The coffee module of the Tchibo shop should be improved and designed to be more understandable. The different price constellations should be presented better.",
+    "solution": "After a requirements workshop, several scribbles were created on paper, which were handed over to UI-Designers and Developers for implementation.",
     "customer": ["Tchibo GmbH", "https://www.tchibo.de/"],
     "employer": ["Dept-Agency Hamburg", "https://www.deptagency.com/de-de/"],
-    "type": "desktop",
-    "skills": {
-      "tl": { "name": "UX" },
-      "br": { "name": 2019 }
-    }
+    "type": "desktop"
   },
   {
     "name": "DB Systel",
+    "timeframe": "2018",
     "images": [
-      "/img/references/dbsystel/1.jpg",
-      "/img/references/dbsystel/2.jpg",
-      "/img/references/dbsystel/3.jpg",
-      "/img/references/dbsystel/4.jpg",
-      "/img/references/dbsystel/5.jpg",
-      "/img/references/dbsystel/6.jpg",
-      "/img/references/dbsystel/7.jpg"
+      "/img/references/dbsystel/1.avif",
+      "/img/references/dbsystel/2.avif",
+      "/img/references/dbsystel/3.avif",
+      "/img/references/dbsystel/4.avif",
+      "/img/references/dbsystel/5.avif",
+      "/img/references/dbsystel/6.avif",
+      "/img/references/dbsystel/7.avif"
     ],
-    "task": "Konzeption einer Tablet-App, die Güterwagen lokalisiert und deren Inhalte erfasst. Die User-Experience muss von Werkarbeitern verstanden werden.",
-    "solution": "Nach dem Kickoff wurden die ersten Wireframes in Sketch & Invision erstellt. Es folgten mehrere Feedbackschleifen und die Inhalte wurden agil weiter ausgebaut. Das Design basiert auf dem Styleguide der Deutschen Bahn.",
+    "role": ["UX Design", "UI Design"],
+    "task": "Concept of a Tablet App that locates freight wagons and records their contents. The user experience must be understood by factory workers.",
+    "solution": "After the kickoff, the first wireframes were created in Sketch & Invision. Several feedback loops followed and the content was further expanded in agile processes. The design is based on Deutsche Bahn's style guide.",
     "customer": ["Deutsche Bahn - Systel", "https://www.dbsystel.de/dbsystel"],
     "employer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
     "type": "tablet",
-    "orientation": "portrait",
-    "skills": {
-      "tl": { "name": "UX" },
-      "tr": { "name": "UI" },
-      "br": { "name": 2018 }
-    }
+    "orientation": "portrait"
   },
   {
     "name": "DocIdent",
+    "timeframe": "2018",
     "images": [
-      "/img/references/docident/2.jpg",
-      "/img/references/docident/3.jpg",
-      "/img/references/docident/4.jpg",
-      "/img/references/docident/5.jpg",
-      "/img/references/docident/6.jpg",
-      "/img/references/docident/7.jpg",
-      "/img/references/docident/8.jpg"
+      "/img/references/docident/2.avif",
+      "/img/references/docident/3.avif",
+      "/img/references/docident/4.avif",
+      "/img/references/docident/5.avif",
+      "/img/references/docident/6.avif",
+      "/img/references/docident/7.avif",
+      "/img/references/docident/8.avif"
     ],
-    "task": "Konzeption einer Website zum digitalen Signieren und Ablegen von Dokumenten in der Blockchain.",
-    "solution": "In einem Anforderungs-Workshop mit dem Kunden wurden Use-Cases und Prozesse definiert. Userflows sind am Whiteboard entstanden auf deren Grundlage Wireframes in Sketch & Invision erstellt wurden.",
+    "role": ["UX Design", "Prototyping", "Requirement workshops"],
+    "task": "Concept of a website for digitally signing and storing documents in the blockchain.",
+    "solution": "Use cases and processes were defined in requirement workshops with the customer. Initially user journeys were created on a whiteboard and later designed in Sketch & Invision.",
     "customer": ["DocIdent", "https://docident.com/"],
     "employer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
-    "type": "desktop",
-    "skills": {
-      "tl": { "name": "UX" },
-      "br": { "name": 2018 }
-    }
+    "type": "desktop"
   },
   {
     "name": "smoothr",
+    "timeframe": "2018",
     "images": [
-      "/img/references/smoothr/1.jpg",
-      "/img/references/smoothr/2.jpg",
-      "/img/references/smoothr/3.jpg",
-      "/img/references/smoothr/4.jpg"
+      "/img/references/smoothr/1.avif",
+      "/img/references/smoothr/2.avif",
+      "/img/references/smoothr/3.avif",
+      "/img/references/smoothr/4.avif"
     ],
-    "task": "Konzeption & Design einer Tablet-Tresen App für Bestellungen im Restaurant.",
-    "solution": "In Anlehnung am mobilen Client-Design ist die Tresen-App für die Angestellten in Photoshop entstanden. Zuvor wurden alle Funktionalitäten in einem Anforderungs-Workshop zusammengetragen und als User-Journeys formuliert.",
-    "customer": ["Sterlix GmbH", "https://smoothr.de/"],
+    "role": ["UX Design", "UI Design", "Requirement workshops"],
+    "task": "Concept & design of a point-of-sale Tablet App for restaurant orders.",
+    "solution": "All functionalities were collected in requirement workshops and formalized as user journeys. Finally the designs were created in Photoshop.",
+    "customer": ["Smoothr", "https://smoothr.de/"],
     "employer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
-    "type": "tablet",
-    "skills": {
-      "tl": { "name": "UX" },
-      "tr": { "name": "UI" },
-      "br": { "name": 2018 }
-    }
+    "type": "tablet"
   },
   {
     "name": "Bornholdt Lee",
+    "timeframe": "2017",
     "images": [
-      "/img/references/blg-relaunch/1.jpg",
-      "/img/references/blg-relaunch/2.jpg",
-      "/img/references/blg-relaunch/3.jpg",
-      "/img/references/blg-relaunch/4.jpg"
+      "/img/references/blg-relaunch/1.avif",
+      "/img/references/blg-relaunch/2.avif",
+      "/img/references/blg-relaunch/3.avif",
+      "/img/references/blg-relaunch/4.avif"
     ],
-    "task": "Relaunch des Firmenauftritts der Bornholdt Lee GmbH. Der Fokus soll auf den Referenzen liegen, so dass die Leistungen des Unternehmens noch besser verstanden werden.",
-    "solution": "Erste Wireframes wurden mit Axure prototypisch entworfen. Das finale Design wurde in Sketch & Invision erstellt und mit dem Projektmanager agil immer weiter ausgearbeitet. Zudem wurde für den ersten Eindruck ein Prototyp in HTML & CSS programmiert.",
+    "role": ["UX Design", "UI Design", "Frontend Development"],
+    "task": "Relaunch of the corporate website of the \"Bornholdt Lee GmbH\". The focus should be on highlighting the references, and making the companies services more clear for potential customers.",
+    "solution": "Wireframes were created with Axure. The final design was created in Sketch & Invision and continuously refined with the project manager in an agile process. Additionally, a prototype was programmed in HTML & CSS.",
     "customer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
-    "employer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
-    "type": "desktop",
-    "skills": {
-      "bl": { "name": "FE" },
-      "tl": { "name": "UX" },
-      "tr": { "name": "UI" },
-      "br": { "name": 2017 }
-    }
+    "type": "desktop"
   },
   {
     "name": "Duchenne",
-    "images": ["/img/references/duchenne/1.jpg", "/img/references/duchenne/2.jpg"],
-    "task": "Redesign der bestehenden Informationswebseite zum Thema \"Duchenne Muskeldystrophie\".",
-    "solution": "Nachdem die Wireframes in Axure erstellt worden sind, wurden das finale Design in Photoshop umgesetzt.",
-    "customer": ["Deutsche Taskforce", "http://duchenne-taskforce.de/"],
+    "timeframe": "2017",
+    "images": ["/img/references/duchenne/1.avif", "/img/references/duchenne/2.avif"],
+    "role": ["UX Design", "UI Design"],
+    "task": "Redesign of the existing website about \"Muscular Dystrophy\".",
+    "solution": "After creating the wireframes in Axure, the final designs was built in Photoshop.",
+    "customer": ["Duchenne Taskforce", "http://duchenne-taskforce.de/"],
     "employer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
-    "type": "desktop",
-    "skills": {
-      "tl": { "name": "UX" },
-      "tr": { "name": "UI" },
-      "br": { "name": 2017 }
-    }
+    "type": "desktop"
   },
   {
     "name": "iChallenge - ING DiBa",
+    "timeframe": "2017",
     "images": [
-      "/img/references/ichallenge/2.jpg",
-      "/img/references/ichallenge/5.jpg",
-      "/img/references/ichallenge/4.jpg",
-      "/img/references/ichallenge/1.jpg"
+      "/img/references/ichallenge/2.avif",
+      "/img/references/ichallenge/5.avif",
+      "/img/references/ichallenge/4.avif",
+      "/img/references/ichallenge/1.avif"
     ],
-    "task": "Die iChallenge-Tablet App der digitalen Schnitzeljagd soll für ein Teamevent im Corporate Design der ING DiBa umgestaltet werden.",
-    "solution": "In Photoshop wurde das vorhandene Design der iChallenge dem Look der ING DiBa angepasst. Neben der Farbänderung wurden ebenfalls die Bilderwelten und Icons geändert und passend zum Corporate-Design umgestaltet.",
-    "customer": ["iChallenge", "https://www.ichallenge.info/de/"],
+    "role": ["UI Design"],
+    "task": "The iChallenge Tablet App for digital geo caching should be redesigned in ING DiBa's corporate design for a team event.",
+    "solution": "In Photoshop, the existing iChallenge design was adapted to match ING DiBa's corporate design.",
+    "customer": ["iChallenge", "https://ichallenge.info/"],
     "employer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
-    "type": "tablet",
-    "skills": {
-      "tr": { "name": "UI" },
-      "br": { "name": 2017 }
-    }
+    "type": "tablet"
   },
   {
     "name": "Pulvermühle",
+    "timeframe": "2017",
     "images": [
-      "/img/references/pulvermuehle/1.jpg",
-      "/img/references/pulvermuehle/2.jpg",
-      "/img/references/pulvermuehle/3.jpg",
-      "/img/references/pulvermuehle/4.jpg",
-      "/img/references/pulvermuehle/5.jpg"
+      "/img/references/pulvermuehle/1.avif",
+      "/img/references/pulvermuehle/2.avif",
+      "/img/references/pulvermuehle/3.avif",
+      "/img/references/pulvermuehle/4.avif",
+      "/img/references/pulvermuehle/5.avif"
     ],
-    "task": "Die Pulvermühle möchte zukünftig Bestell- und Bezahlprozesse über eine Tablet App abwickeln. Hierfür soll ein Konzept und Design entworfen werden.",
-    "solution": "Nach einem Anforderungs-Workshop sind die Wünsche und Ideen in User-Journeys festgehalten worden. In Axure wurden Wireframes umgesetzt, die dann in Photoshop gestaltet wurden.",
-    "customer": ["Pulvermühle", "https://pulvermuehle.eu/de-de/"],
+    "role": ["UX Design", "UI Design", "Requirements Workshops"],
+    "task": "The company \"Pulvermühle\" wants the orders and payments handled in a Tablet App.",
+    "solution": "Following a requirements workshop, the wishes and ideas were collected and defined in user journeys. Wireframes were created in Axure, the design was created in Photoshop.",
+    "customer": ["Pulvermühle", "https://pulvermuehle.eu/"],
     "employer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
-    "type": "phone",
-    "skills": {
-      "tr": { "name": "UI" },
-      "tl": { "name": "UX" },
-      "br": { "name": 2017 }
-    }
+    "type": "phone"
   },
   {
     "name": "Freixenet",
+    "timeframe": "2012",
     "images": [
-      "/img/references/freixenet/1.jpg",
-      "/img/references/freixenet/2.jpg",
-      "/img/references/freixenet/3.jpg",
-      "/img/references/freixenet/4.jpg",
-      "/img/references/freixenet/5.jpg"
+      "/img/references/freixenet/1.avif",
+      "/img/references/freixenet/2.avif",
+      "/img/references/freixenet/3.avif",
+      "/img/references/freixenet/4.avif",
+      "/img/references/freixenet/5.avif"
     ],
-    "task": "Freixenet möchte eine Weinguide-App anbieten, in der die verschiedenen Weine in Kombination mit passenden Koch-Rezepten dargestellt werden.",
-    "solution": "Hierfür wurden zunächst Scribbles der User-Stories erstellt, die in einem Prototyp in WireframeSketcher umgesetzt wurden. Das Design ist in Photoshop entstanden.",
+    "role": ["UX Design", "UI Design", "Prototyping"],
+    "task": "Freixenet would like to offer a Wine-Guide App that presents different wines in combination with matching recipes.",
+    "solution": "First we started creating user stories as scribbles, wireframes were created as a prototype and finally the design was done in Photoshop.",
     "customer": ["Freixenet", "https://www.freixenet.de/"],
     "employer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
-    "type": "phone",
-    "skills": {
-      "tr": { "name": "UI" },
-      "tl": { "name": "UX" },
-      "br": { "name": 2012 }
-    }
+    "type": "phone"
   },
   {
     "name": "Bornholdt Lee",
-    "images": ["/img/references/blg/1.jpg", "/img/references/blg/2.jpg"],
-    "task": "Erster Relaunch der Bornholdt Lee Firmen Website. Das Design der neuen Seite soll moderner und ansprechender gestaltet werden.",
-    "solution": "Die Konzeption und das Design für verschiedene Devices wurden mit Photoshop erstellt, wobei der Focus auf den Referenzen lag. Die gesamte Bilderwelt wurde freundlicher und interessanter gestaltet. Zudem wurde ein Prototyp in HTML & CSS gebaut.",
-    "customer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
+    "timeframe": "2012",
+    "images": ["/img/references/blg/1.avif", "/img/references/blg/2.avif"],
+    "role": ["UX Design", "UI Design", "Frontend Development"],
+
+    "task": "First relaunch of the \"Bornholdt Lee GmbH\" company website. The design should modern and appealing.",
+    "solution": "The concept and the responsive design for various devices were created in Photoshop. Finally the designs were implemented in HTML and CSS.",
     "employer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
-    "type": "desktop",
-    "skills": {
-      "bl": { "name": "FE" },
-      "tl": { "name": "UX" },
-      "tr": { "name": "UI" },
-      "br": { "name": 2012 }
-    }
+    "type": "desktop"
   },
   {
     "name": "O<sub>2</sub>",
-    "images": ["/img/references/o2/1.jpg", "/img/references/o2/2.jpg", "/img/references/o2/3.jpg"],
-    "task": "\"Aus Alice wird O<sub>2</sub>\". Rebranding der Alice Website im neuen Look von O<sub>2</sub>.",
-    "solution": "Anpassung der Coremedia-Templates mit HTML, CSS und JavaScript.",
-    "customer": ["Telefonica Germany GmbH"],
-    "employer": ["Spot-Media GmbH", "https://spot-media.de"],
-    "type": "desktop",
-    "skills": {
-      "bl": { "name": "FE" },
-      "br": { "name": 2011 }
-    }
+    "timeframe": "2011",
+    "images": [
+      "/img/references/o2/1.avif",
+      "/img/references/o2/2.avif",
+      "/img/references/o2/3.avif"
+    ],
+    "role": ["Frontend Development"],
+
+    "task": "\"Aus Alice wird O<sub>2</sub>\" Rebranding of the Alice website with the new O<sub>2</sub> look.",
+    "solution": "Customization of Coremedia templates with HTML, CSS, and JavaScript.",
+    "customer": ["Telefonica Germany GmbH", "https://www.o2online.de"],
+    "employer": ["Spot-Media GmbH"],
+    "type": "desktop"
   },
   {
     "name": "Tchibo",
-    "images": ["/img/references/tchibo/2.jpg"],
-    "task": "Erstellung von wöchentlichen Produkt-Newslettern der Tchibo GmbH.",
-    "solution": "Umsetzung der Newsletter-Templates der Wochenwelten in HTML und CSS.",
+    "timeframe": "2009",
+    "images": ["/img/references/tchibo/2.avif"],
+    "role": ["Frontend Development"],
+    "task": "Creation of the weekly product newsletters for Tchibo.",
+    "solution": "Implementation of the \"Wochenwelten\" newsletter templates with HTML and CSS.",
     "customer": ["Tchibo GmbH", "https://www.tchibo.de/"],
-    "employer": ["Spot-Media GmbH", "https://spot-media.de"],
-    "type": "desktop",
-    "skills": {
-      "bl": { "name": "FE" },
-      "br": { "name": 2009 }
-    }
+    "employer": ["Spot-Media GmbH"],
+    "type": "desktop"
   },
   {
     "name": "Portfolio",
-    "images": ["/img/references/portfolio/1.jpg", "/img/references/portfolio/2.jpg"],
-    "task": "Erstellung meiner ersten eigenen Website.",
-    "solution": "Aus ersten Scribbles ist ein Design in Photoshop entstanden. Anschließend programmierte ich die Seite in HTML, CSS und JavaScript.",
-    "customer": ["eigenes Projekt", "https://silke.design"],
-    "type": "desktop",
-    "skills": {
-      "bl": { "name": "FE" },
-      "tr": { "name": "UI" },
-      "br": { "name": 2008 }
-    }
+    "timeframe": "2008",
+    "images": ["/img/references/portfolio/1.avif", "/img/references/portfolio/2.avif"],
+    "role": ["UX Design", "UI Design", "Frontend Development"],
+    "task": "My first own website.",
+    "solution": "The initial scribbles were turned into a design in Photoshop. Finally i implemented the design with HTML, CSS and JavaScript.",
+    "customer": ["Portfolio", "https://silke.design"],
+    "type": "desktop"
   }
 ]

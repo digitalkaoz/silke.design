@@ -1,5 +1,3 @@
-import { RefObject } from 'react';
-
 export const stripTags = (html: string): string => {
   if (typeof window === 'undefined') {
     return html.replace(/(<([^>]+)>)/gi, '');
@@ -11,31 +9,26 @@ export const stripTags = (html: string): string => {
   return tmp.textContent || tmp.innerText;
 };
 
-// TODO below are all sideeffects
-export const getParameterByName = (name: string): boolean => {
-  if (typeof window === 'undefined') {
-    return true;
-  }
-  const search = new URLSearchParams(window.location.search);
+export const toId = (text: string): string =>
+  stripTags(text).toLowerCase().replace(/\(/g, '').replace(/\)/g, '').replace(/ /g, '-');
 
-  return search.has(name);
-};
+let observer: IntersectionObserver | undefined;
 
-export const isMobile = (): boolean =>
-  typeof window !== 'undefined' &&
-  window.matchMedia &&
-  window.matchMedia('(max-width: 600px)').matches;
-
-export const toId = (text: string): string => stripTags(text).toLowerCase().replace(/ /g, '-');
-
-export const getDistance = (container: RefObject<HTMLElement>): number => {
-  if (!container.current) {
-    return 1;
-  }
-  const currentScroller = container.current.nextSibling;
-  if (!currentScroller) {
-    return 1;
+/**
+ * get distance to viewport top
+ * this doesnt use getBoundingClientRect bc it forces a reflow, but instead use the intersection api
+ */
+export const getDistance = (container: Element): string => {
+  if (!observer) {
+    observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        entry.target.dataset.top = entry.boundingClientRect.top;
+      }
+      observer.disconnect();
+    });
   }
 
-  return currentScroller.getBoundingClientRect().top / window.innerHeight;
+  observer.observe(container as Element);
+
+  return container.dataset.top || '1';
 };

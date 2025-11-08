@@ -1,5 +1,4 @@
 import { FunctionComponent, memo } from 'react';
-import { SimpleImg } from 'react-simple-img';
 
 export type IconProps = {
   src: string;
@@ -21,12 +20,7 @@ const LinkIcon: FunctionComponent<IconProps> = ({ src, target, name }) => (
 );
 
 const ImageIcon: FunctionComponent<ImageIconProps> = ({ src, name, asIcon = true }) => (
-  <SimpleImg
-    src={src}
-    placeholder="linear-gradient(rgba(0,0,0,0) 0%, rgb(0, 0, 0,1) 100%)"
-    alt={name}
-    className={asIcon ? 'icon' : ''}
-  />
+  <img src={src} alt={name} className={asIcon ? 'icon' : ''} loading="lazy" decoding="async" />
 );
 
 const Icon: FunctionComponent<IconProps> = ({ src, target, name }) => {

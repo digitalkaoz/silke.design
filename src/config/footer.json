@@ -1,12 +1,17 @@
 [
   {
-    "name": "Xing Profile",
-    "target": "https://www.xing.com/profile/Silke_Schoenthal",
-    "src": "/img/xing.svg"
+    "name": "Email",
+    "target": "mailto:silke@schoenthal.io",
+    "src": "/img/mail.svg"
   },
   {
-    "name": "Linkedin Profile",
+    "name": "Linkedin",
     "target": "https://www.linkedin.com/in/silke-sch%C3%B6nthal-878412140",
     "src": "/img/linkedin.svg"
+  },
+  {
+    "name": "Xing",
+    "target": "https://www.xing.com/profile/Silke_Schoenthal",
+    "src": "/img/xing.svg"
   }
 ]
