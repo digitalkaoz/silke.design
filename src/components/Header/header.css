@@ -70,7 +70,7 @@ header {
 
     .tk-blob {
       @apply absolute right-auto bottom-auto w-3/4 h-3/4 inline-flex z-10 overflow-hidden;
-      --fill: #ebd7fd;
+      --fill: #a7feed;
       @media (width >= theme(--breakpoint-md)) {
         @apply w-full h-full -top-1/12;
         --fill: #86f4d7;

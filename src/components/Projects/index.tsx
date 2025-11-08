@@ -13,20 +13,21 @@ function fadySticky() {
   let currentProject: HTMLElement | undefined;
   let previousProject: HTMLElement | undefined;
   this.childNodes.forEach((project: HTMLElement, index) => {
+    // we dont handle first element or process further when we found the current project (the one thats not yet sticky)
     if (currentProject || index == 0) {
       return;
     }
     // handle last element when all items have "in-view"
     if (index === this.childNodes.length - 1 && project.classList.contains('in-view')) {
       currentProject = project;
-      previousProject = currentProject.previousSibling;
+      previousProject = currentProject.previousSibling as HTMLElement;
       return;
     }
 
     // the first item without "in-view" class
     if (!project.classList.contains('in-view')) {
-      currentProject = project.previousSibling;
-      previousProject = currentProject.previousSibling;
+      currentProject = project.previousSibling as HTMLElement;
+      previousProject = currentProject.previousSibling as HTMLElement;
       return;
     }
   });
@@ -36,9 +37,14 @@ function fadySticky() {
   }
 
   if (previousProject) {
-    const top = getDistance(currentProject);
-    const distance = parseFloat(top) / window.innerHeight;
-    previousProject.style.filter = `grayscale(${1 - distance}) brightness(${distance})`;
+    window.requestAnimationFrame(() => {
+      // fade out the previous one based on the height of the current one
+      const top = getDistance(currentProject);
+      const distance = parseFloat(top) / window.innerHeight;
+      if (distance > 0.1) {
+        previousProject.style.filter = `grayscale(${1 - distance}) brightness(${distance})`;
+      }
+    });
   }
 }
 

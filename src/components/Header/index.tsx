@@ -10,8 +10,9 @@ const Header: FunctionComponent = () => (
     <div className="text-column">
       <h1>Hi! I&apos;m Silke,</h1>
       <p>
-        a Product-Designer based in Hamburg, with 20 years of professional experience. I bring ideas
-        to life through creativity, thoughtful designs and collaboration with engineers.
+        a Product-Designer based in Hamburg, with 20 years of professional experience in the digital
+        world. I bring ideas to life through creativity, thoughtful designs and collaboration with
+        engineers.
       </p>
     </div>
     <div className="profile-column">

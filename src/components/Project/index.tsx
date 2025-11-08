@@ -68,7 +68,7 @@ const Link: FunctionComponent<{ link: Array<string> | string | undefined }> = ({
       dangerouslySetInnerHTML={{ __html: link[0] }}
     ></a>
   ) : (
-    link && link[0] && <p dangerouslySetInnerHTML={{ __html: link[0] }}></p>
+    link && link[0] && <a dangerouslySetInnerHTML={{ __html: link[0] }}></a>
   );
 
 const Visual: FunctionComponent<ProjectProps> = (props) => (
@@ -90,7 +90,6 @@ const Project: FunctionComponent<ProjectProps> = (props) => {
         entry.target.classList.add('in-view');
       } else {
         entry.target.classList.remove('in-view');
-        entry.target.style.filter = ``;
       }
     },
     { threshold: 0.01 }

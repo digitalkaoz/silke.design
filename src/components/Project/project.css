@@ -3,7 +3,7 @@
 .project {
   --text-color: #000000;
   --bg-color: #ffffff;
-  @apply px-8 grid h-dvh sticky m-0 top-0 grid-cols-1 auto-rows-min will-change-auto;
+  @apply px-8 grid h-dvh sticky m-0 top-0 grid-cols-1 auto-rows-min;
   @media (width >= theme(--breakpoint-md)) {
     @apply px-20;
   }
@@ -95,11 +95,16 @@
         a {
           @apply underline mr-4 mt-8 inline-block;
         }
+
         @media (width >= theme(--breakpoint-md)) {
           a {
             @apply hidden;
           }
         }
+      }
+
+      a:not([href]) {
+        @apply no-underline;
       }
     }
   }
@@ -121,6 +126,9 @@
     a {
       @apply underline mr-4 mt-8 inline-block;
     }
+    a:not([href]) {
+      @apply no-underline;
+    }
   }
 
   .project--gallery-column {
@@ -129,6 +137,10 @@
     .links a {
       @apply hidden;
     }
+    .links a:not([href]) {
+      @apply no-underline;
+    }
+
     @media (width >= theme(--breakpoint-md)) {
       .links {
         @apply mt-32;
@@ -269,6 +281,12 @@
 
 /* Table landscape */
 .project--tablet.project--landscape {
+  .project--gallery-column {
+    @media (width >= theme(--breakpoint-md)) {
+      margin: 0 2vw;
+    }
+  }
+
   .image-gallery {
     img {
       border: 1px solid var(--text-color, "#000000");
@@ -304,7 +322,7 @@
     @media (width >= theme(--breakpoint-md)) {
       margin-top: -5.5vw;
       background-image: url(/img/tablet_p.avif);
-      padding: 15% 5% 15.5% 5.5%;
+      padding: 15% 3% 10% 3.5%;
       .image-gallery-image img {
         @apply border-transparent bg-black;
       }
@@ -419,6 +437,7 @@
 .project--o2 {
   --bg-color: #0090d0;
   --shadow-color: #0090d084;
+  --text-color: #ffffff;
 }
 
 .project--pulvermühle {
@@ -483,6 +502,7 @@
 .project--timesheets {
   --bg-color: #00b1ad;
   --shadow-color: #00b1ad84;
+  --text-color: #ffffff;
 }
 
 .project--car-tracker {

@@ -10,9 +10,9 @@
       "/img/references/yogaeasy/06.avif",
       "/img/references/yogaeasy/05.avif"
     ],
-    "task": "Conception and design of a holistic and cross-device user experience around online yoga for Mobile-Apps.",
-    "role": ["UI Design", "UX Design", "Design System", "User Research", "Competitor Analysis"],
-    "solution": "Complete rebrush of the existing App while also designing new features in Figma after extensive User-Testing and competitor analysis. Finally we also implemented internationalization with regional content.",
+    "task": "Concept and design of a holistic and cross-device user experience around online yoga for native Mobile-Apps.",
+    "role": ["UI Design", "UX Design", "Design System", "UX Research", "Competitor Analysis"],
+    "solution": "Complete rebrush of the existing App. In addition new features were designed in Figma after extensive UX testing and competitor analysis. Finally, we have also implemented internationalization with regional content.",
     "customer": [
       "iOS App",
       "https://apps.apple.com/de/app/yogaeasy-online-yoga-studio/id692200180?platform=iphone"
@@ -40,8 +40,8 @@
       "/img/references/yogaeasy_web/10.avif",
       "/img/references/yogaeasy_web/11.avif"
     ],
-    "task": "Design the rebrush of the existing Web-Application while also implementing new features in Figma. The CI should match the design of the native mobile Apps.",
-    "role": ["UI Design", "UX Design", "Design System", "User Research", "Competitor Analysis"],
+    "task": "Rebrush of the existing Web-Application including new features designed in Figma. The goal was to develop a consistent, cross-device design.",
+    "role": ["UI Design", "UX Design", "Design System", "User Research", "Usability Testing"],
     "solution": "Responsive Redesign of the Web-Application using the newly created Design-System.",
     "employer": ["Yogeasy", "https://yogaeasy.de"],
     "type": "desktop"
@@ -59,9 +59,9 @@
       "/img/references/yogaeasy_tv/7.avif",
       "/img/references/yogaeasy_tv/8.avif"
     ],
-    "task": "Conception and design of a TV app to provide Yogeasy content on Amazon Prime.",
-    "role": ["UI Design", "UX Design", "Design System", "User Research", "Competitor Analysis"],
-    "solution": "Extension of the Design-System to also include components for TV-Apps. Finally the designs was created in Figma and handed over to the development team.",
+    "task": "Concept and design of a TV App to provide Yogeasy content on Amazon Prime.",
+    "role": ["UI Design", "UX Design", "Design System", "Competitor Analysis"],
+    "solution": "A design system was created in Figma and initial components for the TV app were added. Finally the designs was created in Figma and handed over to the development team.",
     "type": "tv"
   },
   {
@@ -73,8 +73,8 @@
       "/img/references/car-tracker/2.avif",
       "/img/references/car-tracker/3.avif"
     ],
-    "task": "Conception of an app for controlling a vehicle alarm system based on Material Design.",
-    "solution": "The main use case is currently focused on retrieving the vehicle position and activating/deactivating the alarm system. Additional use cases are planned.",
+    "task": "Concept of an mobile App in Figma for controlling a vehicle alarm system based on Material Design.",
+    "solution": "The main use case is currently focused on retrieving the vehicle position and activating/deactivating the alarm system.",
     "orientation": "portrait",
     "type": "phone"
   },
@@ -86,8 +86,8 @@
       "/img/references/timesheets/2.avif",
       "/img/references/timesheets/3.avif"
     ],
-    "task": "Conception of a multi-tenant time-tracking App with export function based on Material Design.",
-    "solution": "The existing prototype's user journeys were refined and the final design was implemented using the designs from Figma.",
+    "task": "Concept of a multi-tenant time-tracking App in Figma with recording and export functionality based on Material Design.",
+    "solution": "The designed user journeys were implemented as an interactive Prototype.",
     "role": ["UI Design", "UX Design", "Prototyping"],
     "orientation": "portrait",
     "type": "phone"
@@ -108,8 +108,8 @@
       "/img/references/kita/9.avif"
     ],
     "role": ["UI Design", "UX Design", "Prototyping"],
-    "task": "Conception of an App that enables educators and parents of a daycare center to communicate more easily and quickly.",
-    "solution": "Scribbles and prototypes of the first User-Journeys in Figma.",
+    "task": "Concept of an mobile App that enables educators and parents of a Kindergarden to communicate more easily.",
+    "solution": "Intractive Prototypes of the first user journeys were designed in Figma.",
     "orientation": "portrait",
     "type": "phone"
   },
@@ -124,7 +124,7 @@
       "/img/references/nivea/5.avif",
       "/img/references/nivea/6.avif"
     ],
-    "role": ["UI Design", "UX Design", "Prototyping"],
+    "role": ["UX Design", "Prototyping"],
     "task": "The user should playfully explore the advent calendar doors on the Nivea website with the daily surprises. Creation of wireframes for the different user flows.",
     "solution": "The doors were realized as an advent chain. When the user clicks on a door, the surprise is displayed in an overlay. There you can participate in a raffle or a discount promotion. Wireframes in Sketch and presentation via Invision.",
     "customer": ["Beiersdorf AG, Nivea", "https://www.nivea.de/nivea-fuer-mich/adventskalender"],
@@ -143,7 +143,7 @@
     ],
     "role": ["UX Design", "Google Design-Sprints"],
     "task": "The coffee module of the Tchibo shop should be improved and designed to be more understandable. The different price constellations should be presented better.",
-    "solution": "After a requirements workshop, several scribbles were created on paper, which were then handed over to UI-Designers and Developers for implementation.",
+    "solution": "After a requirements workshop, several scribbles were created on paper, which were handed over to UI-Designers and Developers for implementation.",
     "customer": ["Tchibo GmbH", "https://www.tchibo.de/"],
     "employer": ["Dept-Agency Hamburg", "https://www.deptagency.com/de-de/"],
     "type": "desktop"
@@ -161,8 +161,8 @@
       "/img/references/dbsystel/7.avif"
     ],
     "role": ["UX Design", "UI Design"],
-    "task": "Conception of a Tablet-App that locates freight wagons and records their contents. The user experience must be understood by factory workers.",
-    "solution": "After the kickoff, the first wireframes were created in Sketch & Invision. Several feedback loops followed and the content was further expanded in an agile manner. The design is based on Deutsche Bahn's style guide.",
+    "task": "Concept of a Tablet App that locates freight wagons and records their contents. The user experience must be understood by factory workers.",
+    "solution": "After the kickoff, the first wireframes were created in Sketch & Invision. Several feedback loops followed and the content was further expanded in agile processes. The design is based on Deutsche Bahn's style guide.",
     "customer": ["Deutsche Bahn - Systel", "https://www.dbsystel.de/dbsystel"],
     "employer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
     "type": "tablet",
@@ -180,9 +180,9 @@
       "/img/references/docident/7.avif",
       "/img/references/docident/8.avif"
     ],
-    "role": ["UX Design", "UI Design", "Requirements Workshops"],
-    "task": "Conception of a website for digitally signing and storing documents in the blockchain.",
-    "solution": "Use cases and processes were defined in a requirements workshop with the customer. User flows were created on the whiteboard, based on which wireframes were created in Sketch & Invision.",
+    "role": ["UX Design", "Prototyping", "Requirement workshops"],
+    "task": "Concept of a website for digitally signing and storing documents in the blockchain.",
+    "solution": "Use cases and processes were defined in requirement workshops with the customer. Initially user journeys were created on a whiteboard and later designed in Sketch & Invision.",
     "customer": ["DocIdent", "https://docident.com/"],
     "employer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
     "type": "desktop"
@@ -196,9 +196,9 @@
       "/img/references/smoothr/3.avif",
       "/img/references/smoothr/4.avif"
     ],
-    "role": ["UX Design", "UI Design", "Requirements Workshops"],
-    "task": "Conception & Design of a Tablet point-of-sale App for restaurant orders.",
-    "solution": "Based on the mobile client design, the counter App for employees was created in Photoshop. Previously, all functionalities were gathered in a requirements workshop and formulated as user journeys.",
+    "role": ["UX Design", "UI Design", "Requirement workshops"],
+    "task": "Concept & design of a point-of-sale Tablet App for restaurant orders.",
+    "solution": "All functionalities were collected in requirement workshops and formalized as user journeys. Finally the designs were created in Photoshop.",
     "customer": ["Smoothr", "https://smoothr.de/"],
     "employer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
     "type": "tablet"
@@ -213,8 +213,8 @@
       "/img/references/blg-relaunch/4.avif"
     ],
     "role": ["UX Design", "UI Design", "Frontend Development"],
-    "task": "Relaunch of the corporate website of Bornholdt Lee GmbH. The focus should be on the references, so that the company's services can be better understood.",
-    "solution": "First wireframes were prototypically designed with Axure. The final design was created in Sketch & Invision and continuously refined with the project manager in an agile manner. Additionally, a prototype was programmed in HTML & CSS for the first impression.",
+    "task": "Relaunch of the corporate website of the \"Bornholdt Lee GmbH\". The focus should be on highlighting the references, and making the companies services more clear for potential customers.",
+    "solution": "Wireframes were created with Axure. The final design was created in Sketch & Invision and continuously refined with the project manager in an agile process. Additionally, a prototype was programmed in HTML & CSS.",
     "customer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
     "type": "desktop"
   },
@@ -223,9 +223,9 @@
     "timeframe": "2017",
     "images": ["/img/references/duchenne/1.avif", "/img/references/duchenne/2.avif"],
     "role": ["UX Design", "UI Design"],
-    "task": "Redesign of the existing information website about \"Duchenne Muscular Dystrophy\".",
-    "solution": "After creating the wireframes in Axure, the final design was implemented in Photoshop.",
-    "customer": ["Deutsche Taskforce", "http://duchenne-taskforce.de/"],
+    "task": "Redesign of the existing website about \"Muscular Dystrophy\".",
+    "solution": "After creating the wireframes in Axure, the final designs was built in Photoshop.",
+    "customer": ["Duchenne Taskforce", "http://duchenne-taskforce.de/"],
     "employer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
     "type": "desktop"
   },
@@ -238,10 +238,10 @@
       "/img/references/ichallenge/4.avif",
       "/img/references/ichallenge/1.avif"
     ],
-    "role": ["UI-Design"],
-    "task": "The iChallenge Tablet-App for digital scavenger hunts should be redesigned in ING DiBa's corporate design for a team event.",
-    "solution": "In Photoshop, the existing iChallenge design was adapted to match ING DiBa's look. In addition to color changes, the imagery and icons were also modified to align with the corporate design.",
-    "customer": ["iChallenge", "https://www.ichallenge.info/de/"],
+    "role": ["UI Design"],
+    "task": "The iChallenge Tablet App for digital geo caching should be redesigned in ING DiBa's corporate design for a team event.",
+    "solution": "In Photoshop, the existing iChallenge design was adapted to match ING DiBa's corporate design.",
+    "customer": ["iChallenge", "https://ichallenge.info/"],
     "employer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
     "type": "tablet"
   },
@@ -255,10 +255,10 @@
       "/img/references/pulvermuehle/4.avif",
       "/img/references/pulvermuehle/5.avif"
     ],
-    "role": ["UI Design", "UX Design", "Requirements Workshops"],
-    "task": "The Pulvermühle wants to handle ordering and payment processes via a tablet app in the future. A concept and design should be developed for this.",
-    "solution": "Following a requirements workshop, the wishes and ideas were recorded in user journeys. Wireframes were implemented in Axure and then designed in Photoshop.",
-    "customer": ["Pulvermühle", "https://pulvermuehle.eu/de-de/"],
+    "role": ["UX Design", "UI Design", "Requirements Workshops"],
+    "task": "The company \"Pulvermühle\" wants the orders and payments handled in a Tablet App.",
+    "solution": "Following a requirements workshop, the wishes and ideas were collected and defined in user journeys. Wireframes were created in Axure, the design was created in Photoshop.",
+    "customer": ["Pulvermühle", "https://pulvermuehle.eu/"],
     "employer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
     "type": "phone"
   },
@@ -272,9 +272,9 @@
       "/img/references/freixenet/4.avif",
       "/img/references/freixenet/5.avif"
     ],
-    "role": ["UI Design", "UX Design", "Prototyping"],
-    "task": "Freixenet would like to offer a wine guide app that presents different wines in combination with matching recipes.",
-    "solution": "To this end, scribbles of the user stories were first created and then implemented in a prototype in WireframeSketcher. The design was created in Photoshop.",
+    "role": ["UX Design", "UI Design", "Prototyping"],
+    "task": "Freixenet would like to offer a Wine-Guide App that presents different wines in combination with matching recipes.",
+    "solution": "First we started creating user stories as scribbles, wireframes were created as a prototype and finally the design was done in Photoshop.",
     "customer": ["Freixenet", "https://www.freixenet.de/"],
     "employer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
     "type": "phone"
@@ -283,10 +283,10 @@
     "name": "Bornholdt Lee",
     "timeframe": "2012",
     "images": ["/img/references/blg/1.avif", "/img/references/blg/2.avif"],
-    "role": ["UI Design", "UX Design", "Prototyping", "Frontend Development"],
+    "role": ["UX Design", "UI Design", "Frontend Development"],
 
-    "task": "First relaunch of the Bornholdt Lee company website. The design of the new site is to be made more modern and appealing.",
-    "solution": "The concept and design for various devices were created using Photoshop, with a focus on references. The overall imagery was made more appealing and interesting. In addition, a prototype was built in HTML & CSS.",
+    "task": "First relaunch of the \"Bornholdt Lee GmbH\" company website. The design should modern and appealing.",
+    "solution": "The concept and the responsive design for various devices were created in Photoshop. Finally the designs were implemented in HTML and CSS.",
     "employer": ["Bornholdt Lee GmbH", "https://www.bornholdtlee.de/"],
     "type": "desktop"
   },
@@ -300,10 +300,10 @@
     ],
     "role": ["Frontend Development"],
 
-    "task": "\"Aus Alice wird O<sup>2</sup>\" Rebranding of the Alice website with the new O<sup>2</sup> look.",
+    "task": "\"Aus Alice wird O<sub>2</sub>\" Rebranding of the Alice website with the new O<sub>2</sub> look.",
     "solution": "Customization of Coremedia templates with HTML, CSS, and JavaScript.",
     "customer": ["Telefonica Germany GmbH", "https://www.o2online.de"],
-    "employer": ["Spot-Media GmbH", "https://spot-media.de"],
+    "employer": ["Spot-Media GmbH"],
     "type": "desktop"
   },
   {
@@ -311,19 +311,19 @@
     "timeframe": "2009",
     "images": ["/img/references/tchibo/2.avif"],
     "role": ["Frontend Development"],
-    "task": "Creation of weekly product newsletters for Tchibo GmbH.",
-    "solution": "Implementation of the \"Wochenwelten\" newsletter templates in HTML and CSS.",
+    "task": "Creation of the weekly product newsletters for Tchibo.",
+    "solution": "Implementation of the \"Wochenwelten\" newsletter templates with HTML and CSS.",
     "customer": ["Tchibo GmbH", "https://www.tchibo.de/"],
-    "employer": ["Spot-Media GmbH", "https://spot-media.de"],
+    "employer": ["Spot-Media GmbH"],
     "type": "desktop"
   },
   {
     "name": "Portfolio",
     "timeframe": "2008",
     "images": ["/img/references/portfolio/1.avif", "/img/references/portfolio/2.avif"],
-    "role": ["UI Design", "UX Design", "Frontend Development"],
-    "task": "Creation of my first own portfolio website.",
-    "solution": "The initial scribbles were turned into a design in Photoshop. I then programmed the site in HTML, CSS, and JavaScript.",
+    "role": ["UX Design", "UI Design", "Frontend Development"],
+    "task": "My first own website.",
+    "solution": "The initial scribbles were turned into a design in Photoshop. Finally i implemented the design with HTML, CSS and JavaScript.",
     "customer": ["Portfolio", "https://silke.design"],
     "type": "desktop"
   }

@@ -14,6 +14,10 @@ export const toId = (text: string): string =>
 
 let observer: IntersectionObserver | undefined;
 
+/**
+ * get distance to viewport top
+ * this doesnt use getBoundingClientRect bc it forces a reflow, but instead use the intersection api
+ */
 export const getDistance = (container: Element): string => {
   if (!observer) {
     observer = new IntersectionObserver((entries) => {
