@@ -2,6 +2,7 @@ import { useState, FunctionComponent, useEffect, useCallback, useRef, ReactEleme
 import Gallery, { type ReactImageGalleryItem } from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import './carousel.css';
+import { useOnInView } from 'react-intersection-observer';
 
 export type CarouselProps = {
   text: ReactElement;
@@ -23,25 +24,32 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
 
   const [flipped, setFlipped] = useState(false);
 
-  useEffect(() => {
-    if (!gallery.current) {
-      return;
-    }
-    if (play) {
-      gallery.current.play();
-    } else {
-      gallery.current.pause();
-    }
-  }, [play]);
-
   const flatImages: Array<ReactImageGalleryItem> = images.map((image) => ({
     original: image,
   }));
 
+  const inview = useOnInView(
+    (inView, entry) => {
+      if (!window || !gallery.current) {
+        return;
+      }
+      if (inView) {
+        gallery.current.play();
+      } else {
+        gallery.current.pause();
+      }
+    },
+    { threshold: 0.1, delay: 100 }
+  );
+
   const flip = useCallback(() => {
     if (carousel.current) {
       carousel.current.classList.toggle('carousel--flipped');
-
+      if (flipped) {
+        gallery.current.play();
+      } else {
+        gallery.current.pause();
+      }
       setFlipped(!flipped);
     }
   }, [carousel, flipped]);
@@ -49,7 +57,7 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
   return (
     <>
       <div className="carousel" ref={carousel}>
-        <div className="flipper">
+        <div className="flipper" ref={inview}>
           <Gallery
             items={flatImages}
             ref={gallery}

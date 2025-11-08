@@ -25,12 +25,12 @@ function fadySticky() {
   const target = this.target as HTMLElement;
   const distance = getDistance(this.target);
   if (distance === 0) {
+    // reset to defaults
     if (target.style.filter != `grayscale(0) brightness(1)`) {
-      //console.log('changing visibility for', target)
       target.style.filter = `grayscale(0) brightness(1)`;
     }
   } else if (distance < 1) {
-    //console.log('changing visibility for', target, distance)
+    // slowly fade out
     target.style.filter = `grayscale(${1 - distance}) brightness(${distance})`;
   }
 }
@@ -111,7 +111,7 @@ const Project: FunctionComponent<ProjectProps> = (props) => {
         (entry.target as HTMLElement).style.filter = `grayscale(0) brightness(1)`;
       }
     },
-    { threshold: 0.1, delay: 100, trackVisibility: true }
+    { threshold: 0.1, delay: 100 }
   );
 
   return (

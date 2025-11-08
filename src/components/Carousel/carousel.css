@@ -67,11 +67,6 @@
 
   .image-gallery-bullets {
     @apply relative top-4;
-    .image-gallery-bullet {
-      @media (width >= theme(--breakpoint-md)) {
-        @apply scale-90;
-      }
-    }
   }
 }
 

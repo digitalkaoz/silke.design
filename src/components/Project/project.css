@@ -31,11 +31,13 @@
 
   .image-gallery-bullets-container {
     .image-gallery-bullet {
-      border-color: var(--text-color, #000000) !important;
+      transition-property: color border;
+      border-color: var(--text-color, #000000);
     }
 
     .image-gallery-bullet.active {
-      background-color: var(--text-color, #000000) !important;
+      background: var(--text-color, #000000);
+      border-color: var(--text-color, #000000);
     }
   }
 

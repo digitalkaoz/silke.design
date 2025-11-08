@@ -67,6 +67,7 @@ header {
         @apply w-96 h-96;
       }
     }
+
     .tk-blob {
       @apply absolute right-auto bottom-auto w-3/4 h-3/4 inline-flex overflow-hidden;
       --fill: #ebd7fd;
