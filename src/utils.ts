@@ -14,26 +14,17 @@ export const toId = (text: string): string =>
 
 let observer: IntersectionObserver | undefined;
 
-export const getDistance = (container: Element): number => {
-  if (!container) {
-    return 1;
-  }
-  const currentScroller = container.nextSibling;
-  if (!currentScroller) {
-    return 1;
-  }
-
+export const getDistance = (container: Element): string => {
   if (!observer) {
     observer = new IntersectionObserver((entries) => {
       for (const entry of entries) {
-        entry.target.dataset.top = entry.boundingClientRect.top / window.innerHeight;
+        entry.target.dataset.top = entry.boundingClientRect.top;
       }
       observer.disconnect();
     });
   }
 
-  observer.observe(currentScroller as Element);
+  observer.observe(container as Element);
 
-  return currentScroller.dataset.top || 1;
-  return (currentScroller as Element).getBoundingClientRect().top / window.innerHeight;
+  return container.dataset.top || '1';
 };

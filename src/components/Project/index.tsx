@@ -1,7 +1,7 @@
 import { FunctionComponent, useState, memo } from 'react';
 
 import './project.css';
-import { toId, getDistance } from '../../utils.js';
+import { toId } from '../../utils.js';
 import Carousel from '../Carousel';
 import { useOnInView } from 'react-intersection-observer';
 
@@ -20,20 +20,6 @@ export type ProjectProps = {
   beta?: boolean;
   play?: boolean;
 };
-
-function fadySticky() {
-  const target = this.target as HTMLElement;
-  const distance = getDistance(this.target);
-  if (distance === 0) {
-    // reset to defaults
-    if (target.style.filter != `grayscale(0) brightness(1)`) {
-      target.style.filter = `grayscale(0) brightness(1)`;
-    }
-  } else if (distance < 1) {
-    // slowly fade out
-    target.style.filter = `grayscale(${1 - distance}) brightness(${distance})`;
-  }
-}
 
 const Text: FunctionComponent<ProjectProps> = ({
   task,
@@ -100,18 +86,14 @@ const Project: FunctionComponent<ProjectProps> = (props) => {
 
   const project = useOnInView(
     (inView, entry) => {
-      if (!window) {
-        return;
-      }
-      const cb = fadySticky.bind(entry);
       if (inView) {
-        window.addEventListener('scroll', cb);
+        entry.target.classList.add('in-view');
       } else {
-        window.removeEventListener('scroll', cb);
-        (entry.target as HTMLElement).style.filter = `grayscale(0) brightness(1)`;
+        entry.target.classList.remove('in-view');
+        entry.target.style.filter = ``;
       }
     },
-    { threshold: 0.1, delay: 100 }
+    { threshold: 0.01 }
   );
 
   return (

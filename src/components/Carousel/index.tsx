@@ -1,4 +1,4 @@
-import { useState, FunctionComponent, useEffect, useCallback, useRef, ReactElement } from 'react';
+import { useState, FunctionComponent, useCallback, useRef, ReactElement } from 'react';
 import Gallery, { type ReactImageGalleryItem } from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import './carousel.css';
@@ -18,7 +18,7 @@ const CarouselItem: FunctionComponent<ReactImageGalleryItem> = ({ description, o
   );
 };
 
-const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
+const Carousel: FunctionComponent<CarouselProps> = ({ images, text }) => {
   const carousel = useRef<HTMLDivElement>(null);
   const gallery = useRef<Gallery>(null);
 
@@ -29,7 +29,7 @@ const Carousel: FunctionComponent<CarouselProps> = ({ images, text, play }) => {
   }));
 
   const inview = useOnInView(
-    (inView, entry) => {
+    (inView) => {
       if (!window || !gallery.current) {
         return;
       }
