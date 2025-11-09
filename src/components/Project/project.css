@@ -285,6 +285,12 @@
     @media (width >= theme(--breakpoint-md)) {
       margin: 0 2vw;
     }
+    .image-gallery img {
+      margin-top: 75%;
+      @media (width >= theme(--breakpoint-md)) {
+        @apply mt-0;
+      }
+    }
   }
 
   .image-gallery {
