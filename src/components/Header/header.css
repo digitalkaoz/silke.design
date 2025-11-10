@@ -27,7 +27,7 @@ header {
     @apply grid grid-flow-row auto-rows-max gap-4 order-3;
 
     h1 {
-      @apply pb-4 text-black text-center leading-8 text-4xl font-normal z-50;
+      @apply pb-4 text-black text-center leading-16 text-4xl font-normal z-50;
       @media (width >= theme(--breakpoint-md)) {
         @apply text-6xl;
       }
@@ -65,7 +65,7 @@ header {
     img {
       @apply w-64 h-64 mb-12 mt-8 rounded-full border-3 border-white z-50 relative;
       @media (width >= theme(--breakpoint-md)) {
-        @apply w-96 h-96;
+        @apply w-96 h-96 max-h-96 max-w-96;
       }
     }
 
