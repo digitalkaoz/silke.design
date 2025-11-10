@@ -14,11 +14,12 @@ header {
 
   .logo-column {
     img {
-      @apply w-full z-50 relative;
+      @apply w-3/4 z-50 relative;
+      margin-left: 12.5%;
     }
     @media (width >= theme(--breakpoint-md)) {
       img {
-        @apply w-1/2 mb-12;
+        @apply w-1/2 mb-12 ml-0;
       }
     }
   }
